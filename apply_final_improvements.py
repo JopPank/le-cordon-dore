@@ -33,7 +33,7 @@ for fname in ['proposal.html', 'proposal-complete.html']:
     # Section 1: Chef bio
     html = re.sub(
         r'un <strong>chef formé à Paris avec 25 ans d’expérience.*?</strong>',
-        'un chef propriétaire d\'exception, <strong>Oodith Kallaram</strong>, formé à la prestigieuse <strong>Maison Lenôtre</strong> à Paris avec plus de 25 ans d’expérience culinaire et hôtelière internationale, et intronisé parmi <strong>Les Disciples d\'Auguste Escoffier (Océan Indien)</strong>',
+        'un chef propriétaire d\'exception, <strong>Oodith Kallaram</strong>, formé à la prestigieuse <strong>Maison Lenôtre</strong> à Paris avec plus de 25 ans d’expérience culinaire et hôtelière internationale, et a été intronisé parmi <strong>Les Disciples d\'Auguste Escoffier (Océan Indien)</strong>',
         html
     )
 
@@ -146,7 +146,7 @@ if os.path.exists('PROPOSAL.md'):
 
     md = re.sub(
         r'Un \*\*chef formé à Paris avec 25 ans d’expérience.*?\*\*',
-        'Un chef propriétaire d\'exception, **Chef Oodith Kallaram**, formé à la prestigieuse **Maison Lenôtre** à Paris avec plus de 25 ans d’expérience culinaire et hôtelière internationale, et intronisé parmi **Les Disciples d\'Auguste Escoffier (Océan Indien)**',
+        'Un chef propriétaire d\'exception, **Chef Oodith Kallaram**, formé à la prestigieuse **Maison Lenôtre** à Paris avec plus de 25 ans d’expérience culinaire et hôtelière internationale, et a été intronisé parmi **Les Disciples d\'Auguste Escoffier (Océan Indien)**',
         md
     )
 
@@ -257,7 +257,7 @@ def build_docx(filename):
     # 2. Ce que vous faites déjà très bien
     h2 = doc.add_heading('1. Ce que vous faites déjà très bien', level=1)
     h2.style.font.color.rgb = RGBColor(15, 23, 42)
-    doc.add_paragraph('Le Cordon Doré a des atouts que très peu de restaurants peuvent revendiquer dans l\'Outaouais : un chef propriétaire d\'exception, Oodith Kallaram, formé à la prestigieuse Maison Lenôtre à Paris avec plus de 25 ans d’expérience culinaire et hôtelière internationale, et intronisé parmi Les Disciples d\'Auguste Escoffier (Océan Indien); une double cuisine indienne et bistrot international soignée; des viandes 100 % certifiées Halal; un buffet réputé chaque mardi soir; et une adresse bien ancrée au cœur du Vieux-Aylmer avec plus de 180 avis élogieux (4,7 ★ sur Google).')
+    doc.add_paragraph('Le Cordon Doré a des atouts que très peu de restaurants peuvent revendiquer dans l\'Outaouais : un chef propriétaire d\'exception, Oodith Kallaram, formé à la prestigieuse Maison Lenôtre à Paris avec plus de 25 ans d’expérience culinaire et hôtelière internationale, et a été intronisé parmi Les Disciples d\'Auguste Escoffier (Océan Indien); une double cuisine indienne et bistrot international soignée; des viandes 100 % certifiées Halal; un buffet réputé chaque mardi soir; et une adresse bien ancrée au cœur du Vieux-Aylmer avec plus de 180 avis élogieux (4,7 ★ sur Google).')
     doc.add_paragraph('Le site web doit être le reflet fidèle de cette réputation, pensé d’abord pour le client qui vous cherche sur son cellulaire et veut consulter le menu, appeler ou réserver sans friction.')
 
     doc.add_paragraph().paragraph_format.space_after = Pt(6)

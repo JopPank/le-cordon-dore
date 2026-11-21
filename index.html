@@ -1838,14 +1838,14 @@
         <div>
           <!-- Chef Portrait Image -->
           <div class="relative w-full aspect-[4/3] sm:aspect-square max-h-72 rounded-xl overflow-hidden mb-6 border border-brand-gold/40 shadow-xl group">
-            <img src="chef.jpg" alt="Chef Oodith Kallaram — Le Cordon Doré" class="w-full h-full object-cover object-[center_20%] scale-105 transition-transform duration-500 group-hover:scale-110">
+            <img src="chef.jpg" alt="Chef Oodith Kallaram — Le Cordon Doré" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-transparent to-transparent"></div>
             <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs">
               <span class="px-2.5 py-1 rounded-full bg-brand-dark/90 border border-brand-gold/50 text-amber-300 font-semibold text-[11px] backdrop-blur-md" data-i18n="chef_badge_left">
                 Disciple d'Auguste Escoffier
               </span>
               <span class="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-brand-gold text-[10px] font-bold uppercase tracking-wider" data-i18n="chef_badge_right">
-                Maison Lenôtre · 25 ans
+                Formé chez Lenôtre · Paris
               </span>
             </div>
           </div>
@@ -1855,7 +1855,7 @@
             25 ans d'Art Culinaire de Paris à Aylmer
           </h3>
           <p class="text-slate-300 text-sm leading-relaxed mb-4" data-i18n="chef_p1">
-            Formé à la prestigieuse <strong class="text-white">Maison Lenôtre</strong> à Paris, le chef <strong class="text-brand-gold">Oodith Kallaram</strong> cumule plus de 25 ans d'expérience culinaire et hôtelière internationale, et est intronisé parmi <strong class="text-white">Les Disciples d'Auguste Escoffier (Océan Indien)</strong>.
+            Formé à la prestigieuse <strong class="text-white">Maison Lenôtre</strong> à Paris, le chef <strong class="text-brand-gold">Oodith Kallaram</strong> cumule plus de 25 ans d'expérience culinaire et hôtelière internationale, et a été intronisé parmi <strong class="text-white">Les Disciples d'Auguste Escoffier (Océan Indien)</strong>.
           </p>
           <p class="text-slate-300 text-sm leading-relaxed mb-4" data-i18n="chef_p2">
             Résident de longue date d'Aylmer ayant ouvert Le Cordon Doré en juin 2024 avec sa famille, il conjugue les techniques françaises de mijotage et de réduction avec le secret ancestral des mélanges d'épices de l'Inde.
@@ -1866,7 +1866,7 @@
         </div>
         
         <div class="pt-5 border-t border-slate-800 flex items-center gap-4">
-          <img src="chef.jpg" alt="Chef Oodith Kallaram" class="w-12 h-12 rounded-full border-2 border-brand-gold object-cover object-[center_20%] shadow-md">
+          <img src="chef.jpg" alt="Chef Oodith Kallaram" class="w-12 h-12 rounded-full border-2 border-brand-gold object-cover object-top shadow-md">
           <div>
             <p class="text-sm font-bold text-white" data-i18n="chef_name">Chef Oodith Kallaram</p>
             <p class="text-xs text-slate-400" data-i18n="chef_signature_sub">Chef & Propriétaire · Le Cordon Doré, Aylmer</p>
@@ -1875,60 +1875,62 @@
       </div>
 
       <!-- REVIEWS CARDS (7 COLS) -->
-      <div class="lg:col-span-7 flex flex-col justify-between h-full">
-        <div class="mb-6">
-          <div class="flex items-center gap-2 mb-2">
-            <span class="text-amber-400 text-lg">★★★★★</span>
-            <!-- EDITABLE RATING PLACEHOLDER: Confirm exact live Google Maps number before pitching -->
-            <span class="text-white font-bold text-lg" data-i18n="reviews_rating_summary">4.7 sur Google · 180+ avis</span>
-            <span class="text-slate-400 text-xs font-normal" data-i18n="reviews_verified">(Avis clients vérifiés)</span>
-          </div>
-          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white" data-i18n="reviews_title">
-            Ce que disent nos convives d'Aylmer
-          </h3>
-        </div>
-
-        <div class="space-y-4 mb-6">
-          <!-- Review 1: Authentic Indian & Warm Service -->
-          <div class="p-4 sm:p-5 rounded-xl bg-brand-charcoal border border-slate-800 hover:border-slate-700 transition-colors">
-            <div class="flex items-center justify-between mb-1.5">
-              <span class="font-semibold text-white text-sm">Julie M.</span>
-              <span class="text-amber-400 text-xs">★★★★★</span>
+      <div class="lg:col-span-7 flex flex-col h-full">
+        <div>
+          <div class="mb-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-amber-400 text-lg">★★★★★</span>
+              <!-- EDITABLE RATING PLACEHOLDER: Confirm exact live Google Maps number before pitching -->
+              <span class="text-white font-bold text-lg" data-i18n="reviews_rating_summary">4.7 sur Google · 180+ avis</span>
+              <span class="text-slate-400 text-xs font-normal" data-i18n="reviews_verified">(Avis clients vérifiés)</span>
             </div>
-            <p class="text-slate-300 text-xs sm:text-sm italic mb-2 leading-relaxed" data-i18n="reviews_card_1_text">
-              « Honnêtement, première visite et certainement pas la dernière ! La cuisine indienne est authentique, riche en saveurs et succulente. L'agneau mijoté et le poulet au beurre sont divins, et le service est extrêmement chaleureux. »
-            </p>
-            <span class="text-[11px] text-slate-500" data-i18n="reviews_card_1_tag">Visite en famille · Aylmer</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white" data-i18n="reviews_title">
+              Ce que disent nos convives d'Aylmer
+            </h3>
           </div>
 
-          <!-- Review 2: Fresh Naans, Authentic Flavors (Replaces dated 2024 quote) -->
-          <div class="p-4 sm:p-5 rounded-xl bg-brand-charcoal border border-slate-800 hover:border-slate-700 transition-colors">
-            <div class="flex items-center justify-between mb-1.5">
-              <span class="font-semibold text-white text-sm">Marc-André G.</span>
-              <span class="text-amber-400 text-xs">★★★★★</span>
+          <div class="space-y-4 mb-6">
+            <!-- Review 1: Authentic Indian & Warm Service -->
+            <div class="p-4 sm:p-5 rounded-xl bg-brand-charcoal border border-slate-800 hover:border-slate-700 transition-colors">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-semibold text-white text-sm">Julie M.</span>
+                <span class="text-amber-400 text-xs">★★★★★</span>
+              </div>
+              <p class="text-slate-300 text-xs sm:text-sm italic mb-2 leading-relaxed" data-i18n="reviews_card_1_text">
+                « Honnêtement, première visite et certainement pas la dernière ! La cuisine indienne est authentique, riche en saveurs et succulente. L'agneau mijoté et le poulet au beurre sont divins, et le service est extrêmement chaleureux. »
+              </p>
+              <span class="text-[11px] text-slate-500" data-i18n="reviews_card_1_tag">Visite en famille · Aylmer</span>
             </div>
-            <p class="text-slate-300 text-xs sm:text-sm italic mb-2 leading-relaxed" data-i18n="reviews_card_2_text">
-              « Une table incontournable sur la rue Principale. Les pains naans sortent tout chauds du four, les caris sont parfumés à la perfection et les portions sont généreuses. Le meilleur restaurant indien de l'Outaouais ! »
-            </p>
-            <span class="text-[11px] text-slate-500" data-i18n="reviews_card_2_tag">Dîner sur place · Avis Google</span>
-          </div>
 
-          <!-- Review 3: Tuesday Buffet, Halal Quality & Attentive Chef -->
-          <div class="p-4 sm:p-5 rounded-xl bg-brand-charcoal border border-slate-800 hover:border-slate-700 transition-colors">
-            <div class="flex items-center justify-between mb-1.5">
-              <span class="font-semibold text-white text-sm">Sarah & Karim T.</span>
-              <span class="text-amber-400 text-xs">★★★★★</span>
+            <!-- Review 2: Fresh Naans, Authentic Flavors (Replaces dated 2024 quote) -->
+            <div class="p-4 sm:p-5 rounded-xl bg-brand-charcoal border border-slate-800 hover:border-slate-700 transition-colors">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-semibold text-white text-sm">Marc-André G.</span>
+                <span class="text-amber-400 text-xs">★★★★★</span>
+              </div>
+              <p class="text-slate-300 text-xs sm:text-sm italic mb-2 leading-relaxed" data-i18n="reviews_card_2_text">
+                « Une table incontournable sur la rue Principale. Les pains naans sortent tout chauds du four, les caris sont parfumés à la perfection et les portions sont généreuses. Le meilleur restaurant indien de l'Outaouais ! »
+              </p>
+              <span class="text-[11px] text-slate-500" data-i18n="reviews_card_2_tag">Dîner sur place · Avis Google</span>
             </div>
-            <p class="text-slate-300 text-xs sm:text-sm italic mb-2 leading-relaxed" data-i18n="reviews_card_3_text">
-              « Le grand buffet indien du mardi soir est exceptionnel ! Tout est frais, réapprovisionné en continu avec d'excellentes options végétariennes et des viandes 100 % certifiées Halal d'une tendreté remarquable. Le chef est toujours attentif aux besoins des clients. »
-            </p>
-            <span class="text-[11px] text-slate-500" data-i18n="reviews_card_3_tag">Buffet du mardi & emporter</span>
+
+            <!-- Review 3: Tuesday Buffet, Halal Quality & Attentive Chef -->
+            <div class="p-4 sm:p-5 rounded-xl bg-brand-charcoal border border-slate-800 hover:border-slate-700 transition-colors">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-semibold text-white text-sm">Sarah & Karim T.</span>
+                <span class="text-amber-400 text-xs">★★★★★</span>
+              </div>
+              <p class="text-slate-300 text-xs sm:text-sm italic mb-2 leading-relaxed" data-i18n="reviews_card_3_text">
+                « Le grand buffet indien du mardi soir est exceptionnel ! Tout est frais, réapprovisionné en continu avec d'excellentes options végétariennes et des viandes 100 % certifiées Halal d'une tendreté remarquable. Le chef est toujours attentif aux besoins des clients. »
+              </p>
+              <span class="text-[11px] text-slate-500" data-i18n="reviews_card_3_tag">Buffet du mardi & emporter</span>
+            </div>
           </div>
         </div>
 
         <!-- Google Actions Buttons -->
         <!-- Replace href below with exact Google Business Profile review link (e.g. https://g.page/r/.../review) once confirmed -->
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+        <div class="mt-auto pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
           <a href="https://www.google.com/maps/search/?api=1&query=Le+Cordon+Dor%C3%A9+Restaurant-Bistrot+58+rue+Principale+Gatineau" 
              target="_blank" rel="noopener noreferrer" 
              class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-brand-gold text-brand-dark font-bold text-xs sm:text-sm hover:from-amber-400 hover:to-amber-300 transition-all shadow-md shadow-brand-gold/20 flex items-center justify-center gap-2">
@@ -2318,14 +2320,14 @@
         chef_tag: "Le Parcours du Chef",
         chef_title: "25 ans d'Art Culinaire de Paris à Aylmer",
         chef_badge_left: "Disciple d'Auguste Escoffier",
-        chef_badge_right: "Maison Lenôtre · 25 ans",
-        chef_p1: "Formé à la prestigieuse Maison Lenôtre à Paris, le chef Oodith Kallaram cumule plus de 25 ans d'expérience culinaire et hôtelière internationale, et est intronisé parmi Les Disciples d'Auguste Escoffier (Océan Indien).",
+        chef_badge_right: "Formé chez Lenôtre · Paris",
+        chef_p1: "Formé à la prestigieuse Maison Lenôtre à Paris, le chef Oodith Kallaram cumule plus de 25 ans d'expérience culinaire et hôtelière internationale, et a été intronisé parmi Les Disciples d'Auguste Escoffier (Océan Indien).",
         chef_p2: "Résident de longue date d'Aylmer ayant ouvert Le Cordon Doré en juin 2024 avec sa famille, il conjugue les techniques françaises de mijotage et de réduction avec le secret ancestral des mélanges d'épices de l'Inde.",
         chef_p3: "Toutes nos viandes sont rigoureusement 100% certifiées Halal et préparées dans le plus grand respect des traditions gastronomiques.",
         chef_name: "Chef Oodith Kallaram",
         chef_signature_sub: "Chef & Propriétaire · Le Cordon Doré, Aylmer",
         chef_role: "Chef & Propriétaire",
-        chef_experience_badge: "Maison Lenôtre · 25 ans",
+        chef_experience_badge: "Formé chez Lenôtre · Paris",
         reviews_rating_summary: "4.7 sur Google · 180+ avis",
         reviews_verified: "(Avis clients vérifiés)",
         reviews_title: "Ce que disent nos convives d'Aylmer",
@@ -2646,14 +2648,14 @@
         chef_tag: "The Chef's Journey",
         chef_title: "25 Years of Culinary Art from Paris to Aylmer",
         chef_badge_left: "Disciple d'Auguste Escoffier",
-        chef_badge_right: "Maison Lenôtre · 25 yrs",
+        chef_badge_right: "Trained at Lenôtre · Paris",
         chef_p1: "Trained at the prestigious Maison Lenôtre in Paris, Chef Oodith Kallaram brings over 25 years of international culinary and hospitality experience and is inducted into Les Disciples d'Auguste Escoffier (Océan Indien).",
         chef_p2: "A longtime Aylmer resident who opened Le Cordon Doré in June 2024 with his family, he blends classical French braising and reduction techniques with authentic Indian spice mastery.",
         chef_p3: "All meats are rigorously 100% Halal certified and prepared in the highest culinary traditions.",
         chef_name: "Chef Oodith Kallaram",
         chef_signature_sub: "Chef & Owner · Le Cordon Doré, Aylmer",
         chef_role: "Chef & Owner",
-        chef_experience_badge: "Maison Lenôtre · 25 yrs",
+        chef_experience_badge: "Trained at Lenôtre · Paris",
         reviews_rating_summary: "4.7 on Google · 180+ reviews",
         reviews_verified: "(Verified customer reviews)",
         reviews_title: "What Aylmer Diners Are Saying",
