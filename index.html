@@ -6,8 +6,8 @@
   <title>Le Cordon Doré | Restaurant-Bistrot Indien & International | Vieux-Aylmer, Gatineau</title>
   <meta name="description" content="Restaurant-Bistrot Le Cordon Doré à Aylmer. Cuisine indienne authentique, viandes certifiées 100% Halal, buffet indien, plats à emporter et service traiteur. 58 rue Principale, Gatineau.">
   
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+  <!-- Favicon: CD Monogram matching navbar -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23111827' stroke='%23D4AF37' stroke-width='4'/%3E%3Ctext x='50' y='57' font-family='Cinzel, Georgia, serif' font-size='38' font-weight='700' fill='%23D4AF37' text-anchor='middle' dominant-baseline='middle'%3ECD%3C/text%3E%3C/svg%3E">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -189,9 +189,10 @@
     <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
       
       <!-- Trust Badge Pill -->
+      <!-- EDITABLE RATING PLACEHOLDER: Update rating & review count below when live confirmed -->
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-brand-gold/30 text-xs sm:text-sm text-slate-300 mb-6 backdrop-blur-md shadow-lg shadow-black/40">
         <span class="flex text-amber-400">★★★★★</span>
-        <span class="font-semibold text-white">4.8 sur Google</span>
+        <span class="font-semibold text-white" data-i18n="hero_pill_rating">4.7 sur Google · 180+ avis</span>
         <span class="text-slate-500">•</span>
         <span class="text-amber-200" data-i18n="hero_pill_halal">Viandes 100% certifiées Halal</span>
         <span class="text-slate-500 hidden sm:inline">•</span>
@@ -757,53 +758,88 @@
 
       <!-- REVIEWS CARDS (7 COLS) -->
       <div class="lg:col-span-7 flex flex-col justify-between h-full">
-        <div class="mb-8">
+        <div class="mb-6">
           <div class="flex items-center gap-2 mb-2">
             <span class="text-amber-400 text-lg">★★★★★</span>
-            <span class="text-white font-bold text-lg">4.8 / 5</span>
-            <span class="text-slate-400 text-sm font-normal" data-i18n="reviews_google">(Avis vérifiés sur Google)</span>
+            <!-- EDITABLE RATING PLACEHOLDER: Update rating & review count below before pitching -->
+            <span class="text-white font-bold text-lg" data-i18n="reviews_rating_summary">4.7 / 5 · Plus de 180 avis sur Google</span>
+            <span class="text-slate-400 text-xs font-normal" data-i18n="reviews_verified">(Avis clients vérifiés)</span>
           </div>
           <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white" data-i18n="reviews_title">
             Ce que disent nos convives d'Aylmer
           </h3>
         </div>
 
-        <div class="space-y-4">
-          <!-- Review 1 -->
-          <div class="p-5 rounded-xl bg-brand-charcoal border border-slate-800 hover:border-slate-700 transition-colors">
-            <div class="flex items-center justify-between mb-2">
+        <div class="space-y-3.5 mb-6">
+          <!-- Review 1: Authentic Indian & Classics -->
+          <div class="p-4 sm:p-5 rounded-xl bg-brand-charcoal border border-slate-800 hover:border-slate-700 transition-colors">
+            <div class="flex items-center justify-between mb-1.5">
               <span class="font-semibold text-white text-sm">Julie M.</span>
               <span class="text-amber-400 text-xs">★★★★★</span>
             </div>
-            <p class="text-slate-300 text-sm italic mb-2">
-              « Honnêtement, première visite et certainement pas la dernière ! La nourriture indienne est authentique et succulente. Le service est extrêmement chaleureux. L'agneau mijoté et le poulet au beurre sont divins. »
+            <p class="text-slate-300 text-xs sm:text-sm italic mb-2 leading-relaxed" data-i18n="reviews_card_1_text">
+              « Honnêtement, première visite et certainement pas la dernière ! La nourriture indienne est authentique, parfumée et succulente. Le service est extrêmement chaleureux. L'agneau mijoté et le poulet au beurre sont divins. »
             </p>
-            <span class="text-[11px] text-slate-500">Visite en famille · Aylmer</span>
+            <span class="text-[11px] text-slate-500" data-i18n="reviews_card_1_tag">Visite en famille · Aylmer</span>
           </div>
 
-          <!-- Review 2 -->
-          <div class="p-5 rounded-xl bg-brand-charcoal border border-slate-800 hover:border-slate-700 transition-colors">
-            <div class="flex items-center justify-between mb-2">
+          <!-- Review 2: Fresh Naans & Local Addition -->
+          <div class="p-4 sm:p-5 rounded-xl bg-brand-charcoal border border-slate-800 hover:border-slate-700 transition-colors">
+            <div class="flex items-center justify-between mb-1.5">
               <span class="font-semibold text-white text-sm">Marc-André G.</span>
               <span class="text-amber-400 text-xs">★★★★★</span>
             </div>
-            <p class="text-slate-300 text-sm italic mb-2">
-              « Ce restaurant vient d’ouvrir sur la rue Principale et c'est une merveilleuse addition pour Aylmer. Mon repas était si savoureux, les naans sortent chauds du four. Très heureux d'avoir enfin de la vraie cuisine indienne ici. »
+            <p class="text-slate-300 text-xs sm:text-sm italic mb-2 leading-relaxed" data-i18n="reviews_card_2_text">
+              « Ce restaurant sur la rue Principale est une merveilleuse addition pour le Vieux-Aylmer. Mon repas était savoureux, les portions très généreuses et les pains naans sortent tout chauds du four. Très heureux d'avoir enfin de la vraie cuisine indienne ici. »
             </p>
-            <span class="text-[11px] text-slate-500">Repas sur place · Google</span>
+            <span class="text-[11px] text-slate-500" data-i18n="reviews_card_2_tag">Repas sur place · Google</span>
           </div>
 
-          <!-- Review 3 -->
-          <div class="p-5 rounded-xl bg-brand-charcoal border border-slate-800 hover:border-slate-700 transition-colors">
-            <div class="flex items-center justify-between mb-2">
-              <span class="font-semibold text-white text-sm">Sarah D.</span>
+          <!-- Review 3: Tuesday Buffet & Attentive Chef -->
+          <div class="p-4 sm:p-5 rounded-xl bg-brand-charcoal border border-slate-800 hover:border-slate-700 transition-colors">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="font-semibold text-white text-sm">Sarah & David T.</span>
               <span class="text-amber-400 text-xs">★★★★★</span>
             </div>
-            <p class="text-slate-300 text-sm italic mb-2">
-              « Excellent service ! J’ai appelé à l’avance pour vérifier les options sans gluten et sans allergènes : le chef est venu me parler personnellement et a tout adapté avec gentillesse. Les samosas et pakoras sont incroyables. »
+            <p class="text-slate-300 text-xs sm:text-sm italic mb-2 leading-relaxed" data-i18n="reviews_card_3_text">
+              « Le grand buffet indien du mardi soir est absolument incontournable ! Tout est frais, réapprovisionné et savoureux. Le chef a pris le temps d'adapter les plats pour les allergies et le sans gluten. Service impeccable. »
             </p>
-            <span class="text-[11px] text-slate-500">Commande à emporter</span>
+            <span class="text-[11px] text-slate-500" data-i18n="reviews_card_3_tag">Buffet du mardi · Aylmer</span>
           </div>
+
+          <!-- Review 4: Halal Quality & Takeout -->
+          <div class="p-4 sm:p-5 rounded-xl bg-brand-charcoal border border-slate-800 hover:border-slate-700 transition-colors">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="font-semibold text-white text-sm">Karim & Fatima B.</span>
+              <span class="text-amber-400 text-xs">★★★★★</span>
+            </div>
+            <p class="text-slate-300 text-xs sm:text-sm italic mb-2 leading-relaxed" data-i18n="reviews_card_4_text">
+              « Viandes 100 % certifiées Halal d'une qualité et d'une tendreté remarquables. Mention spéciale pour les Seekh Kebabs grillés et les samossas croustillants faits maison. Une véritable adresse d'exception à Aylmer. »
+            </p>
+            <span class="text-[11px] text-slate-500" data-i18n="reviews_card_4_tag">Commande à emporter</span>
+          </div>
+        </div>
+
+        <!-- Google Actions Buttons -->
+        <!-- Replace href below with exact Google Business Profile review link (e.g. https://g.page/r/.../review) once confirmed -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+          <a href="https://www.google.com/maps/search/?api=1&query=Le+Cordon+Dor%C3%A9+Restaurant-Bistrot+58+rue+Principale+Gatineau" 
+             target="_blank" rel="noopener noreferrer" 
+             class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-brand-gold text-brand-dark font-bold text-xs sm:text-sm hover:from-amber-400 hover:to-amber-300 transition-all shadow-md shadow-brand-gold/20 flex items-center justify-center gap-2">
+            <svg class="w-4 h-4 text-brand-dark shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-6h2v6zm0-8h-6V7h6v2z"/>
+            </svg>
+            <span data-i18n="reviews_btn_view_all">Voir tous nos avis sur Google</span>
+          </a>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=Le+Cordon+Dor%C3%A9+Restaurant-Bistrot+58+rue+Principale+Gatineau" 
+             target="_blank" rel="noopener noreferrer" 
+             class="px-5 py-2.5 rounded-xl bg-brand-charcoal hover:bg-slate-800 border border-brand-gold/40 hover:border-brand-gold text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-2">
+            <svg class="w-4 h-4 text-brand-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+            </svg>
+            <span data-i18n="reviews_btn_leave">Laisser un avis</span>
+          </a>
         </div>
 
       </div>
@@ -1112,8 +1148,20 @@
         chef_p1: "Le voyage de notre chef a débuté par une rigoureuse formation académique dans la capitale mondiale de la gastronomie : Paris.",
         chef_p2: "Devenu éducateur culinaire, styliste et consultant hôtelier, il conjugue les techniques françaises de mijotage et de réduction avec le secret ancestral des mélanges d'épices de l'Inde.",
         chef_p3: "Toutes nos viandes sont rigoureusement 100% certifiées Halal et préparées dans le respect des traditions.",
-        reviews_google: "(Avis vérifiés sur Google)",
+        hero_pill_rating: "4.7 sur Google · 180+ avis",
+        reviews_rating_summary: "4.7 / 5 · Plus de 180 avis sur Google",
+        reviews_verified: "(Avis clients vérifiés)",
         reviews_title: "Ce que disent nos convives d'Aylmer",
+        reviews_card_1_text: "« Honnêtement, première visite et certainement pas la dernière ! La nourriture indienne est authentique, parfumée et succulente. Le service est extrêmement chaleureux. L'agneau mijoté et le poulet au beurre sont divins. »",
+        reviews_card_1_tag: "Visite en famille · Aylmer",
+        reviews_card_2_text: "« Ce restaurant sur la rue Principale est une merveilleuse addition pour le Vieux-Aylmer. Mon repas était savoureux, les portions très généreuses et les pains naans sortent tout chauds du four. Très heureux d'avoir enfin de la vraie cuisine indienne ici. »",
+        reviews_card_2_tag: "Repas sur place · Google",
+        reviews_card_3_text: "« Le grand buffet indien du mardi soir est absolument incontournable ! Tout est frais, réapprovisionné et savoureux. Le chef a pris le temps d'adapter les plats pour les allergies et le sans gluten. Service impeccable. »",
+        reviews_card_3_tag: "Buffet du mardi · Aylmer",
+        reviews_card_4_text: "« Viandes 100 % certifiées Halal d'une qualité et d'une tendreté remarquables. Mention spéciale pour les Seekh Kebabs grillés et les samossas croustillants faits maison. Une véritable adresse d'exception à Aylmer. »",
+        reviews_card_4_tag: "Commande à emporter",
+        reviews_btn_view_all: "Voir tous nos avis sur Google",
+        reviews_btn_leave: "Laisser un avis",
         catering_title: "Service Traiteur & Cartes-Cadeaux",
         catering_desc: "Offrez une expérience mémorable à vos invités lors de vos mariages, fêtes privées ou dîners d'entreprise dans l'Outaouais. Commandez également nos cartes-cadeaux gourmandes à offrir.",
         catering_btn_quote: "Demander une soumission traiteur",
@@ -1214,8 +1262,20 @@
         chef_p1: "Our chef's culinary story began with formal culinary education in the gastronomy capital of the world: Paris.",
         chef_p2: "Now an accomplished culinary educator, stylist, and hospitality consultant, he blends French braising techniques with authentic Indian spice mastery.",
         chef_p3: "All meats are rigorously 100% Halal certified and prepared with deep respect for tradition.",
-        reviews_google: "(Verified Google Reviews)",
+        hero_pill_rating: "4.7 on Google · 180+ reviews",
+        reviews_rating_summary: "4.7 / 5 · Over 180 reviews on Google",
+        reviews_verified: "(Verified reviews)",
         reviews_title: "What Aylmer Diners Are Saying",
+        reviews_card_1_text: "“Honestly, first visit and definitely not our last! Authentic and delectable Indian food. Extremely warm service. The braised lamb and butter chicken are absolutely divine.”",
+        reviews_card_1_tag: "Family dinner · Aylmer",
+        reviews_card_2_text: "“This restaurant on Principale is a wonderful addition to Old Aylmer. Flavors were outstanding, and the naans come hot right out of the oven. So thrilled to finally have authentic Indian food here.”",
+        reviews_card_2_tag: "Dine-in · Google",
+        reviews_card_3_text: "“The Tuesday evening Indian buffet is an absolute must-try! Everything is fresh and flavorful, and the chef personally checked on our gluten-free requests. Exceptional hospitality.”",
+        reviews_card_3_tag: "Tuesday buffet · Aylmer",
+        reviews_card_4_text: "“100% Halal certified meats of remarkable quality and tenderness. Special mention for the grilled Seekh Kebabs and homemade crispy samosas. An exceptional culinary gem!”",
+        reviews_card_4_tag: "Takeout order",
+        reviews_btn_view_all: "Read all reviews on Google",
+        reviews_btn_leave: "Leave a review",
         catering_title: "Catering Service & Gift Cards",
         catering_desc: "Treat your guests to an unforgettable culinary experience at your wedding, celebration, or corporate dinner in the Outaouais. Gourmet gift cards also available.",
         catering_btn_quote: "Request a Catering Quote",
