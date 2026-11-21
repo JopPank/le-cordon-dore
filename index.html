@@ -63,7 +63,7 @@
       transition: opacity 0.3s ease-in-out;
     }
     .tab-content.active {
-      display: grid;
+      display: block;
       opacity: 1;
     }
   </style>
@@ -370,8 +370,8 @@
       <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mb-4" data-i18n="menu_title">
         Nos Menus & Spécialités
       </h2>
-      <p class="text-slate-400 text-sm sm:text-base" data-i18n="menu_sub">
-        Chaque plat principal est servi avec riz basmati parfumé, pois chiches et pain naan chaud. Indiquez votre préférence d'épice : doux, moyen ou relevé !
+      <p class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed" data-i18n="menu_sub">
+        Choix de 3 garnitures incluses avec les plats principaux (riz basmati, pois chiches en curry, dal makhani ou naan nature). Indiquez votre préférence d'épice : doux, moyen ou relevé !
       </p>
     </div>
 
@@ -394,121 +394,770 @@
       </button>
     </div>
 
-    <!-- TAB 1: MENU INDIEN (ACTIVE) -->
-    <div id="tab-indien" class="tab-content active grid-cols-1 md:grid-cols-2 gap-6">
-      
-      <!-- Dish 1 -->
-      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+    <!-- TAB 1: MENU INDIEN (ACTIVE, 44 ITEMS) -->
+    <div id="tab-indien" class="tab-content active space-y-12">
+      <!-- Sub-section: Entrées / Starters -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="h-0.5 w-8 bg-brand-gold"></div>
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-white tracking-wide" data-i18n="indien_sec_starters">Entrées / Starters</h3>
+          <div class="h-0.5 flex-1 bg-slate-800"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
         <div>
           <div class="flex items-baseline justify-between gap-4 mb-2">
-            <h4 class="font-serif text-lg font-bold text-white flex items-center gap-2">
-              <span data-i18n="dish_1_title">Poulet au Beurre / Butter Chicken</span>
-              <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-brand-gold font-sans font-semibold" data-i18n="badge_favorite">Coup de cœur</span>
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_app_1_title">Soupe Mulligatawny</span>
             </h4>
-            <span class="font-serif font-bold text-brand-gold text-lg">29,00 $</span>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">9 $</span>
           </div>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="dish_1_desc">
-            Morceaux de poulet tendres mijotés dans une sauce onctueuse aux tomates crémeuses, beurre fin et épices royales. Servi avec riz basmati, pois chiches et naan.
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_app_1_desc">
+            Soupe légère dholl et légumes au curry.
           </p>
         </div>
-        <div class="flex items-center gap-2 text-[11px] text-slate-400">
-          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_halal">100% Halal</span>
-          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_spice_choice">Épice au choix</span>
-          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_rice_naan_included">Riz & Naan inclus</span>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegan">Végétalien</span>
         </div>
       </div>
-
-      <!-- Dish 2 -->
-      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
         <div>
           <div class="flex items-baseline justify-between gap-4 mb-2">
-            <h4 class="font-serif text-lg font-bold text-white flex items-center gap-2">
-              <span data-i18n="dish_2_title">Agneau Mijoté Rogan Josh</span>
-              <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-brand-gold font-sans font-semibold" data-i18n="badge_chef_special">Spécialité Chef</span>
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_app_2_title">Soupe Rassam</span>
             </h4>
-            <span class="font-serif font-bold text-brand-gold text-lg">31,00 $</span>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">9 $</span>
           </div>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="dish_2_desc">
-            Agneau du Québec mijoté lentement au chaudron avec cardamome, clous de girofle et sauce parfumée au yaourt et safran. Servi avec riz basmati, pois chiches et naan.
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_app_2_desc">
+            Soupe tomate et tamarin aux épices aromatiques.
           </p>
         </div>
-        <div class="flex items-center gap-2 text-[11px] text-slate-400">
-          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_halal">100% Halal</span>
-          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_gluten_free">Sans gluten</span>
-          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_rice_naan_included">Riz & Naan inclus</span>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegan">Végétalien</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-amber-300 font-medium" data-i18n="badge_mild">Légèrement piquant</span>
         </div>
       </div>
-
-      <!-- Dish 3 -->
-      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
         <div>
           <div class="flex items-baseline justify-between gap-4 mb-2">
-            <h4 class="font-serif text-lg font-bold text-white" data-i18n="dish_3_title">Poulet Tandoori Makhani & Miel</h4>
-            <span class="font-serif font-bold text-brand-gold text-lg">29,00 $</span>
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_app_3_title">Samousa Moyen (1 pc)</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">5 $</span>
           </div>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="dish_3_desc">
-            Cuisse de poulet marinée aux épices tandoori, grillée puis nappée d’une douce réduction makhani relevée d'un trait de miel sauvage.
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_app_3_desc">
+            Servi avec chutney de menthe maison.
           </p>
         </div>
-        <div class="flex items-center gap-2 text-[11px] text-slate-400">
-          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_halal">100% Halal</span>
-          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_grill">Grillade</span>
-          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_rice_naan_included">Riz & Naan inclus</span>
-        </div>
-      </div>
-
-      <!-- Dish 4 -->
-      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
-        <div>
-          <div class="flex items-baseline justify-between gap-4 mb-2">
-            <h4 class="font-serif text-lg font-bold text-white" data-i18n="dish_4_title">Paneer Korma / Curry Végétarien</h4>
-            <span class="font-serif font-bold text-brand-gold text-lg">26,00 $</span>
-          </div>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="dish_4_desc">
-            Fromage indien frais artisanal et poivrons croquants en sauce douce au lait de coco, noix de cajou et herbes fraîches. (Option végane sur demande).
-          </p>
-        </div>
-        <div class="flex items-center gap-2 text-[11px] text-slate-400">
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
           <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegetarian">Végétarien</span>
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegan">Végétalien</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_app_4_title">Petits Samousas (6 pcs)</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">12 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_app_4_desc">
+            6 petits samousas croustillants servis avec chutney.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegan">Végétalien</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_app_5_title">Aloo Tikki</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">9 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_app_5_desc">
+            Galette de pommes de terre légèrement épicée.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegan">Végétalien</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_app_6_title">Seekh Kebab de Poulet (2 pcs)</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">9 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_app_6_desc">
+            Poulet épicé, oignons, sauce de menthe et sauce raïta.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_halal">100% Halal</span>
+          <span class="px-2 py-0.5 rounded bg-amber-950/60 text-amber-400 font-medium" data-i18n="badge_spicy">Piquant</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_app_7_title">Seekh Kebab d'Agneau</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">9 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_app_7_desc">
+            Agneau épicé, sauce de menthe et sauce raïta.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_halal">100% Halal</span>
+          <span class="px-2 py-0.5 rounded bg-rose-950/60 text-rose-400 font-medium" data-i18n="badge_very_spicy">Très piquant</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_app_8_title">Samousas au Poulet (3 pcs)</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">9 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_app_8_desc">
+            3 pièces croustillantes farcies de poulet haché épicé.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_halal">100% Halal</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_app_9_title">Petite Salade Poulet Tandoori</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">12 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_app_9_desc">
+            Salade fraîche au poulet tandoori et vinaigrette aux épices.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_halal">100% Halal</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-amber-300 font-medium" data-i18n="badge_mild">Légèrement piquant</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_app_10_title">Pakoras d'Oignons (6 pcs)</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">8 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_app_10_desc">
+            6 beignets d'oignons croustillants en pâte de pois chiches.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegan">Végétalien</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-amber-300 font-medium" data-i18n="badge_mild">Légèrement piquant</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_app_11_title">Pakoras Paneer (6 pcs)</span> <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-brand-gold font-sans font-semibold" data-i18n="badge_favorite">Coup de cœur</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">9 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_app_11_desc">
+            6 beignets de fromage indien frais et trempette.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegetarian">Végétarien</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_app_12_title">Pakoras Assortis (24 pcs)</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">30 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_app_12_desc">
+            24 pièces à partager pour la table avec sauces maison.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-amber-300 font-medium" data-i18n="badge_mild">Légèrement piquant</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_shareable">À partager</span>
+        </div>
+      </div>
+        </div>
+      </div>
+
+      <!-- Sub-section: Plats Principaux / Main Courses -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="h-0.5 w-8 bg-brand-gold"></div>
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-white tracking-wide" data-i18n="indien_sec_mains">Plats Principaux / Main Courses</h3>
+          <div class="h-0.5 flex-1 bg-slate-800"></div>
+        </div>
+        <div class="p-3.5 sm:p-4 rounded-xl bg-amber-500/10 border border-brand-gold/40 text-amber-200 text-xs sm:text-sm font-medium mb-6 flex items-center gap-3">
+          <span class="text-xl">🍛</span>
+          <span data-i18n="mains_callout_banner">Choix de 3 garnitures incluses avec les plats principaux : Riz basmati, Pois chiches en curry, Dal makhani ou Naan nature.</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_1_title">Poulet au Beurre</span> <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-brand-gold font-sans font-semibold" data-i18n="badge_favorite">Coup de cœur</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">26 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_1_desc">
+            Morceaux de poulet tendres en sauce riche aux tomates et beurre. Choix de 3 garnitures incluses.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_halal">100% Halal</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-amber-300 font-medium" data-i18n="badge_mild">Légèrement piquant</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_2_title">Curry de Poulet Madras</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">26 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_2_desc">
+            Poulet mijoté en sauce parfumée façon Madras. Choix de 3 garnitures incluses.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_halal">100% Halal</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-amber-300 font-medium" data-i18n="badge_mild">Légèrement piquant</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_3_title">Poulet Tikka Masala</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">26 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_3_desc">
+            Poulet grillé tandoori mijoté en sauce masala aux épices. Choix de 3 garnitures incluses.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_halal">100% Halal</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-amber-300 font-medium" data-i18n="badge_mild">Légèrement piquant</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_4_title">Brochettes de Poulet Tandoori</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">28 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_4_desc">
+            Brochettes de poulet marinées aux épices tandoori. Choix de 3 garnitures incluses.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_halal">100% Halal</span>
+          <span class="px-2 py-0.5 rounded bg-amber-950/60 text-amber-400 font-medium" data-i18n="badge_spicy">Piquant</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_5_title">Bœuf Vindaloo</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">28 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_5_desc">
+            Bœuf mijoté en sauce vindaloo relevée et acidulée. Choix de 3 garnitures incluses.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_halal">100% Halal</span>
+          <span class="px-2 py-0.5 rounded bg-rose-950/60 text-rose-400 font-medium" data-i18n="badge_very_spicy">Très piquant</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_6_title">Rogan Josh – Curry d'Agneau</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">28 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_6_desc">
+            Agneau mijoté lentement au chaudron aux aromates précieux. Choix de 3 garnitures incluses.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_halal">100% Halal</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_7_title">Curry d'Agneau Épices Grand-Mère</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">28 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_7_desc">
+            Recette familiale traditionnelle aux épices torréfiées. Choix de 3 garnitures incluses.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_halal">100% Halal</span>
+          <span class="px-2 py-0.5 rounded bg-amber-950/60 text-amber-400 font-medium" data-i18n="badge_spicy">Piquant</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_8_title">Curry de Chèvre avec Os et Feuilles de Curry</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">33 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_8_desc">
+            Chèvre mijotée avec os et feuilles de cari fraîches. Choix de 3 garnitures incluses.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_halal">100% Halal</span>
+          <span class="px-2 py-0.5 rounded bg-rose-950/60 text-rose-400 font-medium" data-i18n="badge_very_spicy">Très piquant</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_9_title">Crevettes au Beurre</span> <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-brand-gold font-sans font-semibold" data-i18n="badge_favorite">Coup de cœur</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">28 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_9_desc">
+            Crevettes sautées en sauce douce au beurre et crème. Choix de 3 garnitures incluses.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_10_title">Crevettes Tandoori</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">28 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_10_desc">
+            Crevettes marinées et grillées aux épices tandoori. Choix de 3 garnitures incluses.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-amber-950/60 text-amber-400 font-medium" data-i18n="badge_spicy">Piquant</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_11_title">Thon à la Moutarde et Safran</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">28 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_11_desc">
+            Pavé de thon mijoté aux graines de moutarde et safran. Choix de 3 garnitures incluses.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_12_title">Curry de Fruits de Mer façon Madras au Lait de Coco</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">33 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_12_desc">
+            Crevettes, pétoncles et calamar en sauce au lait de coco. Choix de 3 garnitures incluses.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-amber-300 font-medium" data-i18n="badge_mild">Légèrement piquant</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_13_title">Pétoncles au Beurre</span> <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-brand-gold font-sans font-semibold" data-i18n="badge_favorite">Coup de cœur</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">35 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_13_desc">
+            Pétoncles délicats nappés de notre sauce au beurre royale. Choix de 3 garnitures incluses.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_14_title">Paneer Korma</span> <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-brand-gold font-sans font-semibold" data-i18n="badge_favorite">Coup de cœur</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">26 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_14_desc">
+            Fromage indien et sauce curry au lait de coco. Choix de 3 garnitures incluses.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegetarian">Végétarien</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-amber-300 font-medium" data-i18n="badge_mild">Légèrement piquant</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_15_title">Paneer Kadai</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">26 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_15_desc">
+            Fromage indien et poivrons en sauce curry au yaourt. Choix de 3 garnitures incluses.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegetarian">Végétarien</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-amber-300 font-medium" data-i18n="badge_mild">Légèrement piquant</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_16_title">Paneer au Beurre</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">26 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_16_desc">
+            Fromage indien artisanal mijoté en sauce au beurre. Choix de 3 garnitures incluses.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegetarian">Végétarien</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-amber-300 font-medium" data-i18n="badge_mild">Légèrement piquant</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_17_title">Saag Paneer</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">26 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_17_desc">
+            Fromage indien et épinards mijotés aux épices douces. Choix de 3 garnitures incluses.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegetarian">Végétarien</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-amber-300 font-medium" data-i18n="badge_mild">Légèrement piquant</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_18_title">Thali Végane</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">26 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_18_desc">
+            Assortiment de 6 plats : riz, légumes sautés au curry et lait de coco, pois chiches en curry, saag, chou-fleur sauce tomate et daal.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegetarian">Végétarien</span>
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegan">Végétalien</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_19_title">Tofu et Poivrons au Curry et Lait de Coco</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">26 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_19_desc">
+            Tofu et poivrons croquants en sauce curry au lait de coco. Choix de 3 garnitures incluses.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
           <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_gluten_free">Sans gluten</span>
-          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_rice_naan_included">Riz & Naan inclus</span>
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegetarian">Végétarien</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-amber-300 font-medium" data-i18n="badge_mild">Légèrement piquant</span>
         </div>
       </div>
-
-      <!-- Dish 5 -->
-      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
         <div>
           <div class="flex items-baseline justify-between gap-4 mb-2">
-            <h4 class="font-serif text-lg font-bold text-white" data-i18n="dish_5_title">6 Petits Samossas Traditionnels</h4>
-            <span class="font-serif font-bold text-brand-gold text-lg">13,00 $</span>
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_main_20_title">Saag et Tofu Mijoté</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">26 $</span>
           </div>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="dish_5_desc">
-            Chaussons croustillants dorés farcis de pommes de terre aux épices aromatiques, petits pois et menthe fraîche. Servis avec chutney maison au tamarin.
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_main_20_desc">
+            Épinards mijotés et tofu soyeux aux épices fines. Choix de 3 garnitures incluses.
           </p>
         </div>
-        <div class="flex items-center gap-2 text-[11px] text-slate-400">
-          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegan_veg">Végane / Végétarien</span>
-          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_shareable">Entrée à partager</span>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_gluten_free">Sans gluten</span>
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegetarian">Végétarien</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-amber-300 font-medium" data-i18n="badge_mild">Légèrement piquant</span>
+        </div>
+      </div>
         </div>
       </div>
 
-      <!-- Dish 6 -->
-      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+      <!-- Sub-section: Accompagnements & Naans en extra / Sides & Extra Naans -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="h-0.5 w-8 bg-brand-gold"></div>
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-white tracking-wide" data-i18n="indien_sec_sides">Accompagnements & Naans en extra / Sides & Extra Naans</h3>
+          <div class="h-0.5 flex-1 bg-slate-800"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
         <div>
           <div class="flex items-baseline justify-between gap-4 mb-2">
-            <h4 class="font-serif text-lg font-bold text-white" data-i18n="dish_6_title">Pakoras d’Oignons (Bhaji)</h4>
-            <span class="font-serif font-bold text-brand-gold text-lg">12,00 $</span>
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_side_1_title">Naan à l'Ail</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">3,50 $</span>
           </div>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="dish_6_desc">
-            Beignets d’oignons émincés croustillants en pâte de farine de pois chiches parfumée au cumin et graines de coriandre. Accompagnés de sauces maison.
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_side_1_desc">
+            Pain plat indien cuit au tandoor avec ail frais et coriandre.
           </p>
         </div>
-        <div class="flex items-center gap-2 text-[11px] text-slate-400">
-          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_gluten_free">Sans gluten</span>
-          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegan">Végane</span>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_side_2_title">Naan au Fromage</span> <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-brand-gold font-sans font-semibold" data-i18n="badge_favorite">Coup de cœur</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">5 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_side_2_desc">
+            Pain naan chaud garni de fromage fondant.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_side_3_title">Légumes Sautés</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">3,50 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_side_3_desc">
+            Légumes de saison sautés aux épices douces.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegetarian">Végétarien</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_side_4_title">Riz Biryani</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">3,50 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_side_4_desc">
+            Riz basmati parfumé aux épices entières.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_gluten_free">Sans gluten</span>
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegetarian">Végétarien</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-amber-300 font-medium" data-i18n="badge_mild">Légèrement piquant</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_side_5_title">Riz Tandoori</span> <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-brand-gold font-sans font-semibold" data-i18n="badge_favorite">Coup de cœur</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">3,50 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_side_5_desc">
+            Riz rouge parfumé et légèrement épicé.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegetarian">Végétarien</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_side_6_title">Rajasthani Daal</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">3,50 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_side_6_desc">
+            Pois cassés jaunes mijotés aux épices.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_gluten_free">Sans gluten</span>
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegetarian">Végétarien</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-amber-300 font-medium" data-i18n="badge_mild">Légèrement piquant</span>
+        </div>
+      </div>
         </div>
       </div>
 
+      <!-- Sub-section: Desserts Indiens / Indian Desserts -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="h-0.5 w-8 bg-brand-gold"></div>
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-white tracking-wide" data-i18n="indien_sec_desserts">Desserts Indiens / Indian Desserts</h3>
+          <div class="h-0.5 flex-1 bg-slate-800"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_des_1_title">Halwa Carotte</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">9 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_des_1_desc">
+            Pouding traditionnel aux carottes râpées, lait et cardamome.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegan">Végétalien</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_des_2_title">Rasmalai</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">9 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_des_2_desc">
+            Galettes de fromage frais plongées dans un lait sucré safrané.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegetarian">Végétarien</span>
+        </div>
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_des_3_title">Lassi de Mangue</span> <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-brand-gold font-sans font-semibold" data-i18n="badge_favorite">Coup de cœur</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">11 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_des_3_desc">
+            Boisson onctueuse fouettée à la mangue Alphonso et yogourt.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_des_4_title">Parfait de Chaï Coulis Rouge</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">11 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_des_4_desc">
+            Parfait crémeux au thé chaï d'Inde et coulis de fruits rouges.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_des_5_title">Pudding de Tapioca au Lait de Coco</span> <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-brand-gold font-sans font-semibold" data-i18n="badge_favorite">Coup de cœur</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">9 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_des_5_desc">
+            Pudding léger de tapioca mijoté au lait de coco.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="in_des_6_title">Gulab Jamun</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">9 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="in_des_6_desc">
+            Boulettes de lait doré frites au sirop aromatisé à la rose.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium" data-i18n="badge_vegetarian">Végétarien</span>
+        </div>
+      </div>
+        </div>
+      </div>
     </div>
 
     <!-- TAB 2: COMBOS FAMILIAUX -->
@@ -548,41 +1197,322 @@
 
     </div>
 
-    <!-- TAB 3: BISTRO & GRILLADES -->
-    <div id="tab-bistro" class="tab-content grid-cols-1 md:grid-cols-2 gap-6">
-      
-      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 transition-colors flex flex-col justify-between">
+    <!-- TAB 3: BISTRO & GRILLADES (INTERNATIONAL & BISTRO MENU) -->
+    <div id="tab-bistro" class="tab-content space-y-12">
+      <!-- Sub-section: Entrées du Bistrot / Starters -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="h-0.5 w-8 bg-brand-gold"></div>
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-white tracking-wide" data-i18n="bistro_sec_starters">Entrées du Bistrot / Starters</h3>
+          <div class="h-0.5 flex-1 bg-slate-800"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
         <div>
           <div class="flex items-baseline justify-between gap-4 mb-2">
-            <h4 class="font-serif text-lg font-bold text-white" data-i18n="bistro_1_title">Seekh Kebab d'Agneau & Poulet</h4>
-            <span class="font-serif font-bold text-brand-gold text-lg">22,00 $</span>
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_app_1_title">Potage du jour</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">8 $</span>
           </div>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="bistro_1_desc">
-            Brochettes de viandes hachées assaisonnées aux oignons rouges, coriandre, gingembre et menthe, grillées minute et servies avec salade croquante et sauce yogourt.
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_app_1_desc">
+            Demandez la création du jour au serveur.
           </p>
         </div>
-        <div class="flex items-center gap-2 text-[11px]">
-          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_halal">100% Halal</span>
-          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_high_protein">Haute protéine</span>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_app_2_title">Bisque de Crabe</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">12 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_app_2_desc">
+            Rehaussée au pastis, julienne de légumes et croûtons aux fromages.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_app_3_title">Calamars Croustillants</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">18 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_app_3_desc">
+            Calamars dorés servis avec sauce tartare maison.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_app_4_title">Crevettes Gratinées à l'Ail</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">18 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_app_4_desc">
+            Crevettes gratinées à l'ail et croûtons dorés.
+          </p>
+        </div>
+        
+      </div>
         </div>
       </div>
 
-      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 transition-colors flex flex-col justify-between">
+      <!-- Sub-section: Plats Principaux du Bistrot / Main Courses -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="h-0.5 w-8 bg-brand-gold"></div>
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-white tracking-wide" data-i18n="bistro_sec_mains">Plats Principaux du Bistrot / Main Courses</h3>
+          <div class="h-0.5 flex-1 bg-slate-800"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
         <div>
           <div class="flex items-baseline justify-between gap-4 mb-2">
-            <h4 class="font-serif text-lg font-bold text-white" data-i18n="bistro_2_title">Bavette de Bœuf Façon Bistrot</h4>
-            <span class="font-serif font-bold text-brand-gold text-lg">28,00 $</span>
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_main_1_title">Saumon au Four</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">30 $</span>
           </div>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="bistro_2_desc">
-            Inspiration de la formation parisienne du Chef : bavette de bœuf grillée, réduction d'échalotes au poivre vert et pommes de terre dorées aux herbes de Provence.
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_main_1_desc">
+            Légumes de saison, purée de pommes de terre et beurre blanc.
           </p>
         </div>
-        <div class="flex items-center gap-2 text-[11px]">
-          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_bistro_inspiration">Inspiration Bistrot</span>
-          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium" data-i18n="badge_halal">100% Halal</span>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_main_2_title">St-Jacques Poêlées</span> <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-brand-gold font-sans font-semibold" data-i18n="badge_favorite">Coup de cœur</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">38 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_main_2_desc">
+            Purée de pommes de terre, légumes du jour et beurre safrané.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_main_3_title">Canard à l'Orange</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">28 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_main_3_desc">
+            Canard rôti servi avec pâtes fraîches ou purée de pommes de terre.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_main_4_title">Steak du Jour</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">38 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_main_4_desc">
+            Pièce de bœuf tendre et sauce crémeuse au poivre vert.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+        <!-- NOTE: Confirm exact price with owner as their current page lists this item with duplicate entry without a clear price -->
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_main_5_title">Souris d'Agneau Braisé</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap" data-i18n="bi_main_5_price">Prix à confirmer</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_main_5_desc">
+            Souris d'agneau braisée lentement aux sucs aromatiques.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_main_6_title">Penne Sauce Rosé Pesto</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">17 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_main_6_desc">
+            Pennes al dente. Ajouts : Poulet (25 $), Crevettes (29 $), St-Jacques (37 $).
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_main_7_title">Tagliatelle Sauce Pesto à la Crème & Crevettes Grillées</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">32 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_main_7_desc">
+            Tagliatelles fraîches en sauce crème pesto et crevettes saisies.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_main_8_title">Navarin de Saumon au Coulis de Crustacés & Risotto</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">33 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_main_8_desc">
+            Pavé de saumon au coulis de crustacés et risotto crémeux.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_main_9_title">Gratin de Fruits de Mer & Risotto au Parmesan</span> <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-brand-gold font-sans font-semibold" data-i18n="badge_favorite">Coup de cœur</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">34 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_main_9_desc">
+            Fruits de mer gratinés servis sur risotto onctueux au parmesan.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_main_10_title">Thon Mi-Cuit aux Sésames</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">26 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_main_10_desc">
+            Thon en croûte de sésames, vinaigrette wasabi et miel.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_main_11_title">Poutine Cordon Poulet Tandoori</span> <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-brand-gold font-sans font-semibold" data-i18n="badge_favorite">Coup de cœur</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">19 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_main_11_desc">
+            Frites fraîches, fromage en grains du Québec, poulet tandoori et sauce au beurre.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_main_12_title">Poutine Cordon Classique</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">14 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_main_12_desc">
+            Frites dorées, fromage en grains et sauce au beurre maison.
+          </p>
+        </div>
+        
+      </div>
         </div>
       </div>
 
+      <!-- Sub-section: Desserts Maison / House-Made Desserts -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="h-0.5 w-8 bg-brand-gold"></div>
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-white tracking-wide" data-i18n="bistro_sec_desserts">Desserts Maison / House-Made Desserts</h3>
+          <div class="h-0.5 flex-1 bg-slate-800"></div>
+        </div>
+        <p class="text-xs text-amber-300 font-medium -mt-3 mb-6" data-i18n="bistro_dessert_note">Préparés maison par notre chef pâtissier</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_des_1_title">Crème Brûlée à la Cannelle & Fruit de la Passion</span> <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-brand-gold font-sans font-semibold" data-i18n="badge_favorite">Coup de cœur</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">11 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_des_1_desc">
+            Crème brûlée délicatement parfumée à la cannelle et coulis acidulé.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_des_2_title">Trio Mousse au Chocolat</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">11 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_des_2_desc">
+            Assortiment harmonieux de mousses noir, lait et blanc.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_des_3_title">Gratin de Fruits Frais au Sabayon Grand Marnier</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">11 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_des_3_desc">
+            Fruits frais dorés au four sous un sabayon parfumé au Grand Marnier.
+          </p>
+        </div>
+        
+      </div>
+      <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+              <span data-i18n="bi_des_4_title">Glace du Jour</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">8 $</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_des_4_desc">
+            Sélection artisanale de glaces et sorbets du moment.
+          </p>
+        </div>
+        
+      </div>
+        </div>
+      </div>
     </div>
 
     <!-- TAB 4: MENU ENFANT -->
@@ -622,27 +1552,27 @@
       <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 transition-colors flex flex-col justify-between">
         <div>
           <div class="flex items-baseline justify-between gap-4 mb-2">
-            <h4 class="font-serif text-lg font-bold text-white" data-i18n="drink_1_title">Lassi Artisanal à la Mangue</h4>
-            <span class="font-serif font-bold text-brand-gold text-lg">6,50 $</span>
+            <h4 class="font-serif text-lg font-bold text-white" data-i18n="drink_wine_title">Sélection de Vins & Cocktails Signature</h4>
+            <span class="font-serif font-bold text-brand-gold text-lg" data-i18n="drink_wine_price">Au verre / Bouteille</span>
           </div>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="drink_1_desc">
-            Boisson traditionnelle fouettée au yogourt crémeux, pulpe de mangue Alphonso mûre et une pincée subtile de cardamome verte.
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="drink_wine_desc">
+            Vins blancs minéraux parfaits avec les épices douces, rouges corsés pour l'agneau mijoté et cocktails créatifs préparés au bar de notre bistrot.
           </p>
         </div>
-        <div class="text-xs text-amber-400 font-medium" data-i18n="badge_non_alcoholic">Sans alcool · Rafraîchissant</div>
+        <div class="text-xs text-slate-400" data-i18n="badge_wine_ask">Demandez la carte des alcools en salle</div>
       </div>
 
       <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 transition-colors flex flex-col justify-between">
         <div>
           <div class="flex items-baseline justify-between gap-4 mb-2">
-            <h4 class="font-serif text-lg font-bold text-white" data-i18n="drink_2_title">Sélection de Vins & Cocktails Signature</h4>
-            <span class="font-serif font-bold text-brand-gold text-lg" data-i18n="drink_2_price">Au verre / Bouteille</span>
+            <h4 class="font-serif text-lg font-bold text-white" data-i18n="drink_chai_title">Thé Chaï Traditionnel & Boissons Douces</h4>
+            <span class="font-serif font-bold text-brand-gold text-lg">5,00 $</span>
           </div>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="drink_2_desc">
-            Vins blancs minéraux parfaits avec les épices douces, rouges corsés pour l'agneau mijoté et cocktails créatifs préparés au bar de notre bistrot.
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="drink_chai_desc">
+            Thé noir d'Inde infusé à la cardamome, clous de girofle et gingembre frais, servi avec lait chaud. Boissons fraîches et jus également disponibles.
           </p>
         </div>
-        <div class="text-xs text-slate-400" data-i18n="badge_wine_ask">Demandez la carte des alcools en salle</div>
+        <div class="text-xs text-amber-400 font-medium" data-i18n="badge_non_alcoholic">Sans alcool · Rafraîchissant</div>
       </div>
 
     </div>
@@ -1102,61 +2032,52 @@
         card_4_btn: "Demander une soumission",
         menu_tag: "Saveurs d'Ici & d'Ailleurs",
         menu_title: "Nos Menus & Spécialités",
-        menu_sub: "Chaque plat principal est servi avec riz basmati parfumé, pois chiches et pain naan chaud. Indiquez votre préférence d'épice : doux, moyen ou relevé !",
+        menu_sub: "Choix de 3 garnitures incluses avec les plats principaux (riz basmati, pois chiches en curry, dal makhani ou naan nature). Indiquez votre préférence d'épice : doux, moyen ou relevé !",
         tab_indien: "🍛 Menu Indien",
         tab_familial: "👨‍👩‍👧‍👦 Combos Familiaux",
         tab_bistro: "🥩 Bistro & Grillades",
         tab_enfant: "🧒 Menu Enfant",
         tab_cave: "🍷 Cave Cordon & Cocktails",
-        dish_1_title: "Poulet au Beurre / Butter Chicken",
+        indien_sec_starters: "Entrées & Bouchées Indiennes",
+        indien_sec_mains: "Plats Principaux Indiens",
+        mains_callout_banner: "Choix de 3 garnitures incluses avec les plats principaux : Riz basmati, Pois chiches en curry, Dal makhani ou Naan nature.",
+        indien_sec_sides: "Accompagnements & Naans en extra",
+        indien_sec_desserts: "Desserts Indiens",
+        bistro_sec_starters: "Entrées du Bistrot",
+        bistro_sec_mains: "Plats Principaux du Bistrot",
+        bistro_sec_desserts: "Desserts Maison",
+        bistro_dessert_note: "Préparés maison par notre chef pâtissier",
         badge_favorite: "Coup de cœur",
         badge_halal: "100% Halal",
-        badge_spice_choice: "Épice au choix",
-        badge_rice_naan_included: "Riz & Naan inclus",
-        dish_1_desc: "Morceaux de poulet tendres mijotés dans une sauce onctueuse aux tomates crémeuses, beurre fin et épices royales. Servi avec riz basmati, pois chiches et naan.",
-        dish_2_title: "Agneau Mijoté Rogan Josh",
-        badge_chef_special: "Spécialité Chef",
-        badge_gluten_free: "Sans gluten",
-        dish_2_desc: "Agneau du Québec mijoté lentement au chaudron avec cardamome, clous de girofle et sauce parfumée au yaourt et safran. Servi avec riz basmati, pois chiches et naan.",
-        dish_3_title: "Poulet Tandoori Makhani & Miel",
-        badge_grill: "Grillade",
-        dish_3_desc: "Cuisse de poulet marinée aux épices tandoori, grillée puis nappée d’une douce réduction makhani relevée d'un trait de miel sauvage.",
-        dish_4_title: "Paneer Korma / Curry Végétarien",
         badge_vegetarian: "Végétarien",
-        dish_4_desc: "Fromage indien frais artisanal et poivrons croquants en sauce douce au lait de coco, noix de cajou et herbes fraîches. (Option végane sur demande).",
-        dish_5_title: "6 Petits Samossas Traditionnels",
-        badge_vegan_veg: "Végane / Végétarien",
-        badge_shareable: "Entrée à partager",
-        dish_5_desc: "Chaussons croustillants dorés farcis de pommes de terre aux épices aromatiques, petits pois et menthe fraîche. Servis avec chutney maison au tamarin.",
-        dish_6_title: "Pakoras d’Oignons (Bhaji)",
-        badge_vegan: "Végane",
-        dish_6_desc: "Beignets d’oignons émincés croustillants en pâte de farine de pois chiches parfumée au cumin et graines de coriandre. Accompagnés de sauces maison.",
-        combo_1_title: "Festin d’Aylmer (Pour 2 personnes)",
+        badge_vegan: "Végétalien",
+        badge_gluten_free: "Sans gluten",
+        badge_mild: "Légèrement piquant",
+        badge_spicy: "Piquant",
+        badge_very_spicy: "Très piquant",
+        badge_shareable: "À partager",
         badge_ideal_couple: "Idéal pour couple",
         badge_save_15: "Économie de 15%",
-        combo_1_desc: "4 Samossas au choix, 1 grand Poulet au Beurre, 1 Agneau Rogan Josh ou Cari de légumes, 2 grandes portions de riz basmati, 2 pains Naan chauds et sauces chutney.",
-        combo_2_title: "Grand Festin Familial (4 à 5 personnes)",
         badge_family_night: "Soirée en famille",
         badge_ready_35min: "Prêt en 35 min",
-        combo_2_desc: "Assortiment de 8 Pakoras et Samossas, 2 Poulets au Beurre, 1 Agneau mijoté, 1 Dal Makhani ou Chana Masala, 4 grands riz basmati et 4 pains naan au beurre d'ail.",
-        bistro_1_title: "Seekh Kebab d'Agneau & Poulet",
         badge_high_protein: "Haute protéine",
-        bistro_1_desc: "Brochettes de viandes hachées assaisonnées aux oignons rouges, coriandre, gingembre et menthe, grillées minute et servies avec salade croquante et sauce yogourt.",
-        bistro_2_title: "Bavette de Bœuf Façon Bistrot",
         badge_bistro_inspiration: "Inspiration Bistrot",
-        bistro_2_desc: "Inspiration de la formation parisienne du Chef : bavette de bœuf grillée, réduction d'échalotes au poivre vert et pommes de terre dorées aux herbes de Provence.",
-        kid_1_title: "Menu P'tit Doré — Poulet Doux",
         badge_under_10: "Pour les 10 ans et moins",
+        badge_non_alcoholic: "Sans alcool · Rafraîchissant",
+        badge_wine_ask: "Demandez la carte des alcools en salle",
+        combo_1_title: "Festin d’Aylmer (Pour 2 personnes)",
+        combo_1_desc: "4 Samossas au choix, 1 grand Poulet au Beurre, 1 Agneau Rogan Josh ou Cari de légumes, 2 grandes portions de riz basmati, 2 pains Naan chauds et sauces chutney.",
+        combo_2_title: "Grand Festin Familial (4 à 5 personnes)",
+        combo_2_desc: "Assortiment de 8 Pakoras et Samossas, 2 Poulets au Beurre, 1 Agneau mijoté, 1 Dal Makhani ou Chana Masala, 4 grands riz basmati et 4 pains naan au beurre d'ail.",
+        kid_1_title: "Menu P'tit Doré — Poulet Doux",
         kid_1_desc: "Mini portion de poulet au beurre très doux (zéro piquant) avec riz blanc basmati fondant et demi-naan au beurre chaud. Breuvage inclus.",
         kid_2_title: "Aiguillettes Croustillantes & Frites",
         kid_2_desc: "Morceaux de filet de poulet pané maison dorés, servis avec frites fraîches et trempette au choix. Breuvage inclus.",
-        drink_1_title: "Lassi Artisanal à la Mangue",
-        badge_non_alcoholic: "Sans alcool · Rafraîchissant",
-        drink_1_desc: "Boisson traditionnelle fouettée au yogourt crémeux, pulpe de mangue Alphonso mûre et une pincée subtile de cardamome verte.",
-        drink_2_title: "Sélection de Vins & Cocktails Signature",
-        drink_2_price: "Au verre / Bouteille",
-        badge_wine_ask: "Demandez la carte des alcools en salle",
-        drink_2_desc: "Vins blancs minéraux parfaits avec les épices douces, rouges corsés pour l'agneau mijoté et cocktails créatifs préparés au bar de notre bistrot.",
+        drink_wine_title: "Sélection de Vins & Cocktails Signature",
+        drink_wine_price: "Au verre / Bouteille",
+        drink_wine_desc: "Vins blancs minéraux parfaits avec les épices douces, rouges corsés pour l'agneau mijoté et cocktails créatifs préparés au bar de notre bistrot.",
+        drink_chai_title: "Thé Chaï Traditionnel & Boissons Douces",
+        drink_chai_desc: "Thé noir d'Inde infusé à la cardamome, clous de girofle et gingembre frais, servi avec lait chaud. Boissons fraîches et jus également disponibles.",
         note_call_title: "Vous souhaitez personnaliser vos plats ou commander ?",
         note_call_desc: "Notre chef adapte volontiers les niveaux d'épices, intolérances au gluten et régimes véganes.",
         note_call_btn: "Appeler : 819 682-5781",
@@ -1211,7 +2132,136 @@
         location_title: "Localisation & Accès",
         parking_note: "Stationnement facile disponible dans la rue Principale et à proximité dans le Vieux-Aylmer.",
         all_rights: "Tous droits réservés.",
-        demo_tag: "Proposition de site web moderne — Démonstration exclusive"
+        demo_tag: "Proposition de site web moderne — Démonstration exclusive",
+        in_app_1_title: "Soupe Mulligatawny",
+        in_app_1_desc: "Soupe légère dholl et légumes au curry.",
+        in_app_2_title: "Soupe Rassam",
+        in_app_2_desc: "Soupe tomate et tamarin aux épices aromatiques.",
+        in_app_3_title: "Samousa Moyen (1 pc)",
+        in_app_3_desc: "Servi avec chutney de menthe maison.",
+        in_app_4_title: "Petits Samousas (6 pcs)",
+        in_app_4_desc: "6 petits samousas croustillants servis avec chutney.",
+        in_app_5_title: "Aloo Tikki",
+        in_app_5_desc: "Galette de pommes de terre légèrement épicée.",
+        in_app_6_title: "Seekh Kebab de Poulet (2 pcs)",
+        in_app_6_desc: "Poulet épicé, oignons, sauce de menthe et sauce raïta.",
+        in_app_7_title: "Seekh Kebab d'Agneau",
+        in_app_7_desc: "Agneau épicé, sauce de menthe et sauce raïta.",
+        in_app_8_title: "Samousas au Poulet (3 pcs)",
+        in_app_8_desc: "3 pièces croustillantes farcies de poulet haché épicé.",
+        in_app_9_title: "Petite Salade Poulet Tandoori",
+        in_app_9_desc: "Salade fraîche au poulet tandoori et vinaigrette aux épices.",
+        in_app_10_title: "Pakoras d'Oignons (6 pcs)",
+        in_app_10_desc: "6 beignets d'oignons croustillants en pâte de pois chiches.",
+        in_app_11_title: "Pakoras Paneer (6 pcs)",
+        in_app_11_desc: "6 beignets de fromage indien frais et trempette.",
+        in_app_12_title: "Pakoras Assortis (24 pcs)",
+        in_app_12_desc: "24 pièces à partager pour la table avec sauces maison.",
+        in_main_1_title: "Poulet au Beurre",
+        in_main_1_desc: "Morceaux de poulet tendres en sauce riche aux tomates et beurre. Choix de 3 garnitures incluses.",
+        in_main_2_title: "Curry de Poulet Madras",
+        in_main_2_desc: "Poulet mijoté en sauce parfumée façon Madras. Choix de 3 garnitures incluses.",
+        in_main_3_title: "Poulet Tikka Masala",
+        in_main_3_desc: "Poulet grillé tandoori mijoté en sauce masala aux épices. Choix de 3 garnitures incluses.",
+        in_main_4_title: "Brochettes de Poulet Tandoori",
+        in_main_4_desc: "Brochettes de poulet marinées aux épices tandoori. Choix de 3 garnitures incluses.",
+        in_main_5_title: "Bœuf Vindaloo",
+        in_main_5_desc: "Bœuf mijoté en sauce vindaloo relevée et acidulée. Choix de 3 garnitures incluses.",
+        in_main_6_title: "Rogan Josh – Curry d'Agneau",
+        in_main_6_desc: "Agneau mijoté lentement au chaudron aux aromates précieux. Choix de 3 garnitures incluses.",
+        in_main_7_title: "Curry d'Agneau Épices Grand-Mère",
+        in_main_7_desc: "Recette familiale traditionnelle aux épices torréfiées. Choix de 3 garnitures incluses.",
+        in_main_8_title: "Curry de Chèvre avec Os et Feuilles de Curry",
+        in_main_8_desc: "Chèvre mijotée avec os et feuilles de cari fraîches. Choix de 3 garnitures incluses.",
+        in_main_9_title: "Crevettes au Beurre",
+        in_main_9_desc: "Crevettes sautées en sauce douce au beurre et crème. Choix de 3 garnitures incluses.",
+        in_main_10_title: "Crevettes Tandoori",
+        in_main_10_desc: "Crevettes marinées et grillées aux épices tandoori. Choix de 3 garnitures incluses.",
+        in_main_11_title: "Thon à la Moutarde et Safran",
+        in_main_11_desc: "Pavé de thon mijoté aux graines de moutarde et safran. Choix de 3 garnitures incluses.",
+        in_main_12_title: "Curry de Fruits de Mer façon Madras au Lait de Coco",
+        in_main_12_desc: "Crevettes, pétoncles et calamar en sauce au lait de coco. Choix de 3 garnitures incluses.",
+        in_main_13_title: "Pétoncles au Beurre",
+        in_main_13_desc: "Pétoncles délicats nappés de notre sauce au beurre royale. Choix de 3 garnitures incluses.",
+        in_main_14_title: "Paneer Korma",
+        in_main_14_desc: "Fromage indien et sauce curry au lait de coco. Choix de 3 garnitures incluses.",
+        in_main_15_title: "Paneer Kadai",
+        in_main_15_desc: "Fromage indien et poivrons en sauce curry au yaourt. Choix de 3 garnitures incluses.",
+        in_main_16_title: "Paneer au Beurre",
+        in_main_16_desc: "Fromage indien artisanal mijoté en sauce au beurre. Choix de 3 garnitures incluses.",
+        in_main_17_title: "Saag Paneer",
+        in_main_17_desc: "Fromage indien et épinards mijotés aux épices douces. Choix de 3 garnitures incluses.",
+        in_main_18_title: "Thali Végane",
+        in_main_18_desc: "Assortiment de 6 plats : riz, légumes sautés au curry et lait de coco, pois chiches en curry, saag, chou-fleur sauce tomate et daal.",
+        in_main_19_title: "Tofu et Poivrons au Curry et Lait de Coco",
+        in_main_19_desc: "Tofu et poivrons croquants en sauce curry au lait de coco. Choix de 3 garnitures incluses.",
+        in_main_20_title: "Saag et Tofu Mijoté",
+        in_main_20_desc: "Épinards mijotés et tofu soyeux aux épices fines. Choix de 3 garnitures incluses.",
+        in_side_1_title: "Naan à l'Ail",
+        in_side_1_desc: "Pain plat indien cuit au tandoor avec ail frais et coriandre.",
+        in_side_2_title: "Naan au Fromage",
+        in_side_2_desc: "Pain naan chaud garni de fromage fondant.",
+        in_side_3_title: "Légumes Sautés",
+        in_side_3_desc: "Légumes de saison sautés aux épices douces.",
+        in_side_4_title: "Riz Biryani",
+        in_side_4_desc: "Riz basmati parfumé aux épices entières.",
+        in_side_5_title: "Riz Tandoori",
+        in_side_5_desc: "Riz rouge parfumé et légèrement épicé.",
+        in_side_6_title: "Rajasthani Daal",
+        in_side_6_desc: "Pois cassés jaunes mijotés aux épices.",
+        in_des_1_title: "Halwa Carotte",
+        in_des_1_desc: "Pouding traditionnel aux carottes râpées, lait et cardamome.",
+        in_des_2_title: "Rasmalai",
+        in_des_2_desc: "Galettes de fromage frais plongées dans un lait sucré safrané.",
+        in_des_3_title: "Lassi de Mangue",
+        in_des_3_desc: "Boisson onctueuse fouettée à la mangue Alphonso et yogourt.",
+        in_des_4_title: "Parfait de Chaï Coulis Rouge",
+        in_des_4_desc: "Parfait crémeux au thé chaï d'Inde et coulis de fruits rouges.",
+        in_des_5_title: "Pudding de Tapioca au Lait de Coco",
+        in_des_5_desc: "Pudding léger de tapioca mijoté au lait de coco.",
+        in_des_6_title: "Gulab Jamun",
+        in_des_6_desc: "Boulettes de lait doré frites au sirop aromatisé à la rose.",
+        bi_app_1_title: "Potage du jour",
+        bi_app_1_desc: "Demandez la création du jour au serveur.",
+        bi_app_2_title: "Bisque de Crabe",
+        bi_app_2_desc: "Rehaussée au pastis, julienne de légumes et croûtons aux fromages.",
+        bi_app_3_title: "Calamars Croustillants",
+        bi_app_3_desc: "Calamars dorés servis avec sauce tartare maison.",
+        bi_app_4_title: "Crevettes Gratinées à l'Ail",
+        bi_app_4_desc: "Crevettes gratinées à l'ail et croûtons dorés.",
+        bi_main_1_title: "Saumon au Four",
+        bi_main_1_desc: "Légumes de saison, purée de pommes de terre et beurre blanc.",
+        bi_main_2_title: "St-Jacques Poêlées",
+        bi_main_2_desc: "Purée de pommes de terre, légumes du jour et beurre safrané.",
+        bi_main_3_title: "Canard à l'Orange",
+        bi_main_3_desc: "Canard rôti servi avec pâtes fraîches ou purée de pommes de terre.",
+        bi_main_4_title: "Steak du Jour",
+        bi_main_4_desc: "Pièce de bœuf tendre et sauce crémeuse au poivre vert.",
+        bi_main_5_title: "Souris d'Agneau Braisé",
+        bi_main_5_desc: "Souris d'agneau braisée lentement aux sucs aromatiques.",
+        bi_main_5_price: "Prix à confirmer",
+        bi_main_6_title: "Penne Sauce Rosé Pesto",
+        bi_main_6_desc: "Pennes al dente. Ajouts : Poulet (25 $), Crevettes (29 $), St-Jacques (37 $).",
+        bi_main_7_title: "Tagliatelle Sauce Pesto à la Crème & Crevettes Grillées",
+        bi_main_7_desc: "Tagliatelles fraîches en sauce crème pesto et crevettes saisies.",
+        bi_main_8_title: "Navarin de Saumon au Coulis de Crustacés & Risotto",
+        bi_main_8_desc: "Pavé de saumon au coulis de crustacés et risotto crémeux.",
+        bi_main_9_title: "Gratin de Fruits de Mer & Risotto au Parmesan",
+        bi_main_9_desc: "Fruits de mer gratinés servis sur risotto onctueux au parmesan.",
+        bi_main_10_title: "Thon Mi-Cuit aux Sésames",
+        bi_main_10_desc: "Thon en croûte de sésames, vinaigrette wasabi et miel.",
+        bi_main_11_title: "Poutine Cordon Poulet Tandoori",
+        bi_main_11_desc: "Frites fraîches, fromage en grains du Québec, poulet tandoori et sauce au beurre.",
+        bi_main_12_title: "Poutine Cordon Classique",
+        bi_main_12_desc: "Frites dorées, fromage en grains et sauce au beurre maison.",
+        bi_des_1_title: "Crème Brûlée à la Cannelle & Fruit de la Passion",
+        bi_des_1_desc: "Crème brûlée délicatement parfumée à la cannelle et coulis acidulé.",
+        bi_des_2_title: "Trio Mousse au Chocolat",
+        bi_des_2_desc: "Assortiment harmonieux de mousses noir, lait et blanc.",
+        bi_des_3_title: "Gratin de Fruits Frais au Sabayon Grand Marnier",
+        bi_des_3_desc: "Fruits frais dorés au four sous un sabayon parfumé au Grand Marnier.",
+        bi_des_4_title: "Glace du Jour",
+        bi_des_4_desc: "Sélection artisanale de glaces et sorbets du moment.",
       },
       en: {
         announcement: "Indian Buffet every Tuesday evening & special weekend brunches!",
@@ -1255,61 +2305,52 @@
         card_4_btn: "Request a quote",
         menu_tag: "Flavors From Here & Abroad",
         menu_title: "Our Menus & Specialties",
-        menu_sub: "Each main dish is served with fragrant basmati rice, chickpeas, and fresh naan bread. Choose your spice level: Mild, Medium, or Spicy!",
+        menu_sub: "Choice of 3 sides included with main courses (basmati rice, chickpea curry, dal makhani, or plain naan). Choose your spice level: Mild, Medium, or Spicy!",
         tab_indien: "🍛 Indian Menu",
         tab_familial: "👨‍👩‍👧‍👦 Family Combos",
         tab_bistro: "🥩 Bistro & Grills",
         tab_enfant: "🧒 Kids Menu",
         tab_cave: "🍷 Wine & Cocktails",
-        dish_1_title: "Butter Chicken / Poulet au Beurre",
+        indien_sec_starters: "Indian Appetizers & Starters",
+        indien_sec_mains: "Indian Main Courses",
+        mains_callout_banner: "Choice of 3 sides included with main courses: Basmati rice, Chickpea curry, Dal makhani, or Plain naan.",
+        indien_sec_sides: "Sides & Extra Naans",
+        indien_sec_desserts: "Indian Desserts",
+        bistro_sec_starters: "Bistro Starters",
+        bistro_sec_mains: "Bistro Main Courses",
+        bistro_sec_desserts: "House-Made Desserts",
+        bistro_dessert_note: "Made in-house by our pastry chef",
         badge_favorite: "Guest Favorite",
         badge_halal: "100% Halal",
-        badge_spice_choice: "Choice of Spice Level",
-        badge_rice_naan_included: "Rice & Naan Included",
-        dish_1_desc: "Tender chicken pieces simmered in a silky tomato, rich cream, and royal spice sauce. Served with basmati rice, chickpeas, and naan.",
-        dish_2_title: "Slow-Braised Lamb Rogan Josh",
-        badge_chef_special: "Chef's Specialty",
-        badge_gluten_free: "Gluten-Free",
-        dish_2_desc: "Quebec lamb braised slowly with cardamom, cloves, and a fragrant saffron yogurt gravy. Served with basmati rice, chickpeas, and naan.",
-        dish_3_title: "Tandoori Chicken Makhani & Honey",
-        badge_grill: "Grilled",
-        dish_3_desc: "Chicken thigh marinated in tandoori spices, flame-grilled and glazed with honey makhani reduction. Served with rice and naan.",
-        dish_4_title: "Paneer Korma / Vegetarian Curry",
         badge_vegetarian: "Vegetarian",
-        dish_4_desc: "Artisanal fresh Indian paneer cheese and crisp peppers in a velvety coconut cashew cream sauce. (Vegan option upon request).",
-        dish_5_title: "6 Traditional Crispy Samosas",
-        badge_vegan_veg: "Vegan / Vegetarian",
-        badge_shareable: "Sharing Appetizer",
-        dish_5_desc: "Golden crispy pastries stuffed with spiced potatoes, green peas, and fresh mint. Served with homemade tamarind chutney.",
-        dish_6_title: "Crispy Onion Pakoras (Bhaji)",
         badge_vegan: "Vegan",
-        dish_6_desc: "Crispy sliced onion fritters lightly coated in cumin and coriander spiced chickpea batter. Served with signature dips.",
-        combo_1_title: "Aylmer Feast (For 2 People)",
+        badge_gluten_free: "Gluten-Free",
+        badge_mild: "Mild Spice",
+        badge_spicy: "Spicy",
+        badge_very_spicy: "Very Spicy",
+        badge_shareable: "To Share",
         badge_ideal_couple: "Ideal for Couples",
         badge_save_15: "Save 15%",
-        combo_1_desc: "4 Choice samosas, 1 large Butter Chicken, 1 Lamb Rogan Josh or Vegetable Curry, 2 large basmati rice, 2 hot Naans, and chutneys.",
-        combo_2_title: "Grand Family Feast (4 to 5 People)",
         badge_family_night: "Family Night",
         badge_ready_35min: "Ready in 35 mins",
-        combo_2_desc: "8 Assorted pakoras and samosas, 2 Butter Chickens, 1 Braised Lamb, 1 Dal Makhani or Chana Masala, 4 large basmati rice, and 4 garlic naans.",
-        bistro_1_title: "Lamb & Chicken Seekh Kebab",
         badge_high_protein: "High Protein",
-        bistro_1_desc: "Charbroiled spiced ground lamb and chicken skewers with red onion, coriander, and fresh mint, served with crisp salad and yogurt dip.",
-        bistro_2_title: "Bistro-Style Beef Flank Steak",
         badge_bistro_inspiration: "Bistro Inspiration",
-        bistro_2_desc: "Parisian culinary bistro tribute: grilled steak flank, green peppercorn shallot reduction, and herbed roasted potatoes.",
-        kid_1_title: "Little Doré Meal — Mild Chicken",
         badge_under_10: "For Ages 10 and Under",
+        badge_non_alcoholic: "Non-Alcoholic · Refreshing",
+        badge_wine_ask: "Ask for the wine and drink menu in dining room",
+        combo_1_title: "Aylmer Feast (For 2 People)",
+        combo_1_desc: "4 Choice samosas, 1 large Butter Chicken, 1 Lamb Rogan Josh or Vegetable Curry, 2 large basmati rice, 2 hot Naans, and chutneys.",
+        combo_2_title: "Grand Family Feast (4 to 5 People)",
+        combo_2_desc: "8 Assorted pakoras and samosas, 2 Butter Chickens, 1 Braised Lamb, 1 Dal Makhani or Chana Masala, 4 large basmati rice, and 4 garlic naans.",
+        kid_1_title: "Little Doré Meal — Mild Chicken",
         kid_1_desc: "Mild kid-friendly butter chicken (no heat) served with fluffy basmati rice and half butter naan. Beverage included.",
         kid_2_title: "Crispy Chicken Tenders & Fries",
         kid_2_desc: "Crispy homemade breaded chicken tenders served with golden fries and choice of dip. Beverage included.",
-        drink_1_title: "Handcrafted Mango Lassi",
-        badge_non_alcoholic: "Non-Alcoholic · Refreshing",
-        drink_1_desc: "Traditional chilled yogurt smoothie blended with ripe Alphonso mango pulp and fragrant green cardamom.",
-        drink_2_title: "Wine Selection & Signature Cocktails",
-        drink_2_price: "By the glass / Bottle",
-        badge_wine_ask: "Ask for the wine and drink menu in dining room",
-        drink_2_desc: "Mineral white wines paired for aromatic spices, robust reds for braised lamb, and signature handcrafted cocktails at our bar.",
+        drink_wine_title: "Wine Selection & Signature Cocktails",
+        drink_wine_price: "By the glass / Bottle",
+        drink_wine_desc: "Mineral white wines paired for aromatic spices, robust reds for braised lamb, and signature handcrafted cocktails at our bar.",
+        drink_chai_title: "Traditional Spiced Chai & Cold Beverages",
+        drink_chai_desc: "Indian black tea infused with cardamom, cloves, and fresh ginger, served with warm milk. Fresh cold drinks and juices also available.",
         note_call_title: "Would you like to customize dishes or place an order?",
         note_call_desc: "Our chef is delighted to customize spice heat, gluten-free requirements, and vegan choices.",
         note_call_btn: "Call: 819 682-5781",
@@ -1364,7 +2405,136 @@
         location_title: "Location & Parking",
         parking_note: "Convenient street parking available right on Principale Street and adjacent streets in Old Aylmer.",
         all_rights: "All rights reserved.",
-        demo_tag: "Modern Website Proposal — Exclusive Demonstration"
+        demo_tag: "Modern Website Proposal — Exclusive Demonstration",
+        in_app_1_title: "Mulligatawny Soup",
+        in_app_1_desc: "Light dhal and vegetable curry soup.",
+        in_app_2_title: "Rasam Soup",
+        in_app_2_desc: "Tomato and tamarind soup with aromatic spices.",
+        in_app_3_title: "Medium Samosa (1 pc)",
+        in_app_3_desc: "Served with house-made mint chutney.",
+        in_app_4_title: "Small Samosas (6 pcs)",
+        in_app_4_desc: "6 small crispy samosas served with chutney.",
+        in_app_5_title: "Aloo Tikki",
+        in_app_5_desc: "Lightly spiced golden potato croquette.",
+        in_app_6_title: "Chicken Seekh Kebab (2 pcs)",
+        in_app_6_desc: "Spiced chicken skewers, onions, mint sauce, and raita.",
+        in_app_7_title: "Lamb Seekh Kebab",
+        in_app_7_desc: "Spiced minced lamb kebab with mint sauce and raita.",
+        in_app_8_title: "Chicken Samosas (3 pcs)",
+        in_app_8_desc: "3 crispy pastry pockets filled with spiced chicken.",
+        in_app_9_title: "Tandoori Chicken Chaat Salad",
+        in_app_9_desc: "Fresh salad with tandoori chicken and spiced dressing.",
+        in_app_10_title: "Onion Bhaji Pakoras (6 pcs)",
+        in_app_10_desc: "6 crispy spiced onion fritters in chickpea batter.",
+        in_app_11_title: "Cheese Pakoras (6 pcs)",
+        in_app_11_desc: "6 golden fried fresh Indian paneer cheese fritters.",
+        in_app_12_title: "Assorted Pakoras (24 pcs)",
+        in_app_12_desc: "24 pieces to share with signature dipping sauces.",
+        in_main_1_title: "Butter Chicken",
+        in_main_1_desc: "Tender chicken pieces in silky tomato and butter sauce. Choice of 3 sides included.",
+        in_main_2_title: "Madras Chicken Curry",
+        in_main_2_desc: "Simmered chicken in aromatic Madras curry sauce. Choice of 3 sides included.",
+        in_main_3_title: "Chicken Tikka Masala",
+        in_main_3_desc: "Char-grilled chicken tikka in rich spiced masala sauce. Choice of 3 sides included.",
+        in_main_4_title: "Tandoori Chicken Skewers",
+        in_main_4_desc: "Chicken skewers marinated in classic tandoori spices. Choice of 3 sides included.",
+        in_main_5_title: "Beef Vindaloo",
+        in_main_5_desc: "Tender beef in fiery, tangy vindaloo curry. Choice of 3 sides included.",
+        in_main_6_title: "Rogan Josh Lamb Curry",
+        in_main_6_desc: "Slow-braised lamb in Kashmiri aromatic gravy. Choice of 3 sides included.",
+        in_main_7_title: "Grandmother's Spiced Lamb Curry",
+        in_main_7_desc: "Traditional family recipe with slow-roasted spices. Choice of 3 sides included.",
+        in_main_8_title: "Bone-In Goat Curry with Curry Leaves",
+        in_main_8_desc: "Tender bone-in goat simmered with fresh curry leaves. Choice of 3 sides included.",
+        in_main_9_title: "Butter Shrimp",
+        in_main_9_desc: "Succulent shrimp in rich, velvety butter cream sauce. Choice of 3 sides included.",
+        in_main_10_title: "Tandoori Shrimp",
+        in_main_10_desc: "Shrimp marinated and flame-roasted in tandoor spices. Choice of 3 sides included.",
+        in_main_11_title: "Tuna with Mustard & Turmeric",
+        in_main_11_desc: "Tuna steak gently simmered with mustard seeds and turmeric. Choice of 3 sides included.",
+        in_main_12_title: "Madras Seafood Coconut Curry",
+        in_main_12_desc: "Shrimp, scallops, and calamari in coconut curry sauce. Choice of 3 sides included.",
+        in_main_13_title: "Scallops in Butter Sauce",
+        in_main_13_desc: "Delicate scallops in signature royal butter sauce. Choice of 3 sides included.",
+        in_main_14_title: "Paneer Korma",
+        in_main_14_desc: "Indian cheese in coconut milk curry. Choice of 3 sides included.",
+        in_main_15_title: "Paneer Kadai",
+        in_main_15_desc: "Indian cheese and bell peppers in yogurt curry. Choice of 3 sides included.",
+        in_main_16_title: "Butter Paneer",
+        in_main_16_desc: "Artisanal paneer cheese simmered in rich butter sauce. Choice of 3 sides included.",
+        in_main_17_title: "Saag Paneer",
+        in_main_17_desc: "Fresh Indian cheese in delicately spiced creamed spinach. Choice of 3 sides included.",
+        in_main_18_title: "Vegan Thali",
+        in_main_18_desc: "Tasting platter: rice, coconut vegetable curry, chickpea curry, saag, tomato cauliflower, and daal.",
+        in_main_19_title: "Tofu & Bell Peppers Coconut Curry",
+        in_main_19_desc: "Tofu and crisp bell peppers in coconut milk curry. Choice of 3 sides included.",
+        in_main_20_title: "Simmered Saag & Tofu",
+        in_main_20_desc: "Simmered spinach and tender tofu in subtle spices. Choice of 3 sides included.",
+        in_side_1_title: "Garlic Naan",
+        in_side_1_desc: "Fresh tandoori flatbread brushed with garlic and coriander.",
+        in_side_2_title: "Cheese Naan",
+        in_side_2_desc: "Fresh naan stuffed with melted cheese.",
+        in_side_3_title: "Sautéed Vegetables",
+        in_side_3_desc: "Sautéed seasonal vegetables with mild spices.",
+        in_side_4_title: "Biryani Rice",
+        in_side_4_desc: "Fragrant basmati rice infused with whole spices.",
+        in_side_5_title: "Tandoori Rice",
+        in_side_5_desc: "Spiced red basmati rice.",
+        in_side_6_title: "Rajasthani Daal",
+        in_side_6_desc: "Spiced yellow split peas simmered with herbs.",
+        in_des_1_title: "Carrot Halwa",
+        in_des_1_desc: "Traditional grated carrot pudding with milk and cardamom.",
+        in_des_2_title: "Rasmalai",
+        in_des_2_desc: "Fresh cheese patties in sweetened saffron milk.",
+        in_des_3_title: "Mango Lassi",
+        in_des_3_desc: "Creamy mango smoothie blended with rich yogurt.",
+        in_des_4_title: "Chai Parfait with Berry Coulis",
+        in_des_4_desc: "Spiced chai tea parfait served with berry coulis.",
+        in_des_5_title: "Coconut Milk Tapioca Pudding",
+        in_des_5_desc: "Light tapioca pudding simmered in coconut milk.",
+        in_des_6_title: "Gulab Jamun",
+        in_des_6_desc: "Golden fried milk dumplings in warm rose-infused syrup.",
+        bi_app_1_title: "Soup of the Day",
+        bi_app_1_desc: "Ask the server for the daily creation.",
+        bi_app_2_title: "Crab Bisque",
+        bi_app_2_desc: "Enhanced with pastis, julienned vegetables, and cheese croutons.",
+        bi_app_3_title: "Crispy Calamari",
+        bi_app_3_desc: "Golden fried calamari served with house tartar sauce.",
+        bi_app_4_title: "Garlic Gratinated Shrimp",
+        bi_app_4_desc: "Garlic-gratinated shrimp with golden croutons.",
+        bi_main_1_title: "Baked Salmon",
+        bi_main_1_desc: "Seasonal vegetables, mashed potatoes, and beurre blanc sauce.",
+        bi_main_2_title: "Pan-Seared Scallops",
+        bi_main_2_desc: "Mashed potatoes, vegetables of the day, and saffron butter.",
+        bi_main_3_title: "Duck à l'Orange",
+        bi_main_3_desc: "Roast duck served with fresh pasta or mashed potatoes.",
+        bi_main_4_title: "Steak of the Day",
+        bi_main_4_desc: "Tender cut of beef with creamy green peppercorn sauce.",
+        bi_main_5_title: "Braised Lamb Shank",
+        bi_main_5_desc: "Slow-braised lamb shank in rich aromatic juices.",
+        bi_main_5_price: "Price TBD",
+        bi_main_6_title: "Penne Rosé Pesto",
+        bi_main_6_desc: "Al dente penne pasta. Add-ons: Chicken (25 $), Shrimp (29 $), Scallops (37 $).",
+        bi_main_7_title: "Cream Pesto Tagliatelle & Grilled Shrimp",
+        bi_main_7_desc: "Fresh tagliatelle in creamy pesto sauce with grilled shrimp.",
+        bi_main_8_title: "Salmon Navarin with Shellfish Coulis & Risotto",
+        bi_main_8_desc: "Salmon fillet in shellfish coulis with creamy risotto.",
+        bi_main_9_title: "Seafood Gratin & Parmesan Risotto",
+        bi_main_9_desc: "Gratinated seafood served over creamy parmesan risotto.",
+        bi_main_10_title: "Sesame-Seared Tuna",
+        bi_main_10_desc: "Sesame-crusted tuna steak with honey wasabi vinaigrette.",
+        bi_main_11_title: "Tandoori Chicken Cordon Poutine",
+        bi_main_11_desc: "Crispy fries, Quebec cheese curds, tandoori chicken, and butter sauce.",
+        bi_main_12_title: "Classic Cordon Poutine",
+        bi_main_12_desc: "Golden fries, cheese curds, and signature house butter sauce.",
+        bi_des_1_title: "Cinnamon Crème Brûlée with Passion Fruit Coulis",
+        bi_des_1_desc: "Cinnamon-infused crème brûlée with tangy passion fruit coulis.",
+        bi_des_2_title: "Chocolate Mousse Trio",
+        bi_des_2_desc: "Harmonious trio of dark, milk, and white chocolate mousses.",
+        bi_des_3_title: "Fresh Fruit Gratin with Grand Marnier Sabayon",
+        bi_des_3_desc: "Fresh fruit gratin glazed with fragrant Grand Marnier sabayon.",
+        bi_des_4_title: "Ice Cream of the Day",
+        bi_des_4_desc: "Artisanal selection of seasonal ice cream and sorbet.",
       }
     };
 
