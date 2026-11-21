@@ -1608,20 +1608,26 @@
       
       <!-- Cocktails Signature -->
       <div>
-        <div class="flex items-center gap-3 mb-2">
-          <div class="h-0.5 w-8 bg-brand-gold"></div>
-          <h3 class="font-serif text-xl sm:text-2xl font-bold text-white tracking-wide" data-i18n="cave_sec_cocktails">Cocktails Signature</h3>
-          <div class="h-0.5 flex-1 bg-slate-800"></div>
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+          <div class="flex items-center gap-3">
+            <div class="h-0.5 w-8 bg-brand-gold"></div>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-white tracking-wide" data-i18n="cave_sec_cocktails">Cocktails Signature</h3>
+            <div class="h-0.5 w-12 sm:w-24 bg-slate-800"></div>
+          </div>
+          <!-- Highlighted Price Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-500/20 via-brand-gold/15 to-amber-500/20 border border-brand-gold/50 shadow-md shadow-brand-gold/10 self-start sm:self-auto">
+            <span class="text-xs text-amber-300 font-semibold" data-i18n="cocktails_uniform_label">Tous nos cocktails signature :</span>
+            <span class="font-serif font-bold text-brand-gold text-base">14 $</span>
+          </div>
         </div>
-        <p class="text-xs text-amber-300 font-medium mb-6" data-i18n="cave_cocktails_note">Créations rafraîchissantes préparées minute au bar · 14 $ chacun</p>
+        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-6" data-i18n="cave_cocktails_note">Créations rafraîchissantes préparées minute au bar avec ingrédients frais et spiritueux sélectionnés.</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
       <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
         <div>
-          <div class="flex items-baseline justify-between gap-4 mb-2">
-            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+          <div class="mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white">
               <span data-i18n="cocktail_cordon_dore_title">Cordon Doré</span>
             </h4>
-            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">14 $</span>
           </div>
           <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="cocktail_cordon_dore_desc">
             Jus d'ananas, sirop de fruit de la passion, rhum brun et sirop grenadine.
@@ -1631,11 +1637,10 @@
       </div>
       <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
         <div>
-          <div class="flex items-baseline justify-between gap-4 mb-2">
-            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+          <div class="mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white">
               <span data-i18n="cocktail_bob_marley_title">Bob Marley</span>
             </h4>
-            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">14 $</span>
           </div>
           <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="cocktail_bob_marley_desc">
             Jus d'ananas, rhum blanc, gin et sirop fruit de la passion.
@@ -1645,11 +1650,10 @@
       </div>
       <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
         <div>
-          <div class="flex items-baseline justify-between gap-4 mb-2">
-            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+          <div class="mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white">
               <span data-i18n="cocktail_roma_title">Roma</span>
             </h4>
-            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">14 $</span>
           </div>
           <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="cocktail_roma_desc">
             Jus de tomate, jus de citron, vodka et jus de céleri.
@@ -1659,11 +1663,10 @@
       </div>
       <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
         <div>
-          <div class="flex items-baseline justify-between gap-4 mb-2">
-            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+          <div class="mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white">
               <span data-i18n="cocktail_coucher_soleil_title">Coucher du Soleil Marina</span>
             </h4>
-            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">14 $</span>
           </div>
           <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="cocktail_coucher_soleil_desc">
             Lime, vodka, jus de tamarin et grenadine.
@@ -1673,11 +1676,10 @@
       </div>
       <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
         <div>
-          <div class="flex items-baseline justify-between gap-4 mb-2">
-            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+          <div class="mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white">
               <span data-i18n="cocktail_daiquiri_title">Daiquiri Fraise</span>
             </h4>
-            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">14 $</span>
           </div>
           <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="cocktail_daiquiri_desc">
             Fraise, lime, sirop de canne et rhum blanc.
@@ -1687,11 +1689,10 @@
       </div>
       <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
         <div>
-          <div class="flex items-baseline justify-between gap-4 mb-2">
-            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+          <div class="mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white">
               <span data-i18n="cocktail_lagon_title">Lagon Turquoise</span>
             </h4>
-            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">14 $</span>
           </div>
           <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="cocktail_lagon_desc">
             Vodka, limonade et curaçao bleu.
@@ -1701,11 +1702,10 @@
       </div>
       <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
         <div>
-          <div class="flex items-baseline justify-between gap-4 mb-2">
-            <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
+          <div class="mb-2">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white">
               <span data-i18n="cocktail_mojito_title">Mojito</span>
             </h4>
-            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap">14 $</span>
           </div>
           <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="cocktail_mojito_desc">
             Lime, gin, menthe fraîche et boisson citron-lime.
@@ -2311,7 +2311,8 @@
         catering_desc: "Offrez une expérience culinaire mémorable lors de vos mariages, fêtes privées ou dîners d'affaires dans l'Outaouais. Cartes-cadeaux électroniques disponibles, échangeables en salle et pour emporter.",
         gift_card_denominations_label: "Montants des cartes-cadeaux :",
         cave_sec_cocktails: "Cocktails Signature",
-        cave_cocktails_note: "Créations rafraîchissantes préparées minute au bar · 14 $ chacun",
+        cocktails_uniform_label: "Tous nos cocktails signature :",
+        cave_cocktails_note: "Créations rafraîchissantes préparées minute au bar avec ingrédients frais et spiritueux sélectionnés.",
         badge_cocktail_fresh: "Cocktail Signature · Frais & minute",
         cave_sec_cellar: "Vins, Bières & Spiritueux",
         cave_cellar_desc: "Bouteilles, verres et sélections d'importation disponibles sur place en salle. Demandez conseil à votre serveur pour les meilleurs accords mets et vins avec notre cuisine indienne et nos spécialités bistrot.",
@@ -2625,7 +2626,8 @@
         catering_desc: "Treat your guests to an unforgettable culinary experience at your wedding, celebration, or corporate dinner in the Outaouais. Electronic gift cards available, redeemable for dine-in and takeout.",
         gift_card_denominations_label: "Gift card amounts available:",
         cave_sec_cocktails: "Signature Cocktails",
-        cave_cocktails_note: "Refreshing handcrafted cocktails made to order at the bar · 14 $ each",
+        cocktails_uniform_label: "All signature cocktails:",
+        cave_cocktails_note: "Refreshing handcrafted cocktails prepared fresh to order at the bar.",
         badge_cocktail_fresh: "Signature Cocktail · Freshly crafted",
         cave_sec_cellar: "Wines, Beers & Spirits",
         cave_cellar_desc: "Bottles, glasses, and imported selections available on-site in the dining room. Ask your server for expert wine pairings with our Indian cuisine and bistro dishes.",
