@@ -17,6 +17,7 @@ Cependant, votre site web actuel sous Wix (`lecordondorerestaurantbistrot.ca`) f
 | **Pages fantômes indexées dans Google** (`copie-de-buffet-indien`, `copie-de-home`) | Nuit à votre image de marque et à votre référencement local | **Structure SEO propre** sans aucune page dupliquée |
 | **Menus difficiles à lire sur mobile** (nécessitent de zoomer ou de cliquer 6 fois) | Les clients abandonnent avant de commander | **Menu interactif par onglets** (Indien, Familial, Bistro, Enfants, Boissons) |
 | **Exactitude & rigueur du menu** (doublon du *Seekh kebab poulet*, fautes *Scalops and calamary*, *briyani rice*) | Impression de négligence et confusion pour les clients anglophones | **Menu 100% vérifié**, sans doublon, avec orthographe bilingue soignée |
+| **Pages inachevées & rubriques vides** (page `/blog` avec post « Test » vide, `/cave-cordon` sans prix) | Crée des culs-de-sac frustrants pour les visiteurs et affaiblit l'image de marque | **Zéro cul-de-sac** : carte des cocktails signature (14 $), vins et menus complets |
 | **Numéros dispersés & faute dans le courriel** (`cordondor1803@gmail.com` vs `cordondor18103@gmail.com` sur l'accueil) | Risque de courriels de réservation non reçus et perte d'appels | **Boutons 1-clic** : Appel direct (`819 682-5781`), Texto réservations (`819 661-5113`), courriel pro vérifié |
 | **Absence d'un toggle bilingue fluide** | Perte de clientèle anglophone à Aylmer | **Bascule FR / EN instantanée** sur l'ensemble de la page |
 | **Mise en avant insuffisante du Buffet du mardi** | Salle moins remplie en début de semaine | **Bloc vedette dédié au Buffet Indien du mardi soir** et brunchs |
@@ -28,9 +29,10 @@ Notre évaluation détaillée de votre site actuel a mis en lumière plusieurs a
 1. **Lien brisé & absence de combos :** Le lien de navigation *« Menu familiale Emporter »* renvoie vers l'URL fantôme `/copie-de-buffet-indien` qui n'affiche qu'une vieille image d'avis de vacances (`CORDON VACANCES_edited.jpg`) sans aucun texte de menu ni prix.
 2. **Plat en doublon au menu :** Le plat *« Seekh kebab poulet (2 pcs) »* apparaît deux fois sur votre carte en ligne.
 3. **Coquilles d'anglais sur les mets :** Fautes visibles par vos clients anglophones comme *« Scalops and calamary »* (au lieu de *Scallops and calamari*) et *« briyani rice »* (au lieu de *biryani*).
-4. **Faute dans la navigation principale :** Doublon *Home* et *« Acceuil »* (avec faute d'orthographe sur le mot *Accueil*).
-5. **Adresses courriel contradictoires :** `cordondor1803@gmail.com` affiché dans le pied de page contre `cordondor18103@gmail.com` sous la section Réservation (risque direct d'échec de réception).
-6. **Pages fantômes indexées par Google :** Pages de test Wix non supprimées (*copie-de-buffet-indien*, *menus-1*, *copie-de-home*) qui nuisent à votre image et à votre référencement Google.
+4. **Pages inachevées & rubriques vides :** Votre page `/blog` affiche un article fictif « Test » sans aucun texte publié (« Aucun post publié dans cette langue actuellement »), et la page `/cave-cordon` liste des catégories d'alcool sans aucun met ni prix.
+5. **Faute dans la navigation principale :** Doublon *Home* et *« Acceuil »* (avec faute d'orthographe sur le mot *Accueil*).
+6. **Adresses courriel contradictoires :** `cordondor1803@gmail.com` affiché dans le pied de page contre `cordondor18103@gmail.com` sous la section Réservation (risque direct d'échec de réception).
+7. **Pages fantômes indexées par Google :** Pages de test Wix non supprimées (*copie-de-buffet-indien*, *menus-1*, *copie-de-home*) qui nuisent à votre image et à votre référencement Google.
 
 ---
 
