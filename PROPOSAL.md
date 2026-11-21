@@ -52,6 +52,12 @@ Cependant, votre site web actuel sous Wix (`lecordondorerestaurantbistrot.ca`) f
 
 ---
 
-### 4. Coordonnées de Présentation
-- **Site de démonstration :** https://lecordondore.jopism.com  
-- **Contact pour la mise en ligne :** Jopism Digital Solutions  
+### 4. Coordonnées & Prochaines Étapes
+- **Présenté par :** Jonathan Pankratz
+- **Organisation :** Jopism Solutions Numériques
+- **Courriel :** info@jopism.com
+- **Site web :** [digital.jopism.com](https://digital.jopism.com)
+- **Site de démonstration :** [lecordondore.jopism.com](https://lecordondore.jopism.com)
+
+**Offre sans engagement :** Je suis disponible pour une courte présentation de 10 minutes (en personne dans votre restaurant à Aylmer ou par appel vidéo) afin de vous montrer le fonctionnement en direct sur votre téléphone et répondre à toutes vos questions.
+
