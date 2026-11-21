@@ -1,102 +1,110 @@
-# Proposition de Refonte de Site Web
-## Restaurant-Bistrot Le Cordon Doré
-**58, rue Principale, Gatineau (Vieux-Aylmer)**  
-*Démonstration interactive en ligne :* **[lecordondore.jopism.com](https://lecordondore.jopism.com)**  
-*Date de présentation : Novembre 2026*
+# Un nouveau site web pour Le Cordon Doré
+**Proposition préparée pour Le Cordon Doré Restaurant-Bistrot · 58, rue Principale, Gatineau (Vieux-Aylmer)**  
+*Par Jonathan Pankratz, Jopism Solutions Numériques · Novembre 2026*  
+*Démonstration en ligne :* **[lecordondore.jopism.com](https://lecordondore.jopism.com)**  
 
 ---
 
-### 1. Contexte & Diagnostic du Site Actuel
-Le restaurant **Le Cordon Doré** propose une expérience culinaire rare et recherchée à Aylmer : la rencontre entre les techniques d'un chef formé à Paris (25 ans d'expérience), les saveurs authentiques de l'Inde et des **viandes 100 % certifiées Halal**.
+### En bref
+Votre cuisine soignée, votre chef formé à Paris et votre buffet du mardi méritent un site qui donne envie de réserver en quelques secondes. J’ai préparé une **démonstration fonctionnelle** que vous pouvez essayer dès maintenant sur votre téléphone : **[lecordondore.jopism.com](https://lecordondore.jopism.com)**.
 
-Cependant, votre site web actuel sous Wix (`lecordondorerestaurantbistrot.ca`) freine votre acquisition de nouveaux clients :
-
-| Problème Actuel sur Wix | Impact sur vos Ventes | Solution dans le Nouveau Site |
-| :--- | :--- | :--- |
-| **13 liens encombrés** avec doublon et faute d'orthographe (`Home` et `Acceuil` au lieu d'`Accueil`) | Les clients sur téléphone sont confus et quittent le site | **Menu épuré en 5 sections clés**, accessible en 1 clic |
-| **Pages fantômes indexées dans Google** (`copie-de-buffet-indien`, `copie-de-home`) | Nuit à votre image de marque et à votre référencement local | **Structure SEO propre** sans aucune page dupliquée |
-| **Menus difficiles à lire sur mobile** (nécessitent de zoomer ou de cliquer 6 fois) | Les clients abandonnent avant de commander | **Menu interactif par onglets** (Indien, Familial, Bistro, Enfants, Boissons) |
-| **Exactitude & rigueur du menu** (doublon du *Seekh kebab poulet*, fautes *Scalops and calamary*, *briyani rice*) | Impression de négligence et confusion pour les clients anglophones | **Menu 100% vérifié**, sans doublon, avec orthographe bilingue soignée |
-| **Pages inachevées & rubriques vides** (page `/blog` avec post « Test » vide, `/cave-cordon` sans prix) | Crée des culs-de-sac frustrants pour les visiteurs et affaiblit l'image de marque | **Zéro cul-de-sac** : carte des cocktails signature (14 $), vins et menus complets |
-| **Numéros dispersés & faute dans le courriel** (`cordondor1803@gmail.com` vs `cordondor18103@gmail.com` sur l'accueil) | Risque de courriels de réservation non reçus et perte d'appels | **Boutons 1-clic** : Appel direct (`819 682-5781`), Texto réservations (`819 661-5113`), courriel pro vérifié |
-| **Absence d'un toggle bilingue fluide** | Perte de clientèle anglophone à Aylmer | **Bascule FR / EN instantanée** sur l'ensemble de la page |
-| **Mise en avant insuffisante du Buffet du mardi** | Salle moins remplie en début de semaine | **Bloc vedette dédié au Buffet Indien du mardi soir** et brunchs |
+* **Ce que je propose :** Un site rapide, bilingue (français par défaut), pensé d’abord pour le mobile, avec des boutons directs pour appeler, texter et trouver le restaurant en 1 clic.
+* **Ce que vous gardez :** Votre nom de domaine officiel, votre contenu et le contrôle complet de votre présence en ligne.
+* **Ce que ça coûte :** La conception, la migration technique et l’hébergement moderne sont offerts (0 $/mois). Mises à jour courantes gratuites pendant 6 mois.
+* **Prochaine étape :** Une présentation décontractée de 10 minutes en personne à Aylmer ou par appel vidéo, sans aucun engagement.
 
 ---
 
-### 2. Audit Éditorial : Coquilles & Incohérences Relevées sur le Site Wix
-Notre évaluation détaillée de votre site actuel a mis en lumière plusieurs anomalies concrètes que le nouveau site corrige intégralement :
-1. **Lien brisé & absence de combos :** Le lien de navigation *« Menu familiale Emporter »* renvoie vers l'URL fantôme `/copie-de-buffet-indien` qui n'affiche qu'une vieille image d'avis de vacances (`CORDON VACANCES_edited.jpg`) sans aucun texte de menu ni prix.
-2. **Plat en doublon au menu :** Le plat *« Seekh kebab poulet (2 pcs) »* apparaît deux fois sur votre carte en ligne.
-3. **Coquilles d'anglais sur les mets :** Fautes visibles par vos clients anglophones comme *« Scalops and calamary »* (au lieu de *Scallops and calamari*) et *« briyani rice »* (au lieu de *biryani*).
-4. **Pages inachevées & rubriques vides :** Votre page `/blog` affiche un article fictif « Test » sans aucun texte publié (« Aucun post publié dans cette langue actuellement »), et la page `/cave-cordon` liste des catégories d'alcool sans aucun met ni prix.
-5. **Faute dans la navigation principale :** Doublon *Home* et *« Acceuil »* (avec faute d'orthographe sur le mot *Accueil*).
-6. **Adresses courriel contradictoires :** `cordondor1803@gmail.com` affiché dans le pied de page contre `cordondor18103@gmail.com` sous la section Réservation (risque direct d'échec de réception).
-7. **Pages fantômes indexées par Google :** Pages de test Wix non supprimées (*copie-de-buffet-indien*, *menus-1*, *copie-de-home*) qui nuisent à votre image et à votre référencement Google.
+### 1. Ce que vous faites déjà très bien
+Le Cordon Doré a des atouts que très peu de restaurants peuvent revendiquer dans l'Outaouais :
+* Un **chef formé à Paris avec 25 ans d’expérience** culinaire, alliant techniques françaises de mijotage et secrets d'épices de l'Inde.
+* Une **cuisine indienne et internationale soignée** : 44 spécialités indiennes, classiques du bistrot, 6 menus enfants et options véganes/sans gluten.
+* Des **viandes 100 % certifiées Halal**, un gage de qualité très recherché par la clientèle de Gatineau et d'Ottawa.
+* Le **Grand Buffet Indien du mardi soir**, une formule à volonté réputée.
+* Une adresse bien ancrée au cœur du Vieux-Aylmer avec une solide note de **4,7 ★ sur Google** (plus de 180 avis).
+
+Le site web doit être le reflet fidèle de ce savoir-faire, surtout pour le client qui vous cherche sur son téléphone et décide où manger en moins de 3 secondes.
 
 ---
 
-### 3. Les Piliers de la Nouvelle Version (`lecordondore.jopism.com`)
+### 2. Ce que j’ai remarqué sur le site actuel (et ce qu'on améliore)
+*« Rien de grave : ce sont des détails fréquents sur les sites qui se construisent au fil des années. Mais ils ont un effet réel sur un visiteur pressé. »*
 
-1. **Expérience Mobile-First Ultra-Rapide (< 1 seconde)**  
-   Plus de 80 % des clients de restaurant cherchent un menu sur leur téléphone intelligent. La nouvelle page se charge instantanément, sans lenteurs de constructeur.
+1. **Navigation chargée & doublon avec faute**  
+   *Actuel :* Treize liens dans le menu, dont un doublon avec faute d'orthographe (« Home » et « Acceuil » au lieu d'« Accueil »), et un titre de page en anglais (« Home | Le Cordon Doré… ») sur un site francophone.  
+   *→ Nouvelle version :* Cinq sections claires, un bouton d’appel 1-clic toujours visible et une bascule bilingue instantanée (FR / EN).
 
-2. **Génération Directe de Commandes & Réservations**  
-   - Bouton d'appel flottant ou épinglé en permanence : un client a faim, clique, et commande en 3 secondes.  
-   - Encourage les commandes directes à emporter pour réduire votre dépendance aux commissions de 30% des applications de livraison tierces (comme DoorDash).  
-   - Distinction claire entre les commandes téléphoniques et les réservations rapides par texto (`819 661-5113`).
+2. **Coordonnées qui se contredisent**  
+   *Actuel :* Deux adresses courriel différentes (`cordondor1803@gmail.com` vs `cordondor18103@gmail.com` sous Réservation) et trois numéros de téléphone éparpillés.  
+   *→ Nouvelle version :* Un rôle clair par canal (appeler pour commander au 819 682-5781, texter pour réserver au 819 661-5113, et un courriel vérifié pour le traiteur).
 
-3. **Mise en Valeur des Forces Uniques**  
-   - Badge de confiance en tête de page : **Viandes 100 % Halal**, **4.7 ★ Google (180+ avis)**, **Parcours du Chef formé à Paris**.  
-   - Spécialités les plus rentables mises en avant : **Poulet au beurre**, **Agneau mijoté Rogan Josh**, **Combos familiaux à emporter** et **Buffet à volonté du mardi**.
+3. **Petites erreurs et doublons dans le menu**  
+   *Actuel :* Le *Seekh kebab de poulet* apparaît deux fois dans les entrées, et on trouve des coquilles visibles comme « Scalops and calamary » et « briyani rice » dans les descriptions anglaises.  
+   *→ Nouvelle version :* 44 plats indiens et 20 spécialités bistrot relus, sans doublon, avec orthographe bilingue soignée et validée avec le chef.
 
-4. **Service Traiteur & Cartes-Cadeaux**  
-   Un espace dédié pour capter les contrats à forte marge pour les événements privés, réceptions et mariages dans l'Outaouais.
+4. **Menu familial introuvable**  
+   *Actuel :* Le lien « Menu familiale Emporter » renvoie vers l'adresse `/copie-de-buffet-indien` qui n’affiche qu'une vieille image d'avis de vacances (`CORDON VACANCES`) sans aucun plat ni prix.  
+   *→ Nouvelle version :* Un onglet dédié aux festins familiaux (pour 2 personnes et 4 à 5 personnes), avec compositions et tarifs transparents.
 
-5. **Bilinguisme Parfait (Français & Anglais)**  
-   Un simple bouton permet aux résidents d'Aylmer, de Gatineau et d'Ottawa de consulter l'ensemble des plats et descriptions dans leur langue de préférence.
+5. **Pages inachevées & pages fantômes**  
+   *Actuel :* Le blogue ne contient qu’un article vide intitulé « Test » (« Aucun post publié dans cette langue »), et plusieurs pages de test Wix (« copie-de-... ») sont indexées sur Google.  
+   *→ Nouvelle version :* Architecture monopage moderne sans cul-de-sac, avec redirection automatique des anciennes adresses pour préserver votre référencement.
 
----
-
-### 4. Portrait Financier : Frais Actuels vs Nouvelle Approche
-
-1. **Commissions des applications de livraison tierces (comme DoorDash) :**
-   - Au Canada, les plateformes prélèvent généralement de **20 % à 30 % sur les livraisons** et de **8 % à 15 % sur les commandes à emporter**.
-   - Sur une commande moyenne de 40 $, cela représente **8 $ à 12 $ de marge nette perdue** pour votre restaurant.
-2. **Frais actuels d'hébergement Wix au Canada :**
-   - L'abonnement annuel Wix oscille entre **250 $ et 530 $+ CAD par an** pour maintenir le site actuel.
-3. **Risque commercial sur les réservations :**
-   - Les deux adresses Gmail divergentes affichées sur votre page d'accueil (`cordondor1803@gmail.com` vs `cordondor18103@gmail.com`) risquent de faire rebondir des courriels et de vous faire perdre des réservations de groupes.
-4. **Nouvelle approche : Hébergement moderne à 0 $ / mois :**
-   - Grâce à une infrastructure web moderne et légère, vos frais d'hébergement tombent à **0 $/mois**.
-   - Vous conservez uniquement le renouvellement annuel de base de votre nom de domaine `.ca` (~15 $ à 25 $/an).
-5. **Mon offre clé en main gratuite :**
-   - Je prends en charge **gratuitement** la conception du site, la migration et le transfert de `lecordondorerestaurantbistrot.ca` avec **zéro interruption de service**.
-   - **Maintenance continue incluse :** Mise à jour de vos prix, ajout de plats saisonniers et ajustement des horaires de fêtes ou de buffet sans aucun tracas technique pour vous.
-6. **Option Phase 2 : Commande en ligne DoorDash Storefront (0 $/mois, 0 % de commission) :**
-   - **0 $ de frais mensuels & 0 % de commission marketplace :** Seuls les frais bancaires de carte s'appliquent.
-   - **Zéro friction pour Le Cordon Doré :** Vous êtes déjà sur DoorDash ! Les commandes passées sur votre site web se synchronisent avec votre menu et sonnent sur la même tablette que vous avez déjà au comptoir sans changer vos habitudes.
-   - **Livraison par Dashers :** Les livreurs DoorDash assurent la livraison sans que vous ayez à payer la commission de 20 % à 29 %.
-7. **Redirection courriel professionnel gratuit (optionnel) :**
-   - Configuration gratuite d'une adresse `info@lecordondore.ca` redirigée vers votre boîte de réception (mise à niveau professionnelle pour remplacer les adresses Gmail actuelles).
+6. **Carte des boissons incomplète**  
+   *Actuel :* Les 7 cocktails sont affichés à 14 $, mais les rubriques vins, bières et spiritueux ne montrent aucun article ni tarif.  
+   *→ Nouvelle version :* Bannière mettant en valeur les cocktails signatures à 14 $ et grille des 8 catégories de la cave à compléter selon vos sélections.
 
 ---
 
-### 5. Plan de Déploiement Simple & Sans Interruption
-
-1. **Validation du Design :** Vous testez la version de démonstration sur **[lecordondore.jopism.com](https://lecordondore.jopism.com)** depuis votre téléphone et votre ordinateur.
-2. **Ajustements des Menus & Tarifs :** Nous mettons à jour les prix ou plats saisonniers selon vos instructions.
-3. **Bascule vers votre Domaine :** Nous connectons directement le nouveau site à votre nom de domaine officiel `lecordondorerestaurantbistrot.ca` en moins de 2 heures, sans interruption de service pour vos clients.
-4. **Économie Mensuelle :** Réduction ou élimination des abonnements Wix mensuels coûteux grâce à un hébergement moderne, sécurisé et rapide.
+### 3. Ce que contient la nouvelle version
+* **Le mobile d’abord :** Boutons pour appeler (819 682-5781), texter pour réserver (819 661-5113) et ouvrir l’itinéraire Google Maps. Heures d’ouverture visibles dès l’accueil.
+* **Le buffet du mardi en vedette :** Un bloc dédié avec l’horaire (17h–20h30) et la réservation, plus un renvoi direct vers votre page Facebook officielle pour les brunchs spéciaux du week-end.
+* **Des menus complets & bilingues :** 44 plats indiens, 20 spécialités bistro, 6 menus enfants, desserts et cocktails, avec badges clairs (Halal, Végétarien, Sans gluten, piquant).
+* **Traiteur et cartes-cadeaux :** Une section pour recevoir les soumissions (mariages, fêtes privées, corporatif dans l’Outaouais) et afficher les montants disponibles (25 $ à 200 $).
+* **Votre histoire & authenticité :** Le parcours du chef avec sa photo officielle en tenue, ses 25 ans d’art culinaire et des avis Google récents vérifiés.
+* **Visibilité locale renforcée :** Fiche Google alignée avec le site, vitesse de chargement inférieure à 1 seconde et balisage SEO propre pour attirer la clientèle d'Aylmer, Gatineau et Ottawa.
 
 ---
 
-### 6. Coordonnées & Prochaines Étapes
-- **Présenté par :** Jonathan Pankratz
-- **Organisation :** Jopism Solutions Numériques
-- **Courriel :** info@jopism.com
-- **Site web :** [digital.jopism.com](https://digital.jopism.com)
-- **Site de démonstration :** [lecordondore.jopism.com](https://lecordondore.jopism.com)
+### 4. Ce que nous validerons ensemble avant la mise en ligne
+La démonstration est un prototype fonctionnel. Voici ce que je ne publierai jamais sans votre accord préalable :
+* **Menu, prix et allergènes :** Le chef approuve chaque plat, description et mention diététique. Certains textes de présentation de la démo ont été rédigés par moi et doivent être confirmés ou corrigés selon vos recettes.
+* **Combos familiaux :** Les compositions et les prix de la démo sont des exemples à ajuster selon vos formules exactes.
+* **Photos :** Vos vraies photos (le chef, la salle, le buffet, les plats) à la place des images d'illustration.
+* **Avis et note Google :** Uniquement de vrais avis cités fidèlement. La note et le nombre d’avis affichés seront vérifiés le jour de la mise en ligne : *[4,7 ★ · 180+ avis – à valider sur place]*.
+* **Cartes-cadeaux :** Votre site actuel permet d’acheter des cartes-cadeaux numériques de 25 $ à 200 $ en ligne. Nous choisirons ensemble comment continuer à les offrir et comment honorer celles déjà vendues.
+* **Coordonnées et réseaux sociaux :** Votre page Facebook officielle (*cordondorerestaurantbistrot*), votre compte Instagram (*@cordondorerestaurantbistro*), le numéro secondaire 819 682-1977 et l’adresse courriel officielle.
+* **Carte des vins, bières et spiritueux :** À compléter avec vos bouteilles réelles et les prix que vous souhaitez afficher en salle.
 
-**Offre sans engagement :** Je suis disponible pour une courte présentation de 10 minutes (en personne dans votre restaurant à Aylmer ou par appel vidéo) afin de vous montrer le fonctionnement en direct sur votre téléphone et répondre à toutes vos questions.
+---
 
+### 5. Coûts et engagements
+* **Offerts :** Conception complète du site, migration technique, mise en ligne et hébergement moderne haute performance (0 $/mois).
+* **À votre charge :** Uniquement le renouvellement de votre nom de domaine `.ca` auprès de votre registraire habituel, soit habituellement entre 15 $ et 25 $ par année.
+* **Abonnement Wix :** Vous pourrez l’annuler une fois la bascule terminée et vos cartes-cadeaux réglées. Vous économisez ainsi entre 250 $ et 530 $+ CAD par an.
+* **Mises à jour continues :** Durant les 6 premiers mois, les ajustements courants (changement de prix, ajout de plats saisonniers, horaires spéciaux de fêtes ou du buffet) sont pris en charge gratuitement sans frais. Par la suite, nous pourrons convenir ensemble d'un petit forfait d'entretien mensuel très abordable ou de simples mises à jour à l'acte, selon vos besoins réels et sans engagement.
+* **Propriété & Sans engagement :** Votre domaine reste enregistré à votre nom, votre contenu vous appartient à 100 %, et je vous remets sur demande une copie complète du site. Vous êtes libres d'arrêter quand vous le souhaitez.
+
+---
+
+### 6. Option pour plus tard : commander en ligne avec DoorDash
+Puisque vous êtes déjà partenaire de DoorDash, il est possible d’offrir la commande en ligne directement depuis votre propre site web (technologie Storefront) :
+* **Tarification avantageuse :** 0 $/mois et 0 % de commission marketplace sur les commandes provenant de votre site web (seuls les frais bancaires de carte s'appliquent). La livraison par Dashers se facture à tarif fixe par course (environ 6,99 $ à 10,99 $) plutôt qu'en pourcentage de 20 % à 29 %.
+* **Zéro friction en salle :** Les commandes sonnent directement sur la même tablette DoorDash que vous utilisez déjà au comptoir ! Aucune nouvelle habitude à apprendre pour votre personnel.
+* Avant toute décision, nous confirmerons ensemble avec DoorDash les frais exacts et le fonctionnement. L’économie réelle dépend de la part de vos clients qui commanderaient depuis votre site plutôt que depuis l’application.
+
+---
+
+### 7. Plan de déploiement
+1. **Essai de la démo :** Vous la parcourez sur votre téléphone à l'adresse *lecordondore.jopism.com* et notez vos impressions et ajustements souhaités.
+2. **Validation du contenu :** Menu, prix, photos, avis, cartes-cadeaux et coordonnées, selon vos disponibilités (généralement une à deux semaines).
+3. **Mise en ligne sur votre adresse :** Votre site actuel reste en ligne jusqu’à ce que le nouveau soit approuvé. La bascule elle-même prend quelques heures sans aucune coupure.
+4. **Suivi & accompagnement :** Configuration des redirections, fiche Google et petits ajustements durant le premier mois.
+
+---
+
+### Prochaine étape simple
+Je serais très heureux de passer vous voir au restaurant sur la rue Principale à Aylmer (ou lors d'un court appel vidéo) pour vous faire essayer la démonstration directement sur votre propre téléphone et répondre à vos questions, sans aucun engagement.
+
+**Jonathan Pankratz · Jopism Solutions Numériques**  
+Courriel : [info@jopism.com](mailto:info@jopism.com)  |  Web : [digital.jopism.com](https://digital.jopism.com)  |  Démo : [lecordondore.jopism.com](https://lecordondore.jopism.com)  

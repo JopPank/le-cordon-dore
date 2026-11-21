@@ -3,208 +3,428 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proposition de Refonte Web — Le Cordon Doré Restaurant-Bistrot</title>
+  <title>Un nouveau site web pour Le Cordon Doré — Proposition de Refonte</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
     h1, h2, h3, .font-serif { font-family: 'Cinzel', serif; }
-    
     @page {
       size: letter portrait;
-      margin: 8mm 9mm;
+      margin: 12mm 14mm;
     }
-
     @media print {
       .no-print { display: none !important; }
-      html, body {
+      body {
         background: #ffffff !important;
         color: #0f172a !important;
         padding: 0 !important;
-        margin: 0 !important;
         font-size: 10.5px !important;
-        line-height: 1.3 !important;
       }
-      .proposal-container {
-        background: #ffffff !important;
+      .doc-container {
+        box-shadow: none !important;
         border: none !important;
         padding: 0 !important;
-        margin: 0 !important;
-        box-shadow: none !important;
-        color: #0f172a !important;
         max-width: 100% !important;
       }
-      h1 { font-size: 16px !important; color: #0f172a !important; margin-bottom: 2px !important; }
-      h2 { font-size: 12px !important; color: #0f172a !important; margin-bottom: 3px !important; }
-      h3 { font-size: 11px !important; color: #0f172a !important; margin-bottom: 2px !important; }
-      .text-slate-400, .text-slate-500 { color: #475569 !important; }
-      .text-slate-300 { color: #1e293b !important; }
-      .text-white { color: #0f172a !important; }
-      .border-slate-800 { border-color: #cbd5e1 !important; }
-      table { border: 1px solid #cbd5e1 !important; border-collapse: collapse !important; width: 100% !important; }
-      th { background-color: #f1f5f9 !important; color: #0f172a !important; border-bottom: 2px solid #94a3b8 !important; padding: 3px 5px !important; font-size: 9.5px !important; }
-      td { border-bottom: 1px solid #e2e8f0 !important; color: #1e293b !important; padding: 3px 5px !important; font-size: 9px !important; line-height: 1.25 !important; vertical-align: middle !important; }
-      .text-rose-400 { color: #be123c !important; }
-      .text-emerald-400, .text-emerald-300 { color: #047857 !important; }
-      .bg-slate-900 { background: #f8fafc !important; border: 1px solid #cbd5e1 !important; color: #0f172a !important; }
-      .bg-slate-950 { background: #ffffff !important; }
-      .text-amber-400 { color: #b45309 !important; }
-      .print-box { border: 1px solid #cbd5e1 !important; background: #f8fafc !important; padding: 6px 8px !important; border-radius: 6px !important; margin-bottom: 6px !important; }
-      .contact-block { border: 1px solid #cbd5e1 !important; background: #f8fafc !important; padding: 5px 8px !important; border-radius: 6px !important; }
+      .avoid-break {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+      .page-break {
+        page-break-before: always !important;
+        break-before: page !important;
+      }
     }
   </style>
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen p-2 sm:p-5">
+<body class="bg-slate-100 text-slate-900 min-h-screen py-8 px-4 sm:px-8">
 
-  <div class="proposal-container max-w-4xl mx-auto bg-slate-950 border border-amber-500/30 rounded-2xl p-4 sm:p-6 shadow-2xl relative">
+  <!-- Top Action Bar (Screen Only) -->
+  <div class="max-w-4xl mx-auto mb-6 flex justify-between items-center no-print">
+    <a href="index.html" class="text-sm font-semibold text-amber-700 hover:text-amber-800 flex items-center gap-1.5">
+      ← Retour au site de démonstration
+    </a>
+    <div class="flex gap-3">
+      <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-sm shadow-md flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+        </svg>
+        <span>Imprimer / Sauvegarder en PDF</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="doc-container max-w-4xl mx-auto bg-white border border-slate-200 rounded-2xl p-8 sm:p-14 shadow-xl">
     
-    <!-- Header -->
-    <div class="border-b border-slate-800 pb-3 mb-3 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-      <div class="flex items-center gap-3">
-        <img src="logo.png" alt="Logo Le Cordon Doré" class="h-10 w-auto object-contain">
+    <!-- EN-TÊTE OFFICIEL -->
+    <div class="border-b-2 border-amber-600/30 pb-6 mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+      <div class="flex items-center gap-4">
+        <img src="logo.png" alt="Logo Le Cordon Doré" class="h-16 w-auto object-contain">
         <div>
-          <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-400 text-[10px] font-semibold uppercase tracking-wider inline-block mb-1">
-            Fiche Synthèse Exécutive
+          <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-900 font-bold text-xs uppercase tracking-wider inline-block mb-1.5">
+            Proposition Stratégique & Partenariat
           </span>
-          <h1 class="text-lg sm:text-2xl font-bold text-white font-serif">Le Cordon Doré Restaurant-Bistrot</h1>
-          <p class="text-slate-400 text-xs">58, rue Principale, Gatineau (Vieux-Aylmer)</p>
+          <h1 class="font-serif text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
+            Un nouveau site web pour Le Cordon Doré
+          </h1>
+          <p class="text-slate-500 text-xs sm:text-sm mt-0.5">
+            58, rue Principale, Gatineau (Vieux-Aylmer) · Par Jonathan Pankratz (Jopism) · Novembre 2026
+          </p>
         </div>
       </div>
-      <div class="text-left sm:text-right">
-        <a href="https://lecordondore.jopism.com" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-gradient-to-r from-amber-500 to-amber-400 text-slate-950 font-bold text-xs shadow-md">
-          <span>Démo en ligne</span>
-          <span>→</span>
+      <div class="text-left sm:text-right bg-slate-50 border border-slate-200 p-3 rounded-xl shrink-0">
+        <p class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Démonstration en Ligne</p>
+        <a href="https://lecordondore.jopism.com" target="_blank" class="text-amber-700 font-bold text-sm hover:underline block font-mono">
+          lecordondore.jopism.com
         </a>
-        <p class="text-[11px] text-amber-400 font-mono mt-0.5 font-semibold">lecordondore.jopism.com</p>
       </div>
     </div>
 
-    <!-- Diagnostic Comparison Table -->
-    <div class="mb-3">
-      <h2 class="text-xs sm:text-sm font-bold text-white mb-1.5 flex items-center gap-1.5 font-serif">
-        <span class="w-2 h-2 rounded-full bg-amber-400 inline-block"></span>
-        <span>Comparatif : Votre Site Actuel vs La Nouvelle Version</span>
+    <!-- 1. EN BREF -->
+    <section class="mb-8 avoid-break">
+      <div class="p-5 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-slate-800">
+        <h2 class="font-serif text-lg font-bold text-slate-900 mb-2 flex items-center gap-2">
+          <span>✨</span>
+          <span>En bref</span>
+        </h2>
+        <p class="text-slate-700 text-sm leading-relaxed mb-4">
+          Votre cuisine soignée, votre chef formé à Paris et votre buffet du mardi méritent un site qui donne envie de réserver en quelques secondes. J’ai préparé une <strong>démonstration fonctionnelle</strong> que vous pouvez essayer dès maintenant sur votre téléphone à l'adresse <strong>lecordondore.jopism.com</strong>.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div class="p-3 rounded-xl bg-white border border-amber-200">
+            <strong class="text-slate-900 block mb-0.5">Ce que je propose :</strong>
+            <span class="text-slate-600">Un site rapide, bilingue (français par défaut), pensé d’abord pour le mobile, avec des boutons directs pour appeler, texter et trouver le restaurant.</span>
+          </div>
+          <div class="p-3 rounded-xl bg-white border border-amber-200">
+            <strong class="text-slate-900 block mb-0.5">Ce que vous gardez :</strong>
+            <span class="text-slate-600">Votre nom de domaine officiel, l'intégralité de votre contenu et le contrôle absolu de votre présence en ligne.</span>
+          </div>
+          <div class="p-3 rounded-xl bg-white border border-amber-200">
+            <strong class="text-slate-900 block mb-0.5">Ce que ça coûte :</strong>
+            <span class="text-slate-600">La conception, la migration technique et l’hébergement moderne sont offerts (0 $/mois). Mises à jour courantes gratuites pendant 6 mois.</span>
+          </div>
+          <div class="p-3 rounded-xl bg-white border border-amber-200">
+            <strong class="text-slate-900 block mb-0.5">Prochaine étape :</strong>
+            <span class="text-slate-600">Une courte présentation décontractée de 10 minutes en personne à Aylmer ou par appel vidéo, sans aucun engagement.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CE QUE VOUS FAITES DÉJÀ TRÈS BIEN -->
+    <section class="mb-8 avoid-break">
+      <h2 class="font-serif text-base sm:text-lg font-bold text-slate-900 mb-3 pb-1 border-b border-slate-200 flex items-center gap-2">
+        <span class="w-6 h-6 rounded-full bg-amber-600 text-white flex items-center justify-center text-xs font-sans font-bold">1</span>
+        <span>Ce que vous faites déjà très bien</span>
       </h2>
-      <div class="overflow-x-auto">
-        <table class="w-full text-left text-xs border-collapse">
-          <thead>
-            <tr class="border-b border-slate-800 text-slate-400 bg-slate-900/60">
-              <th class="py-1.5 px-2.5 font-semibold w-1/4">Aspect</th>
-              <th class="py-1.5 px-2.5 font-semibold text-rose-400 w-5/12">Site Actuel (Wix)</th>
-              <th class="py-1.5 px-2.5 font-semibold text-emerald-400 w-1/3">Nouvelle Version 2026</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-800/60">
-            <tr>
-              <td class="py-1 px-2.5 font-medium text-slate-300">Navigation Mobile</td>
-              <td class="py-1 px-2.5 text-slate-400">13 liens encombrés avec doublon et faute d'orthographe (<em>Home</em> et <em>Acceuil</em> au lieu d'<em>Accueil</em>)</td>
-              <td class="py-1 px-2.5 text-slate-200 font-semibold text-emerald-300">5 destinations claires + bouton d'appel 1-clic direct</td>
-            </tr>
-            <tr>
-              <td class="py-1 px-2.5 font-medium text-slate-300">Consultation des Menus</td>
-              <td class="py-1 px-2.5 text-slate-400">Menus dispersés; le lien <em>Menu familiale</em> mène à une image d'avis de vacances sans aucun texte de combos</td>
-              <td class="py-1 px-2.5 text-slate-200 font-semibold text-emerald-300">Menus interactifs par onglets fluides avec prix et festins familiaux complets</td>
-            </tr>
-            <tr>
-              <td class="py-1 px-2.5 font-medium text-slate-300">Exactitude du Menu</td>
-              <td class="py-1 px-2.5 text-slate-400">Plat en doublon (<em>Seekh kebab poulet</em> listé 2 fois) et coquilles (<em>Scalops and calamary</em>, <em>briyani rice</em>)</td>
-              <td class="py-1 px-2.5 text-slate-200 font-semibold text-emerald-300">Menu 100% vérifié, bilingue soigné, sans doublon ni faute d'orthographe</td>
-            </tr>
-            <tr>
-              <td class="py-1 px-2.5 font-medium text-slate-300">Pages Inachevées & Vides</td>
-              <td class="py-1 px-2.5 text-slate-400">Page <em>/blog</em> affichant un post « Test » sans article et <em>/cave-cordon</em> avec rubriques sans aucun prix</td>
-              <td class="py-1 px-2.5 text-slate-200 font-semibold text-emerald-300">Zéro cul-de-sac : carte des cocktails signature (14 $) et sélections de vins claires</td>
-            </tr>
-            <tr>
-              <td class="py-1 px-2.5 font-medium text-slate-300">Langues (Bilinguisme)</td>
-              <td class="py-1 px-2.5 text-slate-400">Mélange de textes bilingues sans toggle clair</td>
-              <td class="py-1 px-2.5 text-slate-200 font-semibold text-emerald-300">Bouton FR / EN instantané pour toute la clientèle d'Aylmer & Ottawa</td>
-            </tr>
-            <tr>
-              <td class="py-1 px-2.5 font-medium text-slate-300">Prise de Commande & Contact</td>
-              <td class="py-1 px-2.5 text-slate-400">3 numéros dispersés et faute dans le courriel Gmail (<strong>cordondor1803</strong> vs <strong>cordondor18103</strong>)</td>
-              <td class="py-1 px-2.5 text-slate-200 font-semibold text-emerald-300">Boutons dédiés : Appels (819 682-5781), Texto réservations (819 661-5113) et courriel pro (info@lecordondore.ca)</td>
-            </tr>
-            <tr>
-              <td class="py-1 px-2.5 font-medium text-slate-300">Promotion Événements</td>
-              <td class="py-1 px-2.5 text-slate-400">Affiches images statiques souvent tronquées</td>
-              <td class="py-1 px-2.5 text-slate-200 font-semibold text-emerald-300">Section vedette pour le Buffet Indien du mardi & service traiteur</td>
-            </tr>
-            <tr>
-              <td class="py-1 px-2.5 font-medium text-slate-300">Confiance & Réputation</td>
-              <td class="py-1 px-2.5 text-slate-400">Note Google de 4.7 ★ (180+ avis) et certification Halal peu visibles</td>
-              <td class="py-1 px-2.5 text-slate-200 font-semibold text-emerald-300">Badges Halal, 4.7 ★ Google (180+ avis) et Chef formé à Paris en tête de page</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- COÛTS & TRANSITION SANS RISQUE SUMMARY BOX -->
-    <div class="print-box border border-amber-500/40 bg-slate-900/90 rounded-xl p-3 mb-3 text-xs">
-      <div class="flex items-center justify-between border-b border-slate-800 pb-1.5 mb-2">
-        <h3 class="font-bold text-amber-400 text-xs font-serif uppercase tracking-wider flex items-center gap-1.5">
-          <span>Portrait Financier & Transition Sans Risque</span>
-        </h3>
-        <span class="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded-full font-bold">
-          Hébergement : 0 $ / mois
-        </span>
-      </div>
-      
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-[11px] leading-snug">
-        <div class="border-r border-slate-800/80 pr-2">
-          <p class="font-bold text-rose-400 mb-0.5">Frais Actuels & Commissions</p>
-          <p class="text-slate-300">
-            • Wix : <strong>~250 $ à 530 $+ CAD/an</strong> d'abonnement.<br>
-            • Applications tierces (DoorDash, etc.) : <strong>20% à 30%</strong> sur livraison, <strong>8% à 15%</strong> sur ramassage (<strong>8 $ à 12 $ perdus</strong> sur une commande de 40 $).
-          </p>
-        </div>
-        <div class="border-r border-slate-800/80 pr-2">
-          <p class="font-bold text-emerald-400 mb-0.5">Nouvelle Approche Économique</p>
-          <p class="text-slate-300">
-            • <strong>0 $/mois</strong> d'hébergement moderne.<br>
-            • Vous conservez uniquement votre nom de domaine .ca (~15 $ à 25 $/an).<br>
-            • Incite aux commandes directes par téléphone sans commission.
-          </p>
-        </div>
-        <div>
-          <p class="font-bold text-amber-300 mb-0.5">Offre Gratuite & Phase 2 DoorDash</p>
-          <p class="text-slate-300">
-            • <strong>Gratuit & clé en main :</strong> Conception, migration sans interruption et maintenance continue.<br>
-            • <strong>Phase 2 (Optionnel) :</strong> Commande DoorDash sur votre site à <strong>0 $/mois et 0 % de commission</strong> ! Synchronisé sur votre tablette actuelle, livraison par Dashers sans les 20%–29% de commission.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Closing Contact Block (Jonathan Pankratz) -->
-    <div class="contact-block border border-slate-800 bg-slate-900/90 rounded-xl p-3 text-xs">
-      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1.5 pb-1.5 mb-1.5 border-b border-slate-800">
-        <div>
-          <span class="text-white font-bold">Jonathan Pankratz</span>
-          <span class="text-slate-400 text-[11px]"> · Jopism Solutions Numériques</span>
-        </div>
-        <div class="flex flex-wrap gap-x-3 gap-y-0.5 text-[11px]">
-          <span class="text-slate-300">Courriel : <a href="mailto:info@jopism.com" class="text-amber-400 hover:underline font-semibold">info@jopism.com</a></span>
-          <span class="text-slate-300">Web : <a href="https://digital.jopism.com" target="_blank" class="text-amber-400 hover:underline">digital.jopism.com</a></span>
-          <span class="text-slate-300">Démo : <a href="https://lecordondore.jopism.com" target="_blank" class="text-amber-400 hover:underline font-semibold">lecordondore.jopism.com</a></span>
-        </div>
-      </div>
-      <p class="text-slate-300 text-[10.5px] leading-relaxed">
-        <strong class="text-amber-400">Offre sans engagement :</strong> Disponible pour une courte présentation de 10 minutes (en personne dans votre restaurant à Aylmer ou par appel vidéo) pour vous montrer le fonctionnement en direct sur votre téléphone et répondre à vos questions.
+      <p class="text-slate-700 text-sm leading-relaxed mb-4">
+        Le Cordon Doré a des atouts que très peu de restaurants peuvent revendiquer dans l'Outaouais : un <strong>chef formé à Paris avec 25 ans d’expérience</strong>, une cuisine indienne et internationale soignée, des <strong>viandes 100 % certifiées Halal</strong>, un buffet réputé le mardi soir et une adresse bien ancrée au cœur du Vieux-Aylmer.
       </p>
-    </div>
+      <p class="text-slate-700 text-sm leading-relaxed">
+        Le site web doit être le reflet fidèle de ce savoir-faire, surtout pour le client qui vous cherche sur son téléphone et décide où manger en moins de 3 secondes.
+      </p>
+    </section>
 
-    <!-- Screen-only Print button -->
-    <div class="mt-3 flex justify-between items-center no-print text-xs text-slate-500">
-      <span>Fiche conçue pour impression directe sur 1 page (Format Lettre).</span>
-      <div class="flex gap-2">
-        <button onclick="window.print()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold border border-slate-700">
-          Imprimer (1 page)
-        </button>
-        <a href="index.html" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold">
-          Voir la démo
-        </a>
+    <!-- 3. CE QUE J'AI REMARQUÉ SUR LE SITE ACTUEL -->
+    <section class="mb-8 avoid-break">
+      <h2 class="font-serif text-base sm:text-lg font-bold text-slate-900 mb-2 pb-1 border-b border-slate-200 flex items-center gap-2">
+        <span class="w-6 h-6 rounded-full bg-amber-600 text-white flex items-center justify-center text-xs font-sans font-bold">2</span>
+        <span>Ce que j’ai remarqué sur le site actuel (et ce qu'on améliore)</span>
+      </h2>
+      <p class="text-slate-600 text-xs italic mb-4">
+        « Rien de grave : ce sont des détails fréquents sur les sites qui se construisent au fil des années. Mais ils ont un effet réel sur un visiteur pressé. »
+      </p>
+
+      <div class="space-y-3 text-xs sm:text-sm">
+        
+        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50 flex flex-col gap-1.5">
+          <div class="font-bold text-slate-900 flex items-center justify-between">
+            <span>• Navigation chargée & doublon avec faute</span>
+            <span class="text-[10px] text-rose-600 font-semibold bg-rose-50 px-2 py-0.5 rounded border border-rose-200">Actuel</span>
+          </div>
+          <p class="text-slate-600 text-xs">
+            Treize liens de menu, dont « Home » et « Acceuil » (avec une faute d'orthographe sur <em>Accueil</em>), et un titre de page en anglais (« Home | Le Cordon Doré… ») sur un site francophone.
+          </p>
+          <p class="text-emerald-700 font-semibold text-xs pt-1 border-t border-slate-200">
+            → Nouvelle version : Cinq sections claires, un bouton d’appel 1-clic toujours visible et une bascule bilingue instantanée (FR / EN).
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50 flex flex-col gap-1.5">
+          <div class="font-bold text-slate-900 flex items-center justify-between">
+            <span>• Coordonnées qui se contredisent</span>
+            <span class="text-[10px] text-rose-600 font-semibold bg-rose-50 px-2 py-0.5 rounded border border-rose-200">Actuel</span>
+          </div>
+          <p class="text-slate-600 text-xs">
+            Deux adresses courriel différentes (<em>cordondor1803@gmail.com</em> vs <em>cordondor18103@gmail.com</em> sous Réservation) et trois numéros de téléphone éparpillés.
+          </p>
+          <p class="text-emerald-700 font-semibold text-xs pt-1 border-t border-slate-200">
+            → Nouvelle version : Un rôle clair par canal (appeler pour commander au 819 682-5781, texter pour réserver au 819 661-5113, et un courriel vérifié pour le traiteur).
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50 flex flex-col gap-1.5">
+          <div class="font-bold text-slate-900 flex items-center justify-between">
+            <span>• Petites erreurs et doublons dans le menu</span>
+            <span class="text-[10px] text-rose-600 font-semibold bg-rose-50 px-2 py-0.5 rounded border border-rose-200">Actuel</span>
+          </div>
+          <p class="text-slate-600 text-xs">
+            Le <em>Seekh kebab de poulet</em> apparaît deux fois dans les entrées, et on trouve des coquilles visibles comme « Scalops and calamary » et « briyani rice » dans les descriptions anglaises.
+          </p>
+          <p class="text-emerald-700 font-semibold text-xs pt-1 border-t border-slate-200">
+            → Nouvelle version : 44 plats indiens et 20 spécialités bistrot relus, sans doublon, avec orthographe bilingue soignée et validée avec le chef.
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50 flex flex-col gap-1.5">
+          <div class="font-bold text-slate-900 flex items-center justify-between">
+            <span>• Menu familial introuvable</span>
+            <span class="text-[10px] text-rose-600 font-semibold bg-rose-50 px-2 py-0.5 rounded border border-rose-200">Actuel</span>
+          </div>
+          <p class="text-slate-600 text-xs">
+            Le lien « Menu familiale Emporter » mène vers une page qui n’affiche qu'une vieille image d'avis de vacances sans aucun plat ni prix.
+          </p>
+          <p class="text-emerald-700 font-semibold text-xs pt-1 border-t border-slate-200">
+            → Nouvelle version : Un onglet dédié aux festins familiaux (pour 2 personnes et 4 à 5 personnes), avec compositions et tarifs transparents.
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50 flex flex-col gap-1.5">
+          <div class="font-bold text-slate-900 flex items-center justify-between">
+            <span>• Pages inachevées & pages fantômes</span>
+            <span class="text-[10px] text-rose-600 font-semibold bg-rose-50 px-2 py-0.5 rounded border border-rose-200">Actuel</span>
+          </div>
+          <p class="text-slate-600 text-xs">
+            Le blogue ne contient qu’un article vide intitulé « Test » (« Aucun post publié dans cette langue »), et plusieurs pages de test Wix (« copie-de-... ») sont indexées sur Google.
+          </p>
+          <p class="text-emerald-700 font-semibold text-xs pt-1 border-t border-slate-200">
+            → Nouvelle version : Architecture monopage moderne sans cul-de-sac, avec redirection automatique des anciennes adresses pour préserver votre référencement.
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50 flex flex-col gap-1.5">
+          <div class="font-bold text-slate-900 flex items-center justify-between">
+            <span>• Carte des boissons incomplète</span>
+            <span class="text-[10px] text-rose-600 font-semibold bg-rose-50 px-2 py-0.5 rounded border border-rose-200">Actuel</span>
+          </div>
+          <p class="text-slate-600 text-xs">
+            Les 7 cocktails sont affichés à 14 $, mais les rubriques vins, bières et spiritueux ne montrent aucun article ni tarif.
+          </p>
+          <p class="text-emerald-700 font-semibold text-xs pt-1 border-t border-slate-200">
+            → Nouvelle version : Bannière mettant en valeur les cocktails signatures à 14 $ et grille des 8 catégories de la cave à compléter selon vos sélections.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. CE QUE CONTIENT LA NOUVELLE VERSION -->
+    <section class="mb-8 avoid-break">
+      <h2 class="font-serif text-base sm:text-lg font-bold text-slate-900 mb-3 pb-1 border-b border-slate-200 flex items-center gap-2">
+        <span class="w-6 h-6 rounded-full bg-amber-600 text-white flex items-center justify-center text-xs font-sans font-bold">3</span>
+        <span>Ce que contient la nouvelle version</span>
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+          <strong class="text-slate-900 block mb-1">📱 Le mobile d’abord</strong>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Boutons pour appeler (819 682-5781), texter pour réserver (819 661-5113) et ouvrir l’itinéraire Google Maps. Heures d’ouverture visibles dès l’accueil.
+          </p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+          <strong class="text-slate-900 block mb-1">✨ Le buffet du mardi en vedette</strong>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Un bloc dédié avec l’horaire (17h–20h30) et réservation, plus un renvoi direct vers votre page Facebook officielle pour les brunchs spéciaux du week-end.
+          </p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+          <strong class="text-slate-900 block mb-1">🍛 Des menus complets & bilingues</strong>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            44 plats indiens, 20 spécialités bistro, 6 menus enfants, desserts et cocktails, avec badges clairs (Halal, Végétarien, Sans gluten, piquant).
+          </p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+          <strong class="text-slate-900 block mb-1">🥂 Traiteur et cartes-cadeaux</strong>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Une section pour recevoir les soumissions (mariages, fêtes, corpo dans l’Outaouais) et afficher les montants disponibles (25 $ à 200 $).
+          </p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+          <strong class="text-slate-900 block mb-1">👨‍🍳 Votre histoire & authenticité</strong>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Le parcours du chef avec sa photo officielle en tenue, ses 25 ans d’art culinaire et des avis Google récents vérifiés.
+          </p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+          <strong class="text-slate-900 block mb-1">🚀 Visibilité locale renforcée</strong>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Fiche Google alignée avec le site, vitesse inférieure à 1 seconde et balisage SEO propre pour attirer la clientèle d'Aylmer, Gatineau et Ottawa.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CE QUE NOUS VALIDERONS ENSEMBLE -->
+    <section class="mb-8 avoid-break">
+      <h2 class="font-serif text-base sm:text-lg font-bold text-slate-900 mb-2 pb-1 border-b border-slate-200 flex items-center gap-2">
+        <span class="w-6 h-6 rounded-full bg-amber-600 text-white flex items-center justify-center text-xs font-sans font-bold">4</span>
+        <span>Ce que nous validerons ensemble avant la mise en ligne</span>
+      </h2>
+      <p class="text-slate-600 text-xs mb-4">
+        La démonstration est un prototype fonctionnel. Voici ce que je ne publierai jamais sans votre accord préalable :
+      </p>
+
+      <ul class="space-y-2 text-xs sm:text-sm text-slate-700">
+        <li class="flex items-start gap-2">
+          <span class="text-amber-600 font-bold">✓</span>
+          <span><strong>Menu, prix et allergènes :</strong> Le chef approuve chaque plat, description et mention diététique. Certains textes de présentation de la démo ont été rédigés par moi et doivent être confirmés ou corrigés selon vos recettes.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-amber-600 font-bold">✓</span>
+          <span><strong>Combos familiaux :</strong> Les compositions et les prix de la démo sont des exemples à ajuster selon vos formules exactes.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-amber-600 font-bold">✓</span>
+          <span><strong>Photos :</strong> Vos vraies photos (le chef, la salle, le buffet, les plats) à la place des images d'illustration.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-amber-600 font-bold">✓</span>
+          <span><strong>Avis et note Google :</strong> Uniquement de vrais avis cités fidèlement. La note et le nombre d’avis affichés seront vérifiés le jour de la mise en ligne : <em>[4,7 ★ · 180+ avis – à valider sur place]</em>.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-amber-600 font-bold">✓</span>
+          <span><strong>Cartes-cadeaux :</strong> Votre site actuel permet d’acheter des cartes-cadeaux numériques de 25 $ à 200 $ en ligne. Nous choisirons ensemble comment continuer à les offrir et comment honorer celles déjà vendues.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-amber-600 font-bold">✓</span>
+          <span><strong>Coordonnées et réseaux sociaux :</strong> Votre page Facebook officielle (<em>cordondorerestaurantbistrot</em>), votre compte Instagram (<em>@cordondorerestaurantbistro</em>), le numéro secondaire 819 682-1977 et l’adresse courriel officielle.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-amber-600 font-bold">✓</span>
+          <span><strong>Carte des vins, bières et spiritueux :</strong> À compléter avec vos bouteilles réelles et les prix que vous souhaitez afficher en salle.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 6. COÛTS ET ENGAGEMENTS -->
+    <section class="mb-8 avoid-break">
+      <h2 class="font-serif text-base sm:text-lg font-bold text-slate-900 mb-3 pb-1 border-b border-slate-200 flex items-center gap-2">
+        <span class="w-6 h-6 rounded-full bg-amber-600 text-white flex items-center justify-center text-xs font-sans font-bold">5</span>
+        <span>Coûts et engagements</span>
+      </h2>
+
+      <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 text-xs sm:text-sm">
+        <div class="flex items-start gap-2">
+          <span class="text-emerald-600 font-bold">✓</span>
+          <div>
+            <strong class="text-slate-900">Offerts :</strong>
+            <span class="text-slate-700"> Conception complète du site, migration technique, mise en ligne et hébergement moderne haute performance (0 $/mois).</span>
+          </div>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-amber-600 font-bold">→</span>
+          <div>
+            <strong class="text-slate-900">À votre charge :</strong>
+            <span class="text-slate-700"> Uniquement le renouvellement de votre nom de domaine .ca auprès de votre registraire habituel, soit habituellement entre 15 $ et 25 $ par année.</span>
+          </div>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-emerald-600 font-bold">💰</span>
+          <div>
+            <strong class="text-slate-900">Abonnement Wix :</strong>
+            <span class="text-slate-700"> Vous pourrez l’annuler une fois la bascule terminée et vos cartes-cadeaux réglées. Vous économisez ainsi entre 250 $ et 530 $+ CAD par an.</span>
+          </div>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-amber-600 font-bold">🛠️</span>
+          <div>
+            <strong class="text-slate-900">Mises à jour continues :</strong>
+            <span class="text-slate-700"> Durant les 6 premiers mois, les ajustements courants (changement de prix, ajout de plats saisonniers, horaires spéciaux de fêtes ou du buffet) sont pris en charge gratuitement sans frais. Par la suite, nous pourrons convenir ensemble d'un petit forfait d'entretien mensuel très abordable ou de simples mises à jour à l'acte, selon vos besoins réels et sans engagement.</span>
+          </div>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-slate-900 font-bold">🛡️</span>
+          <div>
+            <strong class="text-slate-900">Propriété & Sans engagement :</strong>
+            <span class="text-slate-700"> Votre domaine reste enregistré à votre nom, votre contenu vous appartient à 100 %, et je vous remets sur demande une copie complète du site. Vous êtes libres d'arrêter quand vous le souhaitez.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. OPTION DOORDASH -->
+    <section class="mb-8 avoid-break">
+      <h2 class="font-serif text-base sm:text-lg font-bold text-slate-900 mb-3 pb-1 border-b border-slate-200 flex items-center gap-2">
+        <span class="w-6 h-6 rounded-full bg-amber-600 text-white flex items-center justify-center text-xs font-sans font-bold">6</span>
+        <span>Option pour plus tard : commander en ligne avec DoorDash</span>
+      </h2>
+
+      <div class="p-5 rounded-2xl bg-amber-50 border border-amber-200 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-3">
+        <p>
+          Puisque vous êtes déjà partenaire de DoorDash, il est possible d’offrir la commande en ligne directement depuis votre propre site web (technologie Storefront).
+        </p>
+        <p>
+          Selon la tarification canadienne publiée par DoorDash, la commande en ligne sur vos propres canaux n’a <strong>ni frais mensuels ni commission de marketplace</strong>, et la livraison par Dashers depuis votre site se facture à <strong>tarif fixe par livraison (environ 6,99 $ à 10,99 $)</strong> plutôt qu’en pourcentage. À titre de comparaison, la commission sur l'application DoorDash est de <strong>20 % à 29 % pour la livraison</strong> et de <strong>8 % à 10 % pour le ramassage</strong> (soit 8 $ à 12 $ perdus sur une commande de 40 $).
+        </p>
+        <p>
+          <strong>Zéro friction en salle :</strong> Les commandes sonnent sur la même tablette DoorDash que vous utilisez déjà au comptoir ! Avant toute décision, nous confirmerons ensemble avec DoorDash les frais exacts et le fonctionnement. L’économie réelle dépend de la part de vos clients qui commanderaient depuis votre site plutôt que depuis l’application.
+        </p>
+      </div>
+    </section>
+
+    <!-- 8. PLAN DE DÉPLOIEMENT -->
+    <section class="mb-8 avoid-break">
+      <h2 class="font-serif text-base sm:text-lg font-bold text-slate-900 mb-3 pb-1 border-b border-slate-200 flex items-center gap-2">
+        <span class="w-6 h-6 rounded-full bg-amber-600 text-white flex items-center justify-center text-xs font-sans font-bold">7</span>
+        <span>Plan de déploiement</span>
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50">
+          <strong class="text-slate-900 block mb-1">1. Essai de la démo</strong>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Vous la parcourez sur votre téléphone à l'adresse <em>lecordondore.jopism.com</em> et notez vos impressions et ajustements souhaités.
+          </p>
+        </div>
+        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50">
+          <strong class="text-slate-900 block mb-1">2. Validation du contenu</strong>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Menu, prix, photos, avis, cartes-cadeaux et coordonnées, selon vos disponibilités (généralement une à deux semaines).
+          </p>
+        </div>
+        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50">
+          <strong class="text-slate-900 block mb-1">3. Mise en ligne sur votre adresse</strong>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Votre site actuel reste en ligne jusqu’à ce que le nouveau soit approuvé. La bascule elle-même prend quelques heures sans aucune coupure.
+          </p>
+        </div>
+        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50">
+          <strong class="text-slate-900 block mb-1">4. Suivi & accompagnement</strong>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Configuration des redirections, fiche Google et petits ajustements durant le premier mois.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. PROCHAINE ÉTAPE -->
+    <div class="border-t-2 border-slate-200 pt-6 avoid-break">
+      <div class="p-5 rounded-2xl bg-slate-900 text-white flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div>
+          <span class="text-xs text-amber-400 font-bold uppercase tracking-wider block mb-1">Prochaine étape simple</span>
+          <h3 class="text-lg font-bold text-white mb-1">Une présentation de 10 minutes, sans aucun engagement.</h3>
+          <p class="text-slate-300 text-xs max-w-xl leading-relaxed">
+            Je serais très heureux de passer vous voir au restaurant sur la rue Principale à Aylmer (ou lors d'un court appel vidéo) pour vous faire essayer la démonstration directement sur votre propre téléphone et répondre à vos questions.
+          </p>
+        </div>
+        <div class="text-left sm:text-right shrink-0">
+          <p class="text-xs text-slate-400">Jonathan Pankratz</p>
+          <p class="text-xs font-bold text-amber-400">Jopism Solutions Numériques</p>
+          <p class="text-xs text-slate-300 font-mono mt-0.5">info@jopism.com</p>
+          <p class="text-xs text-slate-400 font-mono">digital.jopism.com</p>
+        </div>
       </div>
     </div>
 
