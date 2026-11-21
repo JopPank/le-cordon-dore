@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposition de Refonte Web — Le Cordon Doré Restaurant-Bistrot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    h1, h2, h3, .font-serif { font-family: 'Cinzel', serif; }
+    @page {
+      size: letter portrait;
+      margin: 12mm 14mm;
+    }
+    @media print {
+      .no-print { display: none !important; }
+      body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+        padding: 0 !important;
+      }
+      .proposal-container {
+        background: #ffffff !important;
+        border: none !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        color: #0f172a !important;
+        max-width: 100% !important;
+      }
+      h1, h2, h3 { color: #0f172a !important; }
+      .text-slate-400, .text-slate-500 { color: #475569 !important; }
+      .text-slate-300 { color: #1e293b !important; }
+      .text-white { color: #0f172a !important; }
+      .border-slate-800 { border-color: #cbd5e1 !important; }
+      table { border: 1px solid #cbd5e1 !important; border-collapse: collapse !important; }
+      th { background-color: #f8fafc !important; color: #0f172a !important; border-bottom: 2px solid #94a3b8 !important; }
+      td { border-bottom: 1px solid #e2e8f0 !important; color: #1e293b !important; }
+      .text-rose-400 { color: #be123c !important; }
+      .text-emerald-400, .text-emerald-300 { color: #047857 !important; }
+      .bg-slate-900 { background: #f8fafc !important; border-color: #e2e8f0 !important; color: #0f172a !important; }
+      .bg-slate-950 { background: #ffffff !important; }
+      .text-amber-400 { color: #b45309 !important; }
+      .print-box { border: 1px solid #cbd5e1 !important; background: #f8fafc !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen p-4 sm:p-8">
+
+  <div class="proposal-container max-w-4xl mx-auto bg-slate-950 border border-amber-500/30 rounded-2xl p-6 sm:p-10 shadow-2xl relative">
+    
+    <!-- Header -->
+    <div class="border-b border-slate-800 pb-6 mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+      <div>
+        <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-semibold uppercase tracking-wider inline-block mb-2">
+          Proposition Stratégique & Démonstration
+        </span>
+        <h1 class="text-2xl sm:text-4xl font-bold text-white">Le Cordon Doré Restaurant-Bistrot</h1>
+        <p class="text-slate-400 text-sm mt-1">58, rue Principale, Gatineau (Vieux-Aylmer)</p>
+      </div>
+      <div class="text-left sm:text-right">
+        <a href="https://lecordondore.jopism.com" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-400 text-slate-950 font-bold text-sm shadow-md hover:from-amber-400 hover:to-amber-300 transition-all">
+          <span>Voir le site de démo</span>
+          <span>→</span>
+        </a>
+        <p class="text-xs text-slate-400 mt-1 font-mono">lecordondore.jopism.com</p>
+      </div>
+    </div>
+
+    <!-- Diagnostic Comparison Table -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="text-amber-400">⚡</span>
+        <span>Comparatif : Votre Site Actuel vs La Nouvelle Version</span>
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-slate-800 text-slate-400">
+              <th class="py-3 px-4 font-semibold">Aspect</th>
+              <th class="py-3 px-4 font-semibold text-rose-400">Site Actuel (Wix)</th>
+              <th class="py-3 px-4 font-semibold text-emerald-400">Nouvelle Version 2026</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60">
+            <tr>
+              <td class="py-3 px-4 font-medium text-slate-300">Navigation Mobile</td>
+              <td class="py-3 px-4 text-slate-400">13 liens encombrés avec doublons (<code class="text-xs bg-slate-900 px-1 py-0.5 rounded">Home</code> et <code class="text-xs bg-slate-900 px-1 py-0.5 rounded">Acceuil</code>)</td>
+              <td class="py-3 px-4 text-slate-200 font-semibold text-emerald-300">5 destinations claires + bouton d'appel 1-clic direct</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-medium text-slate-300">Consultation des Menus</td>
+              <td class="py-3 px-4 text-slate-400">Menus dispersés sur plusieurs pages, difficile à lire sur téléphone</td>
+              <td class="py-3 px-4 text-slate-200 font-semibold text-emerald-300">Menus interactifs par onglets fluides avec prix et badges clairs</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-medium text-slate-300">Langues (Bilinguisme)</td>
+              <td class="py-3 px-4 text-slate-400">Mélange de textes bilingues sans toggle clair</td>
+              <td class="py-3 px-4 text-slate-200 font-semibold text-emerald-300">Bouton FR / EN instantané pour toute la clientèle d'Aylmer & Ottawa</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-medium text-slate-300">Prise de Commande</td>
+              <td class="py-3 px-4 text-slate-400">3 numéros différents dispersés et courriel Gmail personnel</td>
+              <td class="py-3 px-4 text-slate-200 font-semibold text-emerald-300">Boutons dédiés : Appels (819 682-5781) & Texto réservations (819 661-5113)</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-medium text-slate-300">Promotion Événements</td>
+              <td class="py-3 px-4 text-slate-400">Affiches images statiques souvent tronquées</td>
+              <td class="py-3 px-4 text-slate-200 font-semibold text-emerald-300">Section vedette pour le Buffet Indien du mardi & service traiteur</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-medium text-slate-300">Confiance & Réputation</td>
+              <td class="py-3 px-4 text-slate-400">Les 4.8★ Google et la certification Halal sont peu visibles</td>
+              <td class="py-3 px-4 text-slate-200 font-semibold text-emerald-300">Badges Halal, 4.8★ Google et histoire du Chef formateur à Paris en tête de page</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 4 Key Advantages -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+      <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+        <div class="text-2xl mb-2">📱</div>
+        <h3 class="font-bold text-white text-base mb-1">Pensé d'abord pour les Téléphones</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          Un client affamé qui marche dans le Vieux-Aylmer ou rentre du travail peut consulter le menu et commander en moins de 3 secondes.
+        </p>
+      </div>
+
+      <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+        <div class="text-2xl mb-2">🚀</div>
+        <h3 class="font-bold text-white text-base mb-1">Vitesse de Chargement Éclair</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          Chargement en moins d'une seconde, sans temps d'attente lourd, améliorant directement votre rang dans Google Maps et la recherche locale.
+        </p>
+      </div>
+
+      <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+        <div class="text-2xl mb-2">💰</div>
+        <h3 class="font-bold text-white text-base mb-1">Hausse des Commandes Directes</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          Encouragez les commandes téléphoniques directes à emporter pour réduire votre dépendance aux commissions de 30% d'Uber Eats.
+        </p>
+      </div>
+
+      <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+        <div class="text-2xl mb-2">🛡️</div>
+        <h3 class="font-bold text-white text-base mb-1">Transition Clé en Main & Sans Risque</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          Déplacement de votre nom de domaine existant sans interruption, avec sauvegarde complète de vos informations.
+        </p>
+      </div>
+    </div>
+
+    <!-- Next Steps Footer -->
+    <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <p class="text-xs text-slate-400">Testez le site en direct dès maintenant :</p>
+        <a href="https://lecordondore.jopism.com" target="_blank" class="text-amber-400 hover:underline font-mono text-sm font-semibold">
+          https://lecordondore.jopism.com
+        </a>
+      </div>
+      <div class="flex gap-3 no-print">
+        <button onclick="window.print()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold border border-slate-700">
+          Imprimer cette fiche
+        </button>
+        <a href="index.html" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold">
+          Ouvrir la démo
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

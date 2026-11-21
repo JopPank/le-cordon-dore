@@ -1,0 +1,105 @@
+
+Here is a conversion-focused, mobile-first demo page structure for **Le Cordon Doré Restaurant-Bistrot**, designed to be built quickly in HTML and Tailwind CSS and hosted on a demo subdomain (with zero Jopism branding on the page itself, ready to move straight to `lecordondorerestaurantbistrot.ca`).
+
+---
+
+## 1. Sticky Navigation Bar (Clean & Bilingual)
+
+Replaces their cluttered 13-link menu (which currently duplicates `Home` and `Acceuil` with a typo) with 5 clear destinations:
+
+* **Left:** Le Cordon Doré logo (clean, transparent PNG).
+* **Center Links:** `Menus` | `Buffet & Emporter` | `Traiteur` | `À propos` | `Nous joindre`
+* **Right Actions:**
+* Clean `FR / EN` language toggle.
+* High-contrast primary button: **Commander / Appeler** (links directly to `tel:8196825781` or the ordering section).
+
+
+
+---
+
+## 2. Hero Section (Above the Fold)
+
+A hungry local diner in Aylmer should know what the restaurant serves, where it is, and how to eat there within 3 seconds:
+
+* **Visual:** Full-bleed, warm photo of their signature Indian dishes (butter chicken, braised lamb, naan) with a dark gradient overlay so text stays crisp.
+* **Trust Badge (Top Pill):** `★ 4.8 sur Google · Viandes 100 % certifiées Halal · 58, rue Principale, Aylmer`
+* **Headline (H1):** *Cuisine indienne authentique & bistro au cœur du Vieux-Aylmer*
+* **Subheadline:** *Sur place, buffet indien, menus familiaux à emporter et service traiteur — préparés avec passion.*
+* **Two Clear CTA Buttons:**
+* Primary: **Voir les menus** (scrolls to the tabbed menu)
+* Secondary: **Appeler pour commander** (`819 682-5781`)
+
+
+
+---
+
+## 3. "Comment voulez-vous manger?" — 4-Card Service Strip
+
+Replaces their scattered, duplicate pages (`copie-de-buffet-indien`, separate takeout/delivery pages) with 4 scannable cards in a responsive grid (`grid-cols-1 sm:grid-cols-2 lg:grid-cols-4`):
+
+1. **Menu Indien & International:** *Classiques indiens (poulet au beurre, agneau mijoté) et options bistro pour tous les goûts.*
+2. **Buffet Indien:** *Jours, heures et tarif affichés clairement (sans devoir fouiller).*
+3. **Menu Familial à Emporter:** *Combos pratiques pour les soirs de semaine à Aylmer.*
+4. **Livraison & Commande:** *Un seul point d'entrée clair pour commander sans confusion.*
+
+---
+
+## 4. Interactive Tabbed Menu Preview (No Pinch-to-Zoom PDFs)
+
+Instead of forcing users to click through 6 separate menu pages, use lightweight JavaScript tabs right on the homepage:
+
+* **Tabs:** `Menu Indien` | `Menu Familial` | `Menu International` | `Menu Enfant` | `Cave Cordon`
+* **Content inside each tab:** 4–6 bestselling items per category with short descriptions, dietary tags (`Halal`, `Végétarien`, `Épicé`), and prices—plus a button at the bottom of the active tab to view the full menu if needed.
+* **Quick Note Banner:** Highlight customization (e.g., spice levels, extra sauce options) to show attentiveness to guest preferences.
+
+---
+
+## 5. Social Proof & Story Band
+
+Combines their strongest trust signals in one clean two-column section:
+
+* **Left Column — Le Parcours du Chef & Qualité:**
+* Short 3-sentence intro on the chef's background and commitment to authentic spices and **Halal-certified meats**.
+* Link to read the full story (`Parcours du Chef`).
+
+
+* **Right Column — Ce que disent nos clients d'Aylmer (4.8 ★):**
+* 3 curated review cards highlighting what real guests already praise (authentic flavors, braised lamb & butter chicken, warm service, great options for both spice lovers and milder palates).
+* Direct link to leave or read more Google reviews.
+
+
+
+---
+
+## 6. Catering & Gift Cards Banner (High-Margin Upsell)
+
+A full-width dark/gold accent banner separating the menu from the footer:
+
+* **Headline:** *Service Traiteur & Cartes-Cadeaux*
+* **Copy:** *Événements privés, dîners d'affaires ou cadeaux gourmands dans l'Outaouais.*
+* **Two Buttons:** `Demander une soumission traiteur` (opens a simple form or `mailto:`) and `Acheter une carte-cadeau`.
+
+---
+
+## 7. Simplified Contact, Hours & Map Footer
+
+Fixes the current confusion of three different phone numbers and a Gmail address:
+
+* **Column 1 — Coordonnées claires:**
+* Address: **58, rue Principale, Gatineau (Aylmer), QC** (clickable Google Maps link).
+* **Téléphone (Commandes & Réservations):** `819 682-5781` (1-tap `tel:` link).
+* **Texto seulement:** `819 661-5113` (1-tap `sms:` link, clearly labeled so customers know *when* to use it).
+* **Courriel:** Show a placeholder for a professional domain email (e.g., `info@lecordondore.ca`) as a subtle visual upgrade over `cordondor1803@gmail.com`.
+
+
+* **Column 2 — Heures d'ouverture:** Clean day-by-day table, plus a dedicated notice area for holiday/vacation hours (replacing the awkward `CORDON VACANCES_edited.jpg` banner).
+* **Column 3 — Embedded Google Map & Socials:** Interactive map pin + clean Facebook & Instagram icons.
+
+---
+
+### What Makes This Demo Land Well in a Pitch
+
+* **Visual Palette:** Use deep charcoal/black (`#111827`), warm gold/amber (`#D4AF37` / Tailwind `amber-500`) to echo *Cordon Doré*, and warm cream/white backgrounds—giving it an upscale bistro feel without losing warmth.
+* **Mobile-First Proof:** When you show it to the owner, pull it up on your phone side-by-side with their current site. The difference in navigation, readability, and 1-tap calling will sell the redesign on its own.
+
+Want me to generate the starter `index.html` (HTML + Tailwind CSS) for this demo page so you can drop it straight into VS Code and customize it?

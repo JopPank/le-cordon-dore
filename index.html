@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Cordon Doré | Restaurant-Bistrot Indien & International | Vieux-Aylmer, Gatineau</title>
+  <meta name="description" content="Restaurant-Bistrot Le Cordon Doré à Aylmer. Cuisine indienne authentique, viandes certifiées 100% Halal, buffet indien, plats à emporter et service traiteur. 58 rue Principale, Gatineau.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              goldHover: '#B89728',
+              goldLight: '#F3E5AB',
+              dark: '#0B0F17',
+              charcoal: '#111827',
+              card: '#182030',
+              cream: '#FAF8F5'
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Gold gradients & accents */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA7C11 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-border-gradient {
+      border-image: linear-gradient(to right, #D4AF37, #AA7C11) 1;
+    }
+    .glass-nav {
+      background: rgba(11, 15, 23, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    /* Tab transition */
+    .tab-content {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .tab-content.active {
+      display: grid;
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body class="bg-brand-dark text-slate-200 font-sans antialiased selection:bg-brand-gold selection:text-black">
+
+  <!-- TOP ANNOUNCEMENT BANNER -->
+  <div class="bg-gradient-to-r from-amber-950 via-brand-dark to-amber-950 border-b border-brand-gold/20 py-2 px-4 text-xs sm:text-sm text-center">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-1">
+      <span class="flex items-center gap-1.5 text-amber-300 font-medium">
+        <svg class="w-4 h-4 text-brand-gold" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+        </svg>
+        <span data-i18n="announcement">Buffet indien chaque mardi soir & brunchs spéciaux le week-end !</span>
+      </span>
+      <span class="text-slate-400 hidden md:inline">|</span>
+      <span class="text-slate-300 flex items-center gap-1">
+        <svg class="w-3.5 h-3.5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+        58, rue Principale, Gatineau (Aylmer)
+      </span>
+      <span class="text-slate-400 hidden md:inline">|</span>
+      <a href="tel:8196825781" class="text-brand-gold hover:underline font-semibold flex items-center gap-1">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+        </svg>
+        819 682-5781
+      </a>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-50 glass-nav border-b border-slate-800 transition-all duration-300" id="main-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-full border border-brand-gold/60 flex items-center justify-center bg-brand-charcoal group-hover:border-brand-gold transition-colors shadow-lg shadow-brand-gold/5">
+          <span class="font-serif text-brand-gold text-xl font-bold tracking-wider">CD</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-lg sm:text-xl font-bold tracking-wider text-white group-hover:text-brand-gold transition-colors">
+            LE CORDON DORÉ
+          </span>
+          <span class="text-[10px] sm:text-xs tracking-widest uppercase text-slate-400 font-medium">
+            Restaurant - Bistrot · Aylmer
+          </span>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAV LINKS -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#services" class="hover:text-brand-gold transition-colors" data-i18n="nav_services">Expériences</a>
+        <a href="#menus" class="hover:text-brand-gold transition-colors" data-i18n="nav_menus">Nos Menus</a>
+        <a href="#buffet" class="hover:text-brand-gold transition-colors" data-i18n="nav_buffet">Buffet Indien</a>
+        <a href="#histoire" class="hover:text-brand-gold transition-colors" data-i18n="nav_story">Le Chef & Avis</a>
+        <a href="#traiteur" class="hover:text-brand-gold transition-colors" data-i18n="nav_catering">Traiteur</a>
+        <a href="#contact" class="hover:text-brand-gold transition-colors" data-i18n="nav_contact">Heures & Contact</a>
+      </nav>
+
+      <!-- RIGHT ACTIONS -->
+      <div class="flex items-center gap-3">
+        <!-- Bilingual Switcher -->
+        <button id="lang-toggle" onclick="toggleLanguage()" class="px-2.5 py-1 text-xs font-semibold rounded-md border border-slate-700 bg-slate-900/60 text-slate-300 hover:border-brand-gold hover:text-white transition-all">
+          <span id="lang-label">FR</span> | <span class="text-slate-500 font-normal">EN</span>
+        </button>
+
+        <!-- Direct 1-Tap Call CTA -->
+        <a href="tel:8196825781" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-amber-500 to-brand-gold text-brand-dark font-bold text-sm hover:from-amber-400 hover:to-amber-300 transition-all shadow-md shadow-brand-gold/20 transform hover:-translate-y-0.5">
+          <svg class="w-4 h-4 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          <span data-i18n="nav_cta">Commander / Appeler</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-slate-400 hover:text-white focus:outline-none">
+          <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- MOBILE MENU DROPDOWN -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-800 bg-brand-dark px-4 pt-3 pb-6 space-y-3">
+      <a href="#services" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-brand-gold font-medium" data-i18n="nav_services">Expériences</a>
+      <a href="#menus" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-brand-gold font-medium" data-i18n="nav_menus">Nos Menus</a>
+      <a href="#buffet" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-brand-gold font-medium" data-i18n="nav_buffet">Buffet Indien</a>
+      <a href="#histoire" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-brand-gold font-medium" data-i18n="nav_story">Le Chef & Avis</a>
+      <a href="#traiteur" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-brand-gold font-medium" data-i18n="nav_catering">Traiteur</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-brand-gold font-medium" data-i18n="nav_contact">Heures & Contact</a>
+      <div class="pt-3 border-t border-slate-800 flex flex-col gap-2">
+        <a href="tel:8196825781" class="w-full text-center py-2.5 rounded-lg bg-brand-gold text-brand-dark font-bold text-sm flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          <span data-i18n="nav_cta">Appeler : 819 682-5781</span>
+        </a>
+        <a href="sms:8196615113" class="w-full text-center py-2 rounded-lg border border-slate-700 text-slate-300 text-xs font-medium">
+          <span data-i18n="hero_sms">Texter pour réserver : 819 661-5113</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <!-- Hero Background Image with deep dark overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=2000&q=80" 
+           alt="Cuisine Indienne Savoureuse au Cordon Doré" 
+           class="w-full h-full object-cover object-center filter brightness-[0.32] scale-105 transition-transform duration-1000">
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/60 to-transparent"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.08),transparent_70%)]"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+      
+      <!-- Trust Badge Pill -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-brand-gold/30 text-xs sm:text-sm text-slate-300 mb-6 backdrop-blur-md shadow-lg shadow-black/40">
+        <span class="flex text-amber-400">★★★★★</span>
+        <span class="font-semibold text-white">4.8 sur Google</span>
+        <span class="text-slate-500">•</span>
+        <span class="text-amber-200" data-i18n="hero_pill_halal">Viandes 100% certifiées Halal</span>
+        <span class="text-slate-500 hidden sm:inline">•</span>
+        <span class="text-slate-400 hidden sm:inline">Vieux-Aylmer</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
+        <span data-i18n="hero_title_1">Cuisine Indienne Authentique</span><br>
+        <span class="gold-gradient-text" data-i18n="hero_title_2">& Bistrot Gourmand à Aylmer</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="max-w-2xl mx-auto text-base sm:text-lg text-slate-300 font-normal mb-10 leading-relaxed" data-i18n="hero_subtitle">
+        Savourez les créations parfumées d’un chef formé à Paris cumulant 25 ans de haute gastronomie. Sur place, buffet indien du mardi, menus familiaux à emporter et service traiteur.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#menus" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-brand-gold text-brand-dark font-bold text-base hover:from-amber-400 hover:to-amber-300 transition-all shadow-xl shadow-brand-gold/25 transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+          <svg class="w-5 h-5 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
+          <span data-i18n="hero_btn_menu">Découvrir les Menus</span>
+        </a>
+
+        <a href="tel:8196825781" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-charcoal/90 hover:bg-slate-800 border border-brand-gold/40 hover:border-brand-gold text-white font-semibold text-base transition-all backdrop-blur-sm flex items-center justify-center gap-2">
+          <svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          <span data-i18n="hero_btn_call">Appeler pour commander (819 682-5781)</span>
+        </a>
+      </div>
+
+      <!-- Quick Trust Indicators -->
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto pt-8 border-t border-slate-800/80 text-left">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-amber-500/10 border border-brand-gold/20 flex items-center justify-center text-brand-gold">
+            ✓
+          </div>
+          <div>
+            <p class="text-xs text-slate-400" data-i18n="stat_1_sub">Viandes</p>
+            <p class="text-sm font-semibold text-white" data-i18n="stat_1_title">100% Halal</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-amber-500/10 border border-brand-gold/20 flex items-center justify-center text-brand-gold">
+            ★
+          </div>
+          <div>
+            <p class="text-xs text-slate-400" data-i18n="stat_2_sub">Avis Google</p>
+            <p class="text-sm font-semibold text-white">4.8 / 5 étoiles</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-amber-500/10 border border-brand-gold/20 flex items-center justify-center text-brand-gold">
+            👨‍🍳
+          </div>
+          <div>
+            <p class="text-xs text-slate-400" data-i18n="stat_3_sub">Chef de Paris</p>
+            <p class="text-sm font-semibold text-white" data-i18n="stat_3_title">25 ans d'art</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-amber-500/10 border border-brand-gold/20 flex items-center justify-center text-brand-gold">
+            📍
+          </div>
+          <div>
+            <p class="text-xs text-slate-400" data-i18n="stat_4_sub">Emplacement</p>
+            <p class="text-sm font-semibold text-white">Vieux-Aylmer</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: 4-CARD SERVICE STRIP ("Comment voulez-vous manger ?") -->
+  <section id="services" class="py-20 bg-brand-charcoal/50 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <p class="text-brand-gold text-xs font-bold tracking-widest uppercase mb-2" data-i18n="strip_tag">Expériences Culinaires</p>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-3" data-i18n="strip_title">
+          Comment voulez-vous vous régaler ?
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base" data-i18n="strip_sub">
+          Une cuisine d'exception adaptée à toutes vos envies : sur place dans notre bistrot chaleureux, à partager en famille à la maison ou pour vos événements.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- CARD 1 -->
+        <div class="group relative rounded-2xl bg-brand-card/90 border border-slate-800 hover:border-brand-gold/60 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-gold/5 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+              🍛
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white mb-2" data-i18n="card_1_title">Menu Indien & Bistro</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6" data-i18n="card_1_desc">
+              Poulet au beurre soyeux, agneau mijoté aux épices fines, grillades Tandoori, plats végétariens et classiques bistro pour toute la table.
+            </p>
+          </div>
+          <a href="#menus" class="inline-flex items-center text-brand-gold hover:text-amber-300 font-semibold text-sm gap-1 group-hover:translate-x-1 transition-all">
+            <span data-i18n="card_1_btn">Explorer les plats</span> →
+          </a>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="group relative rounded-2xl bg-brand-card/90 border border-brand-gold/40 hover:border-brand-gold p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-gold/10 flex flex-col justify-between ring-1 ring-brand-gold/20">
+          <div class="absolute -top-3 right-5 px-2.5 py-0.5 rounded-full bg-brand-gold text-brand-dark font-bold text-[10px] uppercase tracking-wider">
+            Populaire
+          </div>
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+              ✨
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white mb-2" data-i18n="card_2_title">Buffet Indien du Mardi</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6" data-i18n="card_2_desc">
+              Chaque mardi soir (17h - 20h30), dégustez à volonté une sélection variée d'entrées croustillantes, caris mijotés, riz parfumé et naans chauds.
+            </p>
+          </div>
+          <a href="#buffet" class="inline-flex items-center text-brand-gold hover:text-amber-300 font-semibold text-sm gap-1 group-hover:translate-x-1 transition-all">
+            <span data-i18n="card_2_btn">Horaires & détails</span> →
+          </a>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="group relative rounded-2xl bg-brand-card/90 border border-slate-800 hover:border-brand-gold/60 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-gold/5 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+              🥡
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white mb-2" data-i18n="card_3_title">Menu Familial à Emporter</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6" data-i18n="card_3_desc">
+              Des festins complets pour 2 à 6 personnes : samossas, plats principaux copieux, riz basmati et naans chauds prêts à emporter en 30 minutes.
+            </p>
+          </div>
+          <a href="tel:8196825781" class="inline-flex items-center text-brand-gold hover:text-amber-300 font-semibold text-sm gap-1 group-hover:translate-x-1 transition-all">
+            <span data-i18n="card_3_btn">Commander pour ce soir</span> →
+          </a>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="group relative rounded-2xl bg-brand-card/90 border border-slate-800 hover:border-brand-gold/60 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-gold/5 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+              🥂
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white mb-2" data-i18n="card_4_title">Traiteur & Événements</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6" data-i18n="card_4_desc">
+              Mariages, réceptions privées et dîners d'entreprise dans l'Outaouais. Menus sur-mesure préparés selon vos préférences et restrictions alimentaires.
+            </p>
+          </div>
+          <a href="#traiteur" class="inline-flex items-center text-brand-gold hover:text-amber-300 font-semibold text-sm gap-1 group-hover:translate-x-1 transition-all">
+            <span data-i18n="card_4_btn">Demander une soumission</span> →
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: INTERACTIVE TABBED MENU PREVIEW (NO PINCH-TO-ZOOM PDF) -->
+  <section id="menus" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="text-brand-gold text-xs font-bold tracking-widest uppercase mb-2 block" data-i18n="menu_tag">Saveurs d'Ici & d'Ailleurs</span>
+      <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mb-4" data-i18n="menu_title">
+        Nos Menus & Spécialités
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base" data-i18n="menu_sub">
+        Chaque plat principal est servi avec riz basmati parfumé, pois chiches et pain naan chaud. Indiquez votre préférence d'épice : doux, moyen ou relevé !
+      </p>
+    </div>
+
+    <!-- TABS SELECTOR -->
+    <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
+      <button onclick="switchTab('tab-indien')" id="btn-tab-indien" class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all border border-brand-gold bg-brand-gold text-brand-dark shadow-lg shadow-brand-gold/15">
+        <span data-i18n="tab_indien">🍛 Menu Indien</span>
+      </button>
+      <button onclick="switchTab('tab-familial')" id="btn-tab-familial" class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all border border-slate-700 bg-brand-charcoal text-slate-300 hover:border-brand-gold/60">
+        <span data-i18n="tab_familial">👨‍👩‍👧‍👦 Combos Familiaux</span>
+      </button>
+      <button onclick="switchTab('tab-bistro')" id="btn-tab-bistro" class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all border border-slate-700 bg-brand-charcoal text-slate-300 hover:border-brand-gold/60">
+        <span data-i18n="tab_bistro">🥩 Bistro & Grillades</span>
+      </button>
+      <button onclick="switchTab('tab-enfant')" id="btn-tab-enfant" class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all border border-slate-700 bg-brand-charcoal text-slate-300 hover:border-brand-gold/60">
+        <span data-i18n="tab_enfant">🧒 Menu Enfant</span>
+      </button>
+      <button onclick="switchTab('tab-cave')" id="btn-tab-cave" class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all border border-slate-700 bg-brand-charcoal text-slate-300 hover:border-brand-gold/60">
+        <span data-i18n="tab_cave">🍷 Cave Cordon & Cocktails</span>
+      </button>
+    </div>
+
+    <!-- TAB 1: MENU INDIEN (ACTIVE) -->
+    <div id="tab-indien" class="tab-content active grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Dish 1 -->
+      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-lg font-bold text-white flex items-center gap-2">
+              <span>Poulet au Beurre / Butter Chicken</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-brand-gold font-sans font-semibold">Coup de cœur</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-lg">29,00 $</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="dish_1_desc">
+            Morceaux de poulet tendres mijotés dans une sauce onctueuse aux tomates crémeuses, beurre fin et épices royales. Servi avec riz basmati, pois chiches et naan.
+          </p>
+        </div>
+        <div class="flex items-center gap-2 text-[11px] text-slate-400">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">100% Halal</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Épice au choix</span>
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium">Riz & Naan inclus</span>
+        </div>
+      </div>
+
+      <!-- Dish 2 -->
+      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-lg font-bold text-white flex items-center gap-2">
+              <span>Agneau Mijoté Rogan Josh</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-brand-gold font-sans font-semibold">Spécialité Chef</span>
+            </h4>
+            <span class="font-serif font-bold text-brand-gold text-lg">31,00 $</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="dish_2_desc">
+            Agneau du Québec mijoté lentement au chaudron avec cardamome, clous de girofle et sauce parfumée au yaourt et safran. Servi avec riz basmati, pois chiches et naan.
+          </p>
+        </div>
+        <div class="flex items-center gap-2 text-[11px] text-slate-400">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">100% Halal</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Sans gluten</span>
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium">Riz & Naan inclus</span>
+        </div>
+      </div>
+
+      <!-- Dish 3 -->
+      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-lg font-bold text-white">Poulet Tandoori Makhani & Miel</h4>
+            <span class="font-serif font-bold text-brand-gold text-lg">29,00 $</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="dish_3_desc">
+            Cuisse de poulet marinée aux épices tandoori, grillée puis nappée d’une douce réduction makhani relevée d'un trait de miel sauvage.
+          </p>
+        </div>
+        <div class="flex items-center gap-2 text-[11px] text-slate-400">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">100% Halal</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Grillade</span>
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium">Riz & Naan inclus</span>
+        </div>
+      </div>
+
+      <!-- Dish 4 -->
+      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-lg font-bold text-white">Paneer Korma / Curry Végétarien</h4>
+            <span class="font-serif font-bold text-brand-gold text-lg">26,00 $</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="dish_4_desc">
+            Fromage indien frais artisanal et poivrons croquants en sauce douce au lait de coco, noix de cajou et herbes fraîches. (Option végane sur demande).
+          </p>
+        </div>
+        <div class="flex items-center gap-2 text-[11px] text-slate-400">
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium">Végétarien</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Sans gluten</span>
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium">Riz & Naan inclus</span>
+        </div>
+      </div>
+
+      <!-- Dish 5 -->
+      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-lg font-bold text-white">6 Petits Samossas Traditionnels</h4>
+            <span class="font-serif font-bold text-brand-gold text-lg">13,00 $</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="dish_5_desc">
+            Chaussons croustillants dorés farcis de pommes de terre aux épices aromatiques, petits pois et menthe fraîche. Servis avec chutney maison au tamarin.
+          </p>
+        </div>
+        <div class="flex items-center gap-2 text-[11px] text-slate-400">
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium">Végane / Végétarien</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Entrée à partager</span>
+        </div>
+      </div>
+
+      <!-- Dish 6 -->
+      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-lg font-bold text-white">Pakoras d’Oignons (Bhaji)</h4>
+            <span class="font-serif font-bold text-brand-gold text-lg">12,00 $</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="dish_6_desc">
+            Beignets d’oignons émincés croustillants en pâte de farine de pois chiches parfumée au cumin et graines de coriandre. Accompagnés de sauces maison.
+          </p>
+        </div>
+        <div class="flex items-center gap-2 text-[11px] text-slate-400">
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium">Sans gluten</span>
+          <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 font-medium">Végane</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TAB 2: COMBOS FAMILIAUX -->
+    <div id="tab-familial" class="tab-content grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <div class="p-6 rounded-2xl bg-brand-card border border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-lg font-bold text-white">Festin d’Aylmer (Pour 2 personnes)</h4>
+            <span class="font-serif font-bold text-brand-gold text-lg">58,00 $</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="combo_1_desc">
+            4 Samossas au choix, 1 grand Poulet au Beurre, 1 Agneau Rogan Josh ou Cari de légumes, 2 grandes portions de riz basmati, 2 pains Naan chauds et sauces chutney.
+          </p>
+        </div>
+        <div class="flex items-center gap-2 text-[11px]">
+          <span class="px-2 py-0.5 rounded bg-amber-500/20 text-brand-gold font-medium">Idéal pour couple</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Économie de 15%</span>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-brand-card border border-brand-gold/40 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-lg font-bold text-white">Grand Festin Familial (4 à 5 personnes)</h4>
+            <span class="font-serif font-bold text-brand-gold text-lg">115,00 $</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="combo_2_desc">
+            Assortiment de 8 Pakoras et Samossas, 2 Poulets au Beurre, 1 Agneau mijoté, 1 Dal Makhani ou Chana Masala, 4 grands riz basmati et 4 pains naan au beurre d'ail.
+          </p>
+        </div>
+        <div class="flex items-center gap-2 text-[11px]">
+          <span class="px-2 py-0.5 rounded bg-amber-500/20 text-brand-gold font-medium">Soirée en famille</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Prêt en 35 min</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TAB 3: BISTRO & GRILLADES -->
+    <div id="tab-bistro" class="tab-content grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-lg font-bold text-white">Seekh Kebab d'Agneau & Poulet</h4>
+            <span class="font-serif font-bold text-brand-gold text-lg">22,00 $</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="bistro_1_desc">
+            Brochettes de viandes hachées assaisonnées aux oignons rouges, coriandre, gingembre et menthe, grillées minute et servies avec salade croquante et sauce yogourt.
+          </p>
+        </div>
+        <div class="flex items-center gap-2 text-[11px]">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">100% Halal</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Haute protéine</span>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-lg font-bold text-white">Bavette de Bœuf Façon Bistrot</h4>
+            <span class="font-serif font-bold text-brand-gold text-lg">28,00 $</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="bistro_2_desc">
+            Inspiration de la formation parisienne du Chef : bavette de bœuf grillée, réduction d'échalotes au poivre vert et pommes de terre dorées aux herbes de Provence.
+          </p>
+        </div>
+        <div class="flex items-center gap-2 text-[11px]">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Inspiration Bistrot</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">100% Halal</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TAB 4: MENU ENFANT -->
+    <div id="tab-enfant" class="tab-content grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-lg font-bold text-white">Menu P'tit Doré — Poulet Doux</h4>
+            <span class="font-serif font-bold text-brand-gold text-lg">12,50 $</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="kid_1_desc">
+            Mini portion de poulet au beurre très doux (zéro piquant) avec riz blanc basmati fondant et demi-naan au beurre chaud. Breuvage inclus.
+          </p>
+        </div>
+        <div class="text-xs text-brand-gold font-medium">Pour les 10 ans et moins</div>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-lg font-bold text-white">Aiguillettes Croustillantes & Frites</h4>
+            <span class="font-serif font-bold text-brand-gold text-lg">11,50 $</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="kid_2_desc">
+            Morceaux de filet de poulet pané maison dorés, servis avec frites fraîches et trempette au choix. Breuvage inclus.
+          </p>
+        </div>
+        <div class="text-xs text-brand-gold font-medium">Pour les 10 ans et moins</div>
+      </div>
+
+    </div>
+
+    <!-- TAB 5: CAVE CORDON & BOISSONS -->
+    <div id="tab-cave" class="tab-content grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-lg font-bold text-white">Lassi Artisanal à la Mangue</h4>
+            <span class="font-serif font-bold text-brand-gold text-lg">6,50 $</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="drink_1_desc">
+            Boisson traditionnelle fouettée au yogourt crémeux, pulpe de mangue Alphonso mûre et une pincée subtile de cardamome verte.
+          </p>
+        </div>
+        <div class="text-xs text-amber-400 font-medium">Sans alcool · Rafraîchissant</div>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-brand-card border border-slate-800 transition-colors flex flex-col justify-between">
+        <div>
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h4 class="font-serif text-lg font-bold text-white">Sélection de Vins & Cocktails Signature</h4>
+            <span class="font-serif font-bold text-brand-gold text-lg">Au verre / Bouteille</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="drink_2_desc">
+            Vins blancs minéraux parfaits avec les épices douces, rouges corsés pour l'agneau mijoté et cocktails créatifs préparés au bar de notre bistrot.
+          </p>
+        </div>
+        <div class="text-xs text-slate-400">Demandez la carte des alcools en salle</div>
+      </div>
+
+    </div>
+
+    <!-- Extra Ordering note -->
+    <div class="mt-12 p-6 rounded-2xl bg-gradient-to-r from-amber-500/10 via-brand-card to-amber-500/10 border border-brand-gold/30 text-center flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="text-left">
+        <h3 class="font-serif text-lg font-bold text-white mb-1" data-i18n="note_call_title">Vous souhaitez personnaliser vos plats ou commander ?</h3>
+        <p class="text-slate-400 text-sm" data-i18n="note_call_desc">Notre chef adapte volontiers les niveaux d'épices, intolérances au gluten et régimes véganes.</p>
+      </div>
+      <a href="tel:8196825781" class="px-6 py-3 rounded-xl bg-brand-gold text-brand-dark font-bold text-sm whitespace-nowrap hover:bg-amber-400 transition-all flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+        </svg>
+        <span data-i18n="note_call_btn">Appeler : 819 682-5781</span>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- SECTION: BUFFET INDIEN SPOTLIGHT -->
+  <section id="buffet" class="py-20 bg-brand-charcoal border-y border-slate-800 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Text details -->
+        <div>
+          <span class="px-3 py-1 rounded-full bg-brand-gold/15 text-brand-gold text-xs font-bold uppercase tracking-widest inline-block mb-4" data-i18n="buffet_badge">
+            Rendez-vous hebdomadaire incontournable
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
+            <span data-i18n="buffet_title_1">Le Grand Buffet Indien</span><br>
+            <span class="gold-gradient-text" data-i18n="buffet_title_2">Tous les Mardis Soirs</span>
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6" data-i18n="buffet_desc">
+            Ne choisissez plus entre vos plats favoris : chaque mardi soir, venez savourer un buffet à volonté composé d'entrées croustillantes, caris mijotés au beurre, viandes grillées, plats végétariens variés, riz basmati et naans chauds sortis du four.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 mb-8">
+            <div class="p-4 rounded-xl bg-brand-card border border-slate-800">
+              <span class="text-xs text-slate-400 block mb-1" data-i18n="buffet_hours_label">Quand ?</span>
+              <span class="font-bold text-white text-sm" data-i18n="buffet_hours_val">Tous les mardis de 17h à 20h30</span>
+            </div>
+            <div class="p-4 rounded-xl bg-brand-card border border-slate-800">
+              <span class="text-xs text-slate-400 block mb-1" data-i18n="buffet_formula_label">Formule</span>
+              <span class="font-bold text-white text-sm" data-i18n="buffet_formula_val">À volonté · 100% Halal</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="tel:8196825781" class="px-6 py-3 rounded-xl bg-brand-gold text-brand-dark font-bold text-sm hover:bg-amber-400 transition-all shadow-lg shadow-brand-gold/20 flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <span data-i18n="buffet_btn_res">Réserver une table par téléphone</span>
+            </a>
+            <a href="sms:8196615113" class="px-4 py-3 rounded-xl border border-slate-700 hover:border-slate-500 text-slate-300 text-sm font-medium">
+              <span data-i18n="buffet_btn_sms">Ou texto : 819 661-5113</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Image visual -->
+        <div class="relative">
+          <div class="aspect-4/3 rounded-2xl overflow-hidden border border-brand-gold/30 shadow-2xl shadow-brand-gold/10">
+            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1200&q=80" 
+                 alt="Buffet Indien au Cordon Doré" 
+                 class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -bottom-5 -left-5 bg-brand-dark/95 border border-brand-gold p-4 rounded-xl shadow-xl backdrop-blur-md hidden sm:block max-w-xs">
+            <p class="text-xs text-brand-gold font-bold uppercase mb-1" data-i18n="buffet_callout_title">Brunchs du Week-end</p>
+            <p class="text-xs text-slate-300" data-i18n="buffet_callout_desc">Suivez notre page Facebook pour les dates de nos grands brunchs spéciaux le samedi et dimanche midi !</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 5: STORY & SOCIAL PROOF -->
+  <section id="histoire" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- CHEF STORY (5 COLS) -->
+      <div class="lg:col-span-5 bg-brand-card rounded-2xl p-8 border border-slate-800 relative">
+        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-brand-gold/30 flex items-center justify-center text-3xl mb-6">
+          👨‍🍳
+        </div>
+        <span class="text-brand-gold text-xs font-bold tracking-widest uppercase mb-2 block" data-i18n="chef_tag">Le Parcours du Chef</span>
+        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-4" data-i18n="chef_title">
+          25 ans d'Art Culinaire de Paris à Aylmer
+        </h3>
+        <p class="text-slate-300 text-sm leading-relaxed mb-4" data-i18n="chef_p1">
+          Le voyage de notre chef a débuté par une rigoureuse formation académique dans la capitale mondiale de la gastronomie : <strong class="text-white">Paris</strong>.
+        </p>
+        <p class="text-slate-300 text-sm leading-relaxed mb-4" data-i18n="chef_p2">
+          Devenu éducateur culinaire, styliste et consultant hôtelier, il conjugue les techniques françaises de mijotage et de réduction avec le secret ancestral des mélanges d'épices de l'Inde du Nord et du Sud.
+        </p>
+        <p class="text-slate-300 text-sm leading-relaxed mb-6" data-i18n="chef_p3">
+          Toutes nos viandes sont rigoureusement <strong class="text-brand-gold">100% certifiées Halal</strong> et préparées dans le respect des traditions.
+        </p>
+        
+        <div class="pt-6 border-t border-slate-800 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-slate-800 border border-brand-gold/40 flex items-center justify-center font-serif text-brand-gold font-bold">
+            CD
+          </div>
+          <div>
+            <p class="text-sm font-bold text-white">Chef & Propriétaire</p>
+            <p class="text-xs text-slate-400">Le Cordon Doré Bistro · Aylmer</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- REVIEWS CARDS (7 COLS) -->
+      <div class="lg:col-span-7 flex flex-col justify-between h-full">
+        <div class="mb-8">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-amber-400 text-lg">★★★★★</span>
+            <span class="text-white font-bold text-lg">4.8 / 5</span>
+            <span class="text-slate-400 text-sm font-normal" data-i18n="reviews_google">(Avis vérifiés sur Google)</span>
+          </div>
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white" data-i18n="reviews_title">
+            Ce que disent nos convives d'Aylmer
+          </h3>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Review 1 -->
+          <div class="p-5 rounded-xl bg-brand-charcoal border border-slate-800 hover:border-slate-700 transition-colors">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-semibold text-white text-sm">Julie M.</span>
+              <span class="text-amber-400 text-xs">★★★★★</span>
+            </div>
+            <p class="text-slate-300 text-sm italic mb-2">
+              « Honnêtement, première visite et certainement pas la dernière ! La nourriture indienne est authentique et succulente. Le service est extrêmement chaleureux. L'agneau mijoté et le poulet au beurre sont divins. »
+            </p>
+            <span class="text-[11px] text-slate-500">Visite en famille · Aylmer</span>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="p-5 rounded-xl bg-brand-charcoal border border-slate-800 hover:border-slate-700 transition-colors">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-semibold text-white text-sm">Marc-André G.</span>
+              <span class="text-amber-400 text-xs">★★★★★</span>
+            </div>
+            <p class="text-slate-300 text-sm italic mb-2">
+              « Ce restaurant vient d’ouvrir sur la rue Principale et c'est une merveilleuse addition pour Aylmer. Mon repas était si savoureux, les naans sortent chauds du four. Très heureux d'avoir enfin de la vraie cuisine indienne ici. »
+            </p>
+            <span class="text-[11px] text-slate-500">Repas sur place · Google</span>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="p-5 rounded-xl bg-brand-charcoal border border-slate-800 hover:border-slate-700 transition-colors">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-semibold text-white text-sm">Sarah D.</span>
+              <span class="text-amber-400 text-xs">★★★★★</span>
+            </div>
+            <p class="text-slate-300 text-sm italic mb-2">
+              « Excellent service ! J’ai appelé à l’avance pour vérifier les options sans gluten et sans allergènes : le chef est venu me parler personnellement et a tout adapté avec gentillesse. Les samosas et pakoras sont incroyables. »
+            </p>
+            <span class="text-[11px] text-slate-500">Commande à emporter</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 6: CATERING & GIFT CARDS BANNER -->
+  <section id="traiteur" class="py-16 bg-gradient-to-r from-amber-950 via-brand-card to-amber-950 border-y border-brand-gold/30 text-center relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+      
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-bold uppercase tracking-wider mb-4">
+        Événements & Cadeaux
+      </div>
+
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-4" data-i18n="catering_title">
+        Service Traiteur & Cartes-Cadeaux
+      </h2>
+
+      <p class="text-slate-300 text-sm sm:text-base mb-8 max-w-2xl mx-auto" data-i18n="catering_desc">
+        Offrez une expérience mémorable à vos invités lors de vos mariages, fêtes privées ou dîners d'entreprise dans l'Outaouais. Commandez également nos cartes-cadeaux gourmandes à offrir.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="mailto:info@lecordondore.ca?subject=Demande%20de%20soumission%20traiteur" class="w-full sm:w-auto px-7 py-3 rounded-xl bg-brand-gold text-brand-dark font-bold text-sm hover:bg-amber-400 transition-all flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          <span data-i18n="catering_btn_quote">Demander une soumission traiteur</span>
+        </a>
+
+        <a href="tel:8196825781" class="w-full sm:w-auto px-7 py-3 rounded-xl border border-brand-gold/50 hover:border-brand-gold text-white font-semibold text-sm transition-all flex items-center justify-center gap-2">
+          <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V4a2 2 0 10-2 2h2"/>
+          </svg>
+          <span data-i18n="catering_btn_gift">Acheter une carte-cadeau</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 7: CONTACT, HOURS & MAP FOOTER -->
+  <footer id="contact" class="bg-brand-dark border-t border-slate-800 pt-20 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 pb-16 border-b border-slate-800">
+        
+        <!-- COL 1: COORDONNÉES CLAIRES -->
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-full border border-brand-gold flex items-center justify-center font-serif text-brand-gold font-bold">
+              CD
+            </div>
+            <div>
+              <h3 class="font-serif text-lg font-bold text-white">LE CORDON DORÉ</h3>
+              <p class="text-xs text-slate-400">Restaurant - Bistrot · Aylmer</p>
+            </div>
+          </div>
+
+          <div class="space-y-4 text-sm text-slate-300">
+            <!-- Address -->
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-brand-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <div>
+                <a href="https://maps.google.com/?q=58+rue+Principale+Gatineau+Aylmer+QC" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors block font-medium">
+                  58, rue Principale<br>
+                  Gatineau (Aylmer), QC J9H 3L5
+                </a>
+                <span class="text-xs text-brand-gold font-medium mt-1 inline-block" data-i18n="footer_map_link">Ouvrir dans Google Maps →</span>
+              </div>
+            </div>
+
+            <!-- Primary Phone -->
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-brand-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <div>
+                <a href="tel:8196825781" class="font-bold text-white hover:text-brand-gold transition-colors text-base">
+                  819 682-5781
+                </a>
+                <span class="text-xs text-slate-400 block" data-i18n="phone_desc">Commandes & Réservations directes</span>
+              </div>
+            </div>
+
+            <!-- SMS Only Phone -->
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-brand-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+              </svg>
+              <div>
+                <a href="sms:8196615113" class="font-semibold text-slate-200 hover:text-brand-gold transition-colors">
+                  819 661-5113
+                </a>
+                <span class="text-xs text-amber-400 block" data-i18n="sms_desc">Textez seulement (réservations rapides)</span>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-brand-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              <div>
+                <a href="mailto:info@lecordondore.ca" class="hover:text-brand-gold transition-colors">
+                  info@lecordondore.ca
+                </a>
+                <span class="text-xs text-slate-500 block">Service traiteur & renseignements</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COL 2: HEURES D'OUVERTURE OFFICIELLES -->
+        <div>
+          <h4 class="font-serif text-lg font-bold text-white mb-6 flex items-center gap-2">
+            <svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span data-i18n="hours_title">Heures d'Ouverture</span>
+          </h4>
+
+          <div class="space-y-2.5 text-sm">
+            <div class="flex justify-between py-1.5 border-b border-slate-800">
+              <span class="text-slate-400" data-i18n="day_tue">Mardi</span>
+              <span class="font-medium text-white">16h00 – 21h00 <span class="text-[11px] text-amber-400 block sm:inline">(Buffet dès 17h)</span></span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b border-slate-800">
+              <span class="text-slate-400" data-i18n="day_wed">Mercredi</span>
+              <span class="font-medium text-white">16h00 – 21h00</span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b border-slate-800">
+              <span class="text-slate-400" data-i18n="day_thu">Jeudi</span>
+              <span class="font-medium text-white">16h00 – 21h00</span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b border-slate-800">
+              <span class="text-slate-400" data-i18n="day_fri">Vendredi</span>
+              <span class="font-medium text-white">16h00 – 21h00</span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b border-slate-800">
+              <span class="text-slate-400" data-i18n="day_sat">Samedi</span>
+              <span class="font-medium text-white">11h30 – 21h00</span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b border-slate-800">
+              <span class="text-slate-400" data-i18n="day_sun">Dimanche</span>
+              <span class="font-medium text-white">11h30 – 20h00</span>
+            </div>
+            <div class="flex justify-between py-1.5">
+              <span class="text-slate-500" data-i18n="day_mon">Lundi</span>
+              <span class="text-slate-500 italic" data-i18n="closed">Fermé</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- COL 3: MAP / LOCATION -->
+        <div>
+          <h4 class="font-serif text-lg font-bold text-white mb-6 flex items-center gap-2">
+            <svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+            </svg>
+            <span data-i18n="location_title">Localisation & Accès</span>
+          </h4>
+          
+          <div class="rounded-xl overflow-hidden border border-slate-800 h-48 w-full bg-slate-900 mb-4">
+            <iframe 
+              title="Carte Le Cordon Doré"
+              class="w-full h-full border-0 filter invert contrast-125"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2799.387910903328!2d-75.85040682333795!3d45.39922263768407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd1fdbd26a27fa1%3A0x6b77242a98f7eef2!2s58%20Rue%20Principale%2C%20Gatineau%2C%20QC%20J9H%203L5!5e0!3m2!1sfr!2sca!4v1710000000000!5m2!1sfr!2sca" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          
+          <p class="text-xs text-slate-400 leading-relaxed" data-i18n="parking_note">
+            Stationnement facile disponible dans la rue Principale et à proximité dans le Vieux-Aylmer.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- COPYRIGHT & SUBTLE CREDITS -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© 2026 Le Cordon Doré Restaurant-Bistrot. <span data-i18n="all_rights">Tous droits réservés.</span></p>
+        <p class="text-slate-600">
+          <span data-i18n="demo_tag">Proposition de site web moderne — Démonstration exclusive</span>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT: TAB SWITCHER & BILINGUAL TOGGLE -->
+  <script>
+    // Tab Switching Logic
+    function switchTab(tabId) {
+      // Hide all tabs
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      // Reset button styles
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-brand-gold', 'text-brand-dark', 'border-brand-gold', 'shadow-lg', 'shadow-brand-gold/15');
+        btn.classList.add('bg-brand-charcoal', 'text-slate-300', 'border-slate-700');
+      });
+      // Show targeted tab
+      const activeTab = document.getElementById(tabId);
+      if (activeTab) {
+        activeTab.classList.add('active');
+      }
+      // Highlight button
+      const activeBtn = document.getElementById('btn-' + tabId);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-brand-charcoal', 'text-slate-300', 'border-slate-700');
+        activeBtn.classList.add('bg-brand-gold', 'text-brand-dark', 'border-brand-gold', 'shadow-lg', 'shadow-brand-gold/15');
+      }
+    }
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Bilingual Data Store
+    const translations = {
+      fr: {
+        announcement: "Buffet indien chaque mardi soir & brunchs spéciaux le week-end !",
+        nav_services: "Expériences",
+        nav_menus: "Nos Menus",
+        nav_buffet: "Buffet Indien",
+        nav_story: "Le Chef & Avis",
+        nav_catering: "Traiteur",
+        nav_contact: "Heures & Contact",
+        nav_cta: "Commander / Appeler",
+        hero_sms: "Texter pour réserver : 819 661-5113",
+        hero_pill_halal: "Viandes 100% certifiées Halal",
+        hero_title_1: "Cuisine Indienne Authentique",
+        hero_title_2: "& Bistrot Gourmand à Aylmer",
+        hero_subtitle: "Savourez les créations parfumées d’un chef formé à Paris cumulant 25 ans de haute gastronomie. Sur place, buffet indien du mardi, menus familiaux à emporter et service traiteur.",
+        hero_btn_menu: "Découvrir les Menus",
+        hero_btn_call: "Appeler pour commander (819 682-5781)",
+        stat_1_sub: "Viandes",
+        stat_1_title: "100% Halal",
+        stat_2_sub: "Avis Google",
+        stat_3_sub: "Chef de Paris",
+        stat_3_title: "25 ans d'art",
+        stat_4_sub: "Emplacement",
+        strip_tag: "Expériences Culinaires",
+        strip_title: "Comment voulez-vous vous régaler ?",
+        strip_sub: "Une cuisine d'exception adaptée à toutes vos envies : sur place dans notre bistrot chaleureux, à partager en famille à la maison ou pour vos événements.",
+        card_1_title: "Menu Indien & Bistro",
+        card_1_desc: "Poulet au beurre soyeux, agneau mijoté aux épices fines, grillades Tandoori, plats végétariens et classiques bistro pour toute la table.",
+        card_1_btn: "Explorer les plats",
+        card_2_title: "Buffet Indien du Mardi",
+        card_2_desc: "Chaque mardi soir (17h - 20h30), dégustez à volonté une sélection variée d'entrées croustillantes, caris mijotés, riz parfumé et naans chauds.",
+        card_2_btn: "Horaires & détails",
+        card_3_title: "Menu Familial à Emporter",
+        card_3_desc: "Des festins complets pour 2 à 6 personnes : samossas, plats principaux copieux, riz basmati et naans chauds prêts à emporter en 30 minutes.",
+        card_3_btn: "Commander pour ce soir",
+        card_4_title: "Traiteur & Événements",
+        card_4_desc: "Mariages, réceptions privées et dîners d'entreprise dans l'Outaouais. Menus sur-mesure préparés selon vos préférences et restrictions alimentaires.",
+        card_4_btn: "Demander une soumission",
+        menu_tag: "Saveurs d'Ici & d'Ailleurs",
+        menu_title: "Nos Menus & Spécialités",
+        menu_sub: "Chaque plat principal est servi avec riz basmati parfumé, pois chiches et pain naan chaud. Indiquez votre préférence d'épice : doux, moyen ou relevé !",
+        tab_indien: "🍛 Menu Indien",
+        tab_familial: "👨‍👩‍👧‍👦 Combos Familiaux",
+        tab_bistro: "🥩 Bistro & Grillades",
+        tab_enfant: "🧒 Menu Enfant",
+        tab_cave: "🍷 Cave Cordon & Cocktails",
+        dish_1_desc: "Morceaux de poulet tendres mijotés dans une sauce onctueuse aux tomates crémeuses, beurre fin et épices royales. Servi avec riz basmati, pois chiches et naan.",
+        dish_2_desc: "Agneau du Québec mijoté lentement au chaudron avec cardamome, clous de girofle et sauce parfumée au yaourt et safran. Servi avec riz basmati, pois chiches et naan.",
+        dish_3_desc: "Cuisse de poulet marinée aux épices tandoori, grillée puis nappée d’une douce réduction makhani relevée d'un trait de miel sauvage.",
+        dish_4_desc: "Fromage indien frais artisanal et poivrons croquants en sauce douce au lait de coco, noix de cajou et herbes fraîches. (Option végane sur demande).",
+        dish_5_desc: "Chaussons croustillants dorés farcis de pommes de terre aux épices aromatiques, petits pois et menthe fraîche. Servis avec chutney maison au tamarin.",
+        dish_6_desc: "Beignets d’oignons émincés croustillants en pâte de farine de pois chiches parfumée au cumin et graines de coriandre. Accompagnés de sauces maison.",
+        combo_1_desc: "4 Samossas au choix, 1 grand Poulet au Beurre, 1 Agneau Rogan Josh ou Cari de légumes, 2 grandes portions de riz basmati, 2 pains Naan chauds et sauces chutney.",
+        combo_2_desc: "Assortiment de 8 Pakoras et Samossas, 2 Poulets au Beurre, 1 Agneau mijoté, 1 Dal Makhani ou Chana Masala, 4 grands riz basmati et 4 pains naan au beurre d'ail.",
+        bistro_1_desc: "Brochettes de viandes hachées assaisonnées aux oignons rouges, coriandre, gingembre et menthe, grillées minute et servies avec salade croquante et sauce yogourt.",
+        bistro_2_desc: "Inspiration de la formation parisienne du Chef : bavette de bœuf grillée, réduction d'échalotes au poivre vert et pommes de terre dorées aux herbes de Provence.",
+        kid_1_desc: "Mini portion de poulet au beurre très doux (zéro piquant) avec riz blanc basmati fondant et demi-naan au beurre chaud. Breuvage inclus.",
+        kid_2_desc: "Morceaux de filet de poulet pané maison dorés, servis avec frites fraîches et trempette au choix. Breuvage inclus.",
+        drink_1_desc: "Boisson traditionnelle fouettée au yogourt crémeux, pulpe de mangue Alphonso mûre et une pincée subtile de cardamome verte.",
+        drink_2_desc: "Vins blancs minéraux parfaits avec les épices douces, rouges corsés pour l'agneau mijoté et cocktails créatifs préparés au bar de notre bistrot.",
+        note_call_title: "Vous souhaitez personnaliser vos plats ou commander ?",
+        note_call_desc: "Notre chef adapte volontiers les niveaux d'épices, intolérances au gluten et régimes véganes.",
+        note_call_btn: "Appeler : 819 682-5781",
+        buffet_badge: "Rendez-vous hebdomadaire incontournable",
+        buffet_title_1: "Le Grand Buffet Indien",
+        buffet_title_2: "Tous les Mardis Soirs",
+        buffet_desc: "Ne choisissez plus entre vos plats favoris : chaque mardi soir, venez savourer un buffet à volonté composé d'entrées croustillantes, caris mijotés au beurre, viandes grillées, plats végétariens variés, riz basmati et naans chauds sortis du four.",
+        buffet_hours_label: "Quand ?",
+        buffet_hours_val: "Tous les mardis de 17h à 20h30",
+        buffet_formula_label: "Formule",
+        buffet_formula_val: "À volonté · 100% Halal",
+        buffet_btn_res: "Réserver une table par téléphone",
+        buffet_btn_sms: "Ou texto : 819 661-5113",
+        buffet_callout_title: "Brunchs du Week-end",
+        buffet_callout_desc: "Suivez notre page Facebook pour les dates de nos grands brunchs spéciaux le samedi et dimanche midi !",
+        chef_tag: "Le Parcours du Chef",
+        chef_title: "25 ans d'Art Culinaire de Paris à Aylmer",
+        chef_p1: "Le voyage de notre chef a débuté par une rigoureuse formation académique dans la capitale mondiale de la gastronomie : Paris.",
+        chef_p2: "Devenu éducateur culinaire, styliste et consultant hôtelier, il conjugue les techniques françaises de mijotage et de réduction avec le secret ancestral des mélanges d'épices de l'Inde.",
+        chef_p3: "Toutes nos viandes sont rigoureusement 100% certifiées Halal et préparées dans le respect des traditions.",
+        reviews_google: "(Avis vérifiés sur Google)",
+        reviews_title: "Ce que disent nos convives d'Aylmer",
+        catering_title: "Service Traiteur & Cartes-Cadeaux",
+        catering_desc: "Offrez une expérience mémorable à vos invités lors de vos mariages, fêtes privées ou dîners d'entreprise dans l'Outaouais. Commandez également nos cartes-cadeaux gourmandes à offrir.",
+        catering_btn_quote: "Demander une soumission traiteur",
+        catering_btn_gift: "Acheter une carte-cadeau",
+        footer_map_link: "Ouvrir dans Google Maps →",
+        phone_desc: "Commandes & Réservations directes",
+        sms_desc: "Textez seulement (réservations rapides)",
+        hours_title: "Heures d'Ouverture",
+        day_tue: "Mardi",
+        day_wed: "Mercredi",
+        day_thu: "Jeudi",
+        day_fri: "Vendredi",
+        day_sat: "Samedi",
+        day_sun: "Dimanche",
+        day_mon: "Lundi",
+        closed: "Fermé",
+        location_title: "Localisation & Accès",
+        parking_note: "Stationnement facile disponible dans la rue Principale et à proximité dans le Vieux-Aylmer.",
+        all_rights: "Tous droits réservés.",
+        demo_tag: "Proposition de site web moderne — Démonstration exclusive"
+      },
+      en: {
+        announcement: "Indian Buffet every Tuesday evening & special weekend brunches!",
+        nav_services: "Experiences",
+        nav_menus: "Our Menus",
+        nav_buffet: "Indian Buffet",
+        nav_story: "Chef & Reviews",
+        nav_catering: "Catering",
+        nav_contact: "Hours & Contact",
+        nav_cta: "Order / Call Now",
+        hero_sms: "Text to reserve: 819 661-5113",
+        hero_pill_halal: "100% Certified Halal Meats",
+        hero_title_1: "Authentic Indian Cuisine",
+        hero_title_2: "& Gourmet Bistro in Aylmer",
+        hero_subtitle: "Experience aromatic creations by a Paris-trained chef with 25 years of culinary expertise. Dine-in, Tuesday night Indian buffet, family takeout combos, and full catering service.",
+        hero_btn_menu: "Explore Menus",
+        hero_btn_call: "Call to Order (819 682-5781)",
+        stat_1_sub: "Meats",
+        stat_1_title: "100% Halal",
+        stat_2_sub: "Google Reviews",
+        stat_3_sub: "Paris-Trained",
+        stat_3_title: "25 yrs mastery",
+        stat_4_sub: "Location",
+        strip_tag: "Culinary Experiences",
+        strip_title: "How Would You Like to Dine?",
+        strip_sub: "Exceptional cuisine tailored to your lifestyle: dine-in at our welcoming bistro, share at home with family, or cater your special events.",
+        card_1_title: "Indian & Bistro Menu",
+        card_1_desc: "Silky butter chicken, slow-cooked spiced lamb, tandoori grills, vegetarian curries, and bistro favorites for the whole table.",
+        card_1_btn: "Explore dishes",
+        card_2_title: "Tuesday Indian Buffet",
+        card_2_desc: "Every Tuesday evening (5:00 PM – 8:30 PM), indulge in an all-you-can-eat feast of crispy appetizers, curries, basmati rice, and hot naans.",
+        card_2_btn: "Hours & details",
+        card_3_title: "Family Takeout Feasts",
+        card_3_desc: "Generous combos for 2 to 6 people: samosas, signature curries, basmati rice, and hot garlic naans packed fresh in 30 minutes.",
+        card_3_btn: "Order for tonight",
+        card_4_title: "Catering & Private Events",
+        card_4_desc: "Weddings, private celebrations, and corporate dinners across the Outaouais. Custom menus designed for your dietary needs.",
+        card_4_btn: "Request a quote",
+        menu_tag: "Flavors From Here & Abroad",
+        menu_title: "Our Menus & Specialties",
+        menu_sub: "Each main dish is served with fragrant basmati rice, chickpeas, and fresh naan bread. Choose your spice level: Mild, Medium, or Spicy!",
+        tab_indien: "🍛 Indian Menu",
+        tab_familial: "👨‍👩‍👧‍👦 Family Combos",
+        tab_bistro: "🥩 Bistro & Grills",
+        tab_enfant: "🧒 Kids Menu",
+        tab_cave: "🍷 Wine & Cocktails",
+        dish_1_desc: "Tender chicken pieces simmered in a silky tomato, rich cream, and royal spice sauce. Served with basmati rice, chickpeas, and naan.",
+        dish_2_desc: "Quebec lamb braised slowly with cardamom, cloves, and a fragrant saffron yogurt gravy. Served with basmati rice, chickpeas, and naan.",
+        dish_3_desc: "Chicken thigh marinated in tandoori spices, flame-grilled and glazed with honey makhani reduction. Served with rice and naan.",
+        dish_4_desc: "Artisanal fresh Indian paneer cheese and crisp peppers in a velvety coconut cashew cream sauce. (Vegan option upon request).",
+        dish_5_desc: "Golden crispy pastries stuffed with spiced potatoes, green peas, and fresh mint. Served with homemade tamarind chutney.",
+        dish_6_desc: "Crispy sliced onion fritters lightly coated in cumin and coriander spiced chickpea batter. Served with signature dips.",
+        combo_1_desc: "4 Choice samosas, 1 large Butter Chicken, 1 Lamb Rogan Josh or Vegetable Curry, 2 large basmati rice, 2 hot Naans, and chutneys.",
+        combo_2_desc: "8 Assorted pakoras and samosas, 2 Butter Chickens, 1 Braised Lamb, 1 Dal Makhani or Chana Masala, 4 large basmati rice, and 4 garlic naans.",
+        bistro_1_desc: "Charbroiled spiced ground lamb and chicken skewers with red onion, coriander, and fresh mint, served with crisp salad and yogurt dip.",
+        bistro_2_desc: "Parisian culinary bistro tribute: grilled steak flank, green peppercorn shallot reduction, and herbed roasted potatoes.",
+        kid_1_desc: "Mild kid-friendly butter chicken (no heat) served with fluffy basmati rice and half butter naan. Beverage included.",
+        kid_2_desc: "Crispy homemade breaded chicken tenders served with golden fries and choice of dip. Beverage included.",
+        drink_1_desc: "Traditional chilled yogurt smoothie blended with ripe Alphonso mango pulp and fragrant green cardamom.",
+        drink_2_desc: "Mineral white wines paired for aromatic spices, robust reds for braised lamb, and signature handcrafted cocktails at our bar.",
+        note_call_title: "Would you like to customize dishes or place an order?",
+        note_call_desc: "Our chef is delighted to customize spice heat, gluten-free requirements, and vegan choices.",
+        note_call_btn: "Call: 819 682-5781",
+        buffet_badge: "Weekly Outaouais Tradition",
+        buffet_title_1: "The Grand Indian Buffet",
+        buffet_title_2: "Every Tuesday Evening",
+        buffet_desc: "No need to pick just one favorite: every Tuesday evening, enjoy an all-you-can-eat spread of crispy starters, rich butter curries, tandoori meats, vegetarian dishes, basmati rice, and fresh hot naans.",
+        buffet_hours_label: "When?",
+        buffet_hours_val: "Every Tuesday from 5:00 PM to 8:30 PM",
+        buffet_formula_label: "Format",
+        buffet_formula_val: "All-you-can-eat · 100% Halal",
+        buffet_btn_res: "Reserve a Table by Phone",
+        buffet_btn_sms: "Or text: 819 661-5113",
+        buffet_callout_title: "Weekend Brunches",
+        buffet_callout_desc: "Follow our Facebook page for dates of our special Saturday and Sunday lunchtime brunch spreads!",
+        chef_tag: "The Chef's Journey",
+        chef_title: "25 Years of Culinary Art from Paris to Aylmer",
+        chef_p1: "Our chef's culinary story began with formal culinary education in the gastronomy capital of the world: Paris.",
+        chef_p2: "Now an accomplished culinary educator, stylist, and hospitality consultant, he blends French braising techniques with authentic Indian spice mastery.",
+        chef_p3: "All meats are rigorously 100% Halal certified and prepared with deep respect for tradition.",
+        reviews_google: "(Verified Google Reviews)",
+        reviews_title: "What Aylmer Diners Are Saying",
+        catering_title: "Catering Service & Gift Cards",
+        catering_desc: "Treat your guests to an unforgettable culinary experience at your wedding, celebration, or corporate dinner in the Outaouais. Gourmet gift cards also available.",
+        catering_btn_quote: "Request a Catering Quote",
+        catering_btn_gift: "Purchase a Gift Card",
+        footer_map_link: "Open in Google Maps →",
+        phone_desc: "Direct Orders & Table Reservations",
+        sms_desc: "Text only (quick reservations)",
+        hours_title: "Opening Hours",
+        day_tue: "Tuesday",
+        day_wed: "Wednesday",
+        day_thu: "Thursday",
+        day_fri: "Friday",
+        day_sat: "Saturday",
+        day_sun: "Sunday",
+        day_mon: "Monday",
+        closed: "Closed",
+        location_title: "Location & Parking",
+        parking_note: "Convenient street parking available right on Principale Street and adjacent streets in Old Aylmer.",
+        all_rights: "All rights reserved.",
+        demo_tag: "Modern Website Proposal — Exclusive Demonstration"
+      }
+    };
+
+    let currentLang = 'fr';
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'fr' ? 'en' : 'fr';
+      const label = document.getElementById('lang-label');
+      if (currentLang === 'fr') {
+        label.parentElement.innerHTML = '<span id="lang-label">FR</span> | <span class="text-slate-500 font-normal">EN</span>';
+      } else {
+        label.parentElement.innerHTML = '<span class="text-slate-500 font-normal">FR</span> | <span id="lang-label">EN</span>';
+      }
+      
+      const dict = translations[currentLang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.textContent = dict[key];
+        }
+      });
+    }
+  </script>
+</body>
+</html>
