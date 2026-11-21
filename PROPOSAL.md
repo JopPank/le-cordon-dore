@@ -59,9 +59,12 @@ Cependant, votre site web actuel sous Wix (`lecordondorerestaurantbistrot.ca`) f
 5. **Mon offre clé en main gratuite :**
    - Je prends en charge **gratuitement** la conception du site, la migration et le transfert de `lecordondorerestaurantbistrot.ca` avec **zéro interruption de service**.
    - **Maintenance continue incluse :** Mise à jour de vos prix, ajout de plats saisonniers et ajustement des horaires de fêtes ou de buffet sans aucun tracas technique pour vous.
-6. **Évolutions futures optionnelles :**
-   - Configuration gratuite d'une redirection courriel professionnelle (ex. `info@lecordondorerestaurantbistrot.ca`).
-   - Intégration future possible d'un système de commande directe en ligne sans commission.
+6. **Option Phase 2 : Commande en ligne DoorDash Storefront (0 $/mois, 0 % de commission) :**
+   - **0 $ de frais mensuels & 0 % de commission marketplace :** Seuls les frais bancaires de carte s'appliquent.
+   - **Zéro friction pour Le Cordon Doré :** Vous êtes déjà sur DoorDash ! Les commandes passées sur votre site web se synchronisent avec votre menu et sonnent sur la même tablette que vous avez déjà au comptoir sans changer vos habitudes.
+   - **Livraison par Dashers :** Les livreurs DoorDash assurent la livraison sans que vous ayez à payer la commission de 20 % à 29 %.
+7. **Redirection courriel professionnel gratuit (optionnel) :**
+   - Configuration gratuite d'une adresse `info@lecordondorerestaurantbistrot.ca` redirigée vers votre boîte de réception.
 
 ---
 

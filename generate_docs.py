@@ -134,9 +134,9 @@ r_fb_c2 = p_fin_box.add_run('• Nouvelle approche économique : ')
 r_fb_c2.bold = True
 p_fin_box.add_run('Hébergement moderne à 0 $/mois. Vous conservez uniquement votre nom de domaine .ca (~15 $–25 $/an). Commandes directes stimulées par téléphone.\n')
 
-r_fb_c3 = p_fin_box.add_run('• Mon offre clé en main gratuite : ')
+r_fb_c3 = p_fin_box.add_run('• Mon offre gratuite & Phase 2 DoorDash : ')
 r_fb_c3.bold = True
-p_fin_box.add_run('Conception, migration et transfert de domaine entièrement gratuits avec zéro interruption. Maintenance continue incluse (prix, plats saisonniers, buffet/fêtes).')
+p_fin_box.add_run('Conception, migration et maintenance continue gratuites avec zéro interruption. Option Phase 2 : Commande en ligne DoorDash sur votre site à 0 $/mois et 0 % de commission marketplace, synchronisée sur votre tablette actuelle au comptoir avec livraison par Dashers sans les 20%–29% de commission.')
 
 add_contact_block(doc_sum)
 doc_sum.save(r'C:\Users\joppa\Desktop\Documents\GitHub\Le Cordon Doré\Proposition-Sommaire-Comparatif.docx')
@@ -254,7 +254,8 @@ fin_points = [
     ('Risque commercial sur les réservations', 'Deux adresses Gmail divergentes sont actuellement affichées sur votre page d\'accueil (cordondor1803@gmail.com vs cordondor18103@gmail.com), risquant de vous faire perdre des réservations par courriel.'),
     ('Nouvelle approche : Hébergement moderne à 0 $ / mois', 'En migrant vers une architecture web statique ultra-performante, vos frais mensuels d\'hébergement passent à 0 $. Vous ne conservez que le coût de base annuel de votre nom de domaine .ca (~15 $ à 25 $/an).'),
     ('Mon offre clé en main gratuite', 'Je réalise gratuitement la conception du nouveau site, la migration technique et le transfert de lecordondorerestaurantbistrot.ca avec zéro interruption de service pour vos clients, tout en assurant la maintenance continue (mise à jour des prix, menus de saison, horaires du buffet/fêtes).'),
-    ('Options d\'évolution futures (optionnelles)', 'Possibilité d\'ajouter gratuitement une redirection de courriel professionnel (info@lecordondorerestaurantbistrot.ca) ou d\'intégrer plus tard un système de commande directe en ligne sans commission.')
+    ('Option Phase 2 : Commande en ligne DoorDash Storefront (0 $/mois, 0 % de commission)', '0 $ de frais mensuels et 0 % de commission marketplace sur les commandes passées depuis votre site web (seuls les frais bancaires de carte s\'appliquent). Zéro friction pour Le Cordon Doré : vous êtes déjà sur DoorDash, donc les commandes se synchronisent automatiquement avec votre menu existant et sonnent directement sur la même tablette que vous avez déjà au comptoir ! Les Dashers assurent la livraison à domicile sans la commission de 20 % à 29 %.'),
+    ('Redirection de courriel professionnel gratuit (optionnel)', 'Possibilité d\'ajouter sans frais une redirection de courriel professionnel (info@lecordondorerestaurantbistrot.ca) pour professionnaliser vos échanges traiteur et réservations.')
 ]
 
 for title, desc in fin_points:
