@@ -47,7 +47,7 @@ Notre évaluation détaillée de votre site actuel a mis en lumière plusieurs a
    - Distinction claire entre les commandes téléphoniques et les réservations rapides par texto (`819 661-5113`).
 
 3. **Mise en Valeur des Forces Uniques**  
-   - Badge de confiance en tête de page : **Viandes 100 % Halal**, **4.8★ Google**, **Parcours du Chef formé à Paris**.  
+   - Badge de confiance en tête de page : **Viandes 100 % Halal**, **4.7 ★ Google (180+ avis)**, **Parcours du Chef formé à Paris**.  
    - Spécialités les plus rentables mises en avant : **Poulet au beurre**, **Agneau mijoté Rogan Josh**, **Combos familiaux à emporter** et **Buffet à volonté du mardi**.
 
 4. **Service Traiteur & Cartes-Cadeaux**  
@@ -78,7 +78,7 @@ Notre évaluation détaillée de votre site actuel a mis en lumière plusieurs a
    - **Zéro friction pour Le Cordon Doré :** Vous êtes déjà sur DoorDash ! Les commandes passées sur votre site web se synchronisent avec votre menu et sonnent sur la même tablette que vous avez déjà au comptoir sans changer vos habitudes.
    - **Livraison par Dashers :** Les livreurs DoorDash assurent la livraison sans que vous ayez à payer la commission de 20 % à 29 %.
 7. **Redirection courriel professionnel gratuit (optionnel) :**
-   - Configuration gratuite d'une adresse `info@lecordondorerestaurantbistrot.ca` redirigée vers votre boîte de réception.
+   - Configuration gratuite d'une adresse `info@lecordondore.ca` redirigée vers votre boîte de réception (mise à niveau professionnelle pour remplacer les adresses Gmail actuelles).
 
 ---
 

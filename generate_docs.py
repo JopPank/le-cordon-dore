@@ -96,9 +96,9 @@ summary_rows = [
     ('Exactitude du Menu', 'Plat en doublon (Seekh kebab poulet affiché 2 fois) et coquilles ("Scalops and calamary", "briyani rice")', 'Menu 100% vérifié, bilingue soigné, sans doublon ni faute d\'orthographe'),
     ('Pages Inachevées & Vides', 'Page /blog affichant un article "Test" sans texte et /cave-cordon listant des catégories sans prix', 'Site moderne sans cul-de-sac : carte des cocktails signature (14 $) et sélections claires'),
     ('Langues (Bilinguisme)', 'Mélange de textes bilingues sans toggle clair', 'Bouton FR / EN instantané pour toute la clientèle d\'Aylmer & Ottawa'),
-    ('Prise de Commande & Contact', '3 numéros dispersés & faute dans le courriel ("cordondor1803" vs "cordondor18103")', 'Boutons dédiés : Appels directs (819 682-5781), Texto réservations (819 661-5113) et courriel vérifié'),
+    ('Prise de Commande & Contact', '3 numéros dispersés & faute dans le courriel ("cordondor1803" vs "cordondor18103")', 'Boutons dédiés : Appels (819 682-5781), Texto (819 661-5113) et courriel pro (info@lecordondore.ca)'),
     ('Promotion Événements', 'Affiches images statiques souvent tronquées', 'Section vedette pour le Buffet Indien du mardi & service traiteur'),
-    ('Confiance & Réputation', 'Les 4.8★ Google et la certification Halal sont peu visibles', 'Badges Halal, 4.8★ Google et histoire du Chef formé à Paris en tête de page')
+    ('Confiance & Réputation', 'Note Google de 4.7 ★ (180+ avis, à confirmer) et certification Halal peu visibles', 'Badges Halal, 4.7 ★ Google (180+ avis) et Chef formé à Paris en tête de page')
 ]
 
 for row in summary_rows:
@@ -206,9 +206,10 @@ comp_rows = [
     ('Lien brisé & absence de combos', 'Le lien "Menu familiale Emporter" mène à "/copie-de-buffet-indien" qui n\'affiche qu\'une image de vacances sans texte.', 'Onglet dédié aux Combos Familiaux avec compositions claires et tarifs transparents.'),
     ('Menu Wix & fautes bilingues', 'Plat en doublon (Seekh kebab poulet affiché 2 fois) et fautes d\'anglais ("Scalops and calamary", "briyani rice").', 'Menu 100% vérifié, bilingue soigné, sans doublon ni faute d\'orthographe.'),
     ('Pages inachevées & rubriques vides', 'Page /blog affichant un post "Test" vide et /cave-cordon listant des catégories sans aucun prix.', 'Expérience fluide à 100% : cartes complètes des cocktails (14 $), vins et menus.'),
-    ('3 numéros dispersés & faute dans le courriel ("cordondor1803" vs "cordondor18103")', 'Risque de courriels de réservation non reçus et confusion pour commander.', 'Dissociation claire : Appel direct commandes (819 682-5781), Texto réservations (819 661-5113) et courriel vérifié.'),
+    ('3 numéros dispersés & faute dans le courriel ("cordondor1803" vs "cordondor18103")', 'Risque de courriels de réservation non reçus et confusion pour commander.', 'Dissociation claire : Appel direct commandes (819 682-5781), Texto réservations (819 661-5113) et courriel pro (info@lecordondore.ca).'),
     ('Absence d\'un toggle bilingue fluide', 'Perte de clientèle anglophone à Aylmer et Ottawa.', 'Bascule FR / EN instantanée sur l\'ensemble du site en 1 clic.'),
-    ('Mise en avant insuffisante du Buffet du mardi', 'Salle moins remplie pour l\'événement le plus rentable.', 'Bloc vedette dédié au Buffet Indien du mardi soir avec horaires et réservations.')
+    ('Mise en avant insuffisante du Buffet du mardi', 'Salle moins remplie pour l\'événement le plus rentable.', 'Bloc vedette dédié au Buffet Indien du mardi soir avec horaires et réservations.'),
+    ('Confiance & Réputation', 'Note Google de 4.7 ★ (180+ avis, à confirmer) et certification Halal peu visibles.', 'Badges Halal, 4.7 ★ Google (180+ avis) et Chef formé à Paris en tête de page.')
 ]
 
 for row in comp_rows:
@@ -261,7 +262,7 @@ h3_pil.style.font.color.rgb = RGBColor(15, 23, 42)
 points_comp = [
     ('[Pilier 1] Vitesse & Mobile-First (< 1 seconde)', 'Plus de 85 % des recherches de restaurants se font sur téléphone. La nouvelle page se charge instantanément sans lenteurs de constructeur.'),
     ('[Pilier 2] Commandes Téléphoniques Directes', 'Un bouton d\'appel en 1-clic incite vos clients à commander directement au restaurant plutôt que via les applications de livraison tierces (comme DoorDash), vous épargnant jusqu\'à 30 % de commissions.'),
-    ('[Pilier 3] Valorisation des Signes de Confiance', 'Affichage immédiat en tête de page de vos viandes 100 % certifiées Halal, de la note Google de 4.8★ et de la formation prestigieuse à Paris de votre Chef formé à Paris.'),
+    ('[Pilier 3] Valorisation des Signes de Confiance', 'Affichage immédiat en tête de page de vos viandes 100 % certifiées Halal, de la note Google de 4.7 ★ (180+ avis, à confirmer) et des 25 ans d\'expérience de votre Chef formé à Paris.'),
     ('[Pilier 4] Combos Familiaux & Buffet Vedette', 'Mise en lumière claire du Buffet Indien du mardi soir et des festins à emporter (2 à 6 personnes) pour augmenter le panier moyen.'),
     ('[Pilier 5] Service Traiteur & Cartes-Cadeaux', 'Un espace dédié avec demande de soumission directe pour capter les mariages, fêtes privées et dîners corporatifs dans l\'Outaouais.')
 ]
@@ -286,7 +287,7 @@ fin_points = [
     ('Nouvelle approche : Hébergement moderne à 0 $ / mois', 'En migrant vers une architecture web statique ultra-performante, vos frais mensuels d\'hébergement passent à 0 $. Vous ne conservez que le coût de base annuel de votre nom de domaine .ca (~15 $ à 25 $/an).'),
     ('Mon offre clé en main gratuite', 'Je réalise gratuitement la conception du nouveau site, la migration technique et le transfert de lecordondorerestaurantbistrot.ca avec zéro interruption de service pour vos clients, tout en assurant la maintenance continue (mise à jour des prix, menus de saison, horaires du buffet/fêtes).'),
     ('Option Phase 2 : Commande en ligne DoorDash Storefront (0 $/mois, 0 % de commission)', '0 $ de frais mensuels et 0 % de commission marketplace sur les commandes passées depuis votre site web (seuls les frais bancaires de carte s\'appliquent). Zéro friction pour Le Cordon Doré : vous êtes déjà sur DoorDash, donc les commandes se synchronisent automatiquement avec votre menu existant et sonnent directement sur la même tablette que vous avez déjà au comptoir ! Les Dashers assurent la livraison à domicile sans la commission de 20 % à 29 %.'),
-    ('Redirection de courriel professionnel gratuit (optionnel)', 'Possibilité d\'ajouter sans frais une redirection de courriel professionnel (info@lecordondorerestaurantbistrot.ca) pour professionnaliser vos échanges traiteur et réservations.')
+    ('Redirection de courriel professionnel gratuit (optionnel)', 'Possibilité d\'ajouter sans frais une redirection de courriel professionnel suggéré (info@lecordondore.ca) pour professionnaliser vos échanges traiteur et réservations.')
 ]
 
 for title, desc in fin_points:
