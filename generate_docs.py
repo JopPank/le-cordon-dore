@@ -93,6 +93,7 @@ for i, title in enumerate(headers_sum):
 summary_rows = [
     ('Navigation Mobile', '13 liens encombrés avec doublon et faute d\'orthographe ("Home" et "Acceuil" au lieu d\'"Accueil")', '5 destinations claires + bouton d\'appel direct visible en 1 clic'),
     ('Consultation des Menus', 'Menus dispersés sur plusieurs pages, difficile à lire sur téléphone', 'Menus interactifs par onglets fluides avec prix et badges clairs'),
+    ('Exactitude du Menu', 'Plat en doublon (Seekh kebab poulet affiché 2 fois) et coquilles ("Scalops and calamary", "briyani rice")', 'Menu 100% vérifié, bilingue soigné, sans doublon ni faute d\'orthographe'),
     ('Langues (Bilinguisme)', 'Mélange de textes bilingues sans toggle clair', 'Bouton FR / EN instantané pour toute la clientèle d\'Aylmer & Ottawa'),
     ('Prise de Commande & Contact', '3 numéros dispersés & faute dans le courriel ("cordondor1803" vs "cordondor18103")', 'Boutons dédiés : Appels directs (819 682-5781), Texto réservations (819 661-5113) et courriel vérifié'),
     ('Promotion Événements', 'Affiches images statiques souvent tronquées', 'Section vedette pour le Buffet Indien du mardi & service traiteur'),
@@ -202,6 +203,7 @@ comp_rows = [
     ('13 liens encombrés avec doublon et faute d\'orthographe ("Home" et "Acceuil" au lieu d\'"Accueil")', 'Les clients sur téléphone sont confus et quittent la page.', 'Menu épuré en 5 sections clés + bouton d\'appel direct visible en permanence.'),
     ('Pages fantômes indexées dans Google (copie-de-buffet-indien, copie-de-home)', 'Nuit à votre image de marque et à votre référencement local.', 'Structure SEO propre et optimisée sans aucune page dupliquée.'),
     ('Menus difficiles à lire sur mobile (zoom et clics multiples)', 'Friction majeure; les clients abandonnent avant de commander.', 'Menu interactif par onglets fluides (Indien, Familial, Bistro, Enfants, Vins).'),
+    ('Menu Wix & fautes bilingues', 'Plat en doublon (Seekh kebab poulet affiché 2 fois) et fautes d\'anglais ("Scalops and calamary", "briyani rice").', 'Menu 100% vérifié, bilingue soigné, sans doublon ni faute d\'orthographe.'),
     ('3 numéros dispersés & faute dans le courriel ("cordondor1803" vs "cordondor18103")', 'Risque de courriels de réservation non reçus et confusion pour commander.', 'Dissociation claire : Appel direct commandes (819 682-5781), Texto réservations (819 661-5113) et courriel vérifié.'),
     ('Absence d\'un toggle bilingue fluide', 'Perte de clientèle anglophone à Aylmer et Ottawa.', 'Bascule FR / EN instantanée sur l\'ensemble du site en 1 clic.'),
     ('Mise en avant insuffisante du Buffet du mardi', 'Salle moins remplie pour l\'événement le plus rentable.', 'Bloc vedette dédié au Buffet Indien du mardi soir avec horaires et réservations.')
@@ -223,9 +225,34 @@ for row in comp_rows:
 
 doc_comp.add_paragraph().paragraph_format.space_after = Pt(4)
 
-# Section 2
-h2 = doc_comp.add_heading('2. Les 5 Piliers Stratégiques de la Nouvelle Version', level=1)
-h2.style.font.color.rgb = RGBColor(15, 23, 42)
+# Section 2: Audit éditorial
+h2_audit = doc_comp.add_heading('2. Audit Éditorial : Coquilles & Incohérences Relevées sur le Site Wix', level=1)
+h2_audit.style.font.color.rgb = RGBColor(15, 23, 42)
+
+p_aud_intro = doc_comp.add_paragraph('Notre évaluation approfondie de votre site web actuel a mis en lumière plusieurs anomalies concrètes que la nouvelle version corrige intégralement :')
+p_aud_intro.paragraph_format.space_after = Pt(2)
+
+audit_bullets = [
+    ('Plat en doublon au menu', 'Le plat « Seekh kebab poulet (2 pcs) » apparaît deux fois dans votre carte en ligne.'),
+    ('Fautes d\'anglais sur les mets', 'Coquilles visibles par vos clients anglophones comme « Scalops and calamary » (au lieu de Scallops and calamari) et « briyani rice » (au lieu de biryani).'),
+    ('Faute dans la navigation principale', 'Doublon entre « Home » et « Acceuil » (avec faute d\'orthographe sur le mot Accueil).'),
+    ('Adresses courriel contradictoires', 'cordondor1803@gmail.com affiché en bas de page contre cordondor18103@gmail.com sous Réservation (risque d\'échec de réception).'),
+    ('Pages fantômes indexées par Google', 'Pages de test créées par Wix non nettoyées (copie-de-buffet-indien, menus-1, copie-de-home) qui nuisent à votre crédibilité et référencement.')
+]
+
+for title, desc in audit_bullets:
+    p = doc_comp.add_paragraph()
+    p.paragraph_format.space_after = Pt(1.5)
+    r_pt = p.add_run(f'• {title} : ')
+    r_pt.bold = True
+    r_pt.font.color.rgb = RGBColor(190, 18, 60)
+    p.add_run(desc)
+
+doc_comp.add_paragraph().paragraph_format.space_after = Pt(4)
+
+# Section 3: Les 5 Piliers
+h3_pil = doc_comp.add_heading('3. Les 5 Piliers Stratégiques de la Nouvelle Version', level=1)
+h3_pil.style.font.color.rgb = RGBColor(15, 23, 42)
 
 points_comp = [
     ('[Pilier 1] Vitesse & Mobile-First (< 1 seconde)', 'Plus de 85 % des recherches de restaurants se font sur téléphone. La nouvelle page se charge instantanément sans lenteurs de constructeur.'),
@@ -244,9 +271,9 @@ for title, desc in points_comp:
 
 doc_comp.add_paragraph().paragraph_format.space_after = Pt(4)
 
-# Section 3: PORTRAIT FINANCIER
-h3 = doc_comp.add_heading('3. Portrait financier : frais actuels vs nouvelle approche', level=1)
-h3.style.font.color.rgb = RGBColor(15, 23, 42)
+# Section 4: PORTRAIT FINANCIER
+h4_fin = doc_comp.add_heading('4. Portrait financier : frais actuels vs nouvelle approche', level=1)
+h4_fin.style.font.color.rgb = RGBColor(15, 23, 42)
 
 fin_points = [
     ('Commissions des applications de livraison tierces (comme DoorDash)', 'Au Canada, les plateformes prélèvent généralement de 20 % à 30 % sur les livraisons et de 8 % à 15 % sur les commandes à emporter. Sur une commande moyenne de 40 $, cela représente 8 $ à 12 $ de marge perdue pour votre restaurant.'),
@@ -266,9 +293,9 @@ for title, desc in fin_points:
 
 doc_comp.add_paragraph().paragraph_format.space_after = Pt(4)
 
-# Section 4: PLAN DE DÉPLOIEMENT
-h4 = doc_comp.add_heading('4. Plan de Déploiement Simple & Sans Interruption', level=1)
-h4.style.font.color.rgb = RGBColor(15, 23, 42)
+# Section 5: PLAN DE DÉPLOIEMENT
+h5_plan = doc_comp.add_heading('5. Plan de Déploiement Simple & Sans Interruption', level=1)
+h5_plan.style.font.color.rgb = RGBColor(15, 23, 42)
 
 steps_comp = [
     ('Étape 1 : Validation du Prototype en ligne', 'Vous testez la démonstration complète sur votre mobile à l\'adresse https://lecordondore.jopism.com.'),
