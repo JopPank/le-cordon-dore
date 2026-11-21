@@ -15,19 +15,47 @@ for fname in ['proposal.html', 'proposal-complete.html']:
     with open(fname, 'r', encoding='utf-8') as f:
         html = f.read()
 
-    # Add Disciple d'Auguste Escoffier in section 1
+    # Section 1 chef bio update
+    html = re.sub(
+        r'un <strong>chef formé à Paris avec 25 ans d’expérience.*?</strong>',
+        'un chef propriétaire d\'exception, <strong>Oodith Kallaram</strong>, formé à la prestigieuse <strong>Maison Lenôtre</strong> à Paris avec plus de 25 ans d’expérience internationale et intronisé parmi <strong>Les Disciples d\'Auguste Escoffier (Océan Indien)</strong>',
+        html
+    )
+
+    # Add Chef Page finding to Section 2 if not present
+    chef_finding_html = '''        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50 flex flex-col gap-1.5">
+          <div class="font-bold text-slate-900 flex items-center justify-between">
+            <span>• Page « Parcours du Chef » vide</span>
+            <span class="text-[10px] text-rose-600 font-semibold bg-rose-50 px-2 py-0.5 rounded border border-rose-200">Actuel</span>
+          </div>
+          <p class="text-slate-600 text-xs">
+            Le lien « Parcours du Chef » pointe vers une URL de brouillon Wix (<em>/copie-de-menu-enfant</em>) et n'affiche que sa photo, sans aucun texte biographique.
+          </p>
+          <p class="text-emerald-700 font-semibold text-xs pt-1 border-t border-slate-200">
+            → Nouvelle version : Une section dédiée bilingue racontant enfin l'histoire d'Oodith : sa formation d'excellence à la Maison Lenôtre à Paris, son titre de Disciple d'Auguste Escoffier et ses 25 ans de métier.
+          </p>
+        </div>'''
+
+    if 'Page « Parcours du Chef » vide' not in html:
+        target_nav = '→ Nouvelle version : Cinq sections claires, un bouton d’appel 1-clic toujours visible et une bascule bilingue instantanée (FR / EN).\n          </p>\n        </div>'
+        if target_nav in html:
+            html = html.replace(target_nav, target_nav + '\n\n' + chef_finding_html)
+        else:
+            html = html.replace('<div class="space-y-3 text-xs sm:text-sm">', '<div class="space-y-3 text-xs sm:text-sm">\n' + chef_finding_html)
+
+    # Section 3 feature update
     html = html.replace(
-        'un <strong>chef formé à Paris avec 25 ans d’expérience</strong>',
-        'un <strong>chef formé à Paris avec 25 ans d’expérience (Disciple d\'Auguste Escoffier)</strong>'
+        'Le parcours du chef avec sa photo officielle en tenue, ses 25 ans d’art culinaire et des avis Google récents vérifiés.',
+        'Le parcours du chef Oodith Kallaram avec sa photo officielle en tenue de Disciple d\'Escoffier, sa formation Maison Lenôtre à Paris, ses 25 ans d’art culinaire et des avis Google récents vérifiés.'
     )
     html = html.replace(
-        'Petites erreurs et doublons dans le menu',
-        'Petites erreurs et doublons dans le menu'
+        'Le parcours du chef avec sa photo officielle en tenue de Disciple d\'Escoffier, ses 25 ans d’art culinaire et des avis Google récents vérifiés.',
+        'Le parcours du chef Oodith Kallaram avec sa photo officielle en tenue de Disciple d\'Escoffier, sa formation Maison Lenôtre à Paris, ses 25 ans d’art culinaire et des avis Google récents vérifiés.'
     )
-    html = html.replace(
-        'et on trouve des coquilles visibles comme « Scalops and calamary »',
-        'et on trouve des erreurs d\'anglais visibles comme « Scalops and calamary »'
-    )
+
+    # Clean any leftover coquille references
+    html = re.sub(r'\bcoquilles?\b', 'petites erreurs', html, flags=re.IGNORECASE)
+
     # Remove brackets around Google rating
     html = html.replace(
         '<em>[4,7 ★ · 180+ avis – à valider sur place]</em>',
@@ -54,14 +82,24 @@ print("HTML proposal files updated.")
 with open('PROPOSAL.md', 'r', encoding='utf-8') as f:
     md = f.read()
 
-md = md.replace(
-    'Un **chef formé à Paris avec 25 ans d’expérience** culinaire',
-    'Un **chef formé à Paris avec 25 ans d’expérience (Disciple d\'Auguste Escoffier)**'
+md = re.sub(
+    r'Un \*\*chef formé à Paris avec 25 ans d’expérience.*?\*\*',
+    'Un chef propriétaire d\'exception, **Chef Oodith Kallaram**, formé à la prestigieuse **Maison Lenôtre** à Paris avec plus de 25 ans d’expérience internationale et intronisé parmi **Les Disciples d\'Auguste Escoffier (Océan Indien)**',
+    md
 )
+
+chef_finding_md = '''- **Page « Parcours du Chef » vide :**
+  - *Actuel :* Le lien « Parcours du Chef » pointe vers une URL de brouillon Wix (`/copie-de-menu-enfant`) et n'affiche que sa photo, sans aucun texte biographique.
+  - *→ Nouvelle version :* Une section dédiée bilingue racontant l'histoire d'Oodith : sa formation d'excellence à la Maison Lenôtre à Paris, son titre de Disciple d'Auguste Escoffier et ses 25 ans de métier.'''
+
+if 'Page « Parcours du Chef » vide' not in md:
+    md = md.replace('- **Navigation chargée & doublon avec faute** :', chef_finding_md + '\n\n- **Navigation chargée & doublon avec faute** :')
+
 md = md.replace(
-    'et on trouve des coquilles visibles comme « Scalops and calamary »',
-    'et on trouve des erreurs d\'anglais visibles comme « Scalops and calamary »'
+    'Le parcours du chef avec sa photo officielle en tenue de Disciple d\'Escoffier',
+    'Le parcours du chef Oodith Kallaram avec sa photo officielle en tenue de Disciple d\'Escoffier, sa formation Maison Lenôtre à Paris'
 )
+md = re.sub(r'\bcoquilles?\b', 'petites erreurs', md, flags=re.IGNORECASE)
 md = md.replace(
     '*[4,7 ★ · 180+ avis – à valider sur place]*',
     '**4,7 ★ · 180+ avis vérifiés sur Google**'
@@ -124,7 +162,7 @@ def build_docx(filename):
     h1 = doc.add_heading('En bref', level=1)
     h1.style.font.color.rgb = RGBColor(15, 23, 42)
     
-    doc.add_paragraph('Votre cuisine, votre chef formé à Paris (Disciple d\'Auguste Escoffier) et votre buffet du mardi méritent un site qui donne envie de réserver en quelques secondes. J’ai préparé une démonstration fonctionnelle que vous pouvez essayer dès maintenant : https://lecordondore.jopism.com')
+    doc.add_paragraph('Votre cuisine, le savoir-faire d\'exception du chef Oodith Kallaram (formé à la prestigieuse Maison Lenôtre à Paris et intronisé Disciple d\'Auguste Escoffier) et votre grand buffet du mardi méritent un site qui donne envie de réserver en quelques secondes. J’ai préparé une démonstration fonctionnelle que vous pouvez essayer dès maintenant : https://lecordondore.jopism.com')
     
     bref_points = [
         ('Ce que je propose', 'Un site rapide, bilingue (français par défaut), pensé d’abord pour le mobile, avec des boutons directs pour appeler, texter et trouver le restaurant en 1 clic.'),
@@ -145,7 +183,7 @@ def build_docx(filename):
     # 2. Ce que vous faites déjà très bien
     h2 = doc.add_heading('1. Ce que vous faites déjà très bien', level=1)
     h2.style.font.color.rgb = RGBColor(15, 23, 42)
-    doc.add_paragraph('Le Cordon Doré a des atouts que très peu de restaurants peuvent revendiquer dans l\'Outaouais : un chef formé à Paris avec 25 ans d’expérience culinaire (Disciple d\'Auguste Escoffier), une cuisine indienne et internationale soignée, des viandes 100 % certifiées Halal, un buffet réputé chaque mardi soir et une adresse bien ancrée au cœur du Vieux-Aylmer avec plus de 180 avis élogieux (4,7 ★ sur Google).')
+    doc.add_paragraph('Le Cordon Doré a des atouts que très peu de restaurants peuvent revendiquer dans l\'Outaouais : un chef propriétaire d\'exception, Oodith Kallaram, formé à la prestigieuse Maison Lenôtre à Paris avec plus de 25 ans d’expérience culinaire et hôtelière internationale, et intronisé parmi Les Disciples d\'Auguste Escoffier (Océan Indien); une double cuisine indienne et bistrot international soignée; des viandes 100 % certifiées Halal; un buffet réputé chaque mardi soir; et une adresse bien ancrée au cœur du Vieux-Aylmer avec plus de 180 avis élogieux (4,7 ★ sur Google).')
     doc.add_paragraph('Le site web doit être à la hauteur de cette réputation, surtout pour le client qui vous cherche sur son téléphone et décide où manger en moins de 3 secondes.')
 
     doc.add_paragraph().paragraph_format.space_after = Pt(6)
@@ -159,6 +197,7 @@ def build_docx(filename):
 
     remarques = [
         ('Navigation chargée & doublon avec faute', 'Treize liens dans le menu, dont un doublon avec faute d\'orthographe (« Home » et « Acceuil » au lieu d\'« Accueil »), et un titre de page en anglais (« Home | Le Cordon Doré… ») sur un site francophone.', 'Cinq sections claires, un bouton d’appel 1-clic toujours visible et une bascule bilingue instantanée (FR / EN).'),
+        ('Page « Parcours du Chef » vide', 'Le lien « Parcours du Chef » pointe vers une URL de brouillon Wix (/copie-de-menu-enfant) et n\'affiche que sa photo, sans aucun texte biographique.', 'Une section dédiée bilingue racontant enfin l\'histoire d\'Oodith : sa formation d\'excellence à la Maison Lenôtre à Paris, son titre de Disciple d\'Auguste Escoffier et ses 25 ans de métier.'),
         ('Coordonnées qui se contredisent', 'Deux adresses courriel différentes (cordondor1803@gmail.com vs cordondor18103@gmail.com sous Réservation) et trois numéros de téléphone éparpillés.', 'Un rôle clair par canal (appeler pour commander au 819 682-5781, texter pour réserver au 819 661-5113, et un courriel vérifié pour le traiteur).'),
         ('Petites erreurs dans le menu', 'Le Seekh kebab de poulet apparaît deux fois dans les entrées, et on trouve des erreurs d\'anglais visibles comme « Scalops and calamary » et « briyani rice » dans les descriptions anglaises.', '44 plats indiens et 20 spécialités bistrot relus, sans doublon, avec orthographe bilingue soignée et validée avec le chef.'),
         ('Menu familial introuvable', 'Le lien « Menu familiale Emporter » mène vers une page qui n’affiche qu\'une vieille image d\'avis de vacances sans aucun plat ni prix.', 'Un onglet dédié aux festins familiaux (pour 2 personnes et 4 à 5 personnes), avec compositions et tarifs transparents.'),
@@ -193,7 +232,7 @@ def build_docx(filename):
         ('Le buffet du mardi en vedette', 'Un bloc dédié avec l’horaire (17h–20h30) et la réservation, plus un renvoi direct vers votre page Facebook officielle pour les brunchs spéciaux du week-end.'),
         ('Des menus complets & bilingues', '44 plats indiens, 20 spécialités bistro, 6 menus enfants, desserts et cocktails, avec badges clairs (Halal, Végétarien, Sans gluten, piquant).'),
         ('Traiteur et cartes-cadeaux', 'Une section pour recevoir les soumissions (mariages, fêtes privées, corporatif dans l’Outaouais) et afficher les montants disponibles (25 $ à 200 $).'),
-        ('Votre histoire & authenticité', 'Le parcours du chef avec sa photo officielle en tenue de Disciple d\'Escoffier, ses 25 ans d’art culinaire et des avis Google récents vérifiés.'),
+        ('Votre histoire & authenticité', 'Le parcours du chef Oodith Kallaram avec sa photo officielle en tenue de Disciple d\'Escoffier, sa formation Maison Lenôtre à Paris, ses 25 ans d’art culinaire et des avis Google récents vérifiés.'),
         ('Visibilité locale renforcée', 'Fiche Google alignée avec le site, vitesse de chargement inférieure à 1 seconde et balisage SEO propre pour attirer la clientèle d\'Aylmer, Gatineau et Ottawa.')
     ]
     for ftitle, fdesc in features:
@@ -366,7 +405,7 @@ p1_tit.font.color.rgb = C_WHITE
 p1_tit.space_after = PptxPt(14)
 
 p1_sub = tf1.add_paragraph()
-p1_sub.text = "Mettre en valeur votre cuisine, votre chef (Disciple d'Escoffier) et faciliter les réservations de vos convives."
+p1_sub.text = "Mettre en valeur votre cuisine, l'histoire du chef Oodith Kallaram (Maison Lenôtre, Disciple d'Escoffier) et faciliter les réservations de vos convives."
 p1_sub.font.size = PptxPt(14)
 p1_sub.font.color.rgb = C_SLATE
 p1_sub.space_after = PptxPt(20)
@@ -440,7 +479,7 @@ tf3 = tb3.text_frame
 tf3.word_wrap = True
 
 atouts = [
-    ("👨‍🍳 Chef d'expérience & Disciple d'Auguste Escoffier", "25 ans de carrière, formé à Paris, arborant l'écharpe officielle des Disciples d'Escoffier. Une alliance rare entre techniques françaises et épices d'Inde."),
+    ("👨‍🍳 Chef Oodith Kallaram · Maison Lenôtre & Disciple d'Auguste Escoffier", "25 ans de carrière internationale, formé à la prestigieuse Maison Lenôtre à Paris, intronisé Disciple d'Escoffier. Une alliance d'exception entre haute gastronomie française et épices d'Inde."),
     ("🍛 Cuisine authentique & variée", "44 spécialités indiennes soignées, classiques du bistrot international, 6 menus enfants et options véganes/végétariennes."),
     ("🥩 Viandes 100 % certifiées Halal", "Un gage d'excellence et de respect des traditions recherché par la clientèle de Gatineau et d'Ottawa."),
     ("✨ Grand Buffet Indien du Mardi Soir", "Une formule à volonté réputée qui fidélise les amateurs de cuisine indienne chaque semaine."),
@@ -460,21 +499,21 @@ for idx, (atitle, adesc) in enumerate(atouts):
     r.font.bold = False
     r.font.color.rgb = C_WHITE
 
-# Slide 4: Diagnostic bienveillant (no coquilles)
+# Slide 4: Diagnostic bienveillant
 slide4 = prs.slides.add_slide(prs.slide_layouts[6])
 add_bg(slide4)
 add_header(slide4, "Diagnostic Bienveillant", "Ce que j'ai remarqué sur votre site actuel (et ce qu'on améliore)")
 
-remarques = [
+remarques_pptx = [
     ("Navigation encombrée", "13 liens avec doublon « Home » et « Acceuil » (faute d'orthographe).", "5 sections claires, bouton d'appel fixe et toggle bilingue fluide."),
+    ("Page Parcours du Chef vide", "Lien vers URL de brouillon (/copie-de-menu-enfant) avec photo sans aucun texte.", "Section dédiée racontant le parcours d'Oodith : Maison Lenôtre, Escoffier et 25 ans d'art culinaire."),
     ("Coordonnées divergentes", "2 adresses Gmail distinctes (cordondor1803 vs 18103) et 3 numéros éparpillés.", "1 canal clair : appel commandes (819 682-5781), texto réservations (819 661-5113)."),
     ("Petites erreurs au menu", "Seekh kebab listé deux fois, fautes d'anglais (Scalops and calamary, briyani rice).", "Menu relu, orthographe bilingue soignée, validé avec le chef."),
     ("Menu familial manquant", "Le lien « Menu familiale » mène à une page affichant un vieil avis de vacances sans plat.", "Onglet festins familiaux avec compositions et prix transparents."),
-    ("Pages inachevées", "Page /blog avec article « Test » vide, et plusieurs pages de travail Wix indexées.", "Site monopage moderne, aucun cul-de-sac, redirections automatiques propres."),
-    ("Carte des boissons", "Cocktails à 14 $ listés, mais les sections vins, bières et spiritueux sont vides.", "7 cocktails signatures à 14 $ mis en avant + grille des 8 sélections de la cave.")
+    ("Pages inachevées & boissons", "Page /blog avec article « Test » vide, et sélections de la cave sans prix.", "Site monopage sans cul-de-sac, cocktails à 14 $ mis en avant et cave soignée.")
 ]
 
-for idx, (rtitle, rcur, rsol) in enumerate(remarques):
+for idx, (rtitle, rcur, rsol) in enumerate(remarques_pptx):
     x = PptxInches(0.8 + (idx % 2) * 6.0)
     y = PptxInches(1.8 + (idx // 2) * 1.7)
     card = slide4.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, x, y, PptxInches(5.6), PptxInches(1.5))

@@ -1330,12 +1330,11 @@
       </div>
       <div class="p-5 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
         <div>
-        <!-- NOTE: Confirm exact price with owner as their current page lists this item with duplicate entry without a clear price -->
           <div class="flex items-baseline justify-between gap-4 mb-2">
             <h4 class="font-serif text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
               <span data-i18n="bi_main_5_title">Souris d'Agneau Braisé</span>
             </h4>
-            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap" data-i18n="bi_main_5_price">Prix à confirmer</span>
+            <span class="font-serif font-bold text-brand-gold text-base sm:text-lg whitespace-nowrap" data-i18n="bi_main_5_price">42 $</span>
           </div>
           <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3" data-i18n="bi_main_5_desc">
             Souris d'agneau braisée lentement aux sucs aromatiques.
@@ -1839,14 +1838,14 @@
         <div>
           <!-- Chef Portrait Image -->
           <div class="relative w-full aspect-[4/3] sm:aspect-square max-h-72 rounded-xl overflow-hidden mb-6 border border-brand-gold/40 shadow-xl group">
-            <img src="chef.jpg" alt="Chef Propriétaire du Cordon Doré" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+            <img src="chef.jpg" alt="Chef Oodith Kallaram — Le Cordon Doré" class="w-full h-full object-cover object-[center_20%] scale-105 transition-transform duration-500 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-transparent to-transparent"></div>
             <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs">
-              <span class="px-2.5 py-1 rounded-full bg-brand-dark/90 border border-brand-gold/50 text-amber-300 font-semibold text-[11px] backdrop-blur-md" data-i18n="chef_role">
-                Chef & Propriétaire
-              </span>
-              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-brand-gold text-[10px] font-bold uppercase tracking-wider" data-i18n="chef_experience_badge">
+              <span class="px-2.5 py-1 rounded-full bg-brand-dark/90 border border-brand-gold/50 text-amber-300 font-semibold text-[11px] backdrop-blur-md" data-i18n="chef_badge_left">
                 Disciple d'Auguste Escoffier
+              </span>
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-brand-gold text-[10px] font-bold uppercase tracking-wider" data-i18n="chef_badge_right">
+                Maison Lenôtre · 25 ans
               </span>
             </div>
           </div>
@@ -1856,21 +1855,21 @@
             25 ans d'Art Culinaire de Paris à Aylmer
           </h3>
           <p class="text-slate-300 text-sm leading-relaxed mb-4" data-i18n="chef_p1">
-            Le voyage de notre chef a débuté par une rigoureuse formation académique dans la capitale mondiale de la gastronomie : <strong class="text-white">Paris</strong>.
+            Formé à la prestigieuse <strong class="text-white">Maison Lenôtre</strong> à Paris, le chef <strong class="text-brand-gold">Oodith Kallaram</strong> cumule plus de 25 ans d'expérience culinaire et hôtelière internationale, et est intronisé parmi <strong class="text-white">Les Disciples d'Auguste Escoffier (Océan Indien)</strong>.
           </p>
           <p class="text-slate-300 text-sm leading-relaxed mb-4" data-i18n="chef_p2">
-            Devenu éducateur culinaire, styliste et consultant hôtelier, il conjugue les techniques françaises de mijotage et de réduction avec le secret ancestral des mélanges d'épices de l'Inde du Nord et du Sud.
+            Résident de longue date d'Aylmer ayant ouvert Le Cordon Doré en juin 2024 avec sa famille, il conjugue les techniques françaises de mijotage et de réduction avec le secret ancestral des mélanges d'épices de l'Inde.
           </p>
           <p class="text-slate-300 text-sm leading-relaxed mb-6" data-i18n="chef_p3">
-            Toutes nos viandes sont rigoureusement <strong class="text-brand-gold">100% certifiées Halal</strong> et préparées dans le respect des traditions.
+            Toutes nos viandes sont rigoureusement <strong class="text-brand-gold">100% certifiées Halal</strong> et préparées dans le plus grand respect des traditions gastronomiques.
           </p>
         </div>
         
         <div class="pt-5 border-t border-slate-800 flex items-center gap-4">
-          <img src="chef.jpg" alt="Chef Propriétaire" class="w-12 h-12 rounded-full border-2 border-brand-gold object-cover object-top shadow-md">
+          <img src="chef.jpg" alt="Chef Oodith Kallaram" class="w-12 h-12 rounded-full border-2 border-brand-gold object-cover object-[center_20%] shadow-md">
           <div>
-            <p class="text-sm font-bold text-white" data-i18n="chef_role">Chef & Propriétaire</p>
-            <p class="text-xs text-slate-400">Le Cordon Doré Bistro · Aylmer</p>
+            <p class="text-sm font-bold text-white" data-i18n="chef_name">Chef Oodith Kallaram</p>
+            <p class="text-xs text-slate-400" data-i18n="chef_signature_sub">Chef & Propriétaire · Le Cordon Doré, Aylmer</p>
           </div>
         </div>
       </div>
@@ -2318,11 +2317,15 @@
         buffet_fb_btn: "Voir les dates sur Facebook",
         chef_tag: "Le Parcours du Chef",
         chef_title: "25 ans d'Art Culinaire de Paris à Aylmer",
-        chef_experience_badge: "Disciple d'Auguste Escoffier",
-        chef_p1: "Le voyage de notre chef a débuté par une rigoureuse formation académique dans la capitale mondiale de la gastronomie : Paris. Membre émérite des Disciples d'Auguste Escoffier, il apporte un savoir-faire d'exception à Aylmer.",
-        chef_p2: "Devenu éducateur culinaire, styliste et consultant hôtelier, il conjugue les techniques françaises de mijotage et de réduction avec le secret ancestral des mélanges d'épices de l'Inde.",
-        chef_p3: "Toutes nos viandes sont rigoureusement 100% certifiées Halal et préparées dans le respect des traditions.",
+        chef_badge_left: "Disciple d'Auguste Escoffier",
+        chef_badge_right: "Maison Lenôtre · 25 ans",
+        chef_p1: "Formé à la prestigieuse Maison Lenôtre à Paris, le chef Oodith Kallaram cumule plus de 25 ans d'expérience culinaire et hôtelière internationale, et est intronisé parmi Les Disciples d'Auguste Escoffier (Océan Indien).",
+        chef_p2: "Résident de longue date d'Aylmer ayant ouvert Le Cordon Doré en juin 2024 avec sa famille, il conjugue les techniques françaises de mijotage et de réduction avec le secret ancestral des mélanges d'épices de l'Inde.",
+        chef_p3: "Toutes nos viandes sont rigoureusement 100% certifiées Halal et préparées dans le plus grand respect des traditions gastronomiques.",
+        chef_name: "Chef Oodith Kallaram",
+        chef_signature_sub: "Chef & Propriétaire · Le Cordon Doré, Aylmer",
         chef_role: "Chef & Propriétaire",
+        chef_experience_badge: "Maison Lenôtre · 25 ans",
         reviews_rating_summary: "4.7 sur Google · 180+ avis",
         reviews_verified: "(Avis clients vérifiés)",
         reviews_title: "Ce que disent nos convives d'Aylmer",
@@ -2512,7 +2515,7 @@
         bi_main_4_desc: "Pièce de bœuf tendre et sauce crémeuse au poivre vert.",
         bi_main_5_title: "Souris d'Agneau Braisé",
         bi_main_5_desc: "Souris d'agneau braisée lentement aux sucs aromatiques.",
-        bi_main_5_price: "Prix à confirmer",
+        bi_main_5_price: "42 $",
         bi_main_6_title: "Penne Sauce Rosé Pesto",
         bi_main_6_desc: "Pennes al dente. Ajouts : Poulet (25 $), Crevettes (29 $), St-Jacques (37 $).",
         bi_main_7_title: "Tagliatelle Sauce Pesto à la Crème & Crevettes Grillées",
@@ -2642,11 +2645,15 @@
         buffet_fb_btn: "View dates on Facebook",
         chef_tag: "The Chef's Journey",
         chef_title: "25 Years of Culinary Art from Paris to Aylmer",
-        chef_experience_badge: "Disciple d'Auguste Escoffier",
-        chef_p1: "Our chef's culinary story began with formal culinary education in the gastronomy capital of the world: Paris. As an esteemed member of the Disciples d'Auguste Escoffier, he brings exceptional culinary artistry to Aylmer.",
-        chef_p2: "Now an accomplished culinary educator, stylist, and hospitality consultant, he blends French braising techniques with authentic Indian spice mastery.",
-        chef_p3: "All meats are rigorously 100% Halal certified and prepared with deep respect for tradition.",
+        chef_badge_left: "Disciple d'Auguste Escoffier",
+        chef_badge_right: "Maison Lenôtre · 25 yrs",
+        chef_p1: "Trained at the prestigious Maison Lenôtre in Paris, Chef Oodith Kallaram brings over 25 years of international culinary and hospitality experience and is inducted into Les Disciples d'Auguste Escoffier (Océan Indien).",
+        chef_p2: "A longtime Aylmer resident who opened Le Cordon Doré in June 2024 with his family, he blends classical French braising and reduction techniques with authentic Indian spice mastery.",
+        chef_p3: "All meats are rigorously 100% Halal certified and prepared in the highest culinary traditions.",
+        chef_name: "Chef Oodith Kallaram",
+        chef_signature_sub: "Chef & Owner · Le Cordon Doré, Aylmer",
         chef_role: "Chef & Owner",
+        chef_experience_badge: "Maison Lenôtre · 25 yrs",
         reviews_rating_summary: "4.7 on Google · 180+ reviews",
         reviews_verified: "(Verified customer reviews)",
         reviews_title: "What Aylmer Diners Are Saying",
@@ -2836,7 +2843,7 @@
         bi_main_4_desc: "Tender cut of beef with creamy green peppercorn sauce.",
         bi_main_5_title: "Braised Lamb Shank",
         bi_main_5_desc: "Slow-braised lamb shank in rich aromatic juices.",
-        bi_main_5_price: "Price TBD",
+        bi_main_5_price: "42 $",
         bi_main_6_title: "Penne Rosé Pesto",
         bi_main_6_desc: "Al dente penne pasta. Add-ons: Chicken (25 $), Shrimp (29 $), Scallops (37 $).",
         bi_main_7_title: "Cream Pesto Tagliatelle & Grilled Shrimp",

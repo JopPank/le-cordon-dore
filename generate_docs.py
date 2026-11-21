@@ -93,7 +93,7 @@ for i, title in enumerate(headers_sum):
 summary_rows = [
     ('Navigation Mobile', '13 liens encombrés avec doublon et faute d\'orthographe ("Home" et "Acceuil" au lieu d\'"Accueil")', '5 destinations claires + bouton d\'appel direct visible en 1 clic'),
     ('Consultation des Menus', 'Menus dispersés; le lien "Menu familiale" mène à un avis de vacances sans aucun combo', 'Menus interactifs par onglets fluides avec prix et festins familiaux complets'),
-    ('Exactitude du Menu', 'Plat en doublon (Seekh kebab poulet affiché 2 fois) et coquilles ("Scalops and calamary", "briyani rice")', 'Menu 100% vérifié, bilingue soigné, sans doublon ni faute d\'orthographe'),
+    ('Exactitude du Menu', 'Plat en doublon (Seekh kebab poulet affiché 2 fois) et petites erreurs de frappe ("Scalops and calamary", "briyani rice")', 'Menu 100% vérifié, bilingue soigné, sans doublon ni faute d\'orthographe'),
     ('Pages Inachevées & Vides', 'Page /blog affichant un article "Test" sans texte et /cave-cordon listant des catégories sans prix', 'Site moderne sans cul-de-sac : carte des cocktails signature (14 $) et sélections claires'),
     ('Langues (Bilinguisme)', 'Mélange de textes bilingues sans toggle clair', 'Bouton FR / EN instantané pour toute la clientèle d\'Aylmer & Ottawa'),
     ('Prise de Commande & Contact', '3 numéros dispersés & faute dans le courriel ("cordondor1803" vs "cordondor18103")', 'Boutons dédiés : Appels (819 682-5781), Texto (819 661-5113) et courriel pro (info@lecordondore.ca)'),
@@ -229,7 +229,7 @@ for row in comp_rows:
 doc_comp.add_paragraph().paragraph_format.space_after = Pt(4)
 
 # Section 2: Audit éditorial
-h2_audit = doc_comp.add_heading('2. Audit Éditorial : Coquilles & Incohérences Relevées sur le Site Wix', level=1)
+h2_audit = doc_comp.add_heading('2. Audit Éditorial : Petites Erreurs & Incohérences Relevées sur le Site Wix', level=1)
 h2_audit.style.font.color.rgb = RGBColor(15, 23, 42)
 
 p_aud_intro = doc_comp.add_paragraph('Notre évaluation approfondie de votre site web actuel a mis en lumière plusieurs anomalies concrètes que la nouvelle version corrige intégralement :')
@@ -238,7 +238,7 @@ p_aud_intro.paragraph_format.space_after = Pt(2)
 audit_bullets = [
     ('Plat en doublon au menu', 'Le plat « Seekh kebab poulet (2 pcs) » apparaît deux fois dans votre carte en ligne.'),
     ('Lien brisé et absence de combos', 'Le lien « Menu familiale Emporter » renvoie vers /copie-de-buffet-indien qui n\'affiche qu\'une vieille image d\'avis de vacances (CORDON VACANCES) au lieu des combos repas.'),
-    ('Fautes d\'anglais sur les mets', 'Coquilles visibles par vos clients anglophones comme « Scalops and calamary » (au lieu de Scallops and calamari) et « briyani rice » (au lieu de biryani).'),
+    ('Fautes d\'anglais sur les mets', 'Petites erreurs d\'anglais visibles par vos clients comme « Scalops and calamary » (au lieu de Scallops and calamari) et « briyani rice » (au lieu de biryani).'),
     ('Pages inachevées & rubriques vides', 'Votre page /blog affiche un article fictif « Test » sans aucun texte publié (« Aucun post publié dans cette langue »), et la page /cave-cordon liste des catégories d\'alcool sans aucun met ni prix.'),
     ('Faute dans la navigation principale', 'Doublon entre « Home » et « Acceuil » (avec faute d\'orthographe sur le mot Accueil).'),
     ('Adresses courriel contradictoires', 'cordondor1803@gmail.com affiché en bas de page contre cordondor18103@gmail.com sous Réservation (risque d\'échec de réception).'),

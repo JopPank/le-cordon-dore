@@ -17,7 +17,7 @@ Votre cuisine soignée, votre chef formé à Paris et votre buffet du mardi mér
 
 ### 1. Ce que vous faites déjà très bien
 Le Cordon Doré a des atouts que très peu de restaurants peuvent revendiquer dans l'Outaouais :
-* Un **chef formé à Paris avec 25 ans d’expérience (Disciple d'Auguste Escoffier)**, alliant techniques françaises de mijotage et secrets d'épices de l'Inde.
+* Un chef propriétaire d'exception, **Chef Oodith Kallaram**, formé à la prestigieuse **Maison Lenôtre** à Paris avec plus de 25 ans d’expérience internationale et intronisé parmi **Les Disciples d'Auguste Escoffier (Océan Indien)**, alliant techniques françaises de mijotage et secrets d'épices de l'Inde.
 * Une **cuisine indienne et internationale soignée** : 44 spécialités indiennes, classiques du bistrot, 6 menus enfants et options véganes/sans gluten.
 * Des **viandes 100 % certifiées Halal**, un gage de qualité très recherché par la clientèle de Gatineau et d'Ottawa.
 * Le **Grand Buffet Indien du mardi soir**, une formule à volonté réputée.
