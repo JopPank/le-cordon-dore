@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Cordon Doré · Haute Gastronomie & Bistrot · Vieux-Aylmer</title>
+  <meta name="description" content="Une expérience culinaire d'exception au cœur du Vieux-Aylmer. Chef Oodith Kallaram, formé à la Maison Lenôtre (Paris) et Disciple d'Auguste Escoffier.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%230B0F17' stroke='%23D4AF37' stroke-width='4'/><text x='50%' y='64%' font-size='42' font-family='Cinzel, serif' font-weight='700' fill='%23D4AF37' text-anchor='middle'>CD</text></svg>">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            noir: '#08090C',
+            obsidian: '#0E1116',
+            surface: '#151821',
+            or: '#C5A880',
+            orClair: '#E8D5B5',
+            orFonce: '#9B7B4F',
+            ivoire: '#F7F5F0',
+            sable: '#CFCABF',
+            ardoise: '#8C93A0'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'sans-serif'],
+            display: ['"Cinzel"', 'serif']
+          },
+          letterSpacing: {
+            luxe: '0.25em',
+            prestige: '0.35em'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts : Cormorant Garamond & Plus Jakarta Sans & Cinzel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #08090C;
+      color: #F7F5F0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+    .font-display {
+      font-family: 'Cinzel', serif;
+    }
+    ::selection {
+      background-color: #C5A880;
+      color: #08090C;
+    }
+    /* Subtle custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #08090C;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #232733;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #C5A880;
+    }
+  </style>
+</head>
+<body class="bg-noir text-ivoire selection:bg-or selection:text-noir min-h-screen flex flex-col justify-between">
+
+  <!-- ==============================================================================
+       CONCEPT BANNER SWITCHER
+       ============================================================================== -->
+  <div class="bg-surface/90 border-b border-white/5 py-2 px-4 text-center text-xs tracking-wider uppercase text-sable flex items-center justify-between z-50 sticky top-0 backdrop-blur-md">
+    <div class="hidden sm:flex items-center gap-2 text-[11px] text-ardoise">
+      <span class="w-1.5 h-1.5 rounded-full bg-or animate-pulse"></span>
+      <span>Concept Éditorial Inspiré d'Alinea & Eleven Madison Park</span>
+    </div>
+    <div class="mx-auto sm:mx-0 flex items-center gap-3">
+      <span class="text-or font-medium text-[11px]">Ébauche Haute Gastronomie</span>
+      <span class="text-white/20">|</span>
+      <a href="index.html" class="inline-flex items-center gap-1.5 text-ivoire hover:text-or transition-colors text-[11px] font-semibold underline underline-offset-4 decoration-or/40 hover:decoration-or">
+        ← Retourner au site actuel (index.html)
+      </a>
+    </div>
+    <div class="flex items-center gap-2">
+      <button onclick="toggleLang()" class="px-2.5 py-1 rounded border border-white/10 hover:border-or/40 text-[11px] font-mono tracking-widest text-ivoire transition-colors">
+        <span id="lang-btn-text">EN</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==============================================================================
+       HEADER NAVIGATION
+       ============================================================================== -->
+  <header class="border-b border-white/5 relative z-40 bg-noir/70 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 h-24 flex items-center justify-between">
+      
+      <!-- Brand Logo / Monogram -->
+      <a href="#hero" class="flex items-center gap-4 group">
+        <div class="w-12 h-12 rounded-full border border-or/40 flex items-center justify-center bg-obsidian group-hover:border-or transition-colors duration-500 shadow-inner">
+          <span class="font-display text-lg font-bold text-or tracking-widest pt-0.5">CD</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display tracking-prestige text-base sm:text-lg font-medium text-ivoire uppercase group-hover:text-or transition-colors duration-300">
+            Le Cordon Doré
+          </span>
+          <span class="text-[9px] uppercase tracking-luxe text-ardoise -mt-0.5 font-light" data-i18n="nav_sub">
+            Maison Culinaire · Vieux-Aylmer
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-luxe text-sable font-light">
+        <a href="#philosophie" class="hover:text-or transition-colors" data-i18n="nav_1">Philosophie</a>
+        <a href="#experiences" class="hover:text-or transition-colors" data-i18n="nav_2">Les Expériences</a>
+        <a href="#menu-degustation" class="hover:text-or transition-colors" data-i18n="nav_3">La Carte</a>
+        <a href="#buffet" class="hover:text-or transition-colors" data-i18n="nav_4">Le Mardi Soir</a>
+        <a href="#lieu" class="hover:text-or transition-colors" data-i18n="nav_5">Le Lieu</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-4">
+        <a href="tel:8196825781" class="px-5 py-2.5 rounded-full border border-or/60 hover:border-or text-or hover:text-noir hover:bg-or text-xs uppercase tracking-prestige font-medium transition-all duration-300">
+          <span data-i18n="nav_res_btn">Réserver</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==============================================================================
+       HERO SECTION (Majestic & Editorial)
+       ============================================================================== -->
+  <section id="hero" class="relative min-h-[85vh] flex items-center justify-center px-6 sm:px-12 py-20 overflow-hidden">
+    <!-- Subtle Background Lighting -->
+    <div class="absolute inset-0 bg-radial from-surface/40 via-noir to-noir pointer-events-none"></div>
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-or/5 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto text-center relative z-10 flex flex-col items-center">
+      
+      <!-- Prestige Tag -->
+      <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-or/20 bg-surface/60 mb-8 backdrop-blur-md">
+        <span class="w-1.5 h-1.5 rounded-full bg-or"></span>
+        <span class="text-[10px] sm:text-xs uppercase tracking-luxe text-orClair font-light" data-i18n="hero_pill">
+          Disciple d'Auguste Escoffier · Formé chez Lenôtre Paris
+        </span>
+      </div>
+
+      <!-- Main Majestic Title -->
+      <h1 class="font-serif italic font-light text-5xl sm:text-7xl lg:text-8xl text-ivoire leading-[1.08] mb-8 tracking-tight" data-i18n="hero_title">
+        La rencontre de la haute cuisine française et des épices impériales d'Inde.
+      </h1>
+
+      <!-- Elegant Prose Subtitle -->
+      <p class="max-w-2xl mx-auto text-sm sm:text-base text-ardoise font-light leading-relaxed mb-12 tracking-wide" data-i18n="hero_desc">
+        Sous la direction du Chef Oodith Kallaram, Le Cordon Doré célèbre 25 ans d'art culinaire au cœur du Vieux-Aylmer. Des mijotés lents, des sauces de réduction d'exception et des viandes 100 % certifiées Halal.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto">
+        <a href="tel:8196825781" class="w-full sm:w-auto px-8 py-4 rounded-full bg-or text-noir font-semibold text-xs uppercase tracking-prestige hover:bg-orClair transition-all duration-300 shadow-lg shadow-or/10">
+          <span data-i18n="hero_btn_res">Réserver Votre Table</span>
+        </a>
+        <a href="#menu-degustation" class="w-full sm:w-auto px-8 py-4 rounded-full border border-white/20 hover:border-or text-ivoire hover:text-or text-xs uppercase tracking-prestige font-light transition-all duration-300">
+          <span data-i18n="hero_btn_carte">Découvrir la Carte</span>
+        </a>
+      </div>
+
+      <!-- Footnote Meta -->
+      <div class="mt-16 pt-8 border-t border-white/5 flex flex-wrap items-center justify-center gap-8 text-xs text-ardoise tracking-wider font-light">
+        <div class="flex items-center gap-2">
+          <span class="text-or">★★★★★</span>
+          <span class="text-ivoire font-medium">4,7 sur Google</span>
+          <span class="text-ardoise/60">(180+ avis)</span>
+        </div>
+        <span class="hidden sm:inline text-white/10">•</span>
+        <div>58, rue Principale, Gatineau (Vieux-Aylmer)</div>
+        <span class="hidden sm:inline text-white/10">•</span>
+        <div>Viandes 100 % Halal Certifiées</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================================================
+       SECTION: PHILOSOPHIE & CHEF (Style Eleven Madison Park / Daniel Humm)
+       ============================================================================== -->
+  <section id="philosophie" class="py-24 sm:py-32 border-t border-white/5 relative">
+    <div class="max-w-7xl mx-auto px-6 sm:px-12">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 items-center">
+        
+        <!-- Large Portrait with Breathing Room -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative w-full max-w-md mx-auto aspect-[4/5] rounded-2xl overflow-hidden border border-or/30 shadow-2xl group bg-obsidian">
+            <img src="chef.jpg" alt="Chef Oodith Kallaram — Disciple d'Auguste Escoffier" class="w-full h-full object-cover object-top filter grayscale contrast-105 group-hover:grayscale-0 transition-all duration-700 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-noir via-transparent to-transparent opacity-80"></div>
+            
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[10px] uppercase tracking-prestige text-or block mb-1">Maison Lenôtre · Paris</span>
+              <h3 class="font-serif italic text-2xl text-ivoire font-light">Chef Oodith Kallaram</h3>
+              <p class="text-xs text-ardoise font-light mt-0.5">Chef Propriétaire · Disciple d'Auguste Escoffier</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Editorial Story -->
+        <div class="lg:col-span-7 flex flex-col justify-center">
+          
+          <span class="text-xs uppercase tracking-prestige text-or font-medium mb-4 block" data-i18n="chef_kicker">
+            L'Âme de la Maison
+          </span>
+
+          <blockquote class="font-serif italic font-light text-3xl sm:text-4xl text-ivoire leading-snug mb-8" data-i18n="chef_quote">
+            « La gastronomie n'est pas seulement une question d'ingrédients. C'est l'exigence du geste, la mémoire d'un savoir-faire et le bonheur simple de voir une salle comblée. »
+          </blockquote>
+
+          <div class="space-y-5 text-sm sm:text-base text-ardoise font-light leading-relaxed">
+            <p data-i18n="chef_bio_1">
+              Formé à la légendaire <strong class="text-ivoire font-medium">Maison Lenôtre à Paris</strong>, temple de la rigueur et de l'élégance gastronomique, le Chef Oodith Kallaram a consacré plus de 25 ans à la maîtrise des sauces, des réductions et des cuissons parfaites.
+            </p>
+            <p data-i18n="chef_bio_2">
+              Intronisé parmi les prestigieux <strong class="text-or font-medium">Disciples d'Auguste Escoffier (Océan Indien)</strong>, il choisit d'installer sa cuisine dans le Vieux-Aylmer en juin 2024 avec sa famille, pour y réaliser une synthèse unique : la précision des grands classiques français alliée aux secrets ancestraux des épices royales de l'Inde.
+            </p>
+            <p data-i18n="chef_bio_3">
+              Chaque bouillon mijote longuement, les pains naans sont cuits à la minute dans la chaleur du tandoor, et chaque pièce de viande est rigoureusement <strong class="text-ivoire font-medium">100 % certifiée Halal</strong>.
+            </p>
+          </div>
+
+          <!-- Signature details -->
+          <div class="mt-10 pt-8 border-t border-white/5 flex flex-wrap items-center gap-8">
+            <div>
+              <span class="block text-2xl font-serif text-or font-light">25+</span>
+              <span class="text-[10px] uppercase tracking-wider text-ardoise">Années de Métier</span>
+            </div>
+            <div class="w-px h-8 bg-white/10"></div>
+            <div>
+              <span class="block text-2xl font-serif text-or font-light">Lenôtre</span>
+              <span class="text-[10px] uppercase tracking-wider text-ardoise">École de Paris</span>
+            </div>
+            <div class="w-px h-8 bg-white/10"></div>
+            <div>
+              <span class="block text-2xl font-serif text-or font-light">Escoffier</span>
+              <span class="text-[10px] uppercase tracking-wider text-ardoise">Ordre Gastronomique</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================================================
+       SECTION: LES TROIS EXPÉRIENCES (Style Alinea)
+       ============================================================================== -->
+  <section id="experiences" class="py-24 sm:py-32 border-t border-white/5 bg-obsidian">
+    <div class="max-w-7xl mx-auto px-6 sm:px-12">
+      
+      <div class="max-w-2xl mb-16">
+        <span class="text-xs uppercase tracking-prestige text-or font-medium block mb-3" data-i18n="exp_kicker">
+          Trois Dimensions Culinaires
+        </span>
+        <h2 class="font-serif italic font-light text-4xl sm:text-5xl text-ivoire leading-tight" data-i18n="exp_title">
+          Une expérience pensée pour chaque moment
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Experience 1: La Table Indienne -->
+        <div class="p-8 sm:p-10 rounded-2xl bg-noir border border-white/5 hover:border-or/40 transition-all duration-500 flex flex-col justify-between group">
+          <div>
+            <span class="text-xs font-mono text-or tracking-widest block mb-4">01 / DÉGUSTATION</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-light text-ivoire mb-4 group-hover:text-or transition-colors" data-i18n="exp_1_title">
+              L'Art Gastronomique Indien
+            </h3>
+            <p class="text-sm text-ardoise font-light leading-relaxed mb-6" data-i18n="exp_1_desc">
+              44 créations soignées honorant les traditions mogholes et du Sud de l'Inde. Agneau rogan josh fondant, poulet au beurre infusé au fenugrec, biryanis parfumés et naans gonflés à la flamme.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-white/5 flex items-center justify-between text-xs text-sable">
+            <span data-i18n="exp_1_badge">Mijotages & Tandoor</span>
+            <span class="text-or">→</span>
+          </div>
+        </div>
+
+        <!-- Experience 2: Le Bistrot Parisien -->
+        <div class="p-8 sm:p-10 rounded-2xl bg-noir border border-white/5 hover:border-or/40 transition-all duration-500 flex flex-col justify-between group">
+          <div>
+            <span class="text-xs font-mono text-or tracking-widest block mb-4">02 / HÉRITAGE</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-light text-ivoire mb-4 group-hover:text-or transition-colors" data-i18n="exp_2_title">
+              Le Bistrot Classique
+            </h3>
+            <p class="text-sm text-ardoise font-light leading-relaxed mb-6" data-i18n="exp_2_desc">
+              L'hommage à la formation parisienne du chef : Souris d'agneau braisée lentement aux sucs aromatiques (42 $), canard à l'orange, navarin de saumon au coulis de crustacés et steak au poivre vert.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-white/5 flex items-center justify-between text-xs text-sable">
+            <span data-i18n="exp_2_badge">Technique Française</span>
+            <span class="text-or">→</span>
+          </div>
+        </div>
+
+        <!-- Experience 3: Le Buffet Signature -->
+        <div class="p-8 sm:p-10 rounded-2xl bg-noir border border-or/30 hover:border-or transition-all duration-500 flex flex-col justify-between group shadow-xl shadow-or/5">
+          <div>
+            <span class="text-xs font-mono text-or tracking-widest block mb-4">03 / RENDEZ-VOUS</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-light text-ivoire mb-4 group-hover:text-or transition-colors" data-i18n="exp_3_title">
+              Le Grand Buffet du Mardi
+            </h3>
+            <p class="text-sm text-ardoise font-light leading-relaxed mb-6" data-i18n="exp_3_desc">
+              Une institution du Vieux-Aylmer chaque mardi soir. Un banquet d'abondance raffiné avec caris chauds réapprovisionnés en continu, viandes tendres 100 % Halal et généreuses options végétariennes.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-white/5 flex items-center justify-between text-xs text-sable">
+            <span class="text-or font-medium" data-i18n="exp_3_badge">Chaque Mardi Soir</span>
+            <span class="text-or">→</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================================================
+       SECTION: SHOWCASE ÉDITORIAL DE LA CARTE (Style Michelin Guide)
+       ============================================================================== -->
+  <section id="menu-degustation" class="py-24 sm:py-32 border-t border-white/5 relative">
+    <div class="max-w-5xl mx-auto px-6 sm:px-12">
+      
+      <div class="text-center max-w-2xl mx-auto mb-20">
+        <span class="text-xs uppercase tracking-prestige text-or font-medium block mb-3" data-i18n="menu_kicker">
+          Sélection Choisie
+        </span>
+        <h2 class="font-serif italic font-light text-4xl sm:text-6xl text-ivoire mb-4" data-i18n="menu_title">
+          Quelques Plats Emblématiques
+        </h2>
+        <p class="text-sm text-ardoise font-light" data-i18n="menu_sub">
+          Les créations signatures du Chef Oodith Kallaram, cuisinées avec patience et passion.
+        </p>
+      </div>
+
+      <!-- Categories Tabs -->
+      <div class="flex items-center justify-center gap-3 mb-16 flex-wrap">
+        <button onclick="switchTab('bistro')" id="tab-btn-bistro" class="px-5 py-2 rounded-full border border-or text-noir bg-or text-xs uppercase tracking-wider font-medium transition-all">
+          Classiques Bistrot
+        </button>
+        <button onclick="switchTab('indien')" id="tab-btn-indien" class="px-5 py-2 rounded-full border border-white/10 hover:border-or/40 text-sable hover:text-ivoire text-xs uppercase tracking-wider font-light transition-all">
+          Spécialités Indiennes
+        </button>
+        <button onclick="switchTab('cocktails')" id="tab-btn-cocktails" class="px-5 py-2 rounded-full border border-white/10 hover:border-or/40 text-sable hover:text-ivoire text-xs uppercase tracking-wider font-light transition-all">
+          Cocktails Signature (14 $)
+        </button>
+      </div>
+
+      <!-- TAB 1: BISTROT -->
+      <div id="content-bistro" class="space-y-12 block">
+        
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between pb-6 border-b border-white/5 gap-2">
+          <div>
+            <div class="flex items-center gap-3">
+              <h4 class="font-serif text-2xl font-normal text-ivoire">Souris d'Agneau Braisée aux Sucs Aromatiques</h4>
+              <span class="px-2 py-0.5 rounded text-[10px] uppercase font-mono tracking-wider bg-or/10 text-or">Signature</span>
+            </div>
+            <p class="text-xs sm:text-sm text-ardoise font-light mt-1.5 max-w-xl">
+              Souris d'agneau confite lentement pendant de longues heures, fondante à cœur, jus de braisage corsé aux aromates frais.
+            </p>
+          </div>
+          <span class="font-serif text-2xl text-or whitespace-nowrap">42 $</span>
+        </div>
+
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between pb-6 border-b border-white/5 gap-2">
+          <div>
+            <h4 class="font-serif text-2xl font-normal text-ivoire">Navarin de Saumon au Coulis de Crustacés</h4>
+            <p class="text-xs sm:text-sm text-ardoise font-light mt-1.5 max-w-xl">
+              Pavé de saumon saisi servi sur un risotto onctueux lié au parmesan et coulis concentré de fruits de mer.
+            </p>
+          </div>
+          <span class="font-serif text-2xl text-or whitespace-nowrap">34 $</span>
+        </div>
+
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between pb-6 border-b border-white/5 gap-2">
+          <div>
+            <h4 class="font-serif text-2xl font-normal text-ivoire">Canard à l'Orange Flambé</h4>
+            <p class="text-xs sm:text-sm text-ardoise font-light mt-1.5 max-w-xl">
+              Demi-canard rôti à chair tendre, sauce aigre-douce parfumée aux zestes d'oranges caramélisées, pâtes fraîches.
+            </p>
+          </div>
+          <span class="font-serif text-2xl text-or whitespace-nowrap">36 $</span>
+        </div>
+
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between pb-6 border-b border-white/5 gap-2">
+          <div>
+            <h4 class="font-serif text-2xl font-normal text-ivoire">Coquilles Saint-Jacques Poêlées</h4>
+            <p class="text-xs sm:text-sm text-ardoise font-light mt-1.5 max-w-xl">
+              Noix de Saint-Jacques dorées au beurre clarifié, purée de pommes de terre mousseline et légumes du jour croquants.
+            </p>
+          </div>
+          <span class="font-serif text-2xl text-or whitespace-nowrap">34 $</span>
+        </div>
+
+      </div>
+
+      <!-- TAB 2: INDIEN -->
+      <div id="content-indien" class="space-y-12 hidden">
+        
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between pb-6 border-b border-white/5 gap-2">
+          <div>
+            <div class="flex items-center gap-3">
+              <h4 class="font-serif text-2xl font-normal text-ivoire">Poulet au Beurre Royal (Butter Chicken)</h4>
+              <span class="px-2 py-0.5 rounded text-[10px] uppercase font-mono tracking-wider bg-or/10 text-or">Incontournable</span>
+            </div>
+            <p class="text-xs sm:text-sm text-ardoise font-light mt-1.5 max-w-xl">
+              Morceaux de poulet grillé au tandoor mijotés dans une sauce veloutée aux tomates douces, beurre et feuilles de fenugrec. Servi avec riz basmati, daal et salade.
+            </p>
+          </div>
+          <span class="font-serif text-2xl text-or whitespace-nowrap">26 $</span>
+        </div>
+
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between pb-6 border-b border-white/5 gap-2">
+          <div>
+            <h4 class="font-serif text-2xl font-normal text-ivoire">Agneau Rogan Josh du Cachemire</h4>
+            <p class="text-xs sm:text-sm text-ardoise font-light mt-1.5 max-w-xl">
+              Morceaux d'agneau braisés aux oignons caramélisés, yogourt et graines de cardamome noire concassées. Servi avec 3 accompagnements.
+            </p>
+          </div>
+          <span class="font-serif text-2xl text-or whitespace-nowrap">29 $</span>
+        </div>
+
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between pb-6 border-b border-white/5 gap-2">
+          <div>
+            <h4 class="font-serif text-2xl font-normal text-ivoire">Crevettes Karahi aux Épices Rôties</h4>
+            <p class="text-xs sm:text-sm text-ardoise font-light mt-1.5 max-w-xl">
+              Grosses crevettes sautées au wok en fonte avec poivrons, gingembre frais et graines de coriandre moulues.
+            </p>
+          </div>
+          <span class="font-serif text-2xl text-or whitespace-nowrap">29 $</span>
+        </div>
+
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between pb-6 border-b border-white/5 gap-2">
+          <div>
+            <h4 class="font-serif text-2xl font-normal text-ivoire">Halwa Carotte Traditionnel au Lait Réduit</h4>
+            <p class="text-xs sm:text-sm text-ardoise font-light mt-1.5 max-w-xl">
+              Pouding ancestral de carottes râpées mijotées patiemment au lait entier, cardamome verte et amandes effilées.
+            </p>
+          </div>
+          <span class="font-serif text-2xl text-or whitespace-nowrap">9 $</span>
+        </div>
+
+      </div>
+
+      <!-- TAB 3: COCKTAILS -->
+      <div id="content-cocktails" class="space-y-12 hidden">
+        
+        <div class="p-6 rounded-2xl bg-surface border border-or/20 text-center mb-8">
+          <span class="text-xs uppercase tracking-prestige text-or block mb-1">Tous nos Cocktails Signatures</span>
+          <span class="font-serif text-3xl font-light text-ivoire">14 $ chacun</span>
+          <p class="text-xs text-ardoise font-light mt-2 max-w-md mx-auto">
+            Créations rafraîchissantes et équilibrées, préparées avec des jus de fruits frais et spiritueux sélectionnés.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="pb-4 border-b border-white/5">
+            <h4 class="font-serif text-xl font-normal text-ivoire">Cordon Doré</h4>
+            <p class="text-xs text-ardoise font-light mt-1">Jus d'ananas, sirop de fruit de la passion, rhum brun et sirop grenadine.</p>
+          </div>
+          <div class="pb-4 border-b border-white/5">
+            <h4 class="font-serif text-xl font-normal text-ivoire">Coucher du Soleil Marina</h4>
+            <p class="text-xs text-ardoise font-light mt-1">Lime fraîche, vodka, jus de tamarin et grenadine de canne.</p>
+          </div>
+          <div class="pb-4 border-b border-white/5">
+            <h4 class="font-serif text-xl font-normal text-ivoire">Daiquiri Fraise</h4>
+            <p class="text-xs text-ardoise font-light mt-1">Fraises fraîches, lime, sirop de canne pur et rhum blanc antillais.</p>
+          </div>
+          <div class="pb-4 border-b border-white/5">
+            <h4 class="font-serif text-xl font-normal text-ivoire">Mojito Menthe Fraîche</h4>
+            <p class="text-xs text-ardoise font-light mt-1">Lime pressée, gin, menthe du jardin et boisson citron-lime pétillante.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Link to full interactive menu on current site -->
+      <div class="mt-16 text-center">
+        <p class="text-xs text-ardoise font-light mb-4 tracking-wider uppercase">
+          Envie de parcourir l'ensemble de nos 64 spécialités ?
+        </p>
+        <a href="index.html#menus" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-prestige text-or hover:text-orClair transition-colors border-b border-or/40 pb-1">
+          <span>Consulter le menu complet détaillé avec filtres</span> →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================================================
+       SECTION: LE GRAND BUFFET DU MARDI (Atmospheric Callout)
+       ============================================================================== -->
+  <section id="buffet" class="py-24 border-t border-white/5 bg-gradient-to-b from-noir via-surface to-noir relative">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      
+      <span class="text-xs uppercase tracking-prestige text-or font-medium block mb-4" data-i18n="buf_kicker">
+        Chaque Mardi Soir · 17h00 à 20h30
+      </span>
+
+      <h2 class="font-serif italic font-light text-4xl sm:text-6xl text-ivoire mb-6" data-i18n="buf_title">
+        Le Grand Festin du Mardi Soir
+      </h2>
+
+      <p class="text-sm sm:text-base text-ardoise font-light leading-relaxed max-w-2xl mx-auto mb-10" data-i18n="buf_desc">
+        Une table d'abondance royale où défilent les caris fumants, les grillades au tandoor et les délices végétariens préparés sous les yeux des convives. Formule à volonté, viandes 100 % certifiées Halal.
+      </p>
+
+      <div class="inline-flex flex-col sm:flex-row items-center gap-4">
+        <a href="tel:8196825781" class="px-8 py-3.5 rounded-full bg-or text-noir font-semibold text-xs uppercase tracking-prestige hover:bg-orClair transition-colors">
+          <span data-i18n="buf_btn">Réserver par Téléphone (819 682-5781)</span>
+        </a>
+        <a href="sms:8196615113" class="px-8 py-3.5 rounded-full border border-white/20 hover:border-or text-ivoire hover:text-or font-light text-xs uppercase tracking-prestige transition-colors">
+          <span data-i18n="buf_sms">Ou par Texto (819 661-5113)</span>
+        </a>
+      </div>
+
+      <p class="text-[11px] text-ardoise/60 mt-6 tracking-wider">
+        * Horaire habituel à titre indicatif — Places limitées, réservation vivement conseillée.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ==============================================================================
+       SECTION: LE LIEU & CONTACT (Minimalist Chic)
+       ============================================================================== -->
+  <section id="lieu" class="py-24 border-t border-white/5 relative">
+    <div class="max-w-7xl mx-auto px-6 sm:px-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        
+        <!-- Info Column -->
+        <div>
+          <span class="text-xs uppercase tracking-prestige text-or font-medium block mb-3">
+            Au Cœur du Patrimoine
+          </span>
+          <h2 class="font-serif italic font-light text-4xl sm:text-5xl text-ivoire mb-8">
+            58, rue Principale<br>Vieux-Aylmer, Gatineau
+          </h2>
+
+          <div class="space-y-6 text-sm text-ardoise font-light">
+            <div>
+              <strong class="text-ivoire block font-normal uppercase tracking-wider text-xs mb-1">Horaires de Salle</strong>
+              <p>Mardi au Dimanche : 16h30 – 21h00</p>
+              <p class="text-or">Mardi : Grand Buffet de 17h00 à 20h30</p>
+              <p class="text-ardoise/60">Fermé le Lundi</p>
+            </div>
+
+            <div>
+              <strong class="text-ivoire block font-normal uppercase tracking-wider text-xs mb-1">Contact Direct</strong>
+              <p>Commandes & Réservations : <a href="tel:8196825781" class="text-or hover:underline">819 682-5781</a></p>
+              <p>Réservations par Texto : <a href="sms:8196615113" class="text-or hover:underline">819 661-5113</a></p>
+              <p>Traiteur & Événements : <span class="text-ivoire font-mono text-xs">cordondor1803@gmail.com</span></p>
+            </div>
+
+            <div>
+              <strong class="text-ivoire block font-normal uppercase tracking-wider text-xs mb-1">Stationnement</strong>
+              <p>Stationnement facile et gratuit directement sur la rue Principale et dans les rues avoisinantes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Reviews Highlight Card -->
+        <div class="p-10 rounded-2xl bg-surface border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-or text-lg">★★★★★</span>
+              <span class="text-ivoire font-serif text-lg">4,7 sur Google</span>
+              <span class="text-ardoise text-xs">(180+ avis)</span>
+            </div>
+            
+            <p class="font-serif italic text-xl text-ivoire font-light leading-relaxed mb-6">
+              « Une table incontournable sur la rue Principale. Les naans sortent tout chauds du four, les caris sont parfumés à la perfection et le service est d'une bienveillance rare. »
+            </p>
+            
+            <span class="text-xs text-ardoise uppercase tracking-wider block">— Marc-André G., Visiteur vérifié sur Google</span>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
+            <a href="https://www.google.com/maps/search/?api=1&query=Le+Cordon+Dor%C3%A9+Restaurant-Bistrot+58+rue+Principale+Gatineau" target="_blank" rel="noopener noreferrer" class="text-xs uppercase tracking-prestige text-or hover:text-orClair font-medium transition-colors">
+              Ouvrir l'Itinéraire Google Maps →
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================================================
+       FOOTER
+       ============================================================================== -->
+  <footer class="border-t border-white/5 py-12 bg-noir">
+    <div class="max-w-7xl mx-auto px-6 sm:px-12 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-ardoise font-light tracking-wider">
+      
+      <div class="flex items-center gap-3">
+        <span class="font-display text-or tracking-widest font-semibold">LE CORDON DORÉ</span>
+        <span class="text-white/10">|</span>
+        <span>© 2026 Maison Culinaire · Tous droits réservés</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="https://www.facebook.com/cordondorerestaurantbistrot" target="_blank" rel="noopener noreferrer" class="hover:text-or transition-colors">Facebook</a>
+        <a href="https://www.instagram.com/cordondorerestaurantbistro/" target="_blank" rel="noopener noreferrer" class="hover:text-or transition-colors">Instagram</a>
+        <a href="index.html" class="text-or hover:underline">Site Bistrot Mobile</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==============================================================================
+       JAVASCRIPT: TABS & BILINGUAL SUPPORT
+       ============================================================================== -->
+  <script>
+    function switchTab(name) {
+      ['bistro', 'indien', 'cocktails'].forEach(t => {
+        const content = document.getElementById('content-' + t);
+        const btn = document.getElementById('tab-btn-' + t);
+        if (t === name) {
+          content.classList.remove('hidden');
+          content.classList.add('block');
+          btn.classList.add('border-or', 'text-noir', 'bg-or');
+          btn.classList.remove('border-white/10', 'text-sable', 'hover:border-or/40');
+        } else {
+          content.classList.add('hidden');
+          content.classList.remove('block');
+          btn.classList.remove('border-or', 'text-noir', 'bg-or');
+          btn.classList.add('border-white/10', 'text-sable', 'hover:border-or/40');
+        }
+      });
+    }
+
+    // Bilingual dictionary for Haute Gastronomie concept
+    let currentLang = 'fr';
+    const dict = {
+      fr: {
+        nav_sub: "Maison Culinaire · Vieux-Aylmer",
+        nav_1: "Philosophie",
+        nav_2: "Les Expériences",
+        nav_3: "La Carte",
+        nav_4: "Le Mardi Soir",
+        nav_5: "Le Lieu",
+        nav_res_btn: "Réserver",
+        hero_pill: "Disciple d'Auguste Escoffier · Formé chez Lenôtre Paris",
+        hero_title: "La rencontre de la haute cuisine française et des épices impériales d'Inde.",
+        hero_desc: "Sous la direction du Chef Oodith Kallaram, Le Cordon Doré célèbre 25 ans d'art culinaire au cœur du Vieux-Aylmer. Des mijotés lents, des sauces de réduction d'exception et des viandes 100 % certifiées Halal.",
+        hero_btn_res: "Réserver Votre Table",
+        hero_btn_carte: "Découvrir la Carte",
+        chef_kicker: "L'Âme de la Maison",
+        chef_quote: "« La gastronomie n'est pas seulement une question d'ingrédients. C'est l'exigence du geste, la mémoire d'un savoir-faire et le bonheur simple de voir une salle comblée. »",
+        chef_bio_1: "Formé à la légendaire Maison Lenôtre à Paris, temple de la rigueur et de l'élégance gastronomique, le Chef Oodith Kallaram a consacré plus de 25 ans à la maîtrise des sauces, des réductions et des cuissons parfaites.",
+        chef_bio_2: "Intronisé parmi les prestigieux Disciples d'Auguste Escoffier (Océan Indien), il choisit d'installer sa cuisine dans le Vieux-Aylmer en juin 2024 avec sa famille, pour y réaliser une synthèse unique : la précision des grands classiques français alliée aux secrets ancestraux des épices royales de l'Inde.",
+        chef_bio_3: "Chaque bouillon mijote longuement, les pains naans sont cuits à la minute dans la chaleur du tandoor, et chaque pièce de viande est rigoureusement 100 % certifiée Halal.",
+        exp_kicker: "Trois Dimensions Culinaires",
+        exp_title: "Une expérience pensée pour chaque moment",
+        exp_1_title: "L'Art Gastronomique Indien",
+        exp_1_desc: "44 créations soignées honorant les traditions mogholes et du Sud de l'Inde. Agneau rogan josh fondant, poulet au beurre infusé au fenugrec, biryanis parfumés et naans gonflés à la flamme.",
+        exp_1_badge: "Mijotages & Tandoor",
+        exp_2_title: "Le Bistrot Classique",
+        exp_2_desc: "L'hommage à la formation parisienne du chef : Souris d'agneau braisée lentement aux sucs aromatiques (42 $), canard à l'orange, navarin de saumon au coulis de crustacés et steak au poivre vert.",
+        exp_2_badge: "Technique Française",
+        exp_3_title: "Le Grand Buffet du Mardi",
+        exp_3_desc: "Une institution du Vieux-Aylmer chaque mardi soir. Un banquet d'abondance raffiné avec caris chauds réapprovisionnés en continu, viandes tendres 100 % Halal et généreuses options végétariennes.",
+        exp_3_badge: "Chaque Mardi Soir",
+        menu_kicker: "Sélection Choisie",
+        menu_title: "Quelques Plats Emblématiques",
+        menu_sub: "Les créations signatures du Chef Oodith Kallaram, cuisinées avec patience et passion.",
+        buf_kicker: "Chaque Mardi Soir · 17h00 à 20h30",
+        buf_title: "Le Grand Festin du Mardi Soir",
+        buf_desc: "Une table d'abondance royale où défilent les caris fumants, les grillades au tandoor et les délices végétariens préparés sous les yeux des convives. Formule à volonté, viandes 100 % certifiées Halal.",
+        buf_btn: "Réserver par Téléphone (819 682-5781)",
+        buf_sms: "Ou par Texto (819 661-5113)"
+      },
+      en: {
+        nav_sub: "Culinary House · Old Aylmer",
+        nav_1: "Philosophy",
+        nav_2: "Experiences",
+        nav_3: "The Menu",
+        nav_4: "Tuesday Buffet",
+        nav_5: "The Venue",
+        nav_res_btn: "Reserve",
+        hero_pill: "Disciple d'Auguste Escoffier · Trained at Lenôtre Paris",
+        hero_title: "Where French culinary heritage meets the imperial spices of India.",
+        hero_desc: "Under Chef Oodith Kallaram, Le Cordon Doré celebrates 25 years of culinary artistry in Old Aylmer. Slow-braised meats, masterful reduction sauces, and 100% Halal certified dining.",
+        hero_btn_res: "Reserve Your Table",
+        hero_btn_carte: "Explore the Menu",
+        chef_kicker: "The Soul of the House",
+        chef_quote: "“Fine gastronomy is not merely about ingredients. It is about precision of craft, the memory of tradition, and the simple joy of a delighted dining room.”",
+        chef_bio_1: "Trained at the legendary Maison Lenôtre in Paris—a temple of French culinary discipline and finesse—Chef Oodith Kallaram has devoted over 25 years to the mastery of reductions, sauces, and slow braising.",
+        chef_bio_2: "Inducted into the esteemed Disciples d'Auguste Escoffier (Océan Indien), he opened Le Cordon Doré in Old Aylmer in June 2024 with his family to bring this vision to life: classical French technique married with royal Indian spice heritage.",
+        chef_bio_3: "Every broth simmers patiently, naan breads are fired fresh to order in the intense heat of the tandoor, and all meats are rigorously 100% Halal certified.",
+        exp_kicker: "Three Culinary Dimensions",
+        exp_title: "An experience curated for every occasion",
+        exp_1_title: "Authentic Indian Gastronomy",
+        exp_1_desc: "44 refined creations honoring Mughal and Southern Indian traditions. Slow-braised rogan josh, fenugreek butter chicken, fragrant biryanis, and flame-fired naan breads.",
+        exp_1_badge: "Slow Braises & Tandoor",
+        exp_2_title: "Classical Parisian Bistro",
+        exp_2_desc: "A tribute to the chef's Parisian training: slow-braised lamb shank in aromatic juices (42 $), duck à l'orange, salmon navarin with shellfish coulis, and peppercorn steak.",
+        exp_2_badge: "French Technique",
+        exp_3_title: "Tuesday Signature Buffet",
+        exp_3_desc: "An Old Aylmer tradition every Tuesday evening. A refined all-you-can-eat feast featuring continuously replenished hot curries, tender 100% Halal meats, and vegetarian specialties.",
+        exp_3_badge: "Every Tuesday Evening",
+        menu_kicker: "Curated Selection",
+        menu_title: "Signature Culinary Highlights",
+        menu_sub: "Chef Oodith Kallaram's flagship creations, crafted with devotion and time-honored technique.",
+        buf_kicker: "Every Tuesday Evening · 5:00 PM to 8:30 PM",
+        buf_title: "The Tuesday Evening Grand Feast",
+        buf_desc: "A royal table of continuous abundance featuring steaming curries, tandoor grilled specialties, and vegetarian delicacies. All-you-can-eat format, 100% Halal certified.",
+        buf_btn: "Reserve by Phone (819 682-5781)",
+        buf_sms: "Or by Text (819 661-5113)"
+      }
+    };
+
+    function toggleLang() {
+      currentLang = (currentLang === 'fr') ? 'en' : 'fr';
+      document.documentElement.lang = currentLang;
+      document.getElementById('lang-btn-text').textContent = (currentLang === 'fr') ? 'EN' : 'FR';
+      
+      const elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[currentLang] && dict[currentLang][key]) {
+          el.textContent = dict[currentLang][key];
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
