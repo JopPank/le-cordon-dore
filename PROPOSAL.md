@@ -16,7 +16,7 @@ Cependant, votre site web actuel sous Wix (`lecordondorerestaurantbistrot.ca`) f
 | **13 liens de navigation encombrés** avec doublons (`Home` et `Acceuil`) | Les clients sur téléphone sont confus et quittent le site | **Menu épuré en 5 sections clés**, accessible en 1 clic |
 | **Pages fantômes indexées dans Google** (`copie-de-buffet-indien`, `copie-de-home`) | Nuit à votre image de marque et à votre référencement local | **Structure SEO propre** sans aucune page dupliquée |
 | **Menus difficiles à lire sur mobile** (nécessitent de zoomer ou de cliquer 6 fois) | Les clients abandonnent avant de commander | **Menu interactif par onglets** (Indien, Familial, Bistro, Enfants, Boissons) |
-| **Numéros de téléphone dispersés** et courriel Gmail personnel | Perte d'appels et d'opportunités traiteur | **Boutons 1-clic** : Appel direct (`819 682-5781`), Texto réservations (`819 661-5113`), courriel pro |
+| **Numéros dispersés & faute dans le courriel** (`cordondor1803@gmail.com` vs `cordondor18103@gmail.com` sur l'accueil) | Risque de courriels de réservation non reçus et perte d'appels | **Boutons 1-clic** : Appel direct (`819 682-5781`), Texto réservations (`819 661-5113`), courriel pro vérifié |
 | **Absence d'un toggle bilingue fluide** | Perte de clientèle anglophone à Aylmer | **Bascule FR / EN instantanée** sur l'ensemble de la page |
 | **Mise en avant insuffisante du Buffet du mardi** | Salle moins remplie en début de semaine | **Bloc vedette dédié au Buffet Indien du mardi soir** et brunchs |
 
@@ -29,6 +29,7 @@ Cependant, votre site web actuel sous Wix (`lecordondorerestaurantbistrot.ca`) f
 
 2. **Génération Directe de Commandes & Réservations**  
    - Bouton d'appel flottant ou épinglé en permanence : un client a faim, clique, et commande en 3 secondes.  
+   - Encourage les commandes directes à emporter pour réduire votre dépendance aux commissions de 30% des applications de livraison tierces (comme DoorDash).  
    - Distinction claire entre les commandes téléphoniques et les réservations rapides par texto (`819 661-5113`).
 
 3. **Mise en Valeur des Forces Uniques**  
