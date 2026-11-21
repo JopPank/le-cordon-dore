@@ -17,7 +17,7 @@ Votre cuisine soignée, votre chef formé à Paris et votre buffet du mardi mér
 
 ### 1. Ce que vous faites déjà très bien
 Le Cordon Doré a des atouts que très peu de restaurants peuvent revendiquer dans l'Outaouais :
-* Un **chef formé à Paris avec 25 ans d’expérience** culinaire, alliant techniques françaises de mijotage et secrets d'épices de l'Inde.
+* Un **chef formé à Paris avec 25 ans d’expérience (Disciple d'Auguste Escoffier)**, alliant techniques françaises de mijotage et secrets d'épices de l'Inde.
 * Une **cuisine indienne et internationale soignée** : 44 spécialités indiennes, classiques du bistrot, 6 menus enfants et options véganes/sans gluten.
 * Des **viandes 100 % certifiées Halal**, un gage de qualité très recherché par la clientèle de Gatineau et d'Ottawa.
 * Le **Grand Buffet Indien du mardi soir**, une formule à volonté réputée.
@@ -39,7 +39,7 @@ Le site web doit être le reflet fidèle de ce savoir-faire, surtout pour le cli
    *→ Nouvelle version :* Un rôle clair par canal (appeler pour commander au 819 682-5781, texter pour réserver au 819 661-5113, et un courriel vérifié pour le traiteur).
 
 3. **Petites erreurs et doublons dans le menu**  
-   *Actuel :* Le *Seekh kebab de poulet* apparaît deux fois dans les entrées, et on trouve des coquilles visibles comme « Scalops and calamary » et « briyani rice » dans les descriptions anglaises.  
+   *Actuel :* Le *Seekh kebab de poulet* apparaît deux fois dans les entrées, et on trouve des erreurs d'anglais visibles comme « Scalops and calamary » et « briyani rice » dans les descriptions anglaises.  
    *→ Nouvelle version :* 44 plats indiens et 20 spécialités bistrot relus, sans doublon, avec orthographe bilingue soignée et validée avec le chef.
 
 4. **Menu familial introuvable**  
@@ -71,7 +71,7 @@ La démonstration est un prototype fonctionnel. Voici ce que je ne publierai jam
 * **Menu, prix et allergènes :** Le chef approuve chaque plat, description et mention diététique. Certains textes de présentation de la démo ont été rédigés par moi et doivent être confirmés ou corrigés selon vos recettes.
 * **Combos familiaux :** Les compositions et les prix de la démo sont des exemples à ajuster selon vos formules exactes.
 * **Photos :** Vos vraies photos (le chef, la salle, le buffet, les plats) à la place des images d'illustration.
-* **Avis et note Google :** Uniquement de vrais avis cités fidèlement. La note et le nombre d’avis affichés seront vérifiés le jour de la mise en ligne : *[4,7 ★ · 180+ avis – à valider sur place]*.
+* **Avis et note Google :** Uniquement de vrais avis cités fidèlement. La note et le nombre d’avis affichés seront vérifiés le jour de la mise en ligne : **4,7 ★ · 180+ avis vérifiés sur Google**.
 * **Cartes-cadeaux :** Votre site actuel permet d’acheter des cartes-cadeaux numériques de 25 $ à 200 $ en ligne. Nous choisirons ensemble comment continuer à les offrir et comment honorer celles déjà vendues.
 * **Coordonnées et réseaux sociaux :** Votre page Facebook officielle (*cordondorerestaurantbistrot*), votre compte Instagram (*@cordondorerestaurantbistro*), le numéro secondaire 819 682-1977 et l’adresse courriel officielle.
 * **Carte des vins, bières et spiritueux :** À compléter avec vos bouteilles réelles et les prix que vous souhaitez afficher en salle.
@@ -104,7 +104,7 @@ Puisque vous êtes déjà partenaire de DoorDash, il est possible d’offrir la 
 ---
 
 ### Prochaine étape simple
-Je serais très heureux de passer vous voir au restaurant sur la rue Principale à Aylmer (ou lors d'un court appel vidéo) pour vous faire essayer la démonstration directement sur votre propre téléphone et répondre à vos questions, sans aucun engagement.
+Je serais très heureux de passer vous voir au restaurant sur la rue Principale à Aylmer (ou lors d'un court appel vidéo) pour vous faire essayer la démonstration sur votre téléphone ou directement sur mon écran, et répondre à toutes vos questions, sans aucun engagement.
 
 **Jonathan Pankratz · Jopism Solutions Numériques**  
 Courriel : [info@jopism.com](mailto:info@jopism.com)  |  Web : [digital.jopism.com](https://digital.jopism.com)  |  Démo : [lecordondore.jopism.com](https://lecordondore.jopism.com)  
