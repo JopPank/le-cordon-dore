@@ -63,7 +63,7 @@
       transition: opacity 0.3s ease-in-out;
     }
     .tab-content.active {
-      display: block;
+      display: grid;
       opacity: 1;
     }
   </style>
@@ -111,7 +111,7 @@
           <span class="font-serif text-lg sm:text-xl font-bold tracking-wider text-white group-hover:text-brand-gold transition-colors">
             LE CORDON DORÉ
           </span>
-          <span class="text-[10px] sm:text-xs tracking-widest uppercase text-slate-400 font-medium">
+          <span class="text-[10px] sm:text-xs tracking-widest uppercase text-slate-400 font-medium" data-i18n="nav_brand_sub">
             Restaurant - Bistrot · Aylmer
           </span>
         </div>
@@ -196,7 +196,7 @@
         <span class="text-slate-500">•</span>
         <span class="text-amber-200" data-i18n="hero_pill_halal">Viandes 100% certifiées Halal</span>
         <span class="text-slate-500 hidden sm:inline">•</span>
-        <span class="text-slate-400 hidden sm:inline">Vieux-Aylmer</span>
+        <span class="text-slate-400 hidden sm:inline" data-i18n="hero_pill_location">Vieux-Aylmer</span>
       </div>
 
       <!-- Main Headline -->
@@ -266,7 +266,7 @@
           </div>
           <div>
             <p class="text-xs text-slate-400" data-i18n="stat_4_sub">Emplacement</p>
-            <p class="text-sm font-semibold text-white">Vieux-Aylmer</p>
+            <p class="text-sm font-semibold text-white" data-i18n="stat_4_title">Vieux-Aylmer</p>
           </div>
         </div>
       </div>
@@ -2016,7 +2016,7 @@
             </div>
             <div>
               <h3 class="font-serif text-lg font-bold text-white">LE CORDON DORÉ</h3>
-              <p class="text-xs text-slate-400">Restaurant - Bistrot · Aylmer</p>
+              <p class="text-xs text-slate-400" data-i18n="footer_brand_sub">Restaurant - Bistrot · Aylmer</p>
             </div>
           </div>
 
@@ -2325,11 +2325,15 @@
         reviews_card_3_tag: "Buffet du mardi & emporter",
         reviews_btn_view_all: "Voir tous nos avis sur Google",
         reviews_btn_leave: "Laisser un avis",
+        nav_brand_sub: "Restaurant - Bistrot · Aylmer",
+        hero_pill_location: "Vieux-Aylmer",
+        stat_4_title: "Vieux-Aylmer",
         catering_badge: "Événements & Cadeaux",
         catering_title: "Service Traiteur & Cartes-Cadeaux",
-        catering_desc: "Offrez une expérience mémorable à vos invités lors de vos mariages, fêtes privées ou dîners d'entreprise dans l'Outaouais. Commandez également nos cartes-cadeaux gourmandes à offrir.",
+        catering_desc: "Offrez une expérience culinaire mémorable lors de vos mariages, fêtes privées ou dîners d'affaires dans l'Outaouais. Cartes-cadeaux électroniques disponibles, échangeables en salle et pour emporter.",
         catering_btn_quote: "Demander une soumission traiteur",
         catering_btn_gift: "Acheter une carte-cadeau",
+        footer_brand_sub: "Restaurant - Bistrot · Aylmer",
         footer_map_link: "Ouvrir dans Google Maps →",
         phone_desc: "Commandes & Réservations directes",
         sms_desc: "Textez seulement (réservations rapides)",
@@ -2350,7 +2354,6 @@
         parking_note: "Stationnement facile disponible dans la rue Principale et à proximité dans le Vieux-Aylmer.",
         all_rights: "Tous droits réservés.",
         demo_tag: "Proposition de site web moderne — Démonstration exclusive",
-        catering_desc: "Offrez une expérience culinaire mémorable lors de vos mariages, fêtes privées ou dîners d'affaires dans l'Outaouais. Cartes-cadeaux électroniques disponibles, échangeables en salle et pour emporter.",
         gift_card_denominations_label: "Montants des cartes-cadeaux :",
         cave_sec_cocktails: "Cocktails Signature",
         cocktails_uniform_label: "Tous nos cocktails signature :",
@@ -2644,11 +2647,15 @@
         reviews_card_3_tag: "Tuesday buffet & takeout",
         reviews_btn_view_all: "Read all reviews on Google",
         reviews_btn_leave: "Leave a review",
+        nav_brand_sub: "Restaurant - Bistro · Aylmer",
+        hero_pill_location: "Old Aylmer",
+        stat_4_title: "Old Aylmer",
         catering_badge: "Events & Gifts",
         catering_title: "Catering Service & Gift Cards",
-        catering_desc: "Treat your guests to an unforgettable culinary experience at your wedding, celebration, or corporate dinner in the Outaouais. Gourmet gift cards also available.",
+        catering_desc: "Treat your guests to an unforgettable culinary experience at your wedding, celebration, or corporate dinner in the Outaouais. Electronic gift cards available, redeemable for dine-in and takeout.",
         catering_btn_quote: "Request a Catering Quote",
         catering_btn_gift: "Purchase a Gift Card",
+        footer_brand_sub: "Restaurant - Bistro · Aylmer",
         footer_map_link: "Open in Google Maps →",
         phone_desc: "Direct Orders & Table Reservations",
         sms_desc: "Text only (quick reservations)",
@@ -2669,7 +2676,6 @@
         parking_note: "Convenient street parking available right on Principale Street and adjacent streets in Old Aylmer.",
         all_rights: "All rights reserved.",
         demo_tag: "Modern Website Proposal — Exclusive Demonstration",
-        catering_desc: "Treat your guests to an unforgettable culinary experience at your wedding, celebration, or corporate dinner in the Outaouais. Electronic gift cards available, redeemable for dine-in and takeout.",
         gift_card_denominations_label: "Gift card amounts available:",
         cave_sec_cocktails: "Signature Cocktails",
         cocktails_uniform_label: "All signature cocktails:",
