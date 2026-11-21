@@ -25,11 +25,12 @@ Cependant, votre site web actuel sous Wix (`lecordondorerestaurantbistrot.ca`) f
 
 ### 2. Audit Éditorial : Coquilles & Incohérences Relevées sur le Site Wix
 Notre évaluation détaillée de votre site actuel a mis en lumière plusieurs anomalies concrètes que le nouveau site corrige intégralement :
-1. **Plat en doublon au menu :** Le plat *« Seekh kebab poulet (2 pcs) »* apparaît deux fois sur votre carte en ligne.
-2. **Coquilles d'anglais sur les mets :** Fautes visibles par vos clients anglophones comme *« Scalops and calamary »* (au lieu de *Scallops and calamari*) et *« briyani rice »* (au lieu de *biryani*).
-3. **Faute dans la navigation principale :** Doublon *Home* et *« Acceuil »* (avec faute d'orthographe sur le mot *Accueil*).
-4. **Adresses courriel contradictoires :** `cordondor1803@gmail.com` affiché dans le pied de page contre `cordondor18103@gmail.com` sous la section Réservation (risque direct d'échec de réception).
-5. **Pages fantômes indexées par Google :** Pages de test Wix non supprimées (*copie-de-buffet-indien*, *menus-1*, *copie-de-home*) qui nuisent à votre image et à votre référencement Google.
+1. **Lien brisé & absence de combos :** Le lien de navigation *« Menu familiale Emporter »* renvoie vers l'URL fantôme `/copie-de-buffet-indien` qui n'affiche qu'une vieille image d'avis de vacances (`CORDON VACANCES_edited.jpg`) sans aucun texte de menu ni prix.
+2. **Plat en doublon au menu :** Le plat *« Seekh kebab poulet (2 pcs) »* apparaît deux fois sur votre carte en ligne.
+3. **Coquilles d'anglais sur les mets :** Fautes visibles par vos clients anglophones comme *« Scalops and calamary »* (au lieu de *Scallops and calamari*) et *« briyani rice »* (au lieu de *biryani*).
+4. **Faute dans la navigation principale :** Doublon *Home* et *« Acceuil »* (avec faute d'orthographe sur le mot *Accueil*).
+5. **Adresses courriel contradictoires :** `cordondor1803@gmail.com` affiché dans le pied de page contre `cordondor18103@gmail.com` sous la section Réservation (risque direct d'échec de réception).
+6. **Pages fantômes indexées par Google :** Pages de test Wix non supprimées (*copie-de-buffet-indien*, *menus-1*, *copie-de-home*) qui nuisent à votre image et à votre référencement Google.
 
 ---
 

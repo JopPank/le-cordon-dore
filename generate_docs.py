@@ -92,7 +92,7 @@ for i, title in enumerate(headers_sum):
 
 summary_rows = [
     ('Navigation Mobile', '13 liens encombrés avec doublon et faute d\'orthographe ("Home" et "Acceuil" au lieu d\'"Accueil")', '5 destinations claires + bouton d\'appel direct visible en 1 clic'),
-    ('Consultation des Menus', 'Menus dispersés sur plusieurs pages, difficile à lire sur téléphone', 'Menus interactifs par onglets fluides avec prix et badges clairs'),
+    ('Consultation des Menus', 'Menus dispersés; le lien "Menu familiale" mène à un avis de vacances sans aucun combo', 'Menus interactifs par onglets fluides avec prix et festins familiaux complets'),
     ('Exactitude du Menu', 'Plat en doublon (Seekh kebab poulet affiché 2 fois) et coquilles ("Scalops and calamary", "briyani rice")', 'Menu 100% vérifié, bilingue soigné, sans doublon ni faute d\'orthographe'),
     ('Langues (Bilinguisme)', 'Mélange de textes bilingues sans toggle clair', 'Bouton FR / EN instantané pour toute la clientèle d\'Aylmer & Ottawa'),
     ('Prise de Commande & Contact', '3 numéros dispersés & faute dans le courriel ("cordondor1803" vs "cordondor18103")', 'Boutons dédiés : Appels directs (819 682-5781), Texto réservations (819 661-5113) et courriel vérifié'),
@@ -202,7 +202,7 @@ for i, title in enumerate(headers_comp):
 comp_rows = [
     ('13 liens encombrés avec doublon et faute d\'orthographe ("Home" et "Acceuil" au lieu d\'"Accueil")', 'Les clients sur téléphone sont confus et quittent la page.', 'Menu épuré en 5 sections clés + bouton d\'appel direct visible en permanence.'),
     ('Pages fantômes indexées dans Google (copie-de-buffet-indien, copie-de-home)', 'Nuit à votre image de marque et à votre référencement local.', 'Structure SEO propre et optimisée sans aucune page dupliquée.'),
-    ('Menus difficiles à lire sur mobile (zoom et clics multiples)', 'Friction majeure; les clients abandonnent avant de commander.', 'Menu interactif par onglets fluides (Indien, Familial, Bistro, Enfants, Vins).'),
+    ('Lien brisé & absence de combos', 'Le lien "Menu familiale Emporter" mène à "/copie-de-buffet-indien" qui n\'affiche qu\'une image de vacances sans texte.', 'Onglet dédié aux Combos Familiaux avec compositions claires et tarifs transparents.'),
     ('Menu Wix & fautes bilingues', 'Plat en doublon (Seekh kebab poulet affiché 2 fois) et fautes d\'anglais ("Scalops and calamary", "briyani rice").', 'Menu 100% vérifié, bilingue soigné, sans doublon ni faute d\'orthographe.'),
     ('3 numéros dispersés & faute dans le courriel ("cordondor1803" vs "cordondor18103")', 'Risque de courriels de réservation non reçus et confusion pour commander.', 'Dissociation claire : Appel direct commandes (819 682-5781), Texto réservations (819 661-5113) et courriel vérifié.'),
     ('Absence d\'un toggle bilingue fluide', 'Perte de clientèle anglophone à Aylmer et Ottawa.', 'Bascule FR / EN instantanée sur l\'ensemble du site en 1 clic.'),
@@ -234,6 +234,7 @@ p_aud_intro.paragraph_format.space_after = Pt(2)
 
 audit_bullets = [
     ('Plat en doublon au menu', 'Le plat « Seekh kebab poulet (2 pcs) » apparaît deux fois dans votre carte en ligne.'),
+    ('Lien brisé et absence de combos', 'Le lien « Menu familiale Emporter » renvoie vers /copie-de-buffet-indien qui n\'affiche qu\'une vieille image d\'avis de vacances (CORDON VACANCES) au lieu des combos repas.'),
     ('Fautes d\'anglais sur les mets', 'Coquilles visibles par vos clients anglophones comme « Scalops and calamary » (au lieu de Scallops and calamari) et « briyani rice » (au lieu de biryani).'),
     ('Faute dans la navigation principale', 'Doublon entre « Home » et « Acceuil » (avec faute d\'orthographe sur le mot Accueil).'),
     ('Adresses courriel contradictoires', 'cordondor1803@gmail.com affiché en bas de page contre cordondor18103@gmail.com sous Réservation (risque d\'échec de réception).'),
