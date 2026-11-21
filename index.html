@@ -1831,28 +1831,39 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
       
       <!-- CHEF STORY (5 COLS) -->
-      <div class="lg:col-span-5 bg-brand-card rounded-2xl p-8 border border-slate-800 relative">
-        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-brand-gold/30 flex items-center justify-center text-3xl mb-6">
-          👨‍🍳
-        </div>
-        <span class="text-brand-gold text-xs font-bold tracking-widest uppercase mb-2 block" data-i18n="chef_tag">Le Parcours du Chef</span>
-        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-4" data-i18n="chef_title">
-          25 ans d'Art Culinaire de Paris à Aylmer
-        </h3>
-        <p class="text-slate-300 text-sm leading-relaxed mb-4" data-i18n="chef_p1">
-          Le voyage de notre chef a débuté par une rigoureuse formation académique dans la capitale mondiale de la gastronomie : <strong class="text-white">Paris</strong>.
-        </p>
-        <p class="text-slate-300 text-sm leading-relaxed mb-4" data-i18n="chef_p2">
-          Devenu éducateur culinaire, styliste et consultant hôtelier, il conjugue les techniques françaises de mijotage et de réduction avec le secret ancestral des mélanges d'épices de l'Inde du Nord et du Sud.
-        </p>
-        <p class="text-slate-300 text-sm leading-relaxed mb-6" data-i18n="chef_p3">
-          Toutes nos viandes sont rigoureusement <strong class="text-brand-gold">100% certifiées Halal</strong> et préparées dans le respect des traditions.
-        </p>
-        
-        <div class="pt-6 border-t border-slate-800 flex items-center gap-4">
-          <div class="w-12 h-12 rounded-full bg-slate-800 border border-brand-gold/40 flex items-center justify-center font-serif text-brand-gold font-bold">
-            CD
+      <div class="lg:col-span-5 bg-brand-card rounded-2xl p-6 sm:p-8 border border-slate-800 relative overflow-hidden flex flex-col justify-between">
+        <div>
+          <!-- Chef Portrait Image -->
+          <div class="relative w-full aspect-[4/3] sm:aspect-square max-h-72 rounded-xl overflow-hidden mb-6 border border-brand-gold/40 shadow-xl group">
+            <img src="chef.jpg" alt="Chef Propriétaire du Cordon Doré - Disciple d'Auguste Escoffier" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs">
+              <span class="px-2.5 py-1 rounded-full bg-brand-dark/90 border border-brand-gold/50 text-amber-300 font-semibold text-[11px] backdrop-blur-md" data-i18n="chef_escoffier_badge">
+                Disciple d'Auguste Escoffier
+              </span>
+              <span class="px-2 py-0.5 rounded-full bg-amber-500/20 text-brand-gold text-[10px] font-bold uppercase tracking-wider" data-i18n="chef_experience_badge">
+                Paris · 25 ans
+              </span>
+            </div>
           </div>
+
+          <span class="text-brand-gold text-xs font-bold tracking-widest uppercase mb-2 block" data-i18n="chef_tag">Le Parcours du Chef</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight" data-i18n="chef_title">
+            25 ans d'Art Culinaire de Paris à Aylmer
+          </h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4" data-i18n="chef_p1">
+            Le voyage de notre chef a débuté par une rigoureuse formation académique dans la capitale mondiale de la gastronomie : <strong class="text-white">Paris</strong>.
+          </p>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4" data-i18n="chef_p2">
+            Devenu éducateur culinaire, styliste et consultant hôtelier, il conjugue les techniques françaises de mijotage et de réduction avec le secret ancestral des mélanges d'épices de l'Inde du Nord et du Sud.
+          </p>
+          <p class="text-slate-300 text-sm leading-relaxed mb-6" data-i18n="chef_p3">
+            Toutes nos viandes sont rigoureusement <strong class="text-brand-gold">100% certifiées Halal</strong> et préparées dans le respect des traditions.
+          </p>
+        </div>
+        
+        <div class="pt-5 border-t border-slate-800 flex items-center gap-4">
+          <img src="chef.jpg" alt="Chef Propriétaire" class="w-12 h-12 rounded-full border-2 border-brand-gold object-cover object-top shadow-md">
           <div>
             <p class="text-sm font-bold text-white" data-i18n="chef_role">Chef & Propriétaire</p>
             <p class="text-xs text-slate-400">Le Cordon Doré Bistro · Aylmer</p>
@@ -2292,6 +2303,8 @@
         buffet_fb_btn: "Voir les dates sur Facebook",
         chef_tag: "Le Parcours du Chef",
         chef_title: "25 ans d'Art Culinaire de Paris à Aylmer",
+        chef_escoffier_badge: "Disciple d'Auguste Escoffier",
+        chef_experience_badge: "Paris · 25 ans",
         chef_p1: "Le voyage de notre chef a débuté par une rigoureuse formation académique dans la capitale mondiale de la gastronomie : Paris.",
         chef_p2: "Devenu éducateur culinaire, styliste et consultant hôtelier, il conjugue les techniques françaises de mijotage et de réduction avec le secret ancestral des mélanges d'épices de l'Inde.",
         chef_p3: "Toutes nos viandes sont rigoureusement 100% certifiées Halal et préparées dans le respect des traditions.",
@@ -2610,6 +2623,8 @@
         buffet_fb_btn: "View dates on Facebook",
         chef_tag: "The Chef's Journey",
         chef_title: "25 Years of Culinary Art from Paris to Aylmer",
+        chef_escoffier_badge: "Disciple of Auguste Escoffier",
+        chef_experience_badge: "Paris · 25 yrs",
         chef_p1: "Our chef's culinary story began with formal culinary education in the gastronomy capital of the world: Paris.",
         chef_p2: "Now an accomplished culinary educator, stylist, and hospitality consultant, he blends French braising techniques with authentic Indian spice mastery.",
         chef_p3: "All meats are rigorously 100% Halal certified and prepared with deep respect for tradition.",
