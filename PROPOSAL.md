@@ -13,7 +13,7 @@ Cependant, votre site web actuel sous Wix (`lecordondorerestaurantbistrot.ca`) f
 
 | Problème Actuel sur Wix | Impact sur vos Ventes | Solution dans le Nouveau Site |
 | :--- | :--- | :--- |
-| **13 liens de navigation encombrés** avec doublons (`Home` et `Acceuil`) | Les clients sur téléphone sont confus et quittent le site | **Menu épuré en 5 sections clés**, accessible en 1 clic |
+| **13 liens encombrés** avec doublon et faute d'orthographe (`Home` et `Acceuil` au lieu d'`Accueil`) | Les clients sur téléphone sont confus et quittent le site | **Menu épuré en 5 sections clés**, accessible en 1 clic |
 | **Pages fantômes indexées dans Google** (`copie-de-buffet-indien`, `copie-de-home`) | Nuit à votre image de marque et à votre référencement local | **Structure SEO propre** sans aucune page dupliquée |
 | **Menus difficiles à lire sur mobile** (nécessitent de zoomer ou de cliquer 6 fois) | Les clients abandonnent avant de commander | **Menu interactif par onglets** (Indien, Familial, Bistro, Enfants, Boissons) |
 | **Numéros dispersés & faute dans le courriel** (`cordondor1803@gmail.com` vs `cordondor18103@gmail.com` sur l'accueil) | Risque de courriels de réservation non reçus et perte d'appels | **Boutons 1-clic** : Appel direct (`819 682-5781`), Texto réservations (`819 661-5113`), courriel pro vérifié |
