@@ -44,7 +44,28 @@ Cependant, votre site web actuel sous Wix (`lecordondorerestaurantbistrot.ca`) f
 
 ---
 
-### 3. Plan de Déploiement Simple & Sans Interruption
+### 3. Portrait Financier : Frais Actuels vs Nouvelle Approche
+
+1. **Commissions des applications de livraison tierces (comme DoorDash) :**
+   - Au Canada, les plateformes prélèvent généralement de **20 % à 30 % sur les livraisons** et de **8 % à 15 % sur les commandes à emporter**.
+   - Sur une commande moyenne de 40 $, cela représente **8 $ à 12 $ de marge nette perdue** pour votre restaurant.
+2. **Frais actuels d'hébergement Wix au Canada :**
+   - L'abonnement annuel Wix oscille entre **250 $ et 530 $+ CAD par an** pour maintenir le site actuel.
+3. **Risque commercial sur les réservations :**
+   - Les deux adresses Gmail divergentes affichées sur votre page d'accueil (`cordondor1803@gmail.com` vs `cordondor18103@gmail.com`) risquent de faire rebondir des courriels et de vous faire perdre des réservations de groupes.
+4. **Nouvelle approche : Hébergement moderne à 0 $ / mois :**
+   - Grâce à une infrastructure web moderne et légère, vos frais d'hébergement tombent à **0 $/mois**.
+   - Vous conservez uniquement le renouvellement annuel de base de votre nom de domaine `.ca` (~15 $ à 25 $/an).
+5. **Mon offre clé en main gratuite :**
+   - Je prends en charge **gratuitement** la conception du site, la migration et le transfert de `lecordondorerestaurantbistrot.ca` avec **zéro interruption de service**.
+   - **Maintenance continue incluse :** Mise à jour de vos prix, ajout de plats saisonniers et ajustement des horaires de fêtes ou de buffet sans aucun tracas technique pour vous.
+6. **Évolutions futures optionnelles :**
+   - Configuration gratuite d'une redirection courriel professionnelle (ex. `info@lecordondorerestaurantbistrot.ca`).
+   - Intégration future possible d'un système de commande directe en ligne sans commission.
+
+---
+
+### 4. Plan de Déploiement Simple & Sans Interruption
 
 1. **Validation du Design :** Vous testez la version de démonstration sur **[lecordondore.jopism.com](https://lecordondore.jopism.com)** depuis votre téléphone et votre ordinateur.
 2. **Ajustements des Menus & Tarifs :** Nous mettons à jour les prix ou plats saisonniers selon vos instructions.
@@ -53,7 +74,7 @@ Cependant, votre site web actuel sous Wix (`lecordondorerestaurantbistrot.ca`) f
 
 ---
 
-### 4. Coordonnées & Prochaines Étapes
+### 5. Coordonnées & Prochaines Étapes
 - **Présenté par :** Jonathan Pankratz
 - **Organisation :** Jopism Solutions Numériques
 - **Courriel :** info@jopism.com

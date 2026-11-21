@@ -12,7 +12,7 @@ def set_cell_background(cell, fill_hex):
     shd.set(qn('w:fill'), fill_hex)
     tcPr.append(shd)
 
-def set_cell_margins(cell, top=100, bottom=100, left=140, right=140):
+def set_cell_margins(cell, top=80, bottom=80, left=120, right=120):
     tcPr = cell._tc.get_or_add_tcPr()
     tcMar = OxmlElement('w:tcMar')
     for m, val in [('top', top), ('bottom', bottom), ('left', left), ('right', right)]:
@@ -24,29 +24,29 @@ def set_cell_margins(cell, top=100, bottom=100, left=140, right=140):
 
 def add_contact_block(doc):
     p_box = doc.add_paragraph()
-    p_box.paragraph_format.space_before = Pt(14)
-    p_box.paragraph_format.space_after = Pt(4)
+    p_box.paragraph_format.space_before = Pt(12)
+    p_box.paragraph_format.space_after = Pt(2)
     
     r_name = p_box.add_run('Jonathan Pankratz')
     r_name.bold = True
-    r_name.font.size = Pt(10.5)
+    r_name.font.size = Pt(10)
     r_name.font.color.rgb = RGBColor(15, 23, 42)
     
     r_sub = p_box.add_run(' · Jopism Solutions Numériques\n')
-    r_sub.font.size = Pt(9.5)
+    r_sub.font.size = Pt(9)
     r_sub.font.color.rgb = RGBColor(71, 85, 105)
     
     r_c1 = p_box.add_run('Courriel : info@jopism.com   |   Web : digital.jopism.com   |   Démo : lecordondore.jopism.com\n')
-    r_c1.font.size = Pt(9)
+    r_c1.font.size = Pt(8.5)
     r_c1.font.bold = True
     r_c1.font.color.rgb = RGBColor(180, 83, 9)
     
     r_prop = p_box.add_run('Offre sans engagement : ')
     r_prop.bold = True
-    r_prop.font.size = Pt(9)
+    r_prop.font.size = Pt(8.5)
     
     r_txt = p_box.add_run('Disponible pour une courte présentation de 10 minutes (en personne dans votre restaurant à Aylmer ou par appel vidéo) pour vous montrer le fonctionnement en direct sur votre téléphone et répondre à vos questions.')
-    r_txt.font.size = Pt(9)
+    r_txt.font.size = Pt(8.5)
     r_txt.font.color.rgb = RGBColor(51, 65, 85)
 
 # ==========================================
@@ -54,25 +54,25 @@ def add_contact_block(doc):
 # ==========================================
 doc_sum = docx.Document()
 for s in doc_sum.sections:
-    s.top_margin = Inches(0.5)
-    s.bottom_margin = Inches(0.5)
+    s.top_margin = Inches(0.45)
+    s.bottom_margin = Inches(0.45)
     s.left_margin = Inches(0.5)
     s.right_margin = Inches(0.5)
 
 p_sum_head = doc_sum.add_paragraph()
-p_sum_head.paragraph_format.space_after = Pt(4)
+p_sum_head.paragraph_format.space_after = Pt(2)
 r_sum_pre = p_sum_head.add_run('FICHE SYNTHÈSE & COMPARATIF EXÉCUTIF\n')
-r_sum_pre.font.size = Pt(9)
+r_sum_pre.font.size = Pt(8.5)
 r_sum_pre.font.bold = True
 r_sum_pre.font.color.rgb = RGBColor(180, 83, 9)
 
 r_sum_tit = p_sum_head.add_run('Le Cordon Doré Restaurant-Bistrot\n')
-r_sum_tit.font.size = Pt(17)
+r_sum_tit.font.size = Pt(16)
 r_sum_tit.font.bold = True
 r_sum_tit.font.color.rgb = RGBColor(15, 23, 42)
 
 r_sum_sub = p_sum_head.add_run('58, rue Principale, Gatineau (Vieux-Aylmer)  |  Démonstration en ligne : https://lecordondore.jopism.com')
-r_sum_sub.font.size = Pt(9.5)
+r_sum_sub.font.size = Pt(9)
 
 t_sum = doc_sum.add_table(rows=1, cols=3)
 t_sum.alignment = WD_TABLE_ALIGNMENT.CENTER
@@ -85,9 +85,9 @@ headers_sum = ['Aspect Évalué', 'Site Actuel (Wix)', 'Nouvelle Version 2026']
 for i, title in enumerate(headers_sum):
     h_cells[i].text = title
     h_cells[i].paragraphs[0].runs[0].font.bold = True
-    h_cells[i].paragraphs[0].runs[0].font.size = Pt(9)
+    h_cells[i].paragraphs[0].runs[0].font.size = Pt(8.5)
     set_cell_background(h_cells[i], 'F1F5F9')
-    set_cell_margins(h_cells[i], 100, 100, 120, 120)
+    set_cell_margins(h_cells[i], 80, 80, 100, 100)
     h_cells[i].width = widths_sum[i]
 
 summary_rows = [
@@ -104,8 +104,8 @@ for row in summary_rows:
     for i, text in enumerate(row):
         r_cells[i].text = text
         p = r_cells[i].paragraphs[0]
-        p.runs[0].font.size = Pt(8.5)
-        set_cell_margins(r_cells[i], 70, 70, 100, 100)
+        p.runs[0].font.size = Pt(8)
+        set_cell_margins(r_cells[i], 50, 50, 90, 90)
         r_cells[i].width = widths_sum[i]
         if i == 0:
             p.runs[0].font.bold = True
@@ -117,13 +117,26 @@ for row in summary_rows:
             p.runs[0].font.bold = True
 
 doc_sum.add_paragraph().paragraph_format.space_after = Pt(4)
-p_sum_points = doc_sum.add_paragraph()
-p_sum_points.paragraph_format.space_after = Pt(2)
-p_sum_points.add_run('Points Forts de la Nouvelle Solution :\n').bold = True
-p_sum_points.add_run('• 100 % Mobile-First : navigation épurée, temps de chargement inférieur à 1 seconde.\n')
-p_sum_points.add_run('• Appel Direct en 1 Clic : stimulation des commandes à emporter, économie sur les commissions (jusqu\'à 30 %) des applications de livraison tierces (comme DoorDash).\n')
-p_sum_points.add_run('• Bilinguisme Instantané : bascule FR / EN pour rejoindre toute la clientèle d\'Aylmer, de Gatineau et d\'Ottawa.\n')
-p_sum_points.add_run('• Mise en avant du Buffet du Mardi & Traiteur : valorisation des offres les plus rentables du restaurant.')
+
+# COÛTS & TRANSITION SANS RISQUE Box
+p_fin_box = doc_sum.add_paragraph()
+p_fin_box.paragraph_format.space_after = Pt(2)
+r_fb_tit = p_fin_box.add_run('PORTRAIT FINANCIER & TRANSITION SANS RISQUE (Hébergement : 0 $ / mois)\n')
+r_fb_tit.bold = True
+r_fb_tit.font.size = Pt(9)
+r_fb_tit.font.color.rgb = RGBColor(180, 83, 9)
+
+r_fb_c1 = p_fin_box.add_run('• Coûts actuels Wix & Livraison : ')
+r_fb_c1.bold = True
+p_fin_box.add_run('Abonnement Wix de ~250 $ à 530 $+ CAD/an. Commissions de 20% à 30% sur livraison et 8% à 15% sur ramassage via les applications tierces comme DoorDash (8 $ à 12 $ perdus sur une commande de 40 $).\n')
+
+r_fb_c2 = p_fin_box.add_run('• Nouvelle approche économique : ')
+r_fb_c2.bold = True
+p_fin_box.add_run('Hébergement moderne à 0 $/mois. Vous conservez uniquement votre nom de domaine .ca (~15 $–25 $/an). Commandes directes stimulées par téléphone.\n')
+
+r_fb_c3 = p_fin_box.add_run('• Mon offre clé en main gratuite : ')
+r_fb_c3.bold = True
+p_fin_box.add_run('Conception, migration et transfert de domaine entièrement gratuits avec zéro interruption. Maintenance continue incluse (prix, plats saisonniers, buffet/fêtes).')
 
 add_contact_block(doc_sum)
 doc_sum.save(r'C:\Users\joppa\Desktop\Documents\GitHub\Le Cordon Doré\Proposition-Sommaire-Comparatif.docx')
@@ -134,33 +147,33 @@ print('Proposition-Sommaire-Comparatif.docx updated successfully')
 # ==========================================
 doc_comp = docx.Document()
 for s in doc_comp.sections:
-    s.top_margin = Inches(0.65)
-    s.bottom_margin = Inches(0.65)
-    s.left_margin = Inches(0.65)
-    s.right_margin = Inches(0.65)
+    s.top_margin = Inches(0.55)
+    s.bottom_margin = Inches(0.55)
+    s.left_margin = Inches(0.6)
+    s.right_margin = Inches(0.6)
 
 p_c_sub = doc_comp.add_paragraph()
 r_c_sub = p_c_sub.add_run('DOCUMENT DE PRÉSENTATION OFFICIELLE')
-r_c_sub.font.size = Pt(9)
+r_c_sub.font.size = Pt(8.5)
 r_c_sub.font.bold = True
 r_c_sub.font.color.rgb = RGBColor(180, 83, 9)
 
 p_c_title = doc_comp.add_paragraph()
 r_c_title = p_c_title.add_run('Proposition de Refonte de Site Web')
-r_c_title.font.size = Pt(20)
+r_c_title.font.size = Pt(18)
 r_c_title.font.bold = True
 r_c_title.font.color.rgb = RGBColor(15, 23, 42)
 
 p_c_rest = doc_comp.add_paragraph()
 r_c_rest = p_c_rest.add_run('Restaurant-Bistrot Le Cordon Doré\n')
-r_c_rest.font.size = Pt(13)
+r_c_rest.font.size = Pt(12)
 r_c_rest.font.bold = True
 r_c_rest.font.color.rgb = RGBColor(180, 83, 9)
 
 r_c_addr = p_c_rest.add_run('58, rue Principale, Gatineau (Vieux-Aylmer), QC J9H 3L5\n')
-r_c_addr.font.size = Pt(9.5)
+r_c_addr.font.size = Pt(9)
 r_c_demo = p_c_rest.add_run('Démonstration en ligne : https://lecordondore.jopism.com  |  Date : Novembre 2026')
-r_c_demo.font.size = Pt(9.5)
+r_c_demo.font.size = Pt(9)
 r_c_demo.font.bold = True
 
 h1 = doc_comp.add_heading('1. Contexte & Diagnostic du Site Actuel', level=1)
@@ -174,15 +187,15 @@ t_comp.alignment = WD_TABLE_ALIGNMENT.CENTER
 t_comp.autofit = False
 
 h_cells_comp = t_comp.rows[0].cells
-widths_comp = [Inches(2.2), Inches(2.2), Inches(2.7)]
+widths_comp = [Inches(2.1), Inches(2.2), Inches(2.7)]
 headers_comp = ['Problème Actuel sur Wix', 'Impact sur vos Ventes', 'Solution dans le Nouveau Site']
 
 for i, title in enumerate(headers_comp):
     h_cells_comp[i].text = title
     h_cells_comp[i].paragraphs[0].runs[0].font.bold = True
-    h_cells_comp[i].paragraphs[0].runs[0].font.size = Pt(9)
+    h_cells_comp[i].paragraphs[0].runs[0].font.size = Pt(8.5)
     set_cell_background(h_cells_comp[i], 'F1F5F9')
-    set_cell_margins(h_cells_comp[i], 100, 100, 120, 120)
+    set_cell_margins(h_cells_comp[i], 80, 80, 100, 100)
     h_cells_comp[i].width = widths_comp[i]
 
 comp_rows = [
@@ -199,8 +212,8 @@ for row in comp_rows:
     for i, text in enumerate(row):
         r_cells[i].text = text
         p = r_cells[i].paragraphs[0]
-        p.runs[0].font.size = Pt(8.5)
-        set_cell_margins(r_cells[i], 80, 80, 110, 110)
+        p.runs[0].font.size = Pt(8)
+        set_cell_margins(r_cells[i], 60, 60, 90, 90)
         r_cells[i].width = widths_comp[i]
         if i == 1:
             p.runs[0].font.color.rgb = RGBColor(190, 18, 60)
@@ -208,8 +221,9 @@ for row in comp_rows:
             p.runs[0].font.color.rgb = RGBColor(4, 120, 87)
             p.runs[0].font.bold = True
 
-doc_comp.add_paragraph().paragraph_format.space_after = Pt(8)
+doc_comp.add_paragraph().paragraph_format.space_after = Pt(4)
 
+# Section 2
 h2 = doc_comp.add_heading('2. Les 5 Piliers Stratégiques de la Nouvelle Version', level=1)
 h2.style.font.color.rgb = RGBColor(15, 23, 42)
 
@@ -228,16 +242,38 @@ for title, desc in points_comp:
     r_pt.font.color.rgb = RGBColor(180, 83, 9)
     p.add_run(desc)
 
-doc_comp.add_paragraph().paragraph_format.space_after = Pt(8)
+doc_comp.add_paragraph().paragraph_format.space_after = Pt(4)
 
-h3 = doc_comp.add_heading('3. Plan de Déploiement Simple & Sans Interruption', level=1)
+# Section 3: PORTRAIT FINANCIER
+h3 = doc_comp.add_heading('3. Portrait financier : frais actuels vs nouvelle approche', level=1)
 h3.style.font.color.rgb = RGBColor(15, 23, 42)
 
+fin_points = [
+    ('Commissions des applications de livraison tierces (comme DoorDash)', 'Au Canada, les plateformes prélèvent généralement de 20 % à 30 % sur les livraisons et de 8 % à 15 % sur les commandes à emporter. Sur une commande moyenne de 40 $, cela représente 8 $ à 12 $ de marge perdue pour votre restaurant.'),
+    ('Frais actuels d\'hébergement Wix au Canada', 'L\'abonnement Wix représente un coût récurrent d\'environ 250 $ à 530 $+ CAD par an pour héberger le site actuel.'),
+    ('Risque commercial sur les réservations', 'Deux adresses Gmail divergentes sont actuellement affichées sur votre page d\'accueil (cordondor1803@gmail.com vs cordondor18103@gmail.com), risquant de vous faire perdre des réservations par courriel.'),
+    ('Nouvelle approche : Hébergement moderne à 0 $ / mois', 'En migrant vers une architecture web statique ultra-performante, vos frais mensuels d\'hébergement passent à 0 $. Vous ne conservez que le coût de base annuel de votre nom de domaine .ca (~15 $ à 25 $/an).'),
+    ('Mon offre clé en main gratuite', 'Je réalise gratuitement la conception du nouveau site, la migration technique et le transfert de lecordondorerestaurantbistrot.ca avec zéro interruption de service pour vos clients, tout en assurant la maintenance continue (mise à jour des prix, menus de saison, horaires du buffet/fêtes).'),
+    ('Options d\'évolution futures (optionnelles)', 'Possibilité d\'ajouter gratuitement une redirection de courriel professionnel (info@lecordondorerestaurantbistrot.ca) ou d\'intégrer plus tard un système de commande directe en ligne sans commission.')
+]
+
+for title, desc in fin_points:
+    p = doc_comp.add_paragraph()
+    r_pt = p.add_run(f'• {title} : ')
+    r_pt.bold = True
+    p.add_run(desc)
+
+doc_comp.add_paragraph().paragraph_format.space_after = Pt(4)
+
+# Section 4: PLAN DE DÉPLOIEMENT
+h4 = doc_comp.add_heading('4. Plan de Déploiement Simple & Sans Interruption', level=1)
+h4.style.font.color.rgb = RGBColor(15, 23, 42)
+
 steps_comp = [
-    ('Étape 1 : Validation du Prototype', 'Vous testez la démonstration complète sur votre mobile à l\'adresse https://lecordondore.jopism.com.'),
+    ('Étape 1 : Validation du Prototype en ligne', 'Vous testez la démonstration complète sur votre mobile à l\'adresse https://lecordondore.jopism.com.'),
     ('Étape 2 : Ajustement des Menus & Tarifs', 'Mise à jour immédiate des prix, plats saisonniers ou coordonnées selon vos consignes exactes.'),
     ('Étape 3 : Bascule Transparente vers Votre Domaine', 'Connexion directe à votre adresse lecordondorerestaurantbistrot.ca en moins de 2 heures, sans aucune interruption pour vos clients.'),
-    ('Bénéfice Immédiat : Économies Mensuelles', 'Élimination des abonnements mensuels coûteux de Wix au profit d\'un hébergement haute performance.')
+    ('Bénéfice Immédiat : Économies & Sérénité', 'Zéro mensualité Wix, site ultra-rapide et maintenance technique prise en charge.')
 ]
 
 for title, desc in steps_comp:

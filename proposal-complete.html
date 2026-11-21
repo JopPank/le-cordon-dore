@@ -12,7 +12,7 @@
     
     @page {
       size: letter portrait;
-      margin: 10mm 12mm;
+      margin: 9mm 11mm;
     }
 
     @media print {
@@ -22,8 +22,8 @@
         color: #0f172a !important;
         padding: 0 !important;
         margin: 0 !important;
-        font-size: 11px !important;
-        line-height: 1.35 !important;
+        font-size: 10px !important;
+        line-height: 1.3 !important;
       }
       .doc-page {
         box-shadow: none !important;
@@ -36,7 +36,7 @@
         page-break-before: always !important;
         break-before: page !important;
         margin-top: 0 !important;
-        padding-top: 4mm !important;
+        padding-top: 2mm !important;
       }
       .avoid-break {
         page-break-inside: avoid !important;
@@ -51,32 +51,32 @@
         background-color: #f1f5f9 !important;
         color: #0f172a !important;
         border-bottom: 2px solid #94a3b8 !important;
-        padding: 4px 6px !important;
-        font-size: 10px !important;
+        padding: 3px 5px !important;
+        font-size: 9.5px !important;
       }
       td {
         border-bottom: 1px solid #e2e8f0 !important;
-        padding: 3.5px 6px !important;
-        font-size: 9.5px !important;
+        padding: 2.5px 5px !important;
+        font-size: 9px !important;
         line-height: 1.25 !important;
       }
       .text-rose-700, .text-rose-600 { color: #be123c !important; }
       .text-emerald-700 { color: #047857 !important; }
       .bg-slate-50 { background: #f8fafc !important; border: 1px solid #e2e8f0 !important; }
       .bg-amber-50 { background: #fffbeb !important; border: 1px solid #fde68a !important; }
-      .contact-box { background: #f8fafc !important; border: 1px solid #cbd5e1 !important; border-radius: 8px !important; }
+      .contact-box { background: #f8fafc !important; border: 1px solid #cbd5e1 !important; border-radius: 6px !important; padding: 6px 10px !important; }
     }
   </style>
 </head>
-<body class="bg-slate-100 text-slate-900 min-h-screen py-4 px-3 sm:py-8 sm:px-6">
+<body class="bg-slate-100 text-slate-900 min-h-screen py-4 px-3 sm:py-6 sm:px-6">
 
   <!-- TOP BAR (SCREEN ONLY) -->
-  <div class="max-w-4xl mx-auto mb-4 flex justify-between items-center no-print">
+  <div class="max-w-4xl mx-auto mb-3 flex justify-between items-center no-print">
     <a href="index.html" class="text-xs font-semibold text-amber-700 hover:text-amber-800 flex items-center gap-1">
       ← Retour au site démo
     </a>
     <div class="flex gap-2">
-      <button onclick="window.print()" class="px-4 py-2 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs shadow-md flex items-center gap-1.5">
+      <button onclick="window.print()" class="px-4 py-1.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs shadow-md flex items-center gap-1.5">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
         </svg>
@@ -85,123 +85,119 @@
     </div>
   </div>
 
-  <div class="doc-page max-w-4xl mx-auto bg-white border border-slate-200 rounded-2xl p-6 sm:p-10 shadow-xl">
+  <div class="doc-page max-w-4xl mx-auto bg-white border border-slate-200 rounded-2xl p-5 sm:p-8 shadow-xl">
     
-    <!-- PAGE 1 CONTENT -->
+    <!-- ==================== PAGE 1 ==================== -->
     <div class="avoid-break">
       <!-- COVER / HEADER -->
-      <div class="border-b-2 border-amber-600/30 pb-4 mb-4 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-3">
+      <div class="border-b-2 border-amber-600/30 pb-3 mb-3 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-2">
         <div>
-          <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 font-bold text-[10px] uppercase tracking-wider mb-1.5">
+          <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 font-bold text-[10px] uppercase tracking-wider mb-1">
             Document de Présentation Officielle
           </div>
-          <h1 class="font-serif text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
-            Proposition de Refonte Web
+          <h1 class="font-serif text-xl sm:text-2xl font-extrabold text-slate-900 leading-tight">
+            Proposition de Refonte Web & Stratégie
           </h1>
-          <p class="font-serif text-lg text-amber-700 font-bold mt-0.5">
+          <p class="font-serif text-base text-amber-700 font-bold mt-0.5">
             Le Cordon Doré Restaurant-Bistrot
           </p>
-          <p class="text-slate-500 text-xs">58, rue Principale, Gatineau (Vieux-Aylmer), QC J9H 3L5</p>
+          <p class="text-slate-500 text-[11px]">58, rue Principale, Gatineau (Vieux-Aylmer), QC J9H 3L5</p>
         </div>
 
-        <div class="bg-slate-50 border border-slate-200 p-2.5 rounded-xl text-right sm:min-w-[220px]">
-          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Démonstration en Ligne</p>
-          <a href="https://lecordondore.jopism.com" target="_blank" class="text-amber-700 font-bold text-sm hover:underline block mt-0.5">
+        <div class="bg-slate-50 border border-slate-200 p-2 rounded-xl text-right sm:min-w-[210px]">
+          <p class="text-[9.5px] text-slate-500 uppercase tracking-wide font-semibold">Démonstration en Ligne</p>
+          <a href="https://lecordondore.jopism.com" target="_blank" class="text-amber-700 font-bold text-xs hover:underline block mt-0.5">
             lecordondore.jopism.com
           </a>
-          <p class="text-[10px] text-slate-400 mt-0.5">Novembre 2026</p>
+          <p class="text-[9.5px] text-slate-400 mt-0.5">Novembre 2026</p>
         </div>
       </div>
 
       <!-- SECTION 1 -->
-      <section class="mb-2">
-        <h2 class="font-serif text-base font-bold text-slate-900 mb-2 pb-1 border-b border-slate-200 flex items-center gap-2">
-          <span class="w-5 h-5 rounded-full bg-amber-600 text-white flex items-center justify-center text-[10px] font-sans font-bold">1</span>
+      <section class="mb-3">
+        <h2 class="font-serif text-sm font-bold text-slate-900 mb-1.5 pb-1 border-b border-slate-200 flex items-center gap-1.5">
+          <span class="w-4 h-4 rounded-full bg-amber-600 text-white flex items-center justify-center text-[9px] font-sans font-bold">1</span>
           <span>Contexte & Diagnostic du Site Actuel</span>
         </h2>
         
-        <p class="text-slate-700 text-xs leading-relaxed mb-3">
-          Le restaurant <strong>Le Cordon Doré</strong> propose une expérience culinaire distinctive et très appréciée dans le Vieux-Aylmer : la rencontre entre les techniques d'un chef formé à Paris (25 ans d'expérience), les saveurs authentiques de l'Inde, un buffet hebdomadaire réputé et des <strong>viandes 100 % certifiées Halal</strong>.
+        <p class="text-slate-700 text-[11px] leading-relaxed mb-2">
+          Le restaurant <strong>Le Cordon Doré</strong> propose une expérience culinaire rare et recherchée dans le Vieux-Aylmer : l'alliance entre les techniques d'un chef formé à Paris (25 ans de métier), les saveurs authentiques de l'Inde et des <strong>viandes 100 % certifiées Halal</strong>. Cependant, le site actuel sur Wix présente plusieurs freins majeurs :
         </p>
 
-        <p class="text-slate-700 text-xs leading-relaxed mb-3">
-          Cependant, une analyse technique de votre site web actuel sur Wix (<code class="bg-slate-100 px-1 py-0.5 rounded text-[11px] font-mono text-slate-800">lecordondorerestaurantbistrot.ca</code>) révèle des freins majeurs qui réduisent vos ventes directes et compliquent l'expérience des clients sur mobile :
-        </p>
-
-        <!-- COMPARISON TABLE (Fits entirely on page 1) -->
-        <div class="overflow-x-auto rounded-xl border border-slate-200 mb-3 avoid-break">
+        <!-- COMPARISON TABLE -->
+        <div class="overflow-x-auto rounded-xl border border-slate-200 mb-2 avoid-break">
           <table class="w-full text-left text-xs border-collapse">
             <thead>
               <tr class="bg-slate-100 border-b border-slate-200 text-slate-700">
-                <th class="py-2 px-3 font-bold w-1/3">Problème Actuel sur Wix</th>
-                <th class="py-2 px-3 font-bold text-rose-700 w-1/3">Impact sur vos Ventes</th>
-                <th class="py-2 px-3 font-bold text-emerald-700 w-1/3">Solution dans le Nouveau Site</th>
+                <th class="py-1.5 px-2.5 font-bold w-1/3">Problème Actuel sur Wix</th>
+                <th class="py-1.5 px-2.5 font-bold text-rose-700 w-1/3">Impact sur vos Ventes</th>
+                <th class="py-1.5 px-2.5 font-bold text-emerald-700 w-1/3">Solution dans le Nouveau Site</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-200">
               <tr>
-                <td class="py-2 px-3 font-medium text-slate-900">
+                <td class="py-1 px-2.5 font-medium text-slate-900">
                   <strong>13 liens encombrés</strong> avec doublon et faute d'orthographe (<em>Home</em> et <em>Acceuil</em> au lieu d'<em>Accueil</em>)
                 </td>
-                <td class="py-2 px-3 text-rose-600">
+                <td class="py-1 px-2.5 text-rose-600">
                   Les clients sur téléphone sont perdus et quittent la page sans commander.
                 </td>
-                <td class="py-2 px-3 text-emerald-700 font-semibold">
+                <td class="py-1 px-2.5 text-emerald-700 font-semibold">
                   5 destinations claires + bouton d'appel 1-clic direct visible en permanence.
                 </td>
               </tr>
               <tr>
-                <td class="py-2 px-3 font-medium text-slate-900">
-                  <strong>Pages fantômes indexées</strong> dans Google (<code class="bg-slate-100 px-1 rounded text-[10px]">copie-de-buffet-indien</code>, <code class="bg-slate-100 px-1 rounded text-[10px]">copie-de-home</code>)
+                <td class="py-1 px-2.5 font-medium text-slate-900">
+                  <strong>Pages fantômes indexées</strong> dans Google (<em>copie-de-buffet-indien</em>, <em>copie-de-home</em>)
                 </td>
-                <td class="py-2 px-3 text-rose-600">
-                  Brouille votre référencement local et nuit à l'image professionnelle.
+                <td class="py-1 px-2.5 text-rose-600">
+                  Brouille votre référencement local et nuit à votre image professionnelle.
                 </td>
-                <td class="py-2 px-3 text-emerald-700 font-semibold">
+                <td class="py-1 px-2.5 text-emerald-700 font-semibold">
                   Architecture SEO nettoyée, conforme aux standards Google 2026.
                 </td>
               </tr>
               <tr>
-                <td class="py-2 px-3 font-medium text-slate-900">
+                <td class="py-1 px-2.5 font-medium text-slate-900">
                   <strong>Menus difficiles à lire</strong> (nécessitent de zoomer ou cliquer 6 fois)
                 </td>
-                <td class="py-2 px-3 text-rose-600">
+                <td class="py-1 px-2.5 text-rose-600">
                   Friction majeure sur smartphone; perte de clients pressés.
                 </td>
-                <td class="py-2 px-3 text-emerald-700 font-semibold">
+                <td class="py-1 px-2.5 text-emerald-700 font-semibold">
                   Menu interactif par onglets rapides (Indien, Familial, Bistro, Enfants, Vins).
                 </td>
               </tr>
               <tr>
-                <td class="py-2 px-3 font-medium text-slate-900">
+                <td class="py-1 px-2.5 font-medium text-slate-900">
                   <strong>3 numéros dispersés & faute dans le courriel</strong> (<em>cordondor1803</em> vs <em>cordondor18103</em> sur l'accueil)
                 </td>
-                <td class="py-2 px-3 text-rose-600">
+                <td class="py-1 px-2.5 text-rose-600">
                   Risque de courriels de réservation non reçus et confusion pour commander.
                 </td>
-                <td class="py-2 px-3 text-emerald-700 font-semibold">
-                  Dissociation claire : Appel commandes (<strong class="text-slate-900">819 682-5781</strong>), Texto réservations (<strong class="text-slate-900">819 661-5113</strong>) et courriel vérifié.
+                <td class="py-1 px-2.5 text-emerald-700 font-semibold">
+                  Dissociation claire : Appel commandes (<strong>819 682-5781</strong>), Texto réservations (<strong>819 661-5113</strong>) et courriel vérifié.
                 </td>
               </tr>
               <tr>
-                <td class="py-2 px-3 font-medium text-slate-900">
+                <td class="py-1 px-2.5 font-medium text-slate-900">
                   <strong>Absence de toggle bilingue fluide</strong>
                 </td>
-                <td class="py-2 px-3 text-rose-600">
+                <td class="py-1 px-2.5 text-rose-600">
                   Perte de la clientèle anglophone d'Aylmer, de Gatineau et d'Ottawa.
                 </td>
-                <td class="py-2 px-3 text-emerald-700 font-semibold">
+                <td class="py-1 px-2.5 text-emerald-700 font-semibold">
                   Bascule instantanée FR / EN d'un seul clic sur l'ensemble du site.
                 </td>
               </tr>
               <tr>
-                <td class="py-2 px-3 font-medium text-slate-900">
+                <td class="py-1 px-2.5 font-medium text-slate-900">
                   <strong>Promotion statique du Buffet du mardi</strong>
                 </td>
-                <td class="py-2 px-3 text-rose-600">
+                <td class="py-1 px-2.5 text-rose-600">
                   Moins de visibilité pour l'événement le plus rentable de la semaine.
                 </td>
-                <td class="py-2 px-3 text-emerald-700 font-semibold">
+                <td class="py-1 px-2.5 text-emerald-700 font-semibold">
                   Encart vedette dédié au Buffet Indien du mardi soir avec horaires et réservation.
                 </td>
               </tr>
@@ -209,125 +205,174 @@
           </table>
         </div>
       </section>
-    </div>
 
-    <!-- PAGE 2 BREAK -->
-    <div class="page-break-after-p1">
-      
       <!-- SECTION 2 -->
-      <section class="mb-5 avoid-break">
-        <h2 class="font-serif text-base font-bold text-slate-900 mb-3 pb-1 border-b border-slate-200 flex items-center gap-2">
-          <span class="w-5 h-5 rounded-full bg-amber-600 text-white flex items-center justify-center text-[10px] font-sans font-bold">2</span>
+      <section class="mb-1 avoid-break">
+        <h2 class="font-serif text-sm font-bold text-slate-900 mb-2 pb-1 border-b border-slate-200 flex items-center gap-1.5">
+          <span class="w-4 h-4 rounded-full bg-amber-600 text-white flex items-center justify-center text-[9px] font-sans font-bold">2</span>
           <span>Les 5 Piliers Stratégiques de la Nouvelle Version</span>
         </h2>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs mb-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs mb-2">
           
-          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <h3 class="font-bold text-slate-900 text-xs mb-1">
+          <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="font-bold text-slate-900 text-[11px] mb-0.5">
               [Pilier 1] Vitesse & Mobile-First (&lt; 1 seconde)
             </h3>
-            <p class="text-slate-600 text-[11px] leading-relaxed">
-              Plus de 85% des commandes au restaurant débutent sur un téléphone. Le nouveau site s'ouvre instantanément, sans les lourdeurs de chargement de Wix.
+            <p class="text-slate-600 text-[10px] leading-relaxed">
+              Plus de 85% des commandes au restaurant débutent sur un téléphone. Le nouveau site s'ouvre instantanément, sans lenteurs de constructeur.
             </p>
           </div>
 
-          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <h3 class="font-bold text-slate-900 text-xs mb-1">
+          <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="font-bold text-slate-900 text-[11px] mb-0.5">
               [Pilier 2] Commandes Téléphoniques Directes
             </h3>
-            <p class="text-slate-600 text-[11px] leading-relaxed">
-              Un bouton d'appel en 1-clic incite vos clients à commander directement au restaurant plutôt que via les applications de livraison tierces (comme DoorDash), vous épargnant jusqu'à 30% de commissions.
+            <p class="text-slate-600 text-[10px] leading-relaxed">
+              Un bouton d'appel en 1-clic incite vos clients à commander directement au restaurant plutôt que via les applications tierces, évitant les commissions.
             </p>
           </div>
 
-          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <h3 class="font-bold text-slate-900 text-xs mb-1">
+          <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="font-bold text-slate-900 text-[11px] mb-0.5">
               [Pilier 3] Valorisation des Signes de Confiance
             </h3>
-            <p class="text-slate-600 text-[11px] leading-relaxed">
-              Affichage immédiat en tête de page de vos viandes 100% Halal certifiées, de la note Google de 4.8★ et de la formation prestigieuse à Paris de votre Chef.
+            <p class="text-slate-600 text-[10px] leading-relaxed">
+              Affichage immédiat en tête de page de vos viandes 100% Halal certifiées, de la note Google de 4.8★ et du Chef formé à Paris.
             </p>
           </div>
 
-          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <h3 class="font-bold text-slate-900 text-xs mb-1">
+          <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="font-bold text-slate-900 text-[11px] mb-0.5">
               [Pilier 4] Combos Familiaux & Buffet Vedette
             </h3>
-            <p class="text-slate-600 text-[11px] leading-relaxed">
-              Mise en lumière claire du Buffet Indien du mardi soir et des formules repas familiales (2 à 6 personnes) pour stimuler les paniers moyens.
+            <p class="text-slate-600 text-[10px] leading-relaxed">
+              Mise en lumière claire du Buffet Indien du mardi soir et des formules familiales (2 à 6 personnes) pour stimuler le panier moyen.
             </p>
           </div>
 
         </div>
 
-        <div class="p-3 rounded-xl bg-amber-50 border border-amber-200 text-xs">
-          <h3 class="font-bold text-amber-950 text-xs mb-0.5">
+        <div class="p-2.5 rounded-xl bg-amber-50 border border-amber-200 text-xs">
+          <h3 class="font-bold text-amber-950 text-[11px] mb-0.5">
             [Pilier 5] Section Traiteur & Cartes-Cadeaux
           </h3>
-          <p class="text-amber-900 text-[11px] leading-relaxed">
-            Un formulaire de soumission directe pour capter les banquets, mariages et réceptions d'affaires dans l'Outaouais, ainsi que la promotion des cartes-cadeaux gourmandes.
+          <p class="text-amber-900 text-[10px] leading-relaxed">
+            Formulaire de soumission directe pour capter les mariages, banquets et dîners corporatifs dans l'Outaouais, ainsi que la promotion des cartes-cadeaux.
           </p>
         </div>
       </section>
+    </div>
 
-      <!-- SECTION 3 -->
-      <section class="mb-5 avoid-break">
-        <h2 class="font-serif text-base font-bold text-slate-900 mb-2 pb-1 border-b border-slate-200 flex items-center gap-2">
-          <span class="w-5 h-5 rounded-full bg-amber-600 text-white flex items-center justify-center text-[10px] font-sans font-bold">3</span>
-          <span>Plan de Déploiement Simple & Sans Risque</span>
+    <!-- ==================== PAGE 2 ==================== -->
+    <div class="page-break-after-p1">
+      
+      <!-- SECTION 3: PORTRAIT FINANCIER -->
+      <section class="mb-4 avoid-break">
+        <h2 class="font-serif text-sm font-bold text-slate-900 mb-2 pb-1 border-b border-slate-200 flex items-center gap-1.5">
+          <span class="w-4 h-4 rounded-full bg-amber-600 text-white flex items-center justify-center text-[9px] font-sans font-bold">3</span>
+          <span>Portrait Financier : Frais Actuels vs Nouvelle Approche</span>
         </h2>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
-          <div class="flex items-start gap-2.5 p-2.5 rounded-lg border border-slate-200 bg-white">
-            <span class="w-5 h-5 rounded-full bg-slate-900 text-white text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">1</span>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3 text-xs">
+          <!-- Current costs -->
+          <div class="p-3 rounded-xl border border-rose-200 bg-rose-50/40">
+            <h3 class="font-bold text-rose-950 text-xs mb-1.5 flex items-center gap-1">
+              <span>Coûts & Commissions Actuels</span>
+            </h3>
+            <ul class="space-y-1.5 text-slate-700 text-[10.5px] leading-relaxed">
+              <li>
+                <strong>Abonnement Wix au Canada :</strong> Environ <strong>250 $ à 530 $+ CAD/an</strong> pour héberger le site actuel.
+              </li>
+              <li>
+                <strong>Commissions des applications tierces (comme DoorDash) :</strong> Au Canada, les plateformes prélèvent généralement de <strong>20 % à 30 % sur les livraisons</strong> et de <strong>8 % à 15 % sur le ramassage</strong>. Sur une commande de 40 $, cela représente <strong>8 $ à 12 $ de marge perdue</strong>.
+              </li>
+              <li>
+                <strong>Risque sur les réservations :</strong> Deux adresses Gmail divergentes affichées sur votre accueil (<em>cordondor1803</em> vs <em>cordondor18103</em>) augmentent le risque de messages non reçus et de réservations manquées.
+              </li>
+            </ul>
+          </div>
+
+          <!-- New approach & free offer -->
+          <div class="p-3 rounded-xl border border-emerald-200 bg-emerald-50/40">
+            <h3 class="font-bold text-emerald-950 text-xs mb-1.5 flex items-center gap-1">
+              <span>Nouvelle Approche & Offre Clé en Main</span>
+            </h3>
+            <ul class="space-y-1.5 text-slate-700 text-[10.5px] leading-relaxed">
+              <li>
+                <strong>Hébergement moderne à 0 $ / mois :</strong> Vous éliminez totalement les mensualités Wix. Vous conservez uniquement votre nom de domaine officiel .ca (~15 $ à 25 $/an).
+              </li>
+              <li>
+                <strong>Mon offre clé en main gratuite :</strong> Je prends en charge <strong>gratuitement</strong> la conception du site, la migration et la configuration DNS du domaine <em>lecordondorerestaurantbistrot.ca</em> avec <strong>zéro interruption de service</strong>.
+              </li>
+              <li>
+                <strong>Maintenance continue incluse :</strong> Mises à jour des menus, prix, plats saisonniers et horaires de fêtes/buffets gérées pour vous sans tracas.
+              </li>
+              <li>
+                <strong>Évolutions futures optionnelles :</strong> Redirection courriel professionnel gratuite (ex. <em>info@lecordondorerestaurantbistrot.ca</em>) ou intégration de commande directe sans commission.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: PLAN DE DÉPLOIEMENT -->
+      <section class="mb-4 avoid-break">
+        <h2 class="font-serif text-sm font-bold text-slate-900 mb-2 pb-1 border-b border-slate-200 flex items-center gap-1.5">
+          <span class="w-4 h-4 rounded-full bg-amber-600 text-white flex items-center justify-center text-[9px] font-sans font-bold">4</span>
+          <span>Plan de Déploiement Simple & Sans Interruption</span>
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+          <div class="flex items-start gap-2 p-2.5 rounded-lg border border-slate-200 bg-white">
+            <span class="w-4 h-4 rounded-full bg-slate-900 text-white text-[9px] font-bold flex items-center justify-center shrink-0 mt-0.5">1</span>
             <div>
-              <h4 class="font-bold text-slate-900 text-xs">Validation du Prototype</h4>
-              <p class="text-slate-600 text-[11px]">Testez la démo complète sur mobile à l'adresse <strong>lecordondore.jopism.com</strong>.</p>
+              <h4 class="font-bold text-slate-900 text-[11px]">Validation du Prototype</h4>
+              <p class="text-slate-600 text-[10px]">Testez la démo complète sur mobile à l'adresse <strong>lecordondore.jopism.com</strong>.</p>
             </div>
           </div>
 
-          <div class="flex items-start gap-2.5 p-2.5 rounded-lg border border-slate-200 bg-white">
-            <span class="w-5 h-5 rounded-full bg-slate-900 text-white text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">2</span>
+          <div class="flex items-start gap-2 p-2.5 rounded-lg border border-slate-200 bg-white">
+            <span class="w-4 h-4 rounded-full bg-slate-900 text-white text-[9px] font-bold flex items-center justify-center shrink-0 mt-0.5">2</span>
             <div>
-              <h4 class="font-bold text-slate-900 text-xs">Ajustement des Menus & Tarifs</h4>
-              <p class="text-slate-600 text-[11px]">Mise à jour rapide des prix, plats saisonniers ou coordonnées selon vos consignes.</p>
+              <h4 class="font-bold text-slate-900 text-[11px]">Ajustement des Menus & Tarifs</h4>
+              <p class="text-slate-600 text-[10px]">Mise à jour rapide des prix, plats saisonniers ou coordonnées selon vos consignes.</p>
             </div>
           </div>
 
-          <div class="flex items-start gap-2.5 p-2.5 rounded-lg border border-slate-200 bg-white">
-            <span class="w-5 h-5 rounded-full bg-slate-900 text-white text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">3</span>
+          <div class="flex items-start gap-2 p-2.5 rounded-lg border border-slate-200 bg-white">
+            <span class="w-4 h-4 rounded-full bg-slate-900 text-white text-[9px] font-bold flex items-center justify-center shrink-0 mt-0.5">3</span>
             <div>
-              <h4 class="font-bold text-slate-900 text-xs">Bascule Transparente</h4>
-              <p class="text-slate-600 text-[11px]">Connexion à votre adresse officielle <strong>lecordondorerestaurantbistrot.ca</strong> sans aucune interruption.</p>
+              <h4 class="font-bold text-slate-900 text-[11px]">Bascule Transparente</h4>
+              <p class="text-slate-600 text-[10px]">Connexion à votre adresse officielle <strong>lecordondorerestaurantbistrot.ca</strong> sans aucune interruption.</p>
             </div>
           </div>
 
-          <div class="flex items-start gap-2.5 p-2.5 rounded-lg border border-emerald-200 bg-emerald-50/50">
-            <span class="w-5 h-5 rounded-full bg-emerald-700 text-white text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">✓</span>
+          <div class="flex items-start gap-2 p-2.5 rounded-lg border border-emerald-200 bg-emerald-50/50">
+            <span class="w-4 h-4 rounded-full bg-emerald-700 text-white text-[9px] font-bold flex items-center justify-center shrink-0 mt-0.5">✓</span>
             <div>
-              <h4 class="font-bold text-emerald-950 text-xs">Économie Mensuelle</h4>
-              <p class="text-emerald-800 text-[11px]">Élimination des frais mensuels coûteux de Wix au profit d'un hébergement performant.</p>
+              <h4 class="font-bold text-emerald-950 text-[11px]">Économies & Sérénité</h4>
+              <p class="text-emerald-800 text-[10px]">Zéro mensualité Wix, site ultra-rapide et maintenance technique prise en charge.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- SECTION 4: CLOSING CONTACT BLOCK (Jonathan Pankratz) -->
-      <div class="contact-box border border-slate-200 bg-slate-50 p-4 rounded-xl text-xs avoid-break">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 pb-2.5 mb-2.5 border-b border-slate-200">
+      <!-- SECTION 5: CLOSING CONTACT BLOCK (Jonathan Pankratz) -->
+      <div class="contact-box border border-slate-200 bg-slate-50 p-3 rounded-xl text-xs avoid-break">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1.5 pb-2 mb-2 border-b border-slate-200">
           <div>
-            <h4 class="font-bold text-slate-900 text-sm">Jonathan Pankratz</h4>
-            <p class="text-slate-500 text-[11px]">Jopism Solutions Numériques · Spécialiste Web & Expérience Client</p>
+            <h4 class="font-bold text-slate-900 text-xs">Jonathan Pankratz</h4>
+            <p class="text-slate-500 text-[10.5px]">Jopism Solutions Numériques · Spécialiste Web & Expérience Client</p>
           </div>
-          <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs">
+          <div class="flex flex-wrap gap-x-3 gap-y-0.5 text-[11px]">
             <span>Courriel : <a href="mailto:info@jopism.com" class="text-amber-700 font-bold hover:underline">info@jopism.com</a></span>
             <span>Web : <a href="https://digital.jopism.com" target="_blank" class="text-amber-700 hover:underline">digital.jopism.com</a></span>
             <span>Démo : <a href="https://lecordondore.jopism.com" target="_blank" class="text-amber-700 font-bold hover:underline">lecordondore.jopism.com</a></span>
           </div>
         </div>
 
-        <p class="text-slate-700 text-xs leading-relaxed">
+        <p class="text-slate-700 text-[10.5px] leading-relaxed">
           <strong class="text-slate-900">Prochaine étape simple :</strong> Je suis disponible pour une courte présentation de 10 minutes (en personne dans votre restaurant à Aylmer ou par appel vidéo), sans aucun engagement, afin de vous montrer le fonctionnement en direct sur votre propre téléphone et discuter de vos besoins.
         </p>
       </div>
