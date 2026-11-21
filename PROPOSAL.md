@@ -47,18 +47,18 @@ Le site web doit être le reflet fidèle de ce savoir-faire, surtout pour le cli
    *→ Nouvelle version :* Un onglet dédié aux festins familiaux (pour 2 personnes et 4 à 5 personnes), avec compositions et tarifs transparents.
 
 5. **Pages inachevées & pages fantômes**  
-   *Actuel :* Le blogue ne contient qu’un article vide intitulé « Test » (« Aucun post publié dans cette langue »), et plusieurs pages de test Wix (« copie-de-... ») sont indexées sur Google.  
+   *Actuel :* Le blogue ne contient qu’un article vide intitulé « Test » (« Aucun post publié dans cette langue »), et des pages de brouillon Wix (« copie-de-... ») sont encore accessibles publiquement via les liens du site.  
    *→ Nouvelle version :* Architecture monopage moderne sans cul-de-sac, avec redirection automatique des anciennes adresses pour préserver votre référencement.
 
 6. **Carte des boissons incomplète**  
    *Actuel :* Les 7 cocktails sont affichés à 14 $, mais les rubriques vins, bières et spiritueux ne montrent aucun article ni tarif.  
-   *→ Nouvelle version :* Bannière mettant en valeur les cocktails signatures à 14 $ et grille des 8 catégories de la cave à compléter selon vos sélections.
+   *→ Nouvelle version :* Bannière mettant en valeur les cocktails signatures à 14 $ et structure prête à accueillir vos sélections de bouteilles et prix réels.
 
 ---
 
 ### 3. Ce que contient la nouvelle version
 * **Le mobile d’abord :** Boutons pour appeler (819 682-5781), texter pour réserver (819 661-5113) et ouvrir l’itinéraire Google Maps. Heures d’ouverture visibles dès l’accueil.
-* **Le buffet du mardi en vedette :** Un bloc dédié avec l’horaire (17h–20h30) et la réservation, plus un renvoi direct vers votre page Facebook officielle pour les brunchs spéciaux du week-end.
+* **Le buffet du mardi en vedette :** Un bloc dédié avec l’horaire (ex. 17h–20h30, à confirmer avec vous) et la réservation, plus un renvoi direct vers votre page Facebook officielle pour les brunchs spéciaux du week-end.
 * **Des menus complets & bilingues :** 44 plats indiens, 20 spécialités bistro, 6 menus enfants, desserts et cocktails, avec badges clairs (Halal, Végétarien, Sans gluten, piquant).
 * **Traiteur et cartes-cadeaux :** Une section pour recevoir les soumissions (mariages, fêtes privées, corporatif dans l’Outaouais) et afficher les montants disponibles (25 $ à 200 $).
 * **Votre histoire & authenticité :** Le parcours du chef avec sa photo officielle en tenue, ses 25 ans d’art culinaire et des avis Google récents vérifiés.
@@ -81,8 +81,8 @@ La démonstration est un prototype fonctionnel. Voici ce que je ne publierai jam
 ### 5. Coûts et engagements
 * **Offerts :** Conception complète du site, migration technique, mise en ligne et hébergement moderne haute performance (0 $/mois).
 * **À votre charge :** Uniquement le renouvellement de votre nom de domaine `.ca` auprès de votre registraire habituel, soit habituellement entre 15 $ et 25 $ par année.
-* **Abonnement Wix :** Vous pourrez l’annuler une fois la bascule terminée et vos cartes-cadeaux réglées. Vous économisez ainsi entre 250 $ et 530 $+ CAD par an.
-* **Mises à jour continues :** Durant les 6 premiers mois, les ajustements courants (changement de prix, ajout de plats saisonniers, horaires spéciaux de fêtes ou du buffet) sont pris en charge gratuitement sans frais. Par la suite, nous pourrons convenir ensemble d'un petit forfait d'entretien mensuel très abordable ou de simples mises à jour à l'acte, selon vos besoins réels et sans engagement.
+* **Abonnement Wix :** Vous pourrez l’annuler une fois la bascule terminée et vos cartes-cadeaux réglées. D’après mes recherches sur les forfaits professionnels Wix actuels pour restaurants au Canada (sur lequel repose votre site actuel), vous payez probablement entre 250 $ et 500 $+ par année (à valider sur votre facture).
+* **Mises à jour continues :** Durant les 6 premiers mois, les ajustements courants (changement de prix, ajout de plats saisonniers, horaires spéciaux de fêtes ou du buffet) sont pris en charge gratuitement sans frais. Mon but est avant tout de vous aider et de vous remettre un site clé en main complet. Les 6 premiers mois de mises à jour courantes sont entièrement gratuits. Si plus tard vous désirez de gros ajouts ou de nouveaux développements, nous pourrons simplement en discuter selon le travail nécessaire — sans aucun abonnement obligatoire.
 * **Propriété & Sans engagement :** Votre domaine reste enregistré à votre nom, votre contenu vous appartient à 100 %, et je vous remets sur demande une copie complète du site. Vous êtes libres d'arrêter quand vous le souhaitez.
 
 ---
